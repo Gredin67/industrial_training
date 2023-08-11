@@ -1,0 +1,841 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:1
+#: 74c0743dc1e04d42a9d4e8bf215ecada
+msgid "The Linux Terminal"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:2
+#: f56e350a86b64bf8bb059cec48ca2009
+msgid "In this exercise, we will familiarize ourselves with the Linux terminal."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:4
+#: 90ba8bbf27514c3fa8eeaf1d010ee573
+msgid "Starting the Terminal"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:6
+#: 077d66b132d34e2395b9b2ad8762d838
+msgid "To open the terminal, click on the terminal icon:"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:10
+#: 21eb01215bb94cada7b27930044a6f3f
+msgid "Create a second terminal window, either by:"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:12
+#: bb51629fc5ff40588db7c211d668bf21
+msgid "Right-clicking on the terminal and selecting the \"Open Terminal\" or"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:13
+#: bfa3419f7d974e1bae5f33676c2d7652
+msgid "Selecting \"Open Terminal\" from the \"File\" menu"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:15
+#: 7f416f4daeea4ee7a2bacfb5ed85e544
+msgid ""
+"Create a second terminal within the same window by pressing "
+"\"Ctrl+Shift+T\" while the terminal window is selected."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:17
+#: ae0365d3e9c547a1b2fa4d0690af8855
+msgid "Close the 2nd terminal tab, either by:"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:19
+#: 721f662b68d941c5b4664434e5992ab8
+msgid "clicking the small 'x' in the terminal tab (not the main terminal window)"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:20
+#: 262e80b5c66146cd9ed59d6c10440a6f
+msgid "typing exit and hitting enter."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:22
+#: a3b7a8e0dc7a4044a585e975ef376236
+msgid "The window will have a single line, which looks like this:"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:24
+#: ea6536293af04f5f86df3c0494aad80b
+msgid "ros-industrial@ros-i-humble-vm:~$"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:26
+#: f841b32b481648489bff00dac8b64df3
+msgid ""
+"This is called the prompt, where you enter commands. The prompt, by "
+"default, provides three pieces of information:"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:28
+#: db5c033962e2453f9f1c4afe67d68e6d
+msgid "ros-industrial is the login name of the user you are running as."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:29
+#: be50da7e2ece454fabb6d510d9a4cc4d
+msgid "ros-i-humble-vm is the host name of the computer."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:30
+#: 3f88dc71a64142e1a6f92be0375dbb79
+msgid ""
+"~ is the directory in which the terminal is currently in. (More on this "
+"later)."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:32
+#: 11edd3fb67d14a758c876f51e353287f
+msgid ""
+"Close the terminal window by typing exit or clicking on the red 'x' in "
+"the window's titlebar."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:34
+#: 6f45674d7f6242c3a174850b6c164b3f
+msgid "Navigating Directories and Listing Files"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:36
+#: b737d7269c2e4b05864fec26b4fbf496
+msgid "Prepare your environment"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:37
+#: a5bc02ac0e0e4926a2dcda598b817182
+msgid "Open your home folder in the file browser."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:38
+#: 3c3f41de4b434e5286bf249b371d450e
+msgid "Double-click on the ex0.3 folder we created in the previous step."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:39
+#: 54cd301b0ac549b78613a2809fffd8f8
+msgid "We'll use this to illustrate various file operations in the terminal."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:40
+#: f1763fe7da0a45808cbf081ce21644d7
+msgid ""
+"Right click in the main file-browser window and select \"Open in "
+"Terminal\" to create a terminal window at that location."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:41
+#: 7a7e3294b74347a793fb2d73fddeb6b6
+msgid ""
+"In the terminal window, type the following command to create some sample "
+"files that we can study later:"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:42
+#: 9a01cf1db3494e6f912422a76e62a9bd
+msgid "cp -a ~/industrial_training/exercises/0.3/. ."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:44
+#: 91d94a86d7624bee8d727d1ae8f1defd
+msgid "ls Command"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:45
+#: 45395678ec194dc4aba6de01b85fd32c
+msgid "Enter ls into the terminal."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:46
+#: d8b6ae1492a64f728d943524ecb232ec
+msgid ""
+"You should see test.txt, and new listed. (If you don't see 'new', go back"
+" and complete the previous exercise)."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:47
+#: 3142cea89633401aa4ff00fe351e7527
+msgid "Directories, like new, are colored in blue."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:48
+#: da85c5291fca420bbbe5596d1da69755
+msgid ""
+"The file sample_job is in green; this indicates it has its \"execute\" "
+"bit set, which means it can be executed as a command."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:49
+#: 40a1d8c505c844b6ad4112fe50a98a8d
+msgid "Type ls *.txt.  Only the file test.txt will be displayed."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:50
+#: f3bf9137f9864a9c897f51ac74b6a1c8
+msgid "Enter ls -l into the terminal."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:51
+#: 4a9d637801c7492daaf74b2765154df7
+msgid ""
+"Adding the -l option shows one entry per line, with additional "
+"information about each entry in the directory."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:52
+#: fff784daba6345858ab885b618f3203b
+msgid "The first 10 characters indicate the file type and permissions"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:53
+#: 3cf5baadcbf14195be71fe68b1f810ae
+msgid "The first character is d if the entry is a directory."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:54
+#: b128ea473b2b46d0a798c118c36c1300
+msgid "The next 9 characters are the permissions bits for the file"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:55
+#: 8bcb38f322b14edba66a9b586e42856f
+msgid "The third and fourth fields are the owning user and group, respectively."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:56
+#: 6f85129fec9e41e0b6a0588002ae4569
+msgid "The second-to-last field is the time the file was last modified."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:57
+#: 429f7b42da4849f887d7f8539a542282
+msgid ""
+"If the file is a symbolic link, the link's target file is listed after "
+"the link's file name."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:58
+#: 78b06b8594cb4cdc8cdb91e10d133709
+msgid "Enter ls -a in the terminal."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:59
+#: 9fcedccda8f34a2e9745f1e77683e858
+msgid "You will now see one additional file, which is hidden."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:60
+#: e45a9038ca664b709d1632f0712c4227
+msgid "Enter ls -a -l (or ls -al) in the command."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:61
+#: 3cb8c58feb8046fbaa33dfa1ff4cb5fb
+msgid ""
+"You'll now see that the file hidden_link.txt points to "
+".hidden_text_file.txt."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:63
+#: 148234cfd1c54d29bff88413f488680a
+msgid "pwd and cd Commands"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:64
+#: 7b687d0492c846e0860d88d4378c3fff
+msgid "Enter pwd into the terminal."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:65
+#: 95975b9416e64230a258c02ce2c68a11
+msgid "This will show you the full path of the directory you are working in."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:66
+#: aa7dc24391ca49fea963a1d03c8b835c
+msgid "Enter cd new into the terminal."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:67
+#: c067675a9d23472ebaf04874ff96a2cb
+msgid "The prompt should change to ros-industrial@ros-i-humble-vm:~/ex0.3/new$."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:68
+#: 81b3fdcde7ba4106988ac455667dd817
+msgid ""
+"Typing pwd will show you now in the directory /home/ros-"
+"industrial/ex0.3/new."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:69
+#: 914a1bf91e01410b948959454517f345
+msgid ""
+"Enter cd .. into the terminal. * In the previous exercise, we noted that "
+".. is the parent folder. * The prompt should therefore indicate that the "
+"current working directory is /home/ros-industrial/ex0.3."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:72
+#: ed516ec1f63c467f996df6868a1643b0
+msgid "Enter cd /bin, followed by ls."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:73
+#: 290b425e16d449ba9b0dc56cececd37f
+msgid ""
+"This folder contains a list of the most basic Linux commands.<BR> Note "
+"that pwd and ls are both in this folder."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:75
+#: dc41bbfbbc27409eb218448a5698a907
+msgid "Enter cd ~/ex0.3 to return to our working directory."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:76
+#: f98a86566d824bf3a5186d2bd8f77cbf
+msgid ""
+"Linux uses the ~ character as a shorthand representation for your home "
+"directory."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:77
+#: 0380a6febee443c3bd6d2b5ef74d4d7a
+msgid ""
+"It's a convenient way to reference files and paths in command-line "
+"commands."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:78
+#: 0dffe51d51da4d1cac8f64269a41a93e
+msgid "You'll be typing it a lot in this class... remember it!"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:80
+#: f5a9c98969d847ba81886ca34431705d
+msgid ""
+"If you want a full list of options available for any of the commands "
+"given in this section, type man <command> (where <command> is the command"
+" you want information on) in the command line.  This will provide you "
+"with built-in documentation for the command.  Use the arrow and page "
+"up/down keys to scroll, and q to exit."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:82
+#: 54005f9f41d64d47b2878d4060cf07fc
+msgid "Altering Files"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:84
+#: 8a835d08048240a48e8eb072c2609e72
+msgid "mv Command"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:85
+#: a07b5b037f16488dba7ad443ec94a46e
+msgid "Type mv test.txt test2.txt, followed by ls."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:86
+#: c09780e810414cf28664f6ac4cabda9b
+msgid ""
+"You will notice that the file has been renamed to test2.txt.<BR> This "
+"step shows how mv can rename files."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:88
+#: b5b0279343f1490fb9a7d483a7cf7b4b
+msgid "Type mv test2.txt new, then ls."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:89
+#: 223c6da278b54a989c55c7cfb3d7307e
+msgid "The file will no longer be present in the folder."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:90
+#: 66c73e4784d7497eaa22396eeb79c310
+msgid "Type cd new, then ls."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:91
+#: d49a783c1ba34324ad492d0fdd87e0ce
+msgid ""
+"You will see test2.txt in the folder.<BR> These steps show how mv can "
+"move files."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:93
+#: 28ead64e33fd430393875bd989726870
+msgid "Type mv test2.txt ../test.txt, then ls."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:94
+#: 99a604f2c3194c959d29f0faa32ad86b
+msgid "test2.txt will no longer be there."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:95
+#: a66949664e1e4e609b1ea79d5fcff82a
+msgid "Type cd .., then ls."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:96
+#: fe3811d7d0744fc4b8d8be78d09e6a0d
+msgid ""
+"You will notice that test.txt is present again.<BR> This shows how mv can"
+" move and rename files in one step."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:99
+#: 235ec0f1b4914cb4b14eba854e4148b8
+msgid "cp Command"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:100
+#: bce46da29cca461883885c0c386fb48f
+msgid "Type cp test.txt new/test2.txt, then ls new."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:101
+#: b14d7d29391e426087d5e87eca821191
+msgid "You will see test2.txt is now in the new folder."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:102
+#: 8448a7ecf0354be589195eaabdfefce4
+msgid "Type cp test.txt \"test copy.txt\", then ls -l."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:103
+#: 0ae07fdb5ce64b408c2b44a9a9eac27c
+msgid ""
+"You will see that test.txt has been copied to test copy.txt.<BR> Note "
+"that the quotation marks are necessary when spaces or other special "
+"characters are included in the file name."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:106
+#: 68ccb3100412493fab62ddb160a25b51
+msgid "rm Command"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:107
+#: 229e9ca673334e51b1a5aa5e1967b0a5
+msgid "Type rm \"test copy.txt\", then ls -l."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:108
+#: 4ad43b81581547e88074232b8cf0e7fa
+msgid "You will notice that test copy.txt is no longer there."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:110
+#: d40ed2aa59f04873b20863f476ba11c8
+msgid "mkdir Command"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:111
+#: 969c87d345c74477a29ec5e46f70cf1e
+msgid "Type mkdir new2, then ls."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:112
+#: fac677f6e6e640a4aec87c083a453d8b
+msgid "You will see there is a new folder new2."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:114
+#: 7d5f1c64c78e4c63bbd190d7cc84155f
+msgid "touch Command"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:115
+#: 7341e86d610d4ce48142eaeb3bc4b009
+msgid "Type touch ~/Templates/\"Untitled Document\"."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:116
+#: b7b94d798fd84880ac6a2091b0eca3ee
+msgid "This will create a new Document named \"Untitled Document\""
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:118
+#: e79f0bd8c2854b46b8a13f0cf5f4d6bd
+msgid ""
+"You can use the  -i flag with cp, mv, and rm commands to prompt you when "
+"a file will be overwritten or removed."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:120
+#: 4c76d4fc9573451fb0d8a69a71e013d4
+msgid "Job management"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:121
+#: 5e2f7e20941e42adb611ab87e7bdf0c1
+msgid "Stopping Jobs"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:122
+#: 32c6b3553bb148e3ab017e9e2bb75e68
+msgid "Type ./sample_job."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:123
+#: ../../_source/prerequisites/The-Linux-Terminal.md:127
+#: ../../_source/prerequisites/The-Linux-Terminal.md:143
+#: 2596d789692844feada9fda71180fd71 259b56f25133487c8795151d0506dbc9
+#: beff85c8accd4b55bb6ed651a0dbb4fa
+msgid "The program will start running."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:124
+#: ../../_source/prerequisites/The-Linux-Terminal.md:128
+#: a9f92a1a775a4219bfaebd35293e428e d12f2e2e1c6a4a0b8dd634d050a07db3
+msgid "Press Control+C."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:125
+#: 0231afdfa093468589dd326586dd4bc5
+msgid "The program should exit."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:126
+#: 01d0868a35b84d0ca3203c4cbc20e8c2
+msgid "Type ./sample_job sigterm."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:129
+#: b69882188b0641d9a057ad9b47a8f60d
+msgid "This time the program will not die."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:131
+#: 7ef78b7bfc9f40ef8cab1792d28259b5
+msgid "Stopping \"Out of Control\" Jobs"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:132
+#: 955ce4f4c2ec47b6a34d98c81b4b004d
+msgid "Open a new terminal window."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:133
+#: a56eff3dd4a24e97a449ce5dea0ddf1a
+msgid "Type ps ax."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:134
+#: b63acd02433d4f36bd084d8ef07b9ac4
+msgid "Scroll up until you find python ./sample_job sigterm."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:135
+#: 79cab7f7ab9d4e71a75fb025e8e12c85
+msgid "This is the job that is running in the first window."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:136
+#: 41c47d63cd07474f9acfca5d173be05d
+msgid ""
+"The first field in the table is the ID of the process (use man ps to "
+"learn more about the other fields)."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:137
+#: 8aff570d96794be99103450fc8c6b357
+msgid "Type ps ax | grep sample."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:138
+#: 413fa2b319d740f1adebf007c8b49e5a
+msgid "You will notice that only a few lines are returned."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:139
+#: 38be3b09bfe449cc8f82b039ce106268
+msgid "This is useful if you want to find a particular process"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:140
+#: 6e5254f559864d53a2d27c25c5ab96c8
+msgid ""
+"Note: this is an advanced technique called \"piping\", where the output "
+"of one program is passed into the input of the next.  This is beyond the "
+"scope of this class, but is useful to learn if you intend to use the "
+"terminal extensively."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:141
+#: 632098173667463d952d28b83965f523
+msgid "Type kill <id>, where <id> is the job number you found with the ps ax."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:142
+#: 5b151740323a420ea8068949f6dedd9d
+msgid "In the first window, type ./sample_job sigterm sigkill."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:144
+#: 00ca3efb10614586be6fa95228dc44e9
+msgid ""
+"In the second window, type ps ax | grep sample to get the id of the "
+"process."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:145
+#: c48de8d51cea4f3698c706fd37fa06f4
+msgid "Type kill <id>."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:146
+#: ff63a817945e4fc3a187b36734ff5b32
+msgid "This time, the process will not die."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:147
+#: 758cfa77ca9743b0ad2b8a2775be35d9
+msgid "Type kill -SIGKILL <id>."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:148
+#: 83bb89fe8f244f99b71572c90d16818f
+msgid "This time the process will exit."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:150
+#: 400b13f4344344e1a31d763cd471131c
+msgid "Showing Process and Memory usage"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:151
+#: 0bf9b04c7344419fab6b27b583f6e73e
+msgid "In a terminal, type top."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:152
+#: fb086f2b1a654a1db87aa03ed9c298cd
+msgid ""
+"A table will be shown, updated once per second, showing all of the "
+"processes on the system, as well as the overall CPU and memory usage."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:153
+#: c75f4062f71e44ba800119f33a79f6da
+msgid "Press the Shift+P key."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:154
+#: e04f3825c0774a9bbe99ef94e5e7d2da
+msgid ""
+"This will sort processes by CPU utilization.<BR> This can be used to "
+"determine which processes are using too much CPU time."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:156
+#: 1151ddf0db1a488bb3ee4ff40a38e10c
+msgid "Press the Shift+M key."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:157
+#: e2b6fd77ea1f40f6b5116e3e6631f5b8
+msgid ""
+"This will sort processes by memory utilization<BR> This can be used to "
+"determine which processes are using too much memory."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:159
+#: dbe9814f435e4f268a16deda91c1f6eb
+msgid "Press q or Ctrl+C to exit the program."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:161
+#: 75292960ffad488198303240381f8767
+msgid "Editing Text (and Other GUI Commands)"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:162
+#: ../../_source/prerequisites/The-Linux-Terminal.md:172
+#: 2f0fc54d161d42dfa743c1720f4fd851 bbd2dee93abb403b93e9622225d65ced
+msgid "Type gedit test.txt."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:163
+#: ff2d4be0650d41fda0809efc6500a58a
+msgid ""
+"You will notice that a new text editor window will open, and test.txt "
+"will be loaded."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:164
+#: 2a359335e6ee4988a57dce14cbb8219e
+msgid "The terminal will not come back with a prompt until the window is closed."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:165
+#: 7849013b0c5b43989af919e9eee7a03f
+msgid "There are two ways around this limitation.  Try both..."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:166
+#: 5fd2354f7b1c4f7c8216e31bc98a2a29
+msgid "Starting the program and immediately returning a prompt:"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:167
+#: c8d078b0ecdc487f8d775cb5ddf26f63
+msgid "Type gedit test.txt &."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:168
+#: 8024d47dc0764f7fb9e24fb4baf3119e
+msgid ""
+"The & character tells the terminal to run this command in \"the "
+"background\", meaning the prompt will return immediately."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:169
+#: e81133525f18449fb4ab37b980c0a8d7
+msgid "Close the window, then type ls."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:170
+#: 08a5ec7fdf3a4cf7b26ad866a237d562
+msgid ""
+"In addition to showing the files, the terminal will notify you that gedit"
+" has finished."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:171
+#: 38a5eaab2b074e91a3c0203aac441a65
+msgid "Moving an already running program into the background:"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:173
+#: c2fb11cf4f1b45d9a18c3d48799ef493
+msgid "The window should open, and the terminal should not have a prompt waiting."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:174
+#: e6bb3b65ec4c4b44b13a02515f64edcb
+msgid "In the terminal window, press Ctrl+Z."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:175
+#: 9f12c3ef101f4c97b66a4f799a6bbf69
+msgid ""
+"The terminal will indicate that gedit has stopped, and a prompt will "
+"appear."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:176
+#: c76a072ac79e4b4081f180c91e43caa3
+msgid "Try to use the gedit window."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:177
+#: 4fe7a658de2d4684ac81c534a04af5c2
+msgid "Because it is paused, the window will not run."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:178
+#: 1d2e703270f6450ebaff0693eab21f25
+msgid "Type bg in the terminal."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:179
+#: 15998c682c6a48e6b8311d28b6d566ea
+msgid "The gedit window can now run."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:180
+#: 1720097b73f247cfae88cefa047046f1
+msgid "Close the gedit window, and type ls in the terminal window."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:181
+#: 683063ce086b40ca9e04908a15d189aa
+msgid "As before, the terminal window will indicate that gedit is finished."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:183
+#: 2a57214ba6e94e03b7e3bd18281d3e2a
+msgid "Running Commands as Root"
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:184
+#: 0ea9d4eee3e24237863aa9ab84ad6866
+msgid "In a terminal, type ls -a /root."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:185
+#: b7ed7ea3255c49169a833f30cdbb6991
+msgid "The terminal will indicate that you cannot read the folder /root."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:186
+#: 0500dcaac9eb4b2b9c5c2ee9a284faa3
+msgid ""
+"Many times you will need to run a command that cannot be done as an "
+"ordinary user, and must be done as the \"super user\""
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:187
+#: 35063af5ef1b4bd5824dea2434a96785
+msgid ""
+"To run the previous command as root, add sudo to the beginning of the "
+"command."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:188
+#: c38d7a5b976e4bfaa5ea677a779007e4
+msgid "In this instance, type sudo ls -a /root instead."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:189
+#: 4865e32b97a0480b92345459ecfec7c0
+msgid ""
+"The terminal will request your password (in this case, rosindustrial) in "
+"order to proceed."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:190
+#: b45103dba4bf400a916615c66aa0c433
+msgid ""
+"Once you enter the password, you should see the contents of the /root "
+"directory."
+msgstr ""
+
+#: ../../_source/prerequisites/The-Linux-Terminal.md:192
+#: 5c9d7f8b3df7425ca80f0fb62a59659d
+msgid ""
+"Warning: sudo is a powerful tool which doesn't provide any sanity checks "
+"on what you ask it to do, so be VERY careful in using it."
+msgstr ""
+

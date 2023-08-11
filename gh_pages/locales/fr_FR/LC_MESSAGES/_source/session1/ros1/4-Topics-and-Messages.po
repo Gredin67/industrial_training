@@ -1,0 +1,344 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:1
+#: d25870a20d634f31a8f8912512ab0f89
+msgid "Topics and Messages"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:2
+#: 05315f7a25ac4e2fa97008c43c30069b
+msgid "In this exercise, we will explore the concept of ROS messages and topics."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:4
+#: ee16bd134dcf400985637461b21dfd11
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:5
+#: 79d8b06cadd842729f3cd3e297801d67
+msgid ""
+"The first type of ROS communication that we will explore is a one-way "
+"communication called messages which are sent over channels called topics."
+" Typically one node publishes messages on a topic and another node "
+"subscribes to messages on that same topic. In this module we will create "
+"a subscriber node which subscribes to an existing publisher "
+"(topic/message)."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:7
+#: 7d2abe8b38ab4804b885694cf317289f
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:9
+#: 07b31596c0b34a3386c31ae5f2f2c49c
+msgid "Create a Subscriber"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:11
+#: 1e2bb7298ef646c18c8bf231185dceed
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:13
+#: c2d7491d946a4ae6ada0420607ec8ddb
+msgid "Understanding Topics"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:15
+#: 2bf2dd6cf08d4f86ac2f2a45c418d3e9
+msgid "Examining Publisher & Subscriber"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:17
+#: 11bceb538a1e4315b319174eb6f76f69
+msgid "Creating Messages and Services"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:19
+#: 73790abc83a6447199c7fdcd41df3cd1
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:20
+#: 820ac969210f4695867ae64e85185de9
+msgid ""
+"We now have a base ROS node and we want to build on this node. Now we "
+"want to create a subscriber within our node."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:22
+#: 0bdfb66d610c418a819dd14a8f211f3b
+msgid "Your goal is to create your first ROS subscriber:"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:23
+#: 7ef83b1cd9e9426598246b4248991be0
+msgid "First you will want to find out the message structure."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:24
+#: ec389365dd154d74bbec4d3f244ddeaa
+msgid "You also want to determine the topic name."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:25
+#: 919b96ac484844a0a15ebd069c050191
+msgid "Last you can write the c++ code which serves as the subscriber."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:27
+#: d33b7c255c0a4d6e8e5a0007f4fbbebe
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:28
+#: f75cbb7633014c098bd4aaeb1b94e72d
+msgid "Add the fake_ar_publisher Package as a Dependency"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:30
+#: 256584dbcf394a46a0a7866b98d7c8ee
+msgid ""
+"Edit your package's CMakeLists.txt file "
+"(~/catkin_ws/src/myworkcell_core/CMakeLists.txt).  Make the following "
+"changes in the matching sections of the existing template file, by "
+"uncommenting and/or editing existing rules."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:32
+#: 4e6331c054f24e49b3ea88a3cdecdeaf
+msgid "Tell cmake to find the fake_ar_publisher package:"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:44
+#: af3c4c2f9bf14f53bcc725b8f4f9ccb0
+msgid "Add The catkin runtime dependency for publisher."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:62
+#: 13f5c9947db04d688b4fa23cbd76275a
+msgid "Uncomment/edit the add_dependencies line below your add_executable rule:"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:68
+#: 44ef06593f0242d68077fbf9978022a1
+msgid "add dependencies into your package's package.xml:"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:74
+#: 332bbbd9ef3b464a9bc133d8cd4b9c36
+msgid "cd into your catkin workspace"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:80
+#: 16d69381f9684f19b9cec351978fa0f4
+msgid ""
+"Build your package and source the setup file to activate the changes in "
+"the current terminal."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:87
+#: 4281cabaa3324da2bcab0e7282c296dd
+msgid ""
+"In a terminal, enter rosmsg list.  You will notice that, included in the "
+"list, is fake_ar_publisher/ARMarker.  If you want to see only the "
+"messages in a package, type rosmsg package <package_name>"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:89
+#: ec268bec11e7431d9f861d311c48a410
+msgid ""
+"Type rosmsg show fake_ar_publisher/ARMarker.  The terminal will return "
+"the types and names of the fields in the message."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:91
+#: 0cac0085639946ac881667f8b3637941
+msgid ""
+"Note that three fields under the header field are indented, indicating "
+"that these are members of the std_msgs/Header message type"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:93
+#: dfeb743e5cf448149c094d1b25b0577a
+msgid "Run a Publisher Node"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:95
+#: e8edbde53f734fb688b316271794a6da
+msgid ""
+"In a terminal, type rosrun fake_ar_publisher fake_ar_publisher_node. You "
+"should see the program start up and begin publishing messages."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:97
+#: 3097c0e96f0141ae8dacb7e30f576e38
+msgid ""
+"In another terminal, enter rostopic list.  You should see /ar_pose_marker"
+" among the topics listed. Entering rostopic type /ar_pose_marker will "
+"return the type of the message."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:99
+#: ea9845c7b097411a98e43f48f9359878
+msgid ""
+"Enter rostopic echo /ar_pose_marker. The terminal will show the fields "
+"for each message as they come in, separated by a --- line.  Press Ctrl+C "
+"to exit."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:101
+#: 6c2a680b146947a2962e9f1d2ee6c7f3
+msgid "Enter rqt_plot."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:103
+#: 7d04b6118ff44faba83e557d39c7d83e
+msgid ""
+"Once the window opens, type /ar_pose_marker/pose/pose/position/x in the "
+"\"Topic:\" field and click the \"+\" button. You should see the X value "
+"be plotted."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:105
+#: 1f23e624092648c0ab20a3b7caaa7286
+msgid ""
+"Type /ar_pose_marker/pose/pose/position/y in the topic field, and click "
+"on the add button.  You will now see both the x and y values being "
+"graphed."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:107
+#: 6af98ac7ec8a4935b1da0c90e53cb7ba
+msgid "Close the window"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:109
+#: 380f81f65cbd40a8ad7945320d46fc33
+msgid "Leave the publisher node running for the next task."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:111
+#: 9b40a653aefe475cb4070fc16e5cb1f5
+msgid "Create a Subscriber Node"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:112
+#: 3e9592a5273b4725b6ac4a2516527c15
+msgid "Edit the vision_node.cpp file."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:114
+#: 8ff356a483aa44c6947ee3a2c49ef747
+msgid "Include the message type as a header"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:120
+#: ff905c15f19949beb16845b7b4134f10
+msgid ""
+"Add the code that will be run when a message is received from the topic "
+"(the callback)."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:143
+#: 17ed137b912643e3aad4ce3e2d585be2
+msgid "Add the code that will connect the callback to the topic (within main())"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:157
+#: 99d46de37caf44e29b52b108799e1c5f
+msgid "You can replace or leave the \"Hello World\" print... your choice!"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:158
+#: 15ea5160b433456db9ac1935490129e3
+msgid ""
+"These new lines must go below the NodeHandle declaration, so nh is "
+"actually defined."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:159
+#: bc034c04cdfb41e6a06eab5401b929fc
+msgid ""
+"Make sure to retain the ros::spin() call.  It will typically be the last "
+"line in your main routine.  Code after ros::spin() won't run until the "
+"node is shutting down."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:161
+#: 786816321575496484efc1f6ddf6869c
+msgid "Run catkin build, then rosrun myworkcell_core vision_node."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:163
+#: 8bee6dd518604a369c003d6263711e68
+msgid "You should see the positions display from the publisher."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:165
+#: 5b14926e167540d4842a6e18efd31abb
+msgid ""
+"Press Ctrl+C on the publisher node.  The subscriber will stop displaying "
+"information."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:167
+#: 06ea642ea0654ef28d2dac9c1b706051
+msgid ""
+"Start the publisher node again. The subscriber will continue to print "
+"messages as the new program runs."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:169
+#: e454b5fabb87440e90cf00470aa02efa
+msgid ""
+"This is a key capability of ROS, to be able to restart individual nodes "
+"without affecting the overall system."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:171
+#: 9bcc4fa220b04b1787b90746bbce3f31
+msgid ""
+"In a new terminal, type rqt_graph. You should see a window similar to the"
+" one below:"
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:175
+#: fadf03eefe004964be7bd042b9ef9288
+msgid ""
+"The rectangles in the the window show the topics currently available on "
+"the system."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:176
+#: 8a3e1386cded4ab7a4ce82aaa8c8b043
+msgid "The ovals are ROS nodes."
+msgstr ""
+
+#: ../../_source/session1/ros1/4-Topics-and-Messages.md:177
+#: 154f082dda1a4989a6056a9fe767c0a1
+msgid ""
+"Arrows leaving the node indicate the topics the node publishes, and "
+"arrows entering the node indicate the topics the node subscribes to."
+msgstr ""
+

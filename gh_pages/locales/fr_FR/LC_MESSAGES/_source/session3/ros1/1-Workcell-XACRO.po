@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:1
+#: 229d9cb9bd8f465cb5e42393cfd477ed
+msgid "Workcell XACRO"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:2
+#: c851ebca15274e8497c246f24b738947
+msgid ""
+"In this exercise, we will create an XACRO file representing a simple "
+"robot workcell. This will demonstrate both URDF and XACRO elements."
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:5
+#: edcb8529d6e2423fae27996aa21abf23
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:6
+#: c2d932f38004489abe4248b77c3df355
+msgid ""
+"Writing URDFs that involve more than just a few elements can quickly "
+"become a pain. Your file gets huge and duplicate items in your workspace "
+"means copy-pasting a bunch of links and joints while having to change "
+"their names just slightly. It’s really easy to make a mistake that may "
+"(or may not) be caught at startup. It’d be nice if we could take some "
+"guidance from programming languages themselves: define a component once, "
+"then re-use it anywhere without excessive duplication. Functions and "
+"classes do that for programs, and XACRO macros do that for URDFs. XACRO "
+"has other cool features too, like a file include system (think #include),"
+" constant variables, math expression evaluation (e.g., say PI/2.0 instead"
+" of 1.57), and more."
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:9
+#: c3794643a74e44e1b5a6e3fa16c09d88
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:11
+#: 3eb915bf1f7241ea812fb3d9e614288b
+msgid "Cleaning Up URDF with XACRO Tutorial"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:13
+#: e038c4e06e0c4d30bfa3e6074efb9ff8
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:15
+#: 48e68cc5392c4275928bfb78f15f4ee5
+msgid "Xacro Extension Documentation"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:17
+#: 3a874972b8864266a8923ac2dcd5ea11
+msgid "Creating a URDF for an Industrial Robot"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:19
+#: b2850309e4e040be842fb96864da7fd3
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:20
+#: d6c77f9acd2f48baa5fbeb4e1b25709d
+msgid ""
+"In the previous exercise we created a workcell consisting of only static "
+"geometry. In this exercise, we'll add a UR5 robot assembly using XACRO "
+"tools."
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:22
+#: 07eaae42779c4e26ab07e02e8f15c4a3
+msgid "Specifically, you will need to:"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:23
+#: dbb84e09133a4652b6f5a45641458fc0
+msgid ""
+"Convert the *.urdf file you created in the previous sample into a XACRO "
+"file with the xacro extension."
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:24
+#: 841394af10704c7bbaeb3eded19c9a21
+msgid "Include a file containing the xacro-macro definition of a UR5"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:25
+#: e0c10f490df64a50908b6a5c05aa9361
+msgid "Instantiate a UR5 in your workspace and connect it to the table link."
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:27
+#: a302b47fe0684620a17fa91ef70fb2b5
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:28
+#: 1d2bf4330a58444c8434701f3a412f1b
+msgid "Rename the workcell.urdf file from the previous exercise to workcell.xacro"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:30
+#: 6a6b7bda34bf4fc4bca52e430bb1f8ea
+msgid ""
+"Bring in the ur_description package into your ROS environment. You have a"
+" few options:"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:32
+#: 928f11fbf2044b8fa341cef077554a4a
+msgid "You can install the debian packages."
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:38
+#: 6cd1d828be8e486eb45a8f8819a277e9
+msgid ""
+"Note: these may or may not exist for the current distribution of ROS. If "
+"this is the case, you will need to download them from source (see next "
+"step)"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:40
+#: 006985c8f441484a8d83d941d1750ddb
+msgid "You can clone it from GitHub to your catkin workspace:"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:49
+#: 1a76ebea21614792aee876812b3085ee
+msgid ""
+"It’s not uncommon for description packages to put each “module”, “part”, "
+"or “assembly” into its own file. In many cases, a package will also "
+"define extra files that define a complete cell with the given part so "
+"that we can easily visually inspect the result. The UR package defines "
+"such a file for the UR5 (ur5_robot.urdf.xacro): It’s a great example for "
+"this module."
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:51
+#: fd188716b131417d9683249ea787cf84
+msgid ""
+"Locate the xacro file that implements the UR5 macro and include it in "
+"your newly renamed workcell.xacro file.  Add this include line near the "
+"top of your workcell.xacro file, beneath the <robot> tag:"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:57
+#: 856bdcfce540491cb28aeda5e434d316
+msgid ""
+"If you explore the UR5 definition file, or just about any other file that"
+" defines a Xacro macro, you’ll find a lot of uses of ${prefix} in element"
+" names. Xacro evaluates anything inside a “${}” at run-time. It can do "
+"basic math, and it can look up variables that come to it via properties "
+"(ala-global variables) or macro parameters. Most macros will take a "
+"“prefix” parameter to allow a user to create multiple instances of said "
+"macro. It’s the mechanism by which we can make the eventual URDF element "
+"names unique, otherwise we’d get duplicate link names and URDF would "
+"complain."
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:59
+#: e7a8011a385c4990aa2d447d4b2f8efe
+msgid ""
+"Including the ur5.urdf.xacro file does not actually create a UR5 robot in"
+" our URDF model.  It defines a macro, but we still need to call the macro"
+" to create the robot links and joints.  Note the use of the prefix tag, "
+"as discussed above."
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:65
+#: 2f2245c89aa04558ae24b034fe713bd4
+msgid ""
+"Macros in Xacro are just fancy wrappers around copy-paste. You make a "
+"macro and it gets turned into a chunk of links and joints. You still have"
+" to connect the rest of your world to that macro’s results. This means "
+"you have to look at the macro and see what the base link is and what the "
+"end link is. Hopefully your macro follows a standard, like the ROS-"
+"Industrial one, that says that base links are named “base_link” and the "
+"last link is called “tool0”."
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:67
+#: d58a9e0411dc4335968024dffd3a0a20
+msgid ""
+"Connect the UR5 base_link to your existing static geometry with a fixed "
+"link."
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:77
+#: 7dce6918333e4c1f91f3abe848afbdba
+msgid ""
+"Create a new urdf.launch file (in the myworkcell_support package) to load"
+" the URDF model and (optionally) display it in rviz:"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:91
+#: 3dbfc044bed3480c96be0390a19fa28a
+msgid "Check the updated URDF in RViz, using the launch file you just created:"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:93
+#: 10c3ec77883f4fdeafb472cd6f002259
+msgid "roslaunch myworkcell_support urdf.launch"
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:95
+#: 475f2bb9d0a442b78b2ed995f059f717
+msgid ""
+"Set the 'Fixed Frame' to 'world' and add the RobotModel and TF displays "
+"to the tree view on the left, to show the robot and some transforms."
+msgstr ""
+
+#: ../../_source/session3/ros1/1-Workcell-XACRO.md:96
+#: 1c468bd6500f47dbae922f5fac57d362
+msgid "Try moving the joint sliders to see the UR5 robot move."
+msgstr ""
+

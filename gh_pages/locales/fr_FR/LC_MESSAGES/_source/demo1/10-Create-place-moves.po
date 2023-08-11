@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo1/10-Create-place-moves.rst:2
+#: 7f6e21af91924dcb9280563058d37ae6
+msgid "Create Place Moves"
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:4
+#: dca1f0d4332843db861625d4026e226e
+msgid ""
+"The gripper moves through three poses in order to place the box: "
+"Approach, place and retreat. In this exercise, we will create these place"
+" poses for the :abbr:`TCP (Tool Center Point)` coordinate frame."
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:10
+#: 65ffb7726acf4a04b8705d7ad8e6047f
+msgid "Locate Function"
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:12
+#: 6530ad2dd29e4947a8c4ced8565fe478
+msgid ""
+"In the main program , locate the function call to "
+"``application.computePlaceToolPoses()``."
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:14
+#: 0e00b0c8518848d6a325bc2a2070ce0c
+msgid ""
+"Go to the source file of that function by clicking in any part of the "
+"function and pressing :kbd:`F2` in QtCreator."
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:16
+#: b5af933545b74e87a3835ca97c3d4e6f
+msgid ""
+"Remove the first line containing the following ``RCLCPP_ERROR_STREAM "
+"...`` so that the program runs."
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:21
+#: b02431fc3ee249f380b92d694a604dc1
+msgid "Complete Code"
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:23
+#: 23391d4ba5824842beaeb6348b7f13a5
+msgid ""
+"Find every line that begins with the comment ``Fill Code:`` and read the "
+"description. Then, replace every instance of the comment ``UNCOMMENT AND "
+"COMPLETE`` with the appropriate line of code."
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:36
+#: 7cb4985aff944474a2269242c07437ed
+msgid ""
+"The position of the box at the place location is saved in the global "
+"variable ``cfg.BOX_PLACE_TF``."
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:38
+#: f8e0829a3bf04b9382979b5539d40103
+msgid ""
+"|setOrigin()| and |setRotation()| methods enable the modification of the "
+"place transform."
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:39
+#: dbc1b7b6780f45e8ace9fb2feaed48ab
+msgid ""
+"The ``createManipulationPoses()`` uses the values of the approach and "
+"retreat distances in order to create the corresponding poses at the "
+"desired target."
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:44
+#: 3883aee699ff44eb9811139616fefeb1
+msgid "Build Code and Run"
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:46
+#: 55a716166a3745dbac563af72d67f3b2
+msgid "Compile the pick and place node:"
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:48
+#: 3ef3a1fb7948483095bb5d0a93279f8e
+msgid "In QTCreator: :menuselection:`Build --> Build Project`"
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:50
+#: 8bd0274e202c4784a49940d10ece9d9d
+msgid "Alternatively, in a terminal:"
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:56
+#: a5a66503ac5e48069acbf3c70546f7be
+msgid "Run the supporting nodes with the launch file (only if needed):"
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:62
+#: be8aa832b1094d069048fa04f4b27b44
+msgid "In another terminal, run your node with the launch file:"
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:68
+#: cf865355324549acaf658faeb0aa9d5c
+msgid ""
+"The TCP and wrist positions at the place location will be printed on the "
+"terminal. You should see something like this:"
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:79
+#: e2180ff4c9e5419ab05185e48c0c4d3f
+msgid "API References"
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:81
+#: 5285e2930d064b71823e0ec16d61f80e
+msgid "|setOrigin()|"
+msgstr ""
+
+#: ../../_source/demo1/10-Create-place-moves.rst:83
+#: dfc9685b39344f5890bc7bac8541107a
+msgid "|setRotation()|"
+msgstr ""
+

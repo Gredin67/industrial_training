@@ -1,0 +1,125 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo1/6-Open-gripper.rst:2 9d54ebbe756e4584b102af4cbef61e3d
+msgid "Open Gripper"
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:4 f7f9fb227bfa4ecd87e3c9d8cefa8d3c
+msgid ""
+"In this exercise, the objective is to use a \"grasp action client\" to "
+"send a grasp goal that will open the gripper."
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:9 ad78aea6578343e8b27bba718dbc406b
+msgid "Locate Function"
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:11 78332c0eff38453e8c8901489829e146
+msgid ""
+"In the main program, locate the function call to "
+"``application.actuateGripper()``."
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:13 a857d1b4914a4f7dba714639d37e2197
+msgid ""
+"Go to the source file of that function by clicking in any part of the "
+"function and pressing :kbd:`F2` in QtCreator."
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:15 18be5ccf949d4ff28b57e6e014775ed4
+msgid ""
+"Remove the first line containing the following ``RCLCPP_ERROR_STREAM "
+"...`` so that the program runs."
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:20 19ceede9210144c3b4d5141d9aafe3f0
+msgid "Complete Code"
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:22 13f64d385c674ab682d0de57e3db5c62
+msgid ""
+"Find every line that begins with the comment ``Fill Code:`` and read the "
+"description. Then, replace every instance of the comment ``UNCOMMENT AND "
+"COMPLETE`` with the appropriate line of code."
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:35 7bcf284f09d8433fabfc55a5c7598643
+msgid "The ``grasp_goal.goal`` property can take on three possible values:"
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:43 aa5b4f5cf70a4e0d907ef92b88f3cb01
+msgid ""
+"Once the grasp flag has been set, you can send the goal through the grasp"
+" action client."
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:48 88e0dbd6881e4dc593d46687ecef8bbe
+msgid "Build Code and Run"
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:50 88b873886f914bce8862ade0a8b654e2
+msgid "Compile the pick and place node:"
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:52 ca0252ffc44b4b26aecb6b017aeba70a
+msgid "In QTCreator: :menuselection:`Build --> Build Project`"
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:54 3518bcf90a1e40c39a36b5311dc4c478
+msgid "Alternatively, in a terminal:"
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:61 7cd77e481b0b421a9e56e4706c2bb2d7
+msgid "Run the supporting nodes with the launch file (only if needed):"
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:67 c895eaebe0d24523b0e67f3947828da1
+msgid "In another terminal, run your node with the launch file:"
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:73 78ff7bf7f6a04085aa0f4962eef2ec9d
+msgid ""
+"If the task succeeds you will see something like the below in the "
+"terminal. The robot will not move, only gripper I/O is triggered:"
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:84 826c9d779ab4434aa892e08222ed731d
+msgid "API References"
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:86 cca24bfc503f427c98473eac4620f600
+msgid ""
+"`async_send_goal() "
+"<http://docs.ros.org/en/humble/p/rclcpp_action/generated/classrclcpp__action_1_1Client.html#_CPPv4N13rclcpp_action6Client15async_send_goalERK4GoalRK15SendGoalOptions>`_"
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:87 9aa0a80a62eb48fd944eb201d7a6cb92
+msgid ""
+"`wait_for() "
+"<https://en.cppreference.com/w/cpp/thread/shared_future/wait_for>`_"
+msgstr ""
+
+#: ../../_source/demo1/6-Open-gripper.rst:88 225c75ac70774e0fac74bef644a04c35
+msgid ""
+"`std::chrono::duration "
+"<https://en.cppreference.com/w/cpp/chrono/duration>` _"
+msgstr ""
+

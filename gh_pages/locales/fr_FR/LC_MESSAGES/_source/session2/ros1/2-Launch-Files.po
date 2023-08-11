@@ -1,0 +1,192 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:1
+#: 8b50bc475a9349f6a0f3f61a25585199
+msgid "Launch Files"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:2
+#: c7f2c34175b045099567b831e590a61d
+msgid ""
+"In this exercise, we will explore starting groups of nodes at once with "
+"launch files."
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:4
+#: 67757f513bb54f6aad491c99ae1c404a
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:5
+#: 18acd7936a304aa59812bc579b35df11
+msgid ""
+"The ROS architecture encourages engineers to use ''nodes'' as a "
+"fundamental unit of organization in their systems, and applications can "
+"quickly grow to require many nodes to operate. Opening a new terminal and"
+" running each node individually quickly becomes unfeasible. It'd be nice "
+"to have a tool to bring up groups of nodes at once. ROS ''launch'' files "
+"are one such tool. It even handles bringing roscore up and down for you."
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:7
+#: 5976520344904be4ad6b8c5be4c4cf13
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:9
+#: 764a0cbe3afe41caa9de904c9a26eefd
+msgid "Roslaunch Examples"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:11
+#: fe7d35ad72784697bde20ca1a692368b
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:13
+#: d7a21be97deb42b282cc2a3c13489c84
+msgid "Roslaunch XML Specification"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:15
+#: 94617833a23e4e01955d0c13195a257f
+msgid "Debugging and Launch Files"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:17
+#: dc65c198232c46e8952f36163f40e8e7
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:18
+#: 1360ef1d43db4211a981524eeaab1b23
+msgid "In this exercise, you will:"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:19
+#: c5b0cdf631bc42acbafd70ca67afc796
+msgid "Create a new package, myworkcell_support."
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:20
+#: 1fbd0f48a8884649bad0ebf2e2280937
+msgid "Create a directory in this package called launch."
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:21
+#: 28b0e62bff434992ac7855c44b6a744e
+msgid "Create a file inside this directory called workcell.launch that:"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:22
+#: 385d6e1c7bf34190a6928c0f78e77fdd
+msgid "Launches fake_ar_publisher"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:23
+#: b49622c35755439293fae47924de8bf2
+msgid "Launches vision_node"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:25
+#: 88ba80077c3b4d66a5c5655e6f4c664b
+msgid ""
+"You may also choose to launch myworkcell_core node with the others or "
+"keep it separate.  We often configure systems with two main launch files."
+"  In this example, fake_ar_publisher and vision_node are \"environment "
+"nodes\", while myworkcell_node is an \"application\" node."
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:27
+#: a223e2b0c4f640f19bcbf3641a8e974c
+msgid "\"Environment\" Launch File - driver/planning nodes, config data, etc."
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:28
+#: 201759dbd8ba4b40a935d874d6914d50
+msgid ""
+"\"Application\" Launch File - executes a sequence of actions for a "
+"particular application."
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:30
+#: b42286b74e4047f8b2691c733b43a236
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:32
+#: a93fc163ca5e4c41b1e345aa86edca81
+msgid ""
+"In your workspace, create the new package myworkcell_support with a "
+"dependency on myworkcell_core.  Rebuild and source the workspace so that "
+"ROS can find the new package:"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:41
+#: 72c4ce0dc31b4df5a604835f062a5fe3
+msgid ""
+"Create a directory for launch files (inside the new myworkcell_support "
+"package):"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:48
+#: 4d91613f37b84fc0bf73852b4fcf8c8e
+msgid ""
+"Create a new file, workcell.launch (inside the launch directory) with the"
+" following XML skeleton:"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:56
+#: c06d5ec7b4ce4a4ea73496019a4288ae
+msgid ""
+"Insert lines to bring up the nodes outlined in the problem statement. See"
+" the reference documentation for more information:"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:62
+#: 03d7ddf9846a4fea819074bce672cda4
+msgid ""
+"Remember: All launch-file content must be between the <launch> ... "
+"</launch> tag pair."
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:64
+#: 55426e33d4f5470289200d7d2c172c77
+msgid "Test the launch file:"
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:70
+#: 43fd309001bc41e291a4cd86d4ff0fb3
+msgid ""
+"Note: roscore and both nodes were automatically started.  Press Ctrl+C to"
+" close all nodes started by the launch file. If no nodes are left "
+"running, roscore is also stopped."
+msgstr ""
+
+#: ../../_source/session2/ros1/2-Launch-Files.md:72
+#: f16a5fa85d1e4838bce3d1ea5a636011
+msgid ""
+"Notice that none of the usual messages were printed to the console "
+"window.  Launch files will suppress console output below the ERROR "
+"severity level by default. To restore normal text output, add the "
+"output=\"screen\" attribute to each of the nodes in your launch files:"
+msgstr ""
+

@@ -1,0 +1,623 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo3/Setting-up-a-robot.md:1 fa715f6d543f411b9c0c53dd56c10c1d
+msgid "Setting-up-a-robot.md"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:3 785ebcad2b76484a85abc63dc7bbe87d
+msgid ""
+"Next, we will move to using a real robot. For this tutorial, we will be "
+"using the KUKA iiwa 7kg collaborative robot. These instructions are "
+"primarily taken from the iiwa_stack wiki, and it is recommended that the "
+"user read this wiki before following these instructions. Further, as with"
+" any hardware integration task, it is likely that there will be aspects "
+"specific to your setup that may not be addressed here. As always, the "
+"large ROS community knowledgebase is here to help. Solutions to such "
+"problems can usually be found in ROS Answers or in the driver "
+"repository's issue tracker."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:6 ade8c1b8f4764848a84a7938c274f3b7
+msgid "Introduction"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:8 73ad42c14b6b4540825089e8cad86cb1
+msgid ""
+"The KUKA LBR IIWA redundant manipulator is programmed using KUKA Sunrise "
+"Workbench platform and its Java APIs.<br />A Sunrise project, containing "
+"one or more Robotic Application can be synchronized to the robot cabinet "
+"and executed from the SmartPad."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:11
+#: 980d2c474d8f4089a1858ee9718e3bf2
+msgid ""
+"Within this software package, you will find a Robotic Application that "
+"can be used with the robot.<br />It establishes a connection with an "
+"additional machine connected via Ethernet to the robot cabinet via "
+"ROS.<br />The additional machine, having ROS installed, will be able to "
+"send and receive ROS messages to and from the aforementioned Robotic "
+"Application.<br />We make use of ROS messages already available in a mint"
+" ROS distribution as well as custom ones, made to work with the KUKA arm "
+"(iiwa_msgs).<br />A user is then able to manipulate the messages received"
+" from the robot and to send new ones as commands to it, simply within C++"
+" or python code, taking leverage of all the ROS functionalities."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:17
+#: 7cb0208cded7460f8b61b96892a4c9ba
+msgid "Note on computers"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:18
+#: 0ad6a34932754d759c4839ead9437bd5
+msgid ""
+"In this wiki, we will potentially deal with 3 computers. The first is the"
+" Workbench PC. It is used to load settings on the KUKA. It has a version "
+"Sunrise Workbench that is compatible with your robot's installed "
+"firmware, and is running a Windows OS. The second computer is the ROSCORE"
+" computer. This will refer to the additional machine equipped with ROS. "
+"This is the computer (or partition) containing your ROS workspace. "
+"Finally there is the CABINET PC that refers to anything included in the "
+"robot cabinet."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:20
+#: 89908e5e184243259bf585d8667eb58d
+msgid "Setup Guide"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:22
+#: f46bf172f9bd4c648100b7d0535563e8
+msgid ""
+"IMPORTANT : A version of Sunrise Workbench with the Sunrise.Connectivity "
+"module is required to use this stack. If you have something referring to "
+"\"Smart Servoing\", that is the correct module. Connectivity has been "
+"tested on Sunrise versions: 1.5, 1.7, 1.9, 1.11, 1.13, 1.14, and 1.15. If"
+" you do not have the Connectivity module, you might want to ask KUKA for "
+"it."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:24
+#: c2d3c8bd724b4b17a17fb8e6352c34d7
+msgid ""
+"Whatever version you use, the Sunrise OS, Sunrise workbench, and "
+"Connectivity module must all be compatible."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:27
+#: ../../_source/demo3/Setting-up-a-robot.md:28
+#: 83dfde16ea4240d88850a63951afc4ac bf3d2c039d1a4f5ca07d80fad8d18a4b
+msgid "Cabinet setup"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:30
+#: 24d180b7e3bc4a6b988e7a6efb0fc66a
+msgid ""
+"A fair part of this page is taken from Khansari's wiki. In case that one "
+"will go down one day, here it is."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:32
+#: 33bb7126191143948af86451715f516c
+msgid ""
+"Before we start, this is a good time to make a factory image of your "
+"cabinet. If you purchased the KUKA recovery stick, this will allow you to"
+" restore the cabinet in case something goes wrong. Unfortunately the "
+"recovery stick does not come with a factory image, so make one before you"
+" get started. To do that, connect a monitor and keyboard to the cabinet "
+"then simply turn off the cabinet, insert the usb, and reboot the cabinet."
+" It will boot to the recovery menu. You will likely need to change the "
+"language using the Sprachauswahl button. Select create image and give it "
+"a name. When you are done shut down the cabinet, remove the stick, and "
+"reboot."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:34
+#: 3e75b46e2fba4b8db723d16c9eca7f86
+msgid ""
+"The Cabinet of an IIWA robot has multiple ethernet ports. Unless "
+"otherwise specified, we will make use of the KONI interface."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:36
+#: e1ef83a9f1674c8e9a05771406e66327
+msgid ""
+"NOTE: The KONI Ethernet port is on the left side of the front panel of "
+"the cabinet. There should be a label on top of it."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:38
+#: 013ad1c319714ac88a4ea8ce29c5201f
+msgid ""
+"By default, the KONI interface belongs to the Real Time OS of the "
+"Cabinet. It is available basically only for FRI.<br />To use it, we need "
+"to change the configuration of the Cabinet itself."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:41
+#: f0474fecff74439cb7e23c31f9c1885f
+msgid ""
+"WARNING: Follow these instructions at your own risk. KUKA does not "
+"provide these instructions, as it is rather a home-brew solution. It may "
+"cause problems to your hardware (even if so far none is known)."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:43
+#: d415aaf3112d4ef5a7e2ec68a4c25b43
+msgid "Change the configuration of the KONI interface"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:45
+#: 5202c2e0012042eba07618163d818a85
+msgid ""
+"Log into the Cabinet.<br />There are different methods to have access to "
+"the cabinet. The best for this job is to connect the cabinet to an "
+"external monitor, mouse, and keyboard (USB and DVI ports on the bottom "
+"left) and start the cabinet without the SmartPad plugged in.<br />The "
+"Windows7 Embedded should start up with the KukaUser already logged in, if"
+" not you could search for the credentials of that user, google is your "
+"friend."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:49
+#: c366ee918b864aa5a76ac7ce0822a59e
+msgid ""
+"Shutdown KRC<br />Right-click on the green icon in the system tray "
+"(bottom right, next to the clock) and click Stop KRC."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:52
+#: 285a58a748ce49948deb759b21a89836
+msgid ""
+"Check the Network Interfaces<br />Open the list of the network "
+"interfaces: Start -> View network connections.<br />At this point you "
+"should only have one interface: Realtime OS Virtual Network Adapter.<br "
+"/>Just remember it exists and DO NOT EVER CHANGE ITS SETTINGS."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:57
+#: 4330eed8723c4f40bed83863dab07b1a
+msgid ""
+"Open a terminal and type<br "
+"/>C:\\KUKA\\Hardware\\Manager\\KUKAHardwareManager.exe -assign OptionNIC "
+"-os WIN<br />This will assign the KONI interface to Windows."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:61
+#: bac589b1acdc4785b21f163a1d3a353f
+msgid ""
+"Note: If you are not familiar with the German keyboard, you might want to"
+" change it by going to start->Region and Language -> Keyboards and "
+"language and selecting your favorite keyboard layout."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:63
+#: 6c2ffd5b9b5f44f0b35eb18d9e185075
+msgid ""
+"A COMMON ISSUE: It has been reported by several users that the above "
+"command does not work in some new versions of Sunrise OS, and gives the "
+"following error: \"Assignment not possible while KS is running\". To "
+"handle this issue you need to remove KS from the windows auto startup. Do"
+" this by going to start -> msconfig.exe and disabling BoardPackage and KR"
+" C. Restart the PC and now KUKA software should not be loaded. Now apply "
+"the command. After that, put back the KS in the Windows auto startup. "
+"Restart Windows and you should be good to continue with the remaining "
+"steps."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:67
+#: 2cc09958b37f4bb287c5ec135e17646f
+msgid ""
+"Install the network adapter driver (often not needed)<br />Open the "
+"Device Manager, if you do not have any network adapter marked in yellow "
+"then just skip this point.<br />Else, You can find the driver for it in "
+"C:\\KUKA\\Hardware\\Drivers.<br />Sometimes you will find there two "
+"folders for different Ethernet controllers, check within the Device "
+"Manager which one you need."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:72
+#: b606d92d21b840c6a6dc9fa2525ecf99
+msgid ""
+"Reboot and open Start -> View network connections again<br />Change the "
+"settings (IP address) of the new Ethernet adapter to the one you want to "
+"use - within the Network adapter settings in Windows. Choose a different "
+"subnet than the one used by Sunrise Workbench, for example, we use IP: "
+"160.69.69.69 and subnet mask: 255.255.0.0."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:75
+#: 154b044b6cb9431093066363229e5276
+msgid ""
+"Alternatively, you could open C:\\Windows\\System32\\drivers\\etc\\hosts "
+"as Administrator and add the hostname and IP of the ROS machine you are "
+"using. This will let you get an IP within the subnet via DHCP."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:77
+#: 73515bf2acdd4927901a1e3ef4be90e7
+msgid ""
+"Connect an Ethernet cable from the KONI interface to the Ethernet adapter"
+" on the ROSCORE side."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:79
+#: e654b0e5eca14a838773fae649e0f986
+msgid "Further comments from users can be found in some issues: e.g. #65"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:82
+#: ad02770512e7495188a958f0804be939
+msgid ""
+"NOTE:<br />Due to this alteration, other applications using the KONI "
+"Ethernet Port of the Cabinet will not work anymore.<br />For example, any"
+" application using the native KUKA FRI library will not be functioning, "
+"as it uses the same Ethernet Port for communication.<br />To revert the "
+"change execute:<br />C:\\KUKA\\Hardware\\Manager\\KUKAHardwareManager.exe"
+" -assign OptionNIC -os RTOS<br />this will assign the KONI interface back"
+" to the Real Time OS."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:94
+#: 7bce3b51ebef46edb5816862902412ba
+msgid "Roscore PC setup"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:96
+#: 74b4cdb0d16b4fd69d42b0431c0a69e4
+msgid ""
+"The first 3 steps should already have been completed if you are following"
+" this tutorial. However, they are kept here for completeness."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:98
+#: fd89d20be198494384fd9c017a12fa12
+msgid ""
+"Install ROS KINETIC or INDIGO (if not already there) as described at "
+"http://wiki.ros.org/kinetic/Installation/Ubuntu. (till section 1.7)<br "
+"/>It is also a good idea to install the python catkin tools<br />sudo "
+"apt-get install python-catkin-tools"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:102
+#: 02462f21fb7541a0aae8ff13c623d2d6
+msgid ""
+"Clone this repository to your workspace (you can omit the first 3 "
+"commands if you already have one) :<br />mkdir ros_ws && cd ros_ws && "
+"mkdir src<br />catkin_init_workspace<br />git clone "
+"https://github.com/SalvoVirga/iiwa_stack.git src/iiwa_stack"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:108
+#: 295bade18aff422693a51de22ca28833
+msgid ""
+"Download dependences :<br />rosdep install --from-paths src --ignore-src "
+"-r -y"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:111
+#: b93eba21a75145b4878ade7ea2056afc
+msgid "Build the workspace :<br />catkin build"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:114
+#: 697f5ce3414645ca9b2b149ae4b6c8b9
+msgid "Source workspace :<br />source devel/setup.bash"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:117
+#: e3b877a224bc4f338b3e135f807a005b
+msgid ""
+"Setup network :<br />Connect the KONI port of the cabinet to the ROS PC. "
+"Setup the network such that the ROS PC has a static IP address on the "
+"same subnet as the one used by the cabinet. For this example we are using"
+" subnet: 255.255.0.0 and IP: 160.69.69.100."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:120
+#: 9f0ceaf8467c49a19db46b15737b85e7
+msgid ""
+"Open<br />gedit ~/.bashrc &<br />and append these two lines at the end<br"
+" />export ROS_IP=xxx.xxx.xxx.xxx<br />export "
+"ROS_MASTER_URI=http://$ROS_IP:11311<br />With xxx.xxx.xxx.xxx an IP "
+"address on the same subnet of the one you used in the SUNRISE setup. "
+"Also, configure the network interface - within your Operating System - "
+"you are going to use with the same IP address. For example, we use "
+"160.69.69.100."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:127
+#: 346d70b8de2a407299b0ab3350793173
+msgid ""
+"Open a terminal and ping the KONI port of the cabinet.<br />In our case :"
+" ping 160.69.69.69<br />if you get an answer, everything is ready."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:132
+#: 4034650fa8ce4124a3c8af0d984353f3
+msgid "Sunrise OS Setup (on Workbench PC)"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:133
+#: 1ed89bd654dc49f59b504479a78ef911
+msgid ""
+"Next we will do some setup on the robot's Sunrise OS using the workbench "
+"PC (the Windows PC with Sunrise Workbench installed). The iiwa is "
+"somewhat unique in that the ROS node actually runs on the controller. "
+"Here we are going to use the Sunrise Workbench utility to load the "
+"necessary files on the controller. It is worth noting that this utility "
+"is also the only way to change the majority of the iiwa settings, so if "
+"you need to make changes to the safety config or other settings, this "
+"will be the way to do it."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:134
+#: 87eeda49e2a34723afc1b21a4c62a67c
+msgid "Connect the Workbench PC"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:135
+#: 97b691a340754a6c88c7aa3a7de0abc2
+msgid ""
+"The workbench PC should be connected to the cabinet using the x66 "
+"Ethernet port. Depending on the setup of your computer, you may have to "
+"define a static IP as well."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:137
+#: 12e2542799b6458d87c57a570dea0dc9
+msgid "Set up your Sunrise Project"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:139
+#: 6089fe89187c4f0d99b011e84ec1ff33
+msgid ""
+"Create a Sunrise project, or load an existing one from the controller "
+"(default IP: 172.31.1.147)."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:140
+#: b622026c48084cfb9dad7e3013994c9e
+msgid "Open the StationSetup.cat file"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:141
+#: 46707bedcfc540d6a24a3d6fb6bdc39e
+msgid "Select the Software tab"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:142
+#: 70fcb16665c6451aa14b50af389382d3
+msgid ""
+"Enable the Servo Motion packages, this is how that page should look like "
+": ![station][stationsetup]"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:144
+#: 1adeb56f1033407db444909c267d4ebf
+msgid "Save and apply changes"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:146
+#: 217b77a57f1d49229f52adfffd5fa29c
+msgid ""
+"Now you will need to add iiwa_stack (more precisely the content of "
+"iiwa_ros_java) to the Sunrise project."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:148
+#: 90e4bed6afee4a76b202df0e8487919b
+msgid "You could either:"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:150
+#: 24644a7287694d4cae969642e13a272c
+msgid ""
+"Copy iiwa_ros_java into the Sunrise Project: (changes will not be seen by"
+" git)"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:152
+#: 36e776f3de31424b846f4c59432809b3
+msgid "Copy the content of iiwa_stack/iiwa_ros_java/src inside the src folder."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:153
+#: f6eaa07709494b9db48d2c6acc65e806
+msgid ""
+"Copy the folder iiwa_stack/iiwa_ros_java/ROSJavaLib into the root of the "
+"project."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:154
+#: e6f50dd84a50494c907036c50c926b92
+msgid ""
+"Inside Sunrise Workbench select all the files inside ROSJavaLib, right "
+"click and choose Build Path -> Add to Build Path... (you may have to "
+"refresh to see them)"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:156
+#: 052819538a9546b5885ed33f517a75de
+msgid "or"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:158
+#: 0e391c36299a411a9b0e0cff07fe6588
+msgid "Create symlinks to iiwa_ros_java: (changes will be tracked by git!)"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:160
+#: c0c6a7e0d8fc4ecda51ab95efc15e536
+msgid ""
+"Run the command prompt as an administrator (press windows key->type "
+"cmd->right click->run as an administrator)."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:161
+#: ec68c74378f04231975c7967c1789af3
+msgid "type cd \\path\\to\\sunrise\\project"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:162
+#: 778e28bdf6bd42f4b83282d64d55c87f
+msgid ""
+"type mklink /D ROSJavaLib "
+"..\\relative\\path\\to\\iiwa_stack\\iiwa_ros_java\\ROSJavaLib"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:163
+#: 41af3ed682694cd5826033d777d23697
+msgid "type cd src"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:164
+#: 5368f8f962f443a6ab6995bcac645602
+msgid ""
+"type mklink /D de "
+"..\\relative\\path\\to\\iiwa_stack\\iiwa_ros_java\\src\\de"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:165
+#: a463570b02ea4d6a94fb65b08640ed61
+msgid ""
+"Inside Sunrise Workbench select all the files inside ROSJavaLib, right "
+"click and choose Build Path -> Add to Build Path..."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:167
+#: fccb4d4b7e034dd789f15dcaf7abaa12
+msgid ""
+"❗ IMPORTANT ❗<br />6. Are your Safety Configuration already set? If not, "
+"you should! HERE we show how we set up ours.<br />7. Be sure that the "
+"right master_ip is set in the config.txt file. See below."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:171
+#: 4139ad74bb544b7181d4ab4d2b81b94e
+msgid "Configuration File"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:173
+#: 321cab4c5ca44b969e7237ac7852144d
+msgid ""
+"From release 1.7.x, we introduced a configuration file that allows to "
+"easily set some parameters.<br />In the  Java project you just created, "
+"you should have a config.txt file."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:176
+#: 2f99db56dcf743099982e652c0392485
+msgid "There you can set :"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:177
+#: bff816f4d7c44739be189d08e6201f26
+msgid ""
+"robot_name: name of your robot, by default iiwa. Read more about this "
+"HERE;"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:178
+#: 63d55c05c77a426a8891ed7995526435
+msgid ""
+"master_ip: IP of the ROSCORE machine you just set HERE, for example "
+"160.69.69.100;"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:179
+#: 52a5400acf174c15b395be70243cde1e
+msgid ""
+"master_port: port for ROS communication, also set HERE, by default it is "
+"11311;"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:180
+#: 605ca2ee85264678a46fe02ae7ce3152
+msgid ""
+"ntp_with_host: turns on/off the ntptimeprovider from ROSJava to sync the "
+"two machines. The default value is false, note that you need an NTP "
+"provider on the external machine if you want to set it to true."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:182
+#: ead89acb0a2249e5aafe039faaa25236
+msgid ""
+"Once you properly fill this file, everything is ready. There should be no"
+" red sign or problem found by the IDE. Is this a new project? Then you "
+"first need to Install it (Station Setup -> Installation) and then "
+"synchronize it."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:185
+#: 1d7c1143d2084e029d4e7f4962987c81
+msgid "Execute trajectory on robot"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:187
+#: 9cd1ad57748046608eae29ecf365a48d
+msgid ""
+"With setup complete, you are ready to execute on the robot. First, switch"
+" the robot into auto mode by turning the key, selecting auto, and turning"
+" the key back."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:189
+#: d8af8485d0244f2f81265eeba7099d6d
+msgid ""
+"Then select the ROSSmartServo program on the smart pad and press the run "
+"button."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:191
+#: 7375a0702b254058af7d010bc24e3b38
+msgid ""
+"Finally, simply run the same code from before, this time with "
+"sim_robot=false."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:193
+#: 70d55b5474fd40d8a9e67721e5d82f26
+msgid ""
+"roslaunch pick_and_place pick_and_place.launch sim_sensor:=false "
+"sim_robot:=false"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:196
+#: 5368073ec54e454ba7431b6ca51eec0c
+msgid ""
+"The system should use a 3D scan of the environment to find the pick "
+"location, path plan the pick and place moves, then ask if you would like "
+"to execute. Simply key in y+enter to execute on the robot."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-robot.md:198
+#: 2243f82cde2f42c8a2d4d64aba29ae26
+msgid ""
+"Note that a ROS node is actually running on the KUKA cabinet PC. This "
+"means that pausing the program on the smart pad (e.g. by manually jogging"
+" it) or restarting the launch file can cause problems. In order to get "
+"the program to reconnect to the ROS master, you may need to restart the "
+"program by unselecting it and reselecting it in the program menu then re-"
+"running it."
+msgstr ""
+

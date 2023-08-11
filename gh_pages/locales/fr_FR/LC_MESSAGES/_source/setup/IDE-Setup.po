@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/setup/IDE-Setup.md:1 49b4495561304a978b1c62ef74deab6d
+msgid "IDE Setup"
+msgstr ""
+
+#: ../../_source/setup/IDE-Setup.md:2 003bfd33c0bf4aaeafe3a7a673414be9
+msgid ""
+"An integrated development environment (IDE) is a text editor with a set "
+"of tools for helping you program, like syntax highlighting, autocomplete,"
+" and debugging. This section details the installation and setup of two "
+"IDEs commonly used for ROS development."
+msgstr ""
+
+#: ../../_source/setup/IDE-Setup.md:4 a2e8eddc18a44896aaf667eb8429cd0d
+msgid ""
+"These tutorials assume you are using QT Creator. If you are not sure "
+"which IDE to use, we recommend QT Creator."
+msgstr ""
+
+#: ../../_source/setup/IDE-Setup.md:6 769e1c1d2f20446188919e3e319b5f99
+msgid "QT Creator"
+msgstr ""
+
+#: ../../_source/setup/IDE-Setup.md:7 aeafbcfa67f84dc99a2c23d03fb0811c
+msgid ""
+"QT Creator is a popular cross-platform IDE. ROS-Industrial provides a ROS"
+" QT Creator plug-in with features like ROS build tool integration, "
+"automatic sourcing of workspaces, and templates for commonly created "
+"files."
+msgstr ""
+
+#: ../../_source/setup/IDE-Setup.md:9 7732965acd194bbb8aeb8abad2ce12ac
+msgid ""
+"You can easily install the editor bundled with the plug-in from the Snap "
+"store here. Click the green Install button in the top right and click "
+"View in Desktop store. In the window which opens, install the "
+"application. Then you can open the IDE by searching for QT Creator ROS on"
+" your system."
+msgstr ""
+
+#: ../../_source/setup/IDE-Setup.md:11 d97745bd4e814bac9f46bda93a2462f6
+msgid ""
+"To make a new ROS project open QT Creator and go to File -> New Project "
+"in the toolbar. In the resulting pop-up, navigate to Other Project in the"
+" left section. Select ROS Workspace in the middle section. Next you will "
+"be prompted to enter the project details. For the project workspace you "
+"must select an existing directory, so you may have to use your system's "
+"file explorer to create a new directory for your project."
+msgstr ""
+
+#: ../../_source/setup/IDE-Setup.md:13 809f1c8cf74d4d4682ad46f9625e9da8
+msgid ""
+"Once the project is created, you may right click on the project name "
+"under the Projects window on the left side of the GUI to bring up the "
+"project context window. Select Add New. You can choose ROS in the left "
+"section and Package in the middle section to create a new ROS package."
+msgstr ""
+
+#: ../../_source/setup/IDE-Setup.md:15 4485222e3d9940d29959dc66889a6640
+msgid ""
+"Once you have a package, you can build the workspace by selecting Build "
+"in the toolbar then Build all projects."
+msgstr ""
+
+#: ../../_source/setup/IDE-Setup.md:17 01e52d1a262c4758a66eeadbcb625374
+msgid "VS Code"
+msgstr ""
+
+#: ../../_source/setup/IDE-Setup.md:18 cf232043c58a460f9282d568307b2d21
+msgid ""
+"Visual Studio Code is a Microsoft editor which can be used for ROS "
+"projects. Download the editor and install the C/C++ extension pack and "
+"the ROS extension pack. (Make sure you get the right ones - both "
+"extensions are authored by Microsoft.)"
+msgstr ""
+
+#: ../../_source/setup/IDE-Setup.md:20 81acf1153e4f47fcbc37cd5300e7b73c
+msgid ""
+"After opening a workspace folder, navigate to the workspace settings "
+"(Ctrl+shift+P -> \"Preferences: Open workspace settings (JSON)\"). Add "
+"the key \"ros.distro\": \"<distro>\". For example,"
+msgstr ""
+
+#: ../../_source/setup/IDE-Setup.md:28 5d5e4e28a4f442489b4a39b4c846eca5
+msgid ""
+"Upon opening a C++ file, you should get a pop-up offering to configure "
+"the workspace settings. After accepting, you should have a file "
+".vscode/c_cpp_properties.json similar to"
+msgstr ""
+
+#: ../../_source/setup/IDE-Setup.md:49 b6fb5f38334642ed9627f0da90c200d8
+msgid ""
+"Add the appropriate ROS and user include paths to resolve IDE include "
+"errors. For example,"
+msgstr ""
+
+#: ../../_source/setup/IDE-Setup.md:59 302406b34586452eadfb536dc67ae620
+msgid "where humble can be changed to the appropriate distro."
+msgstr ""
+

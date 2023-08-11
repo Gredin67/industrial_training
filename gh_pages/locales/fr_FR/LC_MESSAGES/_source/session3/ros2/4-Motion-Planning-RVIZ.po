@@ -1,0 +1,308 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:1
+#: 8fb6edcd3f88494389a1928dcb1688e7
+msgid "Motion Planning using RViz"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:2
+#: 1121f4b285954bdfb722c4f56cffbdb9
+msgid ""
+"In this exercise, we will (finally) learn how to use the MoveIt! RViz "
+"plugin to plan and execute motion on a simulated robot. We will explore "
+"the different options and constraints associated with both MoveIt! and "
+"the RViz plugin."
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:5
+#: 398d33e2bdbb4c6b80ed817976ecb18d
+msgid "Launch the Planning Environment"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:7
+#: b49e039e396a49a680db89befca3d7dd
+msgid "Source your ROS2 workspace."
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:9
+#: f04b78438c544882946b59c122a56d64
+msgid "Bring up the planning environment, with simulated execution:"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:15
+#: 4cd12becc20742f19a5057145520ed1d
+msgid "Plugin Display Options"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:17
+#: d84f7dbb1dbe41b8b620ee3a5934ad26
+msgid ""
+"Find and test the following display options in the Displays panel, Motion"
+" Planning display"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:19
+#: 0a8b2f134b31467abba2cf81319e92e4
+msgid "Scene Robot -> Show Robot Visual"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:21
+#: f219dfa6583245da93e2bc29e9fcb31f
+msgid "Scene Robot -> Show Robot Collision"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:23
+#: 7424ad884b0d48b2994443e73880da30
+msgid "Planning Request -> Query Start State"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:25
+#: 331f8d694bb64f82b4464fd7d4550b44
+msgid "Planning Request -> Query Goal State"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:27
+#: 8771472b7bc44399b7de214275938448
+msgid ""
+"For now, enable display of the Show Robot Visual and Query Goal State, "
+"leaving Show Robot Collision and Query Start State disabled"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:29
+#: e130067926904fe4b60bf967a6bbaee9
+msgid ""
+"Use the Panels dropdown next to File to display a trajectory preview "
+"slider by checking the Motion Planning - Trajectory Slider box"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:31
+#: 08d37039a3fb458da56fa2028753692f
+msgid "this slider allows for detailed review of the last planned trajectory"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:32
+#: 57ea32cb896d4aac967fbc0f94746ae2
+msgid ""
+"Check the Context tab in the motion planning panel to ensure that "
+"RRTConnect is selected."
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:33
+#: ff5a70a5e01c47ca9462a47c0b60cec1
+msgid ""
+"If you are struggling to find a motion plan, try increasing the planning "
+"time and/or planning attempts."
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:35
+#: 74c542f921fb4ef399e0ebbb2b7682bd
+msgid "Basic Motion"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:37
+#: 7727d988da3b44ff991b37bf5355de8b
+msgid "In the Motion Planning panel, select the Planning tab"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:39
+#: 4ccb46912def4afea3895e718b90af53
+msgid "Under the Query section, expand the Select Goal State section"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:41
+#: 32229045c4d24d64b69a58b2f79d5944
+msgid "select <random valid>"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:42
+#: 6583934f83904e98aac671a3663ff56b
+msgid ""
+"you may need to repeat this a few times to get a position that is not in "
+"collision.  The robot model will be shaded RED if MoveIt detects a "
+"collision.  \"Random Valid\" is supposed to find a collision-free target "
+"position, but quits trying after 100 random-sampling attempts."
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:43
+#: a3c0e6f918a441dc85f8e262ec6a9c75
+msgid "observe the goal position in the graphics window"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:45
+#: abb8eb5569f54e84a82e79e7f21e4e17
+msgid ""
+"Click Plan to see the robot motion generated by the MoveIt! planning "
+"libraries"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:47
+#: 778bc983df4949f79352c50bb7d348fa
+msgid ""
+"select Displays -> Motion Planning -> Planned Path -> Loop Animation to "
+"show the planned path in a cyclic display."
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:48
+#: 27a0f60beade45f3829884970ab0b4d0
+msgid ""
+"select Displays -> Motion Planning -> Planned Path -> Show Trail to show "
+"the planned path in a swept display."
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:50
+#: ac5004362c8c479a9e69cb1ec34c3637
+msgid "Click Execute to run the motion on the simulated robot"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:52
+#: 17470b82564240f598f79ad8490142b2
+msgid ""
+"observe that the multi-colored scene robot display updates to show that "
+"the robot has \"moved\" to the goal position"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:54
+#: b45c3b4aafdc41db8745af89f774f8b7
+msgid "Repeat steps 2-5 a few more times"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:56
+#: 4c28ba6533944e5399e28950e8f9989c
+msgid ""
+"try using the interactive marker to manually move the robot to a desired "
+"position"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:57
+#: 1c7c9266fad54429a46d7e6a306c23aa
+msgid "try using a named pose (e.g. \"straight up\")"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:59
+#: 6aa5dc3e134f4d98a6a44df27304c788
+msgid "Beyond the Basics"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:61
+#: f2b11028dc1348e5bce5ca1de32e82e8
+msgid "Experiment with different Planning Algorithms"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:63
+#: c63910bff6e94ab8bc5f0a038d0bbd80
+msgid ""
+"select Context tab, choose a Planning Algorithm (drop-down box below "
+"\"OMPL\")"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:65
+#: 128d1cd72ff6476197fbed5fd0c56f39
+msgid "the RRTConnect algorithm is one of our favorites."
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:67
+#: f06c89f20bc84c96a1b5cc5996b51f7e
+msgid "Environment Obstacles"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:69
+#: ed741c003bf74e7bbb9fbdc76b1c1517
+msgid ""
+"Adjust the Goal State to move the robot into collision with an obstacle "
+"(e.g. the table)"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:71
+#: 3201575f1fb241d6aa3cf1a8bf02953b
+msgid "note the colliding links are colored red"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:73
+#: 57c21bd618f04277a59eaf81db56f331
+msgid ""
+"depending on the \"Collision-Aware IK\" setting on the Planning tab, the "
+"robot may try to search through different IK solutions to find a non-"
+"colliding solution."
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:75
+#: f443cf8e62944608a971a584787b133f
+msgid "Try to plan a path through the obstacle"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:77
+#: 38c10f1bab67423899579ec2bad09770
+msgid ""
+"It may help to have \"Collision-Aware IK\" disabled when moving the Goal "
+"State"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:79
+#: 9f44f716177b40cd8cdf9da1ed7fec15
+msgid ""
+"If the robot fails to plan, check the error log and try repeating the "
+"plan request"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:81
+#: 382eab97ad194bfe995fb1a89837b161
+msgid ""
+"Because the default planners are sampling-based, they may produce "
+"different results on each execution"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:83
+#: aa768887524e4af586afde17e9949cf7
+msgid ""
+"You can also try increasing the planning time to allow a successful plan "
+"to be created"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:85
+#: 5350ae23cbc140d88952665058e2cd92
+msgid "Try different planning algorithms in this, more complex, planning task"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:87
+#: e389f94ced7540359ab87733e63d153b
+msgid "Try adding a new obstacle to the scene:"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:88
+#: 624ff1953d92404eb583ee5903b9dcc2
+msgid "Under the Scene Objects tab, Add a Box object (0.1 x 1.0 x 0.1)"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:89
+#: de07924b88ed4c7fbcb3c8a7fde5aba1
+msgid "Move the Box into an interesting position, using the manipulation handles"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:90
+#: b61576bf424d40efbd6a4371162d1db5
+msgid "Press Publish Scene, to push the updated position to MoveIt"
+msgstr ""
+
+#: ../../_source/session3/ros2/4-Motion-Planning-RVIZ.md:91
+#: a49989d6652d4559864a3654aa78f0eb
+msgid "Try to plan around the obstacle"
+msgstr ""
+

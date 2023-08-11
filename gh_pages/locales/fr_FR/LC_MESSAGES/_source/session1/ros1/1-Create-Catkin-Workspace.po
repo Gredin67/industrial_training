@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:1
+#: 85b7c259f8c542e49ec73af2dcc32b2e
+msgid "Create Catkin Workspace"
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:2
+#: 3d43aa142cb943da9bc20a512f98a463
+msgid "In this exercise, we will create a ROS catkin workspace."
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:4
+#: 99b00c3d3238446e869bfb6fb0ce783a
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:5
+#: 2c94d2240f294101a1509994b42f63ca
+msgid ""
+"Any ROS project begins with making a workspace. In this workspace, you "
+"will put all the things related to this particular project. In this "
+"module we will create the workspace where we will build the components of"
+" our Scan-N-Plan application."
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:7
+#: ee1983e42fe94c319b0f5f4afb9dc6fd
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:8
+#: e4da6183b25148f1b7fd475a47d4b1b5
+msgid "Steps to creating a workspace: Creating a Catkin Workspace"
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:10
+#: 4bdac8e86af94f03bc4ab16ee42d2532
+msgid ""
+"Note: Many current examples on ros.org use the older-style "
+"catkin_init_workspace commands.  These are similar, but not directly "
+"interchangeable with the catkin_tools commands used in this course."
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:12
+#: 47827d8b07bc483b9923d50a200f654d
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:13
+#: 6763fa29e1814f8e92d3b1b71d174728
+msgid "Using a Catkin Workspace: Using a Workspace"
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:15
+#: e8671c1a7e0d4700b5c081ce90ac265b
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:16
+#: 865e70b7e4024b46a537402cf79794e2
+msgid ""
+"We have a good installation of ROS, and we need to take the first step to"
+" setting up our particular application. Your goal is to create a "
+"workspace - a catkin workspace - for your application and its "
+"supplements."
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:18
+#: ce0352d59afe4142a0b4112ff67a32df
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:20
+#: 68fdac3a0b44457fb07f87b33770ddec
+msgid "Create a Catkin Workspace"
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:22
+#: 6c3a2368b41f4b3bade82466f0e02e77
+msgid "Create the root workspace directory (we'll use catkin_ws)"
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:30
+#: 64a4ab4f5f634619aeac726b8594e528
+msgid "Initialize the catkin workspace"
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:35
+#: e58fcfdf903f4fa7aca4b12ad7d6fa1f
+msgid ""
+"Look for the statement \"Workspace configuration appears valid\", showing"
+" that your catkin workspace was created successfully.  If you forgot to "
+"create the src directory, or did not run catkin init from the workspace "
+"root (both common mistakes), you'll get an error message like \"WARNING: "
+"Source space does not yet exist\"."
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:37
+#: 09c783eff8d4491f90e4e15daa36b299
+msgid ""
+"Build the workspace. This command may be issued anywhere under the "
+"workspace root-directory (i.e. catkin_ws)."
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:44
+#: 88130e5c247e4cc6b923d676693cd042
+msgid ""
+"See that the catkin_ws directory now contains additional directories "
+"(build, devel, logs)."
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:46
+#: 09b72286307f453789c35f9275e32e32
+msgid ""
+"These new directories can be safely deleted at any time (either manually,"
+" or using catkin clean).  Note that catkin never changes any files in the"
+" src directory.  Re-run catkin build to re-create the build/devel/logs "
+"directories."
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:55
+#: ab18a096fe5e46ceaf2d2480d076e1be
+msgid ""
+"Make the workspace visible to ROS. Source the setup file in the devel "
+"directory."
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:61
+#: bda67aaa3da44311acac1dccc38e8673
+msgid "This file MUST be sourced for every new terminal."
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:62
+#: 84e382217dce413098da0d2d62e3cedb
+msgid ""
+"To save typing, add this to your ~/.bashrc file, so it is automatically "
+"sourced for each new terminal:"
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:64
+#: dea55d1c2b8842a197ea08967b8162ef
+msgid "gedit ~/.bashrc"
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:65
+#: 4d9ce955b9424cb7a6172a67030bcb4a
+msgid "add to the end: source ~/catkin_ws/devel/setup.bash"
+msgstr ""
+
+#: ../../_source/session1/ros1/1-Create-Catkin-Workspace.md:66
+#: 9cb0724c05104a6399e2c509e2fa5d23
+msgid "save and close the editor"
+msgstr ""
+

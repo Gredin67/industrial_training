@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo1/9-Pick-up-box.rst:2 eb2b0f50e4e14d1382d8d316ae9c9173
+msgid "Pick Up Box"
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:4 20aa6694dd654444847098f13f36e98f
+msgid ""
+"In this exercise, we will move the robot through the pick motion while "
+"avoiding obstacles in the environment. This will be accomplished by "
+"planning for each pose and closing or opening the vacuum gripper when "
+"appropriate. Also, we will demonstrate how to create a motion plan that "
+"MoveIt! can understand and solve."
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:12 e529a257dda64c54929886414d6a29ef
+msgid "Locate Function"
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:14 12de0d0f31f4410cb6a58a07292d322f
+msgid ""
+"In the main program, locate the function call to "
+"``application.doBoxPickup()``."
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:16 223d9b1d6d5d434180ecde020f09a680
+msgid ""
+"Go to the source file of that function by clicking in any part of the "
+"function and pressing :kbd:`F2` in QtCreator."
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:18 a813f136092e4bc891199856e8f03519
+msgid ""
+"Remove the first line containing the following ``RCLCPP_ERROR_STREAM "
+"...`` so that the program runs."
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:23 38b4ca8215844a87ab6e60bcfd0a72af
+msgid "Complete Code"
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:25 9350756f63e740ba824306e111d2a6ab
+msgid ""
+"Find every line that begins with the comment ``Fill Code:`` and read the "
+"description. Then, replace every instance of the comment ``UNCOMMENT AND "
+"COMPLETE`` with the appropriate line of code."
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:38 96439ccb5ff246238392c9b1957d611c
+msgid ""
+"Inspect the ``setAttachedObject`` method to understand how to manipulate "
+"a ``RobotState`` object which will then be used to construct a motion "
+"plan."
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:40 d8bc91700ecc46c78a9595a88db2b6b5
+msgid ""
+"Inspect the ``doMotionPlanning`` method to see how an entire motion plan "
+"request is defined and sent."
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:42 8c814b76ffcd40d98d7c4530768ef9c2
+msgid "The |execute()| method sends a motion plan to the robot."
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:46 9e73cc6db9ab40f1abb25dd9b4938044
+msgid "Build Code and Run"
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:48 a05a7578c2424070a99061ff10f5de53
+msgid "Compile the pick and place node:"
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:50 cbb742310914465e999f7f372f395549
+msgid "In QTCreator: :menuselection:`Build --> Build Project`"
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:52 65ebde119def42049a43a7d6bef44f8d
+msgid "Alternatively, in a terminal:"
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:58 bf3c9234534a4a2e9e1dedebacd3c711
+msgid "Run the supporting nodes with the launch file:"
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:64 1f640998c65049d68ef4b3ae4d69aeeb
+msgid "In another terminal, run your node with the launch file:"
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:70 cd370a93ae5048bd8eabb973d8a78f71
+msgid ""
+"The robot should go through the pick moves (approach, pick and retreat) "
+"in addition to the moves from the previous exercises. In the terminal you"
+" should see something like this:"
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:81 9f1f9c4144674c02963d3ada87b317c6
+msgid "API References"
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:83 cb77c1a95efa44acad37d4885991e657
+msgid ""
+"`MoveItCpp class reference "
+"<https://docs.ros.org/en/api/moveit_ros_planning/html/classmoveit__cpp_1_1MoveItCpp.html>`_"
+msgstr ""
+
+#: ../../_source/demo1/9-Pick-up-box.rst:85 a24ffab674954ea19db7124b0795408e
+msgid "|execute()|"
+msgstr ""
+

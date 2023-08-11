@@ -1,0 +1,369 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session2/ros1/0-Services.md:1 f81a0c5814874657a61b7948fd9c7bf9
+msgid "Services"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:2 5f3db62a4166459198e28ed22fafeb1b
+msgid ""
+"In this exercise, we will create a custom service by defining a .srv "
+"file. Then we will write server and client nodes to utilize this service."
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:4 87fdca7f604a4756bdc6398fa3c80f1c
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:5 42a6b8cfa6704c3aa30f2b9e5a1f9e96
+msgid ""
+"The first type of ROS communication that we explored was a one-way "
+"interaction called messages which are sent over channels called topics. "
+"Now we are going to explore a different communication type, which is a "
+"two-way interaction via a request from one node to another and a response"
+" from that node to the first. In this module we will create a service "
+"server (waits for request and comes up with response) and client (makes "
+"request for info then waits for response)."
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:7 88b032e43add493ab1a018f66f9c1b2d
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:9 dc7d10baac114c28a70be995542ba953
+msgid "Create a Service Server/Client"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:11
+#: 811bf727eb5a4faa9af296f5c9f46a07
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:13
+#: 4c186dae282244f7a4f82d451da36ad7
+msgid "Creating Messages & Services"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:14
+#: 4cf05fd22a5f4d899cb888d89ed196a4
+msgid "Understanding Services & Params"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:15
+#: 976dadab959346d3917ab287d4617313
+msgid "Examining Service Client"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:17
+#: 8f7859b2dd8c42d69543ac042131d2ad
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:18
+#: ee5b5e7ff5ae486e9495872aa177f776
+msgid ""
+"We now have a base ROS node which is subscribing to some information and "
+"we want to build on this node. In addition we want this node to serve as "
+"a sub-function to another \"main\" node. The original vision node will "
+"now be responsible for subscribing to the AR information and responding "
+"to requests from the main workcell node."
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:20
+#: a71a3ed1cfe5415e96084f9cc2969001
+msgid "Your goal is to create a more intricate system of nodes:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:22
+#: c3bcd2a45fa5465a894b809b21131066
+msgid "Update the vision node to include a service server"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:24
+#: 2354f8e03e3844c2b027dd6474b0aadc
+msgid "Create a new node which will eventually run the Scan-N-Plan App"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:25
+#: 7bc0bfaf56784bd39edf927fadd2a5d7
+msgid ""
+"First, we'll create the new node (myworkcell_core) as a service client.  "
+"Later, we will expand from there"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:27
+#: 09c21fdbef0a4e6f86c1a71c8d601399
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:29
+#: 2700498baae945fd9e84c97a6ad43325
+msgid "Create Service Definition"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:31
+#: 7f3047ab966e445dab51b29e4f062f2e
+msgid ""
+"Similar to the message file located in the fake_ar_publisher package, we "
+"need to create a service file. The following is a generic structure of a "
+"service file:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:39
+#: 0e26929d020a481690119842c3a8db18
+msgid ""
+"Create a folder called srv inside your myworkcell_core package (at same "
+"level as the package's src folder)"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:46
+#: f649438ac7904e178d87a280327f7d26
+msgid "Create a file (gedit or QT) called LocalizePart.srv inside the srv folder."
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:48
+#: 0d0e9ddd80dd4c26a3270d7da03c9a7c
+msgid ""
+"Inside the file, define the service as outlined above with a request of "
+"type string named base_frame and a response of type geometry_msgs/Pose "
+"named pose:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:58
+#: db3eeb7bbfe347399f301052a8cad05c
+msgid ""
+"Edit the package's CMakeLists.txt and package.xml to add dependencies on "
+"key packages:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:60
+#: 3aa5dfef4da74ec5a8342557ecf1fc83
+msgid ""
+"message_generation is required to build C++ code from the .srv file "
+"created in the previous step"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:61
+#: 5ee74e2baaef42d98207a52c9b536bd5
+msgid "message_runtime provides runtime dependencies for new messages"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:62
+#: 44f018af392643ec81592b7a305505e7
+msgid ""
+"geometry_msgs provides the Pose message type used in our service "
+"definition"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:64
+#: 9351c59965b6490085f7ae60eae7f66a
+msgid ""
+"Edit the package's CMakeLists.txt file to add the new build-time "
+"dependencies to the existing find_package rule:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:75
+#: 8f3f44a8eb714f67a47f791d11127651
+msgid ""
+"Also in CMakeLists.txt, add the new run-time dependencies to the existing"
+" catkin_package rule:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:90
+#: 76468e09f573447d911bdb0b954ae631
+msgid "Edit the package.xml file to add the appropriate build/run dependencies:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:98
+#: e76c49110c624337916d779b532bf189
+msgid ""
+"Edit the package's CMakeLists.txt to add rules to generate the new "
+"service files:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:100
+#: e1b499df61b64608ae41ce3621520e31
+msgid ""
+"Uncomment/edit the following CMakeLists.txt rule to reference the "
+"LocalizePart service we defined earlier:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:110
+#: ea5fef173e0b4e12ab07ec2b8f463ff2
+msgid ""
+"Uncomment/edit the following CMakeLists.txt rule to enable generation of "
+"messages and services:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:120
+#: 882558667d4e496483a9880e667ef61d
+msgid ""
+"NOW! you have a service defined in you package and you can attempt to "
+"Build the code to generate the service:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:125
+#: ../../_source/session2/ros1/0-Services.md:273
+#: 1b9173102414474aa355c7c5d5147d7c f0f99412a76a464f83485006c743841b
+msgid "Note: (or use Qt!)"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:127
+#: 4c1ab5049c2a4e8992e8d484de5b5558
+msgid "Service Server"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:129
+#: 7a21b2d96e97479ca47ca98dd57f38bc
+msgid "Edit vision_node.cpp; remember that the ros wiki is a resource."
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:131
+#: 07b10d3fa7f54ac2bdf100bc3c90c4ed
+msgid "Add the header for the service we just created"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:137
+#: 754da227f573471eaf4a49957889956d
+msgid ""
+"Add a member variable (type: ServiceServer, name: server_), near the "
+"other Localizer class member variables:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:143
+#: 4948757b120e481d9b269c39e67bb50f
+msgid ""
+"In the Localizer class constructor, advertise your service to the ROS "
+"master:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:149
+#: 1dbabb1a18b84d528a8c5d71d69f2493
+msgid ""
+"The advertiseService command above referenced a service callback named "
+"localizePart. Create an empty boolean function with this name in the "
+"Localizer class. Remember that your request and response types were "
+"defined in the LocalizePart.srv file. The arguments to the boolean "
+"function are the request and response type, with the general structure of"
+" Package::ServiceName::Request or Package::ServiceName::Response."
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:159
+#: 6ebaf90c9ed84b40b0171844c0c36975
+msgid ""
+"Now add code to the localizePart callback function to fill in the Service"
+" Response. Eventually, this callback will transform the pose received "
+"from the fake_ar_publisher (in visionCallback) into the frame specifed in"
+" the Service Request.  For now, we will skip the frame-transform, and "
+"just pass through the data received from fake_ar_publisher.  Copy the "
+"pose measurement received from fake_ar_publisher (saved to last_msg_) "
+"directly to the Service Response."
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:174
+#: 3bca0c78d8784d7aa72da8adf2fefaca
+msgid ""
+"You should comment out the ROS_INFO_STREAM call in your visionCallback "
+"function, to avoid cluttering the screen with useless info."
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:176
+#: 6cd16058abc1458cab3477e4d4d84b8b
+msgid "Build the updated vision_node, to make sure there are no compile errors."
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:178
+#: 71297163c06e4a8a89af9ef1f9eeabe0
+msgid "Service Client"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:180
+#: 0d681e40b15d4e3ba9eb6f12023feb40
+msgid ""
+"Create a new node (inside the same myworkcell_core package), named "
+"myworkcell_node.cpp.  This will eventually be our main \"application "
+"node\", that controls the sequence of actions in our Scan & Plan task.  "
+"The first action we'll implement is to request the position of the AR "
+"target from the Vision Node's LocalizePart service we created above."
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:182
+#: 32b6fc3e801e4d4292b8ad93a9b3fe08
+msgid ""
+"Be sure to include the standard ros header as well as the header for the "
+"LocalizePart service:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:189
+#: 9ecdec4fa0f44dfa80ba1c1171299249
+msgid "Create a standard C++ main function, with typical ROS node initialization:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:203
+#: 29bf5ff1caaa4681aed24f7e3e4c169f
+msgid ""
+"We will be using a cpp class \"ScanNPlan\" to contain most functionality "
+"of the myworkcell_node.  Create a skeleton structure of this class, with "
+"an empty constructor and a private area for some internal/private "
+"variables."
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:220
+#: cb27c99a7ae3438782dfa0798442e02c
+msgid ""
+"Within your new ScanNPlan class, define a ROS ServiceClient as a private "
+"member variable of the class.  Initialize the ServiceClient in the "
+"ScanNPlan constructor, using the same service name as defined earlier "
+"(\"localize_part\"). Create a void function within the ScanNPlan class "
+"named start, with no arguments. This will contain most of our application"
+" workflow.  For now, this function will call the LocalizePart service and"
+" print the response."
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:250
+#: 9fd4b51a8b50483fb28bb7bd36fbbac3
+msgid ""
+"Now back in myworkcell_node's main function, instantiate an object of the"
+" ScanNPlan class and call the object's start function."
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:258
+#: bff72df662c1401a85b5ece6ef7c91e2
+msgid ""
+"Edit the package's CMakeLists.txt to build the new node (executable), "
+"with its associated dependencies.  Add the following rules to the "
+"appropriate sections, directly under the matching rules for vision_node:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:268
+#: 1534552c8b564c0ea6bc5a8a67e34071
+msgid "Build the nodes to check for any compile-time errors:"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:275
+#: 029825c592674103b33dd62f9a0232dc
+msgid "Use New Service"
+msgstr ""
+
+#: ../../_source/session2/ros1/0-Services.md:277
+#: b6c7422b49c1468d92d4b8bd40881e8f
+msgid "Enter each of these commands in their own terminal:"
+msgstr ""
+

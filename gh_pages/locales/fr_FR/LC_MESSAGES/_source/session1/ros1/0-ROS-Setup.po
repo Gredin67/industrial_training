@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:1
+#: 377eb9b6863341c48ea242d9349d4625
+msgid "ROS-Setup"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:2
+#: f35fbf54428744ab82febdc76b46e169
+msgid ""
+"In this exercise, we will setup ROS to be used from the terminal, and "
+"start roscore"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:5
+#: 67a3a8945ecd42d6ae1d8a52d91da2ac
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:6
+#: 227e92b5c4d84493aa06d5298992e5ec
+msgid ""
+"In order to start programming in ROS, you should know how to install ROS "
+"on a new machine as well and check that the installation worked properly."
+" This module will walk you through a few simple checks of your installed "
+"ROS system. Assuming you are working from the VM, you can skip any "
+"installation instructions as ROS is already installed."
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:8
+#: 586d5619ba894ef2b42be8874b6a94df
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:9
+#: f2ee2d17135c43ff87c2ba22f1354485
+msgid "Configuring ROS"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:11
+#: ea485f28cd474269903d942a8776e862
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:12
+#: f09324b5a1e74ba3a52c2527e2a1cd73
+msgid "Installation Instructions"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:14
+#: fdff720d1ce44033a20f3202f2ea12b8
+msgid "Navigating ROS"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:16
+#: a7ea822ee2d9432bb4bfb0b7bda65501
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:17
+#: 1e3c1c4d1c9345aba427c1430879fc9d
+msgid ""
+"We believe we have a good installation of ROS but let's test it to make "
+"sure."
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:19
+#: bcc6f6e3f3cb43959556b642acfc4072
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:20
+#: 3dfffaff94ec46669ae85b586f3760f3
+msgid "Setup ~/.bashrc"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:21
+#: 90f589a3e3724731ad97ab8c7a0694b5
+msgid ""
+"If you are ever having problems finding or using your ROS packages make "
+"sure that you have your environment properly setup. A good way to check "
+"is to ensure that environment variables like ROS_ROOT and "
+"ROS_PACKAGE_PATH are set:"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:27
+#: feff61ee726b48529fae58384c0b573b
+msgid "If they are not then you might need to 'source' some setup.*sh files."
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:33
+#: 09721268c5f243ffa57720c3e062eab5
+msgid ""
+"In a \"bare\" ROS install, you will need to run this command on every new"
+" shell you open to have access to the ROS commands.  One of the setup "
+"steps in a typical ROS install is to add that command to the end of your "
+"~/.bashrc file, which is run automatically in every new terminal window."
+"  Check that your .bashrc file has already been configured to source the "
+"ROS-melodic setup.bash script:"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:39
+#: 55f8a81c2fcb4b418b847e5f532fc1f6
+msgid ""
+"This process allows you to install several ROS distributions (e.g. "
+"indigo, kinetic, melodic) on the same computer and switch between them by"
+" sourcing the distribution-specific setup.bash file."
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:41
+#: 94308deaa795428fbf62db947c462ebb
+msgid "Starting roscore"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:42
+#: 09b258f834114ed6ada3e5d68ec3d495
+msgid ""
+"roscore is a collection of nodes and programs that are pre-requisites of "
+"a ROS-based system. You must have a roscore running in order for ROS "
+"nodes to communicate. It is launched using the roscore command."
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:48
+#: bf059bbc12004a699423f4053216683f
+msgid "roscore will start up:"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:50
+#: f8b234b00e134781ad974b2fb6d719af
+msgid "a ROS Master"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:51
+#: 5e256e5f168d45338916e10d7d78d1f7
+msgid "a ROS Parameter Server"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:52
+#: 878c7a5eb2614f8ca28b57ead9a2a1e7
+msgid "a rosout logging node"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:54
+#: 8fdf161e107f482d999fa47780f0a013
+msgid ""
+"You will see ending with started core service [/rosout]. If you see "
+"roscore: command not found then you have not sourced your environment, "
+"please refer to section 5.1. .bashrc Setup."
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:56
+#: 4157ccf8626d44e1972bda105f87b966
+msgid "To view the logging node, open a new terminal and enter:"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:62
+#: dd666c0815044292ab626e14e37436c3
+msgid "The logging node is named /rosout"
+msgstr ""
+
+#: ../../_source/session1/ros1/0-ROS-Setup.md:64
+#: efbeaea4dc12461ab07c5a2ea8bbe3df
+msgid ""
+"Press Ctrl+C in the first terminal window to stop roscore.  Ctrl-C is the"
+" typical method used to stop most ROS commands."
+msgstr ""
+

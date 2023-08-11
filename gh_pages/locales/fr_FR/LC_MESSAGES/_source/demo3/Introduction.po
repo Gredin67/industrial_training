@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo3/Introduction.rst:2 37cccf03346646da877bf5e2d8342755
+msgid "Optimization Based Planning Introduction"
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:5 1454aa448941427394834740cc60242a
+msgid "Goal"
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:7 6ba6cc6b1efd4085909b72e59168ada4
+msgid ""
+"The purpose of these exercises is to implement a ROS node that drives a "
+"robot through a series of moves and actions in order to complete a pick "
+"and place task. In addition, they will serve as an example of how to "
+"utilize more specialized tools such as the optimization based path "
+"planner, TrajOpt, and the control interfaces of the KUKA iiwa robot, "
+"while also integrating a variety of software capabilities (perception, "
+"controller drivers, I/O, inverse kinematics, path planning, collision "
+"avoidance, etc) into a ROS-based industrial application."
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:20 c9115707b12e450db9345af4b3cba0ff
+msgid "Objectives"
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:22 209e024c047142e1b854958af56a8c5d
+msgid ""
+"Understand the components and structure of a real or simulated robot "
+"application."
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:24 20e3a9346ec34c6d97433e0a8ac160cd
+msgid "Leverage perception capabilities using PCL"
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:25 86dd68a09ab04f688a09ebe123e1face
+msgid "Learn how to setup a TrajOpt path planning problem"
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:26 40b29db8451a4a80ae1ff95ab2ad7db6
+msgid "Learn how to use costs and constraints in TrajOpt"
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:27 4692cbc499664234933638137c171897
+msgid "Learn how to move the arm to a joint or Cartesian position"
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:28 aa77e5f16ff64e058f98d56c160ea71c
+msgid "Plan collision-free paths for a pick and place task"
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:29 a49039d45ace4a47b2c5d5028a2dfa30
+msgid "Send these trajectories to real robot hardware"
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:32 4956a207dfb0446db890f9df7c43160b
+msgid "Outline"
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:34 37e78cf1d6de472b82c29b0b00815f99
+msgid ""
+"First we will explore the given template code and import it into QT "
+"Creator."
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:36 77eedda4d389449c9a901a9aec430e46
+msgid ""
+"We will then use the data from a simulated 3D sensor and PCL to find the "
+"top of the box as the pick point."
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:38 ae29c2602f5e459da53c6b9b47e5a1b4
+msgid ""
+"Next, we will give a conceptual introduction to TrajOpt exploring the "
+"procedure for building a problem, adding costs, and solving for a "
+"trajectory."
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:41 c51826d130604d68a7b2bdbf7ba69a44
+msgid ""
+"We will then build a series of helper functions for TrajOpt to perform "
+"the different parts of a pick and place operation and test in simulation."
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:44 77de0fd0664b4918b2595f437f45289e
+msgid ""
+"With simulation working we will move to a real 3D sensor, learning to "
+"calibrate it and testing it in conjunction with a simulated robot."
+msgstr ""
+
+#: ../../_source/demo3/Introduction.rst:46 095a938545a944f3a8e438591783eb0d
+msgid "Finally, we will move to a physical robot with a real 3D sensor."
+msgstr ""
+

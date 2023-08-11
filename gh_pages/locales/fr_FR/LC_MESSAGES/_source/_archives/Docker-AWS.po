@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/_archives/Docker-AWS.md:1 c7f9434236a645f5a2e3f86e3ddc0d08
+msgid "Docker AWS"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:3 dba4e82a339e4318a0611ce14e08eb9c
+msgid "Demo #1 - Run front-end Gazebo host and back-end in Docker"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:4 abf0048ad4874d84aeb82a4df8eb5401
+msgid "Setup workspace"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:5 e038c4b0fa95455ea94dbec61d4d21cc
+msgid "Front-end (run on host and only contains gui)"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:6 7f34c823cbdf4ec89a72b1b5792c372b
+msgid "in terminal 1"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:17 aac674200433431ca49c5443c9f0bd43
+msgid "Back-end (run in container)"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:18 69d9874adc00458881d27022dd1c0e96
+msgid ""
+"In this step, we will create a docker image that has the executables we "
+"need:"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:19 ed202a9b50e441508da98e1eaec8de35
+msgid ""
+"run /bin/bash in the rosindustrial/core:indigo image then apt-get the "
+"package, commiting the result."
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:20 dc5afb05a2364d5b8db90f878d63c862
+msgid ""
+"run /bin/bash in the rosindustrial/core:indigo image then build the "
+"package from source, commiting the result."
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:21 9307490c490d4558881f8a6f375a48b3
+msgid ""
+"create a docker container using the fetch Dockerfile, which we will "
+"perform. "
+"https://gist.github.com/AustinDeric/242c1edf1c934406f59dfd078a0ce7fa"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:27 9f9158d6c3274ef4ac0e812507f343a4
+msgid "Running the Demo"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:28 37a43aea8d8c40c499b459034c5f695f
+msgid "Run the front-end"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:29 bf195631366b449aae445d12dcc6f882
+msgid "Run the front end in terminal 1:"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:34 549d253f0fb1405ba91bf79a2b3e6fb4
+msgid "Run the backend"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:35 04b783378e614e3da59b925076fadf39
+msgid "There are multiple ways to perform this:"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:36 011353618bc5435fb8afa0a0c8029e8e
+msgid "run /bin/bash in the fetch container and manually run the demo node."
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:37 101edf89c5cb4a6dae4b807a75f95a93
+msgid ""
+"run the demo node directly in the container, which is the method we will "
+"perform"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:39 0139948c2cca4299bca614e210fff5e7
+msgid "Run the back end in terminal 2:"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:44 5981e0dd0f304c0dbaaf70cf84a89577
+msgid "Demo #2 - Run front-end on a web-server and back-end in docker"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:45 1f28121b5b4a4ecd964f37ab173232d5
+msgid "start the environment"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:49 9b99aede07d242ee920473990e879b1e
+msgid "run the gazebo web server:"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:53 ccf21c3a58714b57beba8432ef951a62
+msgid "then run the server:"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:58 e02b4dfb6cff4b3cb91bc0f763fec588
+msgid "run the demo in terminal 3:"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:62 a968a1cc80b049ed9915828bb7bcd8cf
+msgid "Demo #3 Robot Web Tools"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:63 ebbb24cc432e4de2b7f02493ad97aba0
+msgid ""
+"In this demo we will run an industrial robot URDF viewable in a browser "
+"In terminal 1 we will load a robot to the parameter server"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:75 4f709252c01f4b119069b3824da01df7
+msgid "in terminal 2 we will start the robot web tools:"
+msgstr ""
+
+#: ../../_source/_archives/Docker-AWS.md:79 40135e9b531d4bb19837da45c22989d7
+msgid ""
+"in terminal 3 we will launch the webserver first we need to start a www "
+"folder"
+msgstr ""
+

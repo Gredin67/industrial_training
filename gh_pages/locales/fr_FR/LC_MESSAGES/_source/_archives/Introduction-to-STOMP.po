@@ -1,0 +1,277 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:1
+#: ebbf0de69d304810baeab667bc3b2f96
+msgid "Introduction to STOMP"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:3
+#: 8bd1da2b34994b3592d93c2b56053b83
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:4
+#: 523a12eaee9541eb83acba0c4453ddee
+msgid "Learn how to plan with STOMP through !MoveIt!."
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:7
+#: 6d982b3177e04cf1a21cdbc7cba898b7
+msgid "Information and Resources"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:9
+#: d0ceb9d7e0674daf845fc3e880074e1b
+msgid "STOMP for MoveIt!"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:11
+#: 2f781da3ec484279a38d11209ab49a68
+msgid "Plugins for MoveIt!"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:13
+#: 80e015bf457642a89882ee815b5af872
+msgid "Objectives"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:14
+#: 32a21541a3f4401692c13cb24a4f1fd1
+msgid ""
+"Integrate STOMP into !MoveIt! by changing and adding files to a "
+"moveit_config package."
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:15
+#: e09df87e067f44d9be359dd6c698dd06
+msgid "We'll then generate STOMP plans from the Rviz Motion Planning Plugin"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:17
+#: 0aba9fa30d0a44339eeaa48d9ab202b3
+msgid "Setup"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:18
+#: 47c3a132cbe6456ea9ef41e11052beb9
+msgid "Create a workspace"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:26
+#: 4addc06480d144fb88303688ee5bcf06
+msgid "Copy over existing exercise"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:31
+#: 24c47dfc62544c46aebb40921d7b9880
+msgid "Clone industrial_moveit repository into your workspace"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:37
+#: 3381edf78c7046bca5bb2218252d491b
+msgid "Install Missing Dependencies"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:43
+#: f64143b5ef6b467ebb5a79f9481226fb
+msgid "Create a moveit_config package created with the  MoveIt! Setup Assistant"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:45
+#: da23346d498a40828e3fdd550870e907
+msgid "Add STOMP"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:47
+#: 361f55b9533e48f9a3e8c4581052fad8
+msgid ""
+"Create a \"stomp_planning_pipeline.launch.xml\" file in the launch "
+"directory of your moveit_config package.  The file should contain the "
+"following:"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:70
+#: 56041870dedd4e2b9cdea589d71a4ecd
+msgid ""
+"!!! Take notice of the stomp_planning.yaml configuration file, this file "
+"must exists in moveit_config package."
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:73
+#: dc3df7d25c494ff69bf83e497b1dd55f
+msgid "Create the \"stomp_planning.yaml\" configuration file"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:75
+#: 5ee18733d6174348a89214da7c913716
+msgid ""
+"This file contains the parameters required by STOMP.  The parameters are "
+"specific to each ''planning group'' defined in   the SRDF file.  So if "
+"there are three planning groups \"manipulator\", \"manipulator_tool\", "
+"and \"manipulator_rail\" then the configuration file defines a specific "
+"set of parameters for each  planning group:"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:158
+#: fb762368685648ae84b83efa78522ef7
+msgid "!!! Save this file in the config directory of the moveit_config package"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:160
+#: 12fb26c250774d8b89da40e0fbd3866d
+msgid ""
+"Modify the move_group.launch file: Open the move_group.launch in the "
+"launch directory and change the pipeline parameter value to stomp as "
+"shown below:"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:183
+#: 4f8c821c8d224496aa470dd09d28952d
+msgid "Run MoveIt! with STOMP"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:185
+#: 7a8dc5727ffb4de6a2458706ac8d6d51
+msgid "In a sourced terminal, run the demo.launch file:"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:190
+#: 3a74c982a8b54630bfd4e2ef9d64817b
+msgid "In Rviz, select robot start and goal positions and plan:"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:191
+#: 9edef1f5a62943cfaded17d65da0d12e
+msgid "In the \"Motion Planning\" panel, go to the \"Planning\" tab."
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:192
+#: 47183ba9cdea4bc39743a46c43aea07c
+msgid ""
+"Click the \"Select Start State\" drop-down, select \"allZeros\" and click"
+" \"Update\""
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:193
+#: de2a6c54abe84c649b166c0b28557546
+msgid ""
+"Click the \"Select Goal State\" drop-down, select \"home\" and click "
+"\"Update\""
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:194
+#: 83b08a7924b140e391cdac06fda61407
+msgid ""
+"Click the \"Plan\" button and watch the arm move past obstacles to reach "
+"the goal position. The blue line shows the tool path."
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:196
+#: cdd6a6c0fc5b46da95ea5fd1e91e06d4
+msgid "Explore STOMP"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:198
+#: 33f0b4899cf74953b055c300afbc7d1c
+msgid ""
+"In Rviz, select other \"Start\" and \"Goal\" positions and then hit plan "
+"and see the robot move."
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:199
+#: cf2158418aa24538a5d9bd4ad483af01
+msgid ""
+"Display the Noisy Trajectories by clicking on the \"Marker Array\" "
+"checkbox in the \"Displays\" Rviz panel.  Hit the \"Plan\" button again "
+"and you'll see the noisy trajectory markers as yellow lines."
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:201
+#: 969daca3c27543aebade9dc2fb6e07a5
+msgid ""
+"Note: STOMP explores the workspace by generating a number of noisy "
+"trajectories as a result of applying noise onto the current trajectory.  "
+"The degree of noise applied can be be changed by adjusting the \"stddev\""
+" parameters in the \"stomp_config.yaml\" file.  Larger \"stddev\" values "
+"correspond to larger motions of the joints."
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:207
+#: f6b5201f06cf4f94829fe2c9ec2565a3
+msgid "Configure STOMP"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:209
+#: c0508e01c7ba4361bf0dc643a3a2559a
+msgid ""
+"We'll now change the parameters in the stomp_config.yaml and see what "
+"effect those changes have on the planning."
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:211
+#: bf58caef563041798833b46283e33b2c
+msgid ""
+"Ctrl-C in the terminal where you ran the demo.launch file earlier to stop"
+" the move_group planning node."
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:212
+#: f0740bc450ec4c768f83fa75bb44ed87
+msgid "Locate and open up the stomp_config.yaml with your preferred editor."
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:213
+#: 5bd589d2c8ca46afa1e8b13799e9c6f1
+msgid ""
+"Under the \"manipulator_rail\" group, take notice of the values assigned "
+"to \"stddev\" parameter.  Each value is the amplitude of the noise "
+"applied to the joint at that position in the array.  For instance, the "
+"leftmost value in the array will be the value used to set the noise of "
+"the first joint \"rail_to_base\"; which moves the rail along the x "
+"direction.  Since the \"rail_to_base\" is a prismatic joint then its "
+"units are in meters; for revolute joints the units are radians."
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:214
+#: 34979ed61d6d4b649b1c56774c0a41b3
+msgid ""
+"Change the \"stddev\" values (preferably one entry at a time), save the "
+"file and rerun the \"demo.launch\" file in the terminal."
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:215
+#: d7770b20f961464db4eb48462157cf8a
+msgid ""
+"Go back to the Rviz window and select arbitrary \"Start\" and \"Goal\" "
+"positions to see what effect your changes have had on the planning "
+"performance."
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:217
+#: 1b8f7ff3cdb745d1882034b402a883ba
+msgid "More info on the STOMP parameters"
+msgstr ""
+
+#: ../../_source/_archives/Introduction-to-STOMP.md:219
+#: 03dd201a0f9f48e7812e1defb95475aa
+msgid "The STOMP wiki explains these parameter in more detail."
+msgstr ""
+

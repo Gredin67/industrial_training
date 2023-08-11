@@ -1,0 +1,146 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/setup/PC-Setup---ROS.md:1 ac078733e25a48938aa2601fdbd05339
+msgid "PC Setup"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:3 7c2245c058864cb699bb8d04d8d3cf5f
+msgid ""
+"There are two options for utilizing the ROS-Industrial training "
+"materials.  The first recommended option is to utilize a pre-configured "
+"virtual machine.  The second option is to install a native Ubuntu machine"
+" with the required software.  The virtual machine approach is by far the "
+"easiest option and ensures the fewest build errors during training but is"
+" limited in its ability to connect to certain hardware, particularly over"
+" USB (i.e. kinect-like devices)."
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:5 6b75d9b2068b4fb6bea8aaa193d9a1d8
+msgid "Virtual Machine Configuration (Recommended)"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:7 5e13a965a6e14177b3cfad6d73a95c86
+msgid ""
+"The VM method is the most convenient method of utilizing the training "
+"materials:"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:9 7ed45c946fb147888397196507dd1e89
+msgid "Download virtual box"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:10 9f8ccd387e164ab89545a09d0a5e3ec5
+msgid "Download ROS Humble training VM"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:11 8e2b6793da994150b1d072c08a71ab5c
+msgid "Import image into virtual box"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:12 8898a35b30bb4ba4829f959e50796204
+msgid "Start virtual machine"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:13 0196ccfc818745faa1823d7203a01f1b
+msgid ""
+"*Note: If possible, assign additional cores in "
+"Settings>>System>>Processor to your virtual machine before starting your "
+"virtual machine. This setting can be adjusted when the virtual machine is"
+" closed and shut down."
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:14 ca8122169d86466eb1108f55c5ce0f09
+msgid ""
+"Log into virtual machine, user: ros-industrial, pass: rosindustrial (no "
+"spaces or hyphens)"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:15 8baa93a7b53241098f4a0159833438c7
+msgid "Get the latest changes (Open Terminal)."
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:25 7fe01b4b63b24639946abb1cb0375786
+msgid "Limitations of Virtual Box"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:26 c35bd2545a1f4d9ea6116b9550170cbe
+msgid ""
+"The Virtual Box is limited both in hardware capability(due to VM "
+"limitations) and package installs (to save space).  Kinect-based demos "
+"aren't possible due to USB limitations."
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:28 c3d35eb770cd4d858a827c8978921b1a
+msgid "Common VM Issues"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:29 74e1d120b871492bb79b1511174c000f
+msgid ""
+"On most new systems, Virtual Box and VMs work out of the box.  The "
+"following is a list of issues others have encountered and solutions:"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:30 87a6f8fb392a48759cabc0ee4732673c
+msgid ""
+"Virtualization must be enabled - Older systems do not have virtualization"
+" enabled (by default).  Virtualization must be enabled in the BIOS.  See "
+"http://www.sysprobs.com/disable-enable-virtualization-technology-bios for"
+" more information."
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:32 b6f94990c4504fa89f5ea44bbbf315f2
+msgid "Direct Linux PC Configuration"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:33 769574406530484e9bfb9652154777f7
+msgid ""
+"An installation shell script is provided to run in Ubuntu Linux 22.04 LTS"
+" (Jammy). This script installs ROS and any other packages needed for the "
+"environment used for this training."
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:36 daa2a7ccb3a84531b2dac42e9a891f47
+msgid ""
+"After this step (or if you already have a working ROS environment), clone"
+" the training material repository into your home directory:"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:38 d6471e07f0954021b99b846d55a2e58c
+msgid ""
+"git clone -b humble https://github.com/ros-"
+"industrial/industrial_training.git ~/industrial_training"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:40 f7ed8c0b1bd949c6bc684724cbd17d64
+msgid "Configuration Check"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:41 f8308a2076854cd1937d324ef2a232a3
+msgid ""
+"The following is a quick check to ensure that the appropriate packages "
+"have been installed and the the industrial_training git repository is "
+"current.  Enter the following into the terminal:"
+msgstr ""
+
+#: ../../_source/setup/PC-Setup---ROS.md:43 9e41a969664a4157a605b3bb774b56c0
+msgid "~/industrial_training/.check_training_config.bash"
+msgstr ""
+

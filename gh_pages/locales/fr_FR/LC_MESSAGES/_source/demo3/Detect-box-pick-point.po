@@ -1,0 +1,316 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo3/Detect-box-pick-point.md:1
+#: fea9e32f49d3492e93498d00edc014ef
+msgid "Detect Box Pick Point"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:2
+#: 8e6077e354094affb807e28c3c7ad73a
+msgid ""
+"The first step in a pick and place operation is that the pick location "
+"must be found. To do that, we will leverage a 3D camera sensor and the "
+"Point Cloud Library (PCL)."
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:4
+#: 83f9ed5d47574f38b163de44fc837d1e
+msgid ""
+"The coordinate frame of the box's pick can be requested from a ros "
+"service that detects it by processing the sensor data. In this exercise, "
+"we will learn to write a ROS service and apply the neccessary filters to "
+"locate the pick location."
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:6
+#: 9aeb0cd47c40434b861ba52fd28561ef
+msgid "Overview of the process"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:8
+#: eb6b3ed170da497f8be96226b9d4d356
+msgid ""
+"The perception node is launched. This registers a new service with "
+"roscore and pulls necessary parameters from the ROS parameter server. It "
+"then waits until the service is called. When the ROS perception service "
+"is called:"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:10
+#: a9a7b5d111c24af28a6746ade61f9681
+msgid "Service pulls latest point cloud from the 3D sensor"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:11
+#: 04b61b3cac574a0cb3c206c5bf4cd745
+msgid "Point cloud is cropped to exclude areas outside of the work cell"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:12
+#: 9402f094dbf641a6924af3ab1fb24751
+msgid ""
+"RANSAC plane segmentation is used to remove the work table from the point"
+" cloud"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:13
+#: 8ea47ed0ec714cb3a371a92a7b9afdac
+msgid "Euclidean cluster extraction is used to cluster the remaining points"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:14
+#: 92e9907a8cc246cdb11b9c8b47ab95aa
+msgid "Outliers are removed"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:15
+#: 667579c923bb4c66b540ef4c2d3ce52c
+msgid ""
+"The largest cluster is taken as the pick object (additional logic could "
+"be added here to support multiple pick objects in sight)"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:16
+#: 6b7b1fa9cfd6456aa2bdde902bf397e8
+msgid "RANSAC plane segmentations is used to find the top of the box"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:17
+#: 18d29b7610a04f8fb4beae9b84e937cb
+msgid "The centroid of these points is calculated"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:18
+#: 7c629f5092854b309a77f4b4daab143a
+msgid "The service returns this pose"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:20
+#: 20110391096d486e9570396c18e53164
+msgid "Explore processing_node.launch"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:21
+#: 5d8aa878c791446fbc99fa40cd9bed35
+msgid ""
+"Open processing_node.launch in demo3_perception/launch. This file "
+"launches the perception node. Note the standalone flag which can be set "
+"to true to test the perception without the rest of the system."
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:23
+#: 0223db1fefc444dfaf2ff6a8d4ff081b
+msgid ""
+"Additionally, it adds some associated rosparams to the parameter server. "
+"Explore these parameters. While the given values should work in "
+"simulation, it is likely that some of the PCL filter parameters will have"
+" to be changed when moving to real hardware. Here are some of them "
+"associated with the ROS setup:"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:25
+#: 4594609e37d5401b9c228ba50f297753
+msgid ""
+"cloud_debug: true means intermediate point clouds will be published for "
+"debugging"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:26
+#: c68bf4ab5f774ab78a9a2f67829931e0
+msgid "cloud_topic: Topic from which the service pulls the point cloud"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:27
+#: 0f2c1cb1764f449584061849a5abe7be
+msgid "world_frame: Frame into which the point cloud is placed"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:28
+#: 004a631c39204308840ac3d12d343821
+msgid "camera_frame: Frame associated with the camera location"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:31
+#: bd698016756a410db9fd8c562c051fd9
+msgid "Define ROS Service"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:32
+#: a2101d270658416fa415f1455a4d5cf2
+msgid ""
+"We first review the ROS service definition. This file will define the "
+"service inputs and outputs."
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:34
+#: 85accd66c29f475cb0348a21dee33e1f
+msgid "In the pick_and_place_perception/srv directory, open GetTargetPose.srv"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:35
+#: b84f371108fe4013b403045cc2ca0410
+msgid ""
+"Ensure that the following code is in this file. Note that the service "
+"request is empty. It returns a boolean flag, a ROS message of the "
+"geometry_msgs/Pose type for the location of the center of the top of the "
+"box, and two geometry_msgs/Pose messages that define a bounding box "
+"around the top of the box."
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:48
+#: 5eacf4b6c3d94d94bacb7760195ab9da
+msgid "Explore perception_node architecture"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:50
+#: bd3fc09ea75e4d1dba325e7d70781003
+msgid ""
+"For a ROS service to be registered on roscore, it must be advertised "
+"similarly to a node. This is done with nh.advertiseService(args). "
+"Although this is often done in the main() function, for our use case this"
+" is done in the constructor of the PerceptionPipeline class. The service "
+"function is then a member of that class. Creating a pipeline class has "
+"several advantages."
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:52
+#: 45aaab023b02456db493d49d3c57cda9
+msgid ""
+"It allows to create ROS publishers as class members that are also "
+"maintained between service calls. We are using this for debugging in our "
+"case by publishing the intermediate point clouds."
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:53
+#: 21b640aee344479a884489b59e9ca3fc
+msgid ""
+"It allows to read parameters and store them in class members that are "
+"maintained between service calls, reducing processing time."
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:54
+#: 9df0f2f990354830b7c2ace7c48e14ab
+msgid "It allows to instantiate multiple instances of the same pipeline."
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:56
+#: 71a427b699814e8b826b1348a6575283
+msgid "Complete Code"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:58
+#: 91a28c541eb24b5a9def560e0b691ceb
+msgid "A template has been provided with some of the setup complete"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:59
+#: 562f937006f24027a673985d4bd5806d
+msgid ""
+"Find every line that begins with the comment \"''Fill Code: ''\" and read"
+" the description.  Then, replace every instance of the comment  \"''ENTER"
+" CODE HERE''\" with the appropriate line of code:"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:71
+#: 9ef1b9b26f3443f89e6552789e44f12c
+msgid ""
+"The '''find_pick_client''' object in your program can use the "
+"'''call()''' method to send a request to a ROS service."
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:73
+#: 2b784a68b882401d9d86f9178758ded3
+msgid ""
+"The ROS service that receives the call will process the sensor data and "
+"return the pose for the box pick in the service structure member "
+"'''srv.response.target_pose'''."
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:76
+#: eda8648f68974833833452289c2a17b0
+msgid "Build Code and Run"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:78
+#: 7be86b29b4b34766bad5c150009d6f7e
+msgid "Compile the pick and place node in QT"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:83
+#: 9972562d852e45fb99e4a398e6e75928
+msgid ""
+"Alternatively, in a terminal cd into your workspace directory and do the "
+"following"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:88
+#: b09f82aaac92458190354a6a4e13f550
+msgid ""
+"Run your node with the launch file which calls the processing_node.launch"
+" that you used previously. Although you could call that launch file "
+"directly, the environment would not load, and there would be no point "
+"cloud to process."
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:92
+#: d304cd6b915f4cd5b3857dddc2e658a5
+msgid ""
+"test_bed_core_node will call your service automatically. However, you can"
+" also test your code from the command line by calling rosservice call "
+"/find_pick when a point cloud is being published on the cloud_topic "
+"(/cloud by default)."
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:94
+#: 8667281a8516428291389bcb7dbc0ab3
+msgid ""
+"Some errors and warnings will pop up when you run the template code. As "
+"the correct code is filled, they will disappear until a fully defined "
+"Pose message is returned from the service."
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:96
+#: 0d35e105c3d64f68a176dcd990539cfe
+msgid "Additional exploration (optional)"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:98
+#: f676341a6cd0407696b5368dc434fcdc
+msgid ""
+"You may notice that this service is not quick to run. Aside from "
+"publishing the clouds for debugging, intermediate copies of the point "
+"cloud are made that simplify the demonstration but hinder performance. "
+"Additionally, PCL has a wide variety of filters available and the "
+"solution given here is just one out of many possibilities. Use the "
+"included timing functions to explore changes that can speed up "
+"processing."
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:101
+#: c93be15e177b4a96b6e4340fc7ebcaf0
+msgid "API References"
+msgstr ""
+
+#: ../../_source/demo3/Detect-box-pick-point.md:104
+#: 118f7f36f2ce4ac8a9895c3a038e97c7
+msgid "call()"
+msgstr ""
+

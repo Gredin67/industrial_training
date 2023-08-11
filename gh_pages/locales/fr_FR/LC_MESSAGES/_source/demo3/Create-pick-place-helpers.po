@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:1
+#: 02edd5d274e6447183cfbba66e9b83dd
+msgid "Create Pick and Place Helpers"
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:2
+#: 8043023d60c74869981bfd40c151801d
+msgid ""
+"With knowledge of the way that TrajOpt works, we will now use it to build"
+" our application. Consider the motion steps in a pick and place "
+"operation."
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:4
+#: 63dd0401ff0d4531958f89e832bcc9e3
+msgid "Pick"
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:6
+#: ../../_source/demo3/Create-pick-place-helpers.md:12
+#: 2c0dafc0c5cc45438bb9e654b138e01a a2ff702e1e15457ca427ecbcf2445da8
+msgid "Free space move to approach pose"
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:7
+#: ../../_source/demo3/Create-pick-place-helpers.md:13
+#: ecfd61ed48924c88a6cadc2cf4ef2ee7 fd88539ed3034a37abd9b4f3ad3ec561
+msgid "Linear move to target pose"
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:9
+#: e3f7519b105b459baf32cef375009bd0
+msgid "Place"
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:11
+#: 8d14b936e03248139ef24957b148973e
+msgid "Linear move to retreat pose"
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:15
+#: c2b273cbdf6e4c3d8f90248fd9a8db50
+msgid ""
+"In order to simplify the scripting of the pick and place operation, "
+"helper functions are defined. These are then used in test_bed_core_node "
+"to perform the operation."
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:17
+#: 5490a6dbffeb409ea1859908246f1934
+msgid "Explore function definitions"
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:19
+#: 2cc2f78cdaa54c2f832f7ed44e931167
+msgid "In pick_and_place/include open trajopt_pick_and_place_constructor.h"
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:20
+#: f56ae7e30d41441ea8101ab74a40769f
+msgid ""
+"Look at each of public member functions. These are the functions you will"
+" complete. Understand each the inputs and purpose of each of them."
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:22
+#: 6db50b17d7d444d99166dc7de8742e77
+msgid "Complete Code"
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:24
+#: cf52cf7c1ad54d36918733a739d0ea57
+msgid "Open trajopt_pick_and_place_constructor.cpp"
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:25
+#: 0a83f11e5c314d2891ab9c6276e32bf3
+msgid ""
+"Find every line that begins with the comment \"''Fill Code: ''\" and read"
+" the description.  Then, replace every instance of the comment  \"''ENTER"
+" CODE HERE''\" with the appropriate line of code."
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:36
+#: 89b31dd1c48d4cb2adec721790c5e0a1
+msgid ""
+"You may find Sections 3.5 and 3.6 helpful in completing this exercise. "
+"Additionally, QT Creator's autocomplete functionality can aid in finding "
+"the correct methods described in the comments."
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:38
+#: 44f527a35de24dcfbc39c9b680e3be29
+msgid "Build Code and Run"
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:40
+#: 6434964f758b4526a0dcfd4d21232b2a
+msgid ""
+"The code can be run by using the same launch file as before. This time "
+"the robot should pathplan when the perception service completes."
+msgstr ""
+
+#: ../../_source/demo3/Create-pick-place-helpers.md:42
+#: ecd92c9ac0b44fbdb55e9e9e73e05273
+msgid "roslaunch pick_and_place pick_and_place.launch"
+msgstr ""
+

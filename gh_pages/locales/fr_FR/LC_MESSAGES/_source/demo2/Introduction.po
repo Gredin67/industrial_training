@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo2/Introduction.md:1 37292cb47d664e98921481f3daffa79b
+msgid "Introduction"
+msgstr ""
+
+#: ../../_source/demo2/Introduction.md:3 82b656bb828040cabfcb799aa90a17ad
+msgid "Goal"
+msgstr ""
+
+#: ../../_source/demo2/Introduction.md:4 d9b61758e3ef4a4785ac7dd1498d4bb6
+msgid ""
+"This application will demonstrate how to use the various components in "
+"the Descartes library for planning and executing a robot path from a "
+"semi-constrained trajectory of points."
+msgstr ""
+
+#: ../../_source/demo2/Introduction.md:6 021e8475b7a74c9d90e8132072230597
+msgid "Objectives"
+msgstr ""
+
+#: ../../_source/demo2/Introduction.md:7 c07f219ecf4c4ba29495c51264068112
+msgid "Become familiar with the Descartes workflow."
+msgstr ""
+
+#: ../../_source/demo2/Introduction.md:8 f6c48a0cc53348878036225c8e708870
+msgid "Learn how to load a custom Descartes RobotModel."
+msgstr ""
+
+#: ../../_source/demo2/Introduction.md:9 1f7387b261924517954965075ec90c07
+msgid "Learn how to create a semi-constrained trajectory from 6DOF tool poses."
+msgstr ""
+
+#: ../../_source/demo2/Introduction.md:10 4fec47a5255946afa9893c567a36f34f
+msgid "Plan a robot path with a Descartes Planner."
+msgstr ""
+
+#: ../../_source/demo2/Introduction.md:11 00b108635350454ab7c0eea4bbb0fa3b
+msgid "Convert a Descartes Path into a MoveIt! message for execution."
+msgstr ""
+
+#: ../../_source/demo2/Introduction.md:12 6c4f7f1bbbfe418caff89a219f6c8bf7
+msgid "Executing the path on the robot."
+msgstr ""
+

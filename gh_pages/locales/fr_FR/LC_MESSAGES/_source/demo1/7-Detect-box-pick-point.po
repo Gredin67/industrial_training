@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:2
+#: ec418336a7634eff92ca93a898b590d3
+msgid "Detect Box Pick Point"
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:4
+#: 124a143b9ae04b9cb6d4a2e0aefe4fcd
+msgid ""
+"The coordinate frame of the box's pick can be requested from a ROS "
+"service that detects it by processing the sensor data. In this exercise, "
+"we will learn how to use a service client to call that ROS service for "
+"the box pick pose."
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:11
+#: 158abdc9cf5447f2bba5924e2204c719
+msgid "Locate Function"
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:13
+#: 4eec441a5b054543bbd44e548bed8cda
+msgid ""
+"In the main program, locate the function call to "
+"``application.detectBox()``."
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:15
+#: 25d645027dac4b7ebb5d9496513e9806
+msgid ""
+"Go to the source file of that function by clicking in any part of the "
+"function and pressing :kbd:`F2` in QtCreator."
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:17
+#: 378bfa391a2949608cbb2acf150dd32c
+msgid ""
+"Remove the first line containing the following ``RCLCPP_ERROR_STREAM "
+"...`` so that the program runs."
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:22
+#: 611f6cdde606474ead32fac2098e9bbd
+msgid "Complete Code"
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:24
+#: 5eae54175ab54b40bd8a70916801108e
+msgid ""
+"Find every line that begins with the comment ``Fill Code:`` and read the "
+"description. Then, replace every instance of the comment ``UNCOMMENT AND "
+"COMPLETE`` with the appropriate line of code."
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:37
+#: 81d53a48d5534a98bbb10660626f5686
+msgid ""
+"The ``target_recognition_client`` object in your programs can use the "
+"``async_send_request()`` method to send a request to a ROS service."
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:39
+#: 332479e1b28147bc884175b4a8c196bd
+msgid ""
+"The ROS service that receives the request will process the sensor data "
+"and return the pose for the box pick. This response can be retrieved by "
+"calling ``get()`` on ``response_fut``. The pose can then be accessed with"
+" ``response->target_pose``."
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:45
+#: 8d9111ef16974f24b9bba415fbc84c7b
+msgid "Build Code and Run"
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:47
+#: c0e58046f4ba472988dae88792e1e7f3
+msgid "Compile the pick and place node:"
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:49
+#: a3ac6eb463764ae6b7d7bae743353c18
+msgid "In QTCreator: :menuselection:`Build --> Build Project`"
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:51
+#: 804b214b696f43e5a5f2ca7be30346f4
+msgid "Alternatively, in a terminal:"
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:57
+#: d42bc461495c4969966e75770d9f217b
+msgid "Run the supporting nodes with the launch file (only if needed):"
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:63
+#: 903ca651d0b74b3bb8d196f74753d395
+msgid "In another terminal, run your node with the launch file:"
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:69
+#: 8845984632f344549749b55683c44a9f
+msgid ""
+"A blue box and voxel grid obstacles will be displayed in rviz. In the "
+"terminal you should see something like this:"
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:80
+#: 7b07315ce4854718863b67ba8463835d
+msgid "API References"
+msgstr ""
+
+#: ../../_source/demo1/7-Detect-box-pick-point.rst:82
+#: 6e7c81d68f35473dacbbeddb69525186
+msgid ""
+"`async_send_request() "
+"<http://docs.ros.org/en/humble/p/rclcpp/generated/classrclcpp_1_1Client.html#_CPPv4N6rclcpp6Client18async_send_requestE13SharedRequest>`_"
+msgstr ""
+

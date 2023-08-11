@@ -1,0 +1,484 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:1
+#: 3d2a3b26e96845e1af2ccf43db9cdda3
+msgid "ROS1-ROS2 Bridge Demo"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:3
+#: f912f1bda7cb48d18d8d5de44c1a2e85
+msgid "Introduction"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:5
+#: 76f8c258b2624ecabc35d4fe209a2216
+msgid ""
+"This is a system integration exercise to demonstrate operation of the "
+"ROS1-ROS2 topic and service bridge. Using the bridge does not require new"
+" techniques when developing either ROS1 or ROS2 software, so much of the "
+"required code is provided to you in a template workspace "
+"(~/industrial_training/exercises/7.2/template_ws/src). Instead, we will "
+"focus on developing code that interfaces with the ros1_bridge package."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:9
+#: a2035eed1d2e49abacd87876e35e8d71
+msgid ""
+"In this exercise, the ROS1 ARMarker message, which is the goal "
+"destination for the robot, must be communicated to the ROS2 application. "
+"Then, the ROS2 application needs to use service clients to call a planner"
+" that only exists as a ROS1 package. Specifically, this exercise calls "
+"the Descartes motion planner as seen in Exercise 4.1. On the ROS1 side, "
+"service servers are provided to generate motion plans and to execute "
+"them. In order to use these custom services, the bridge needs to be "
+"compiled from source with the message definitions in the build "
+"environment, which is the bulk of the complexity in this exercise."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:16
+#: 1b7babdf7048486992bdf46d8913d2b1
+msgid "Building the Demo"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:18
+#: 845e15cf223e42689cf319214a9eb1f9
+msgid ""
+"This exercise uses the ROS1 bridge to call ROS1 nodes from ROS2 nodes and"
+" therefore the build procedure is somewhat involved."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:21
+#: f5aa2b6202684661aa20be4dee16d1b3
+msgid "Create a ROS1 workspace from Exercise 4.1"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:23
+#: 72b5a855ce164f48a0ffdf8f40cfcdbc
+msgid ""
+"Open a new terminal. Create a catkin workspace for the exercise 4.1 ROS1 "
+"packages and dependencies."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:28
+#: 4317c9b50719470892de6cd0ef1c1fe5
+msgid "Copy Exercise 4.1 in the training repo."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:33
+#: 5bf464ecdf3c461caf7d0fc48796b6b8
+msgid "Clone additional dependencies."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:41
+#: 011ecaac52dd478db57c8aa39ef74d77
+msgid "Source and build exercise from the top workspace directory."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:48
+#: 6b3d1950305047e79dfa610dcaeeaf35
+msgid ""
+"From the above steps, the ROS1 catkin workspace is being provided without"
+" requiring edits. Take note of the critical components that will be "
+"communicated over the bridge."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:51
+#: 92384248032442a5bddf8b5f301f41e8
+msgid ""
+"There is an ARMarker topic message (directory "
+"~/catkin_ws_to_bridge/src/fake_ar_publisher/msg) published by the node "
+"within fake_ar_publisher.cpp (directory "
+"~/catkin_ws_to_bridge/src/fake_ar_publisher/src)."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:53
+#: d893fe8a17e344b7b24fbe6d65278f17
+msgid ""
+"Additionally, there are service messages (directory "
+"~/catkin_ws_to_bridge/src/demo/myworkcell_core/srv), and the service "
+"servers will be adverstized by nodes (directory "
+"~/catkin_ws_to_bridge/src/demo/myworkcell_core/src/)."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:55
+#: 22152c79bcba4c0aa44a2c131e69c721
+msgid ""
+"Service message LocalizePart      advertised by node within "
+"vision_node.cpp"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:57
+#: d3c458ee0d824132a90fe14e39ab5562
+msgid ""
+"Service message PlanCartesianPath advertised by node within "
+"descartes_node.cpp"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:59
+#: 0813b05c399a491c831a68a7e4a8b7e5
+msgid "Service message ExecuteTrajectory advertised by node within move_robot.cpp"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:61
+#: cf40b7efcc2d4739b97ca7cf9a8d41a6
+msgid "Service message MoveToPose        advertised by node within move_robot.cpp"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:64
+#: a64a91d87b14469db47aad54f733a277
+msgid "Create the ROS2 workspace"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:66
+#: 5e916808be084710aff0c987d2c6da81
+msgid ""
+"In a new terminal, create a colcon workspace for the exercise 7.2 ROS1 "
+"packages and dependencies. We will copy a template with part of the "
+"exercise created for you."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:76
+#: 47c842beb0e4438dbbf541c505717758
+msgid "Open the blank file located at the following directory:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:80
+#: fd21ee30b90249b7917b06c5e229d3ba
+msgid ""
+"Add the message mapping parameters to the blank file. This will map four "
+"services that we plan on using in our ROS2 node "
+"(~/colcon_ws/src/demo/myworkcell_core/src/myworkcell_core.cpp). These are"
+" necessary to call the planner in ROS1 and command the robot to execute "
+"the trajectory. Additionally, we will map one publisher/subscriber "
+"message called ARMarker, but the ROS2 C++ code will not require this "
+"message. We will use it in the terminal in the later section called "
+"\"Communicate a Publisher/subscriber topic over the bridge.\" The final "
+"contents of the YAML file should be as follows:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:110
+#: dff0cf8271f840eda9c693da104c179a
+msgid ""
+"Save and close the file "
+"~/colcon_ws/src/demo/myworkcell_msgs/message_mappings.yaml."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:112
+#: 8a3595600e854b21a11add549e8ce028
+msgid "Open the ScanNPlan node file file at the following directory:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:117
+#: bc34601454104194826fcc2031221212
+msgid ""
+"Add the definitions and declarations for the services that will be "
+"communicated over the bridge when calling the ROS1 planner."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:151
+#: e4d6bb2a525a44c98afe0f91da712d65
+msgid ""
+"Add a start() method that will call the service servers from ROS1. The "
+"final start method should appear as follows to use all four services we "
+"previously mapped."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:239
+#: 48be8ab7371d4e24aa1becf6948bb6f2
+msgid ""
+"Add a main method that starts ROS2 and calls the start() method after "
+"instantiation of the ScanNPlan class."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:267
+#: 2da65ee005ab4317a62a58f3e6d8e2eb
+msgid ""
+"Save and close the file "
+"~/colcon_ws/src/demo/myworkcell_core/src/myworkcell_core.cpp."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:269
+#: d909bc3d476a4b2081a940393350caa5
+msgid "Build the ROS2 workspace."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:276
+#: 7cb9f94daf4d47fca9e696f4ba788710
+msgid "Build the ROS1 Bridge"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:278
+#: a2cb0896c2e74d03a6a148cb3ba34033
+msgid ""
+"If you have ros2_control installed, you may encounter a known error while"
+" building the ros1_bridge (#329). This can be avoided by purging "
+"controller_manager_msgs from the foxy installation."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:284
+#: 5f6059a8db5144b0a448f65b4b90c773
+msgid ""
+"At the end of Exercise 7.2, the last instruction will remind you to "
+"reinstall ros2_control so the package can be used during other demos and "
+"exercises."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:287
+#: 9a803142d9e243f7b9dc602e38c75989
+msgid ""
+"Open a new terminal. Create the ros1_bridge workspace. We build the "
+"bridge in a separate workspace because it needs to see both ROS1 and ROS2"
+" packages in its environment, and we want to make sure our application "
+"workspaces only see the packages from the distribution they are in."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:295
+#: 3a57ca347d5345318d31c0d684a069c0
+msgid ""
+"Clone the ROS1 bridge into your ROS2 workspace, selecting the branch that"
+" matches your ROS release."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:301
+#: 5cf2f3e59f85498ba67a2a20a279fac2
+msgid ""
+"Source ROS1 and ROS2 setup bash files. This is one of the only times "
+"you'll want to mix setup files from different ROS distributions."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:308
+#: 21cdf14eb8914b5e817fb664fe6eed67
+msgid ""
+"You should see a warning about the ROS_DISTRO variable being previously "
+"set to a different value.  Now the environment contains references to "
+"both distributions which can be verified by observing the CMake path."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:315
+#: 3c36cf16423a438e9fc5cdec825a8e18
+msgid ""
+"Build the bridge. This may take a while (~30 min) since it is creating "
+"mappings between all known message and service types."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:322
+#: 487ed7ad583d426d9de7c99440971453
+msgid "List the mapped message and service pairs."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:327
+#: 5e625bb5a7a048819f6e4714be91beaf
+msgid "This should list the custom mapped services."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:329
+#: c8db31f2b20d454a8e6e5f7a9ea0ee56
+msgid ""
+"'myworkcell_msgs/srv/ExecuteTrajectory' (ROS 2) <=> "
+"'myworkcell_core/ExecuteTrajectory' (ROS 1)"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:330
+#: 1d0f5284ebb944ca911c1efbb271e7b1
+msgid ""
+"'myworkcell_msgs/srv/LocalizePart' (ROS 2) <=> "
+"'myworkcell_core/LocalizePart' (ROS 1)"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:331
+#: 19b07b1359424b9bab7eeed458a85fd7
+msgid ""
+"'myworkcell_msgs/srv/MoveToPose' (ROS 2) <=> 'myworkcell_core/MoveToPose'"
+" (ROS 1)"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:332
+#: 4240f93ee9b34040aa55b853ff6b5cce
+msgid ""
+"'myworkcell_msgs/srv/PlanCartesianPath' (ROS 2) <=> "
+"'myworkcell_core/PlanCartesianPath' (ROS 1)"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:334
+#: ef378063662c49208a7ce413764db634
+msgid "The command should also list the custom mapped topic message."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:336
+#: 89a77279b9a64a798de12c7dc9f1476e
+msgid ""
+"'myworkcell_msgs/msg/ARMarker' (ROS 2) <=> 'fake_ar_publisher/ARMarker' "
+"(ROS 1)"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:338
+#: c441860a7c7b4208a47f0f694a09e558
+msgid ""
+"If you struggle to verify this information in the lengthy terminal "
+"output, use grep to simplify the terminal output."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:344
+#: 71cf7dcb77fd4406b7e319c2884b9675
+msgid "Run the Demo"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:346
+#: d94b06f0714f479fb963a3bf48682dbd
+msgid "Run the ROS1 nodes"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:348
+#: d699926032d84a56b21d7220154d40e8
+msgid ""
+"Open a new terminal, source your ROS1 workspace, and run the following "
+"launch file."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:355
+#: 4d28a7f7f49c457dad5618eb879b009c
+msgid ""
+"This will launch the motion planning and motion execution nodes is ROS1. "
+"Rviz will come up as well."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:357
+#: 4ff575595c9b40d2bec7d765c477127f
+msgid "Run the ROS1 bridge"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:359
+#: 13be217afcd843398cf1deaeda32e68a
+msgid ""
+"In your ros1_bridge_ws ROS2 workspace, source the workspace if you have "
+"not already."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:365
+#: b68e751ee4cc458c9a719f29c32443c6
+msgid "Export the ROS_MASTER_URI environment variable."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:370
+#: 64baaaf6fa694d5b9dca425ef6670794
+msgid "Run the bridge."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:375
+#: 4ce53347250e4b6992cb511f67e276b9
+msgid ""
+"We are using --bridge-all-topics argument to ensure the dynamic_bridge "
+"will force a connnection to be made, even for topics not used in the ROS2"
+" C++ code. This allows a ROS2 terminal to view all of the ROS1 topics. "
+"For example, without the --bridge-all-topics argument, a mapped message "
+"topic like ar_pose_marker would not be bridged since there is not a ROS2 "
+"subscriber in in the C++ code."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:378
+#: 47b9b8a6343b4aafac70953c5edf870f
+msgid "Run the ROS2 nodes"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:380
+#: dbc5aa18b22640ba811b095a9a37271a
+msgid "Open a new terminal and source your ROS2 workspace."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:386
+#: cf8c6f5f8a6148aab43941935f387b68
+msgid ""
+"Run the python launch file that starts the ROS2 nodes for this "
+"application."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:390
+#: 102fd27baed54497a014636a2df29b7b
+msgid "If the program succeeds you should see the following output:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:392
+#: 2adf3c318e444b74b4ccc2a161876f37
+msgid ""
+"[INFO] [myworkcell_node-1]: process started with pid [522184] "
+"[myworkcell_node-1] Got base_frame parameter world [myworkcell_node-1] "
+"Waiting for client /localize_part [myworkcell_node-1] Waiting for client "
+"/plan_path [myworkcell_node-1] Waiting for client /move_to_pose "
+"[myworkcell_node-1] Waiting for client /execute_trajectory "
+"[myworkcell_node-1] Found all services [myworkcell_node-1] Requesting "
+"pose in base frame: world [myworkcell_node-1] Part localized "
+"[myworkcell_node-1] Planning trajectory [myworkcell_node-1] Executing "
+"trajectory [myworkcell_node-1] Trajectory execution complete [INFO] "
+"[myworkcell_node-1]: process has finished cleanly [pid 522184]"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:406
+#: bd5e3b3d18fa4f66aa294fdf5b4e8b8e
+msgid "You should also see the robot moving accordingly in the Rviz window."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:408
+#: b0b879c589a94fd29d4062f8ca3db88e
+msgid "Communicate a Publisher/subscriber topic over the bridge:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:410
+#: 13f8edc4edb545d38a7816a701826204
+msgid ""
+"The information for the ARMarker message is already communicated over the"
+" bridge using the ROS1 Service Server localize_part. However, we will "
+"practice using a custom topic message to confirm the information by "
+"subscribing to the ar_pose_marker topic from the terminal."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:412
+#: 64a0aeeeebea4374bd02b04ab249239c
+msgid "Open a new terminal and source to the ROS2 workspace."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:417
+#: adf55bc963ed40348295aa8654724597
+msgid ""
+"List the available ROS2 topics. You should see ar_pose_marker among the "
+"options."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:422
+#: 064b7af1c48a4abcbace838e3e7610ab
+msgid "Print the topic's messages in your terminal."
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:427
+#: 48db4aa882934ae4b317b74ff3b2236e
+msgid ""
+"Displayed in the terminal, you should see the marker goal pose that was "
+"used for motion planning. The ROS2 workspace called the planner in the "
+"previous section called \"Run the ROS2 nodes.\""
+msgstr ""
+
+#: ../../_source/session7/ROS1-ROS2-bridge.md:431
+#: d72f521f92994625a50f78467a9be35c
+msgid ""
+"REMINDER: If purging controller_manager_msgs from the foxy installation "
+"was required to complete Exercise 7.2, reinstall ros2_control so the "
+"package can be used during other demos and exercises."
+msgstr ""
+

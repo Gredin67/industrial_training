@@ -1,0 +1,252 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:1
+#: 3dd442be75f542858342745f105162a8
+msgid "Launch Files"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:2
+#: dcd6704d9da74bb0bdd02286ece08210
+msgid ""
+"In this exercise, we will explore starting groups of nodes at once with "
+"launch files."
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:4
+#: 2d34180bbf6a4d1b9ef91d912b231227
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:5
+#: e1724aed4ea84b788105df050a3dd55f
+msgid ""
+"The ROS architecture encourages engineers to use ''nodes'' as a "
+"fundamental unit of organization in their systems, and applications can "
+"quickly grow to require many nodes to operate. Opening a new terminal and"
+" running each node individually quickly becomes unfeasible. It'd be nice "
+"to have a tool to bring up groups of nodes at once. ROS ''launch'' files "
+"are one such tool."
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:7
+#: cdb3194d4eb94a67ad22a3b1ebb87295
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:9
+#: 613605272fc24413b25b65f34783a5b4
+msgid "Launching a ROS System"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:11
+#: a49cc8410e73461b9443c34aee148594
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:13
+#: 1a8506bef60a4b02908a4df907a75ef7
+msgid "ROS2 python launch Node action"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:15
+#: a458f83da6da4c8eb817967323718017
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:16
+#: 7542a326542f45f3a2bef6c9b28daec1
+msgid "In this exercise, you will:"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:17
+#: e3e3dc599fc4401c9acd925db58cff60
+msgid "Create a new package, myworkcell_support."
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:18
+#: e5c9d5c0e3b1470bbd2e8027ad34f877
+msgid "Create a directory in this package called launch."
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:19
+#: 499f6dbdf5ad4139869e7570a99b14e0
+msgid "Create a file inside this directory called workcell.launch.py that:"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:20
+#: 941e7c78f0354b2cb0b8d610888f4e7b
+msgid "Launches fake_ar_publisher"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:21
+#: 7d8acb2356964a259dd7b69472a8ab5e
+msgid "Launches vision_node"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:23
+#: 6be829364110474aac6243f0122d5f92
+msgid ""
+"You may also choose to launch myworkcell_core node with the others or "
+"keep it separate.  We often configure systems with two main launch files."
+"  In this example, fake_ar_publisher and vision_node are \"environment "
+"nodes\", while myworkcell_node is an \"application\" node."
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:25
+#: 58ec7e1532284829abd7bdd68a9ad64d
+msgid "\"Environment\" Launch File - driver/planning nodes, config data, etc."
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:26
+#: e67e4cfca57e49ed9037826dbfdedbfb
+msgid ""
+"\"Application\" Launch File - executes a sequence of actions for a "
+"particular application."
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:28
+#: b6486fbb54e9432894d5e44e926211d9
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:30
+#: b7266d18f0644e78bb44e3e59c9f0245
+msgid ""
+"In your workspace, create the new package myworkcell_support with a "
+"dependency on myworkcell_core.  Rebuild and source the workspace so that "
+"ROS can find the new package:"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:37
+#: 504eabd6436c4305859d32814d1e4eec
+msgid ""
+"Then run colcon build in your build terminal and source your running "
+"terminal."
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:43
+#: 2fd527744aac4488b63a39792b8b7a86
+msgid ""
+"Create a directory for launch files (inside the new myworkcell_support "
+"package):"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:50
+#: 49b472346fe340a493f8a3eb0e2018bf
+msgid ""
+"Create a new file, workcell.launch.py (inside the launch directory) with "
+"the following skeleton:"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:61
+#: 7168a2fa416e4dd3aa890071dc924778
+msgid ""
+"In the space marked by the comment about 'launch actions', insert lines "
+"to bring up the nodes outlined in the problem statement. See the "
+"reference documentation for more information:"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:76
+#: c913ea254a9a4f26950795455ae3396c
+msgid ""
+"There are other options you can set for these Node actions, but name, "
+"package, and executable are the most common ones."
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:78
+#: b05f0f18c45b45219053e1a17eab1e5f
+msgid "Try to run the launch file:"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:84
+#: 50795f54e7e94cd88d88b793d0d5d7a9
+msgid ""
+"You should see an error that the launch file was not found. This is "
+"because it only exists in the src/ directory, and the ros2 tool will only"
+" work with files in the install/ directory. Therefore, the launch file "
+"must be installed."
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:86
+#: 35e7f7486efd4e3cae0d562c76cff1b6
+msgid ""
+"Add an installation rule to CMakeLists.txt in your myworkcell_support "
+"package, after the find_package section, and before the BUILD_TESTING "
+"section:"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:92
+#: 151d26dcd36c4706b5caf5f6a3c16af4
+msgid ""
+"Now build the workspace to install the launch file and try to run it "
+"again:"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:98
+#: e8c6ba6e2d9a4e609aef07574a6ff3e8
+msgid ""
+"Note: Both nodes were automatically started. Press Ctrl+C to close all "
+"nodes started by the launch file."
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:100
+#: 216758b60c3f48209d50bf863c08d002
+msgid ""
+"The expected behavior is that you should see none of the usual messages "
+"printed to the console window.  Launch files will suppress console output"
+" below the ERROR severity level by default. To restore normal text "
+"output, add the output='screen' argument to each of the nodes in your "
+"launch file (see below).  Current versions of ROS do not seem to follow "
+"this behavior, though, and output INFO/WARN messages to screen regardless"
+" of output setting."
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:117
+#: b2b0cd1e4c3e4571863aae095c151082
+msgid ""
+"Even without the output='screen' argument, the logging statements are "
+"still broadcast to any ROS nodes that listen to the global /rosout topic "
+"and captured in a log file."
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:118
+#: 7959fbda077742f980a608290a34a1a4
+msgid ""
+"Important: Remember that ros2 works on the launch file in the install/ "
+"directory and so you won't see the new behavior without running colcon "
+"build again to reinstall the file. To avoid having to do this for every "
+"change during development, you can run colcon build with a --symlink-"
+"install option which will install a link to the file in the src/ "
+"directory so any changes will be seen immediately."
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:120
+#: 48dd006100eb41359b94a64a26c05d7a
+msgid "Challenge Exercise"
+msgstr ""
+
+#: ../../_source/session2/ros2/2-Launch-Files.md:121
+#: ba493894f3c0403181264eea7613ab57
+msgid ""
+"ROS2 also supports [XML] and YAML launch files.  Review the example here "
+"and try to recreate the launch file we just made in XML or YAML instead."
+msgstr ""
+

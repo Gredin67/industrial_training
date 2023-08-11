@@ -1,0 +1,883 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:2
+#: be2018d51cb14b1d879b8e2499b242c9
+msgid "Motion Planning with Tesseract"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:3
+#: 62ac37d95e4c409eb2c5d096bd3467a8
+msgid ""
+"In this exercise we will fill in the appropriate pieces of code to create"
+" a motion planning pipeline using Tesseract. The end goal of this will be"
+" to implement a \"scan and plan\" application. Much of the code from the "
+"exercise is from our `Scan N Plan Workshop <https://github.com/ros-"
+"industrial-consortium/scan_n_plan_workshop>`_."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:6
+#: 8bd4abcb39284822abafa209a271dad5
+msgid "Prepare New Workspace:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:7
+#: 43e22136dde442d3a306c7eb07841654
+msgid ""
+"We will create a new workspace, since this exercise does not overlap with"
+" the previous exercises."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:9
+#: 559715921c8a48248a37be61dcb819ce
+msgid ""
+"Disable automatic sourcing of your previous workspace in your ``.bashrc``"
+" if you had any."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:11
+#: 2d66aca0816341dfafabd144a38a6f1a
+msgid ""
+"This means you'll need to manually source the setup file from your new "
+"colcon workspace in each new terminal window."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:13
+#: 16726862f23b4ab2b1a5073f71a94122
+msgid "Source ROS 2 into your environment"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:19
+#: af44e24df79e4e62a83710782cc55844
+msgid ""
+"If you are using a VM provided by us, please skip to step 7 as a "
+"directory called ``tesseract_ws`` should already exist with the "
+"dependencies already installed for you."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:21
+#: 017ae157f00d4b15bd7bca903881718d
+msgid "Copy the template workspace layout and files:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:28
+#: 2950eea2d3bd4524bd52b2f4ed41763c
+msgid ""
+"Install the ROS 2 dependencies (this will take a while if you don't do "
+"the shallow tag in the first one, but only do it for the first one)"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:38
+#: e5d2726938c2422cad048c19aca34007
+msgid "Install extra dependencies that aren't properly caught"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:46
+#: 2fd1edb254c34122844603b6fe0c849f
+msgid "Initialize and Build this new workspace (this may take a little while)"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:53
+#: e7a40030245844a7ae231a159b5496d9
+msgid "Source the workspace"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:59
+#: cdd883b57825480eb0679f1fb49d5175
+msgid "Import the new workspace into your QTCreator IDE (if using QTCreator):"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:61
+#: 7e859689744a4c67815c76546aefb07f
+msgid ""
+"In QTCreator: `File -> New File or Project -> Other Project -> ROS "
+"Workspace -> ~/tesseract_ws`"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:62
+#: a097ce9204e049dd9eaa180c47e06af6
+msgid "Don't forget to check the ROS distro and the build system!"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:65
+#: c4b7ec2aed1c4819a74d2e3f705ad589
+msgid "Intro (Review Existing Code)"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:66
+#: d273381d45354cdb9f1ab6748de14640
+msgid ""
+"Most of the infrastructure for a ROS node has already been completed for "
+"you; the focus of this exercise are Tesseract custom pipelines and "
+"planner profiles. You will notice that many files and packages are "
+"already provided for you. You could run the application as is, but it "
+"won't do anything intelligent and you may notice some weird behaviors. At"
+" this time we will explore the source code that has been provided. The "
+"following are highlights of what is included."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:69
+#: 62aece6e3bd6403e824551a47b36f7c8
+msgid "``snp_automate_2022/config/worcell_plugins.yaml``:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:69
+#: d5a8e48676e945c6af0460712760737c
+msgid ""
+"This file contains all of the kinematic plugins and contact manager "
+"plugins for our application. A kinematic plugin configuration file like "
+"this is required to use Tesseract. Take a look at ``workcell.srdf`` to "
+"see how it gets incorporated into the project."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:72
+#: e824d22665ee403d948107da4e79f085
+msgid "``snp_motion_planning/config/task_composer_plugins.yaml``:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:72
+#: 2362f42ac19a425bbc8c05c17481a6bb
+msgid ""
+"This file contains the custom pipeline we will be using in this exercise."
+" Currently, it is populated with very minimal pipelines. We will be "
+"modifying this file heavily to create increasingly complex and capable "
+"pipelines that enable solving difficult motion plans."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:75
+#: 4be507ba73204b4dafbe9486a42883af
+msgid "``snp_motion_planning/src/planner_profiles.hpp``:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:75
+#: 9a93826006454f008b99359a42b7d4f2
+msgid ""
+"This file contains the planner profiles used to create our motion plan. "
+"The configuration of these profiles affect the behavior of the steps in "
+"our pipelines. Currently, only the Simple Planner profile is fully "
+"populated. This is one of the main files we will be editing in our "
+"exercise."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:78
+#: ab7535c12da344c18da50b5f7e14e02b
+msgid "``snp_motion_planning/src/planning_server.cpp``:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:78
+#: ee94b497fa974c3ea72c8146fa8d8fd3
+msgid ""
+"This is where our custom planner profiles will be used by our "
+"application. Take a look at the ``createProgram()`` method. This method "
+"takes in the toolpath rasters and constructs motion plan requests in a "
+"manner usable by Tesseract. These motions include freespace motions, "
+"transition motions, and raster (process) motions. The order that they are"
+" added is the same order that they will be returned in."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:81
+#: 6b23166822554722a2b3b958d8170c31
+msgid "Running the Application"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:82
+#: f59fd6a602d741319ee2b39e27bb6045
+msgid ""
+"Throughout this exercise we will always follow the same process for "
+"running the application."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:84
+#: 994071e76f8545ec9bee94150ffe0844
+msgid "Launch the application with verbose logging on to help with debugging:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:90
+#: 8d78aeea353747edbeeb5e3516ef199c
+msgid ""
+"At this point you should see an RVIZ window pop up with an HC10 robot on "
+"a table"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:92
+#: e92cc3c4da294fe495096a458c9454cd
+msgid ""
+"There should also be a `joint_state_publisher_gui` on your screen. Feel "
+"free to play around with it as well to create different start states."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:94
+#: b988affe0c9c45fa8116e25102fd20c5
+msgid ""
+"Click the ``Get Detailed Scan`` button to populate the mesh we will be "
+"running process motions on"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:96
+#: 03eccb7c52c94e088bf3c3ce4de0f263
+msgid "Click the ``Polygon Selection Tool`` on the top row of RVIZ"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:98
+#: 820c3d455bbd40258bd52c1b516134e5
+msgid ""
+"With your mouse draw a region on the yellow mesh where you want to "
+"process."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:100
+#: f852892aa5994a38be00de96645bad59
+msgid ""
+"If this area is too small waypoints won't be able to be generated. Also, "
+"you can clear your drawing with a press of the middle mouse button."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:102
+#: ae57eeb55c294ac5b4a93f0197e04249
+msgid ""
+"Click back on the ``Interact``  button on the top row of RVIZ to go back "
+"to normal RVIZ interaction."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:104
+#: 5f50119e933d4220b698289097bc4e27
+msgid ""
+"Click ``Generate Tool Path Plan`` to create waypoints. If no waypoints "
+"show up or you dislike your selected region try redrawing your area with "
+"the ``Polygon Selection Tool``"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:106
+#: 7212e06540f5448186f2cc6c349738b9
+msgid ""
+"Once satisfied with your waypoints click ``Generate Motion Plan``. At "
+"this point your terminal should start writing out many lines."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:108
+#: b80abe95fcc542d0a813b4808da72e71
+msgid ""
+"Once motion planning is complete, if it is successful, you can see it by "
+"going to the ``TesseractWorkbench`` tab in the bottom left of RVIZ then "
+"the ``Trajectory`` tab and expose the items under ``general`` by clicking"
+" the arrow. Clicking on ``Trajectory Set`` will allow you to plan the "
+"planned trajectory and further inspection allows you to look at each "
+"individual step in detail."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:114
+#: 91adc1a65c9947608231dce26980aff8
+msgid ""
+"To understand what exactly the pipeline did you can go to the ``/tmp`` "
+"directory and open the following files:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:116
+#: eafe9575ba4c4395a2b723cbbc81c620
+msgid "ScanNPlanPipeline.dot"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:118
+#: e3014c1deb7147fca0b39fd5badbf1b6
+msgid "SNPFreespacePipeline.dot"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:120
+#: 47e13ab57dc34d89bea34d693c38ee91
+msgid "SNPTransitionPipeline.dot"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:122
+#: 5ab7c0ca590b41269b4caec322f82ec3
+msgid "SNPCartesianPipeline.dot"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:124
+#: 3d3fcb0c6e2a463782c2250e9f5693d9
+msgid "ScanNPlanPipelineResults.dot"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:126
+#: 6bb8aeb8042b400c89c478f446b639e6
+msgid ""
+"If you're having trouble viewing these files install `xdot` with ``sudo "
+"apt install xdot``"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:129
+#: 9c3ae752611c4bfdb5725069e7900497
+msgid "Fill in the Code"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:130
+#: fc3f0c00969e4a908d9c90a2080d0787
+msgid ""
+"If you try and run the application right now you'll get a successful "
+"plan, but right now it is just interpolated between waypoints naively. If"
+" you open the file ``/tmp/SNPCartesianPipeline.dot`` you'll see that only"
+" one step was performed and it was just checking that the raster meets a "
+"minimum length."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:136
+#: d244657cb26f4e80ac338e1f7d11c07e
+msgid "In this graph a ``1`` signifies success and a ``0`` signifies failure."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:138
+#: be8550b2307f4bf793d030fb0e476dcf
+msgid ""
+"Let's improve this pipeline by making it use Descartes when planning the "
+"Cartesian process motions."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:141
+#: fb19e6b85df245bfad91176b604d2052
+msgid "Add Descartes to the Pipeline"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:143
+#: 68e423acb99d40f6bfc44d6f7ed1f117
+msgid ""
+"Open the ``snp_motion_planning/config/task_composer_plugins.yaml`` file "
+"so we can add Descartes to the pipeline. Scroll down until you find the "
+"line that says ``SNPCartesianPipeline``. This is the place where the "
+"pipeline resides that made that dotgraph you just looked at. If you look "
+"at the ``nodes`` field you'll see exactly the nodes you see in the "
+"dotgraph."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:163
+#: a33c80994d9a44aa8485ba582337d762
+msgid ""
+"And how all of these nodes should be connected is defined in the "
+"``edges`` part."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:171
+#: 2f12728ad0dd46129ba39aded14e083c
+msgid ""
+"We want to add a node that is called ``DescartesMotionPlannerTask`` of "
+"class ``DescartesFMotionPlannerTaskFactory``. Everything else should look"
+" like the ``MinLengthTask`` block, except we will add one additional "
+"required field ``format_result_as_input`` under ``config``, which will be"
+" set to ``false`` and for  ``inputs:`` we're going to put "
+"``[output_data]`` because we want the input of Descartes to take the "
+"output of the previous task. From here on all our ``inputs`` and "
+"``outputs`` will just be ``[output_data]``. The new nodes structure "
+"should look like this:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:198
+#: 905941ffee584d1f9e3658a9e7f06c01
+msgid ""
+"Once you've updated the nodes you need to update the edges. to account "
+"for this new task. The edges should look like this:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:208
+#: c93c238ace574075b24b36f9b0b9a657
+msgid ""
+"In YAML files whitespace matters, so be very careful when adding to this "
+"document as it is easy to make mistakes if tabs don't perfectly align."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:210
+#: c529773bf47d43c8a5d816bdb9bed1f4
+msgid "Now save this file and trying runnining a motion plan again!"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:212
+#: 5245e5216d5343648b012cf0452c6474
+msgid ""
+"If you built with ``--symlink-install`` you don't need to rebuild, but if"
+" not you need to rebuild your workspace every time you make a change to "
+"this file"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:214
+#: 8cc496cb8779421d98a7249bfe729e18
+msgid ""
+"You should notice a difference in the planned motion with slightly more "
+"consistent joint motions with a given raster and if you look at "
+"``/tmp/SNPCartesianPipeline.dot`` you should see this:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:220
+#: d35ae42161e049069382d53154853129
+msgid ""
+"Now the process motions look better, but the freespaces and transitions "
+"are still just doing joint interpolation. Let's fix that by incorporating"
+" OMPL."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:223
+#: f5052ec43ab7403f9e59a38e93683cb6
+msgid "Add OMPL to the Pipeline"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:225
+#: 9227705cad3f4566b01b15e2ec38c5df
+msgid ""
+"Just like we added Descartes to ``SNPCartesianPipeline`` we will add OMPL"
+" to ``SNPFreespacePipeline`` and ``SNPTransitionPipeline``. We're going "
+"to call this task ``OMPLMotionPlannerTask`` and it will be of class "
+"``OMPLMotionPlannerTaskFactory``."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:227
+#: 4451160cca7e4ce7aa84582537e8a046
+msgid ""
+"You can name the tasks whatever you want we just chose "
+"``OMPLMotionPlannerTask`` because it is clear. Make sure your task name "
+"matches what you put in ``edges``. However, the class name must strictly "
+"match the generated plugins."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:229
+#: 27f6b85b449b46b198338d5378504300
+msgid ""
+"By following the same process as Descartes go ahead and try to add OMPL "
+"to your Freespace and Transition pipelines."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:274
+#: 3e0adfd802ab44f39dc48ba55165ba2b
+msgid ""
+"If you're having problems successfully running try and look at "
+"``/tmp/ScanNPlanPipelineResults.dot`` for help in debugging what's going "
+"wrong. You might find that your from_start or to_end motions are failing."
+" This is a common issue people run into because they don't realize the "
+"start state of the robot is actually in collision. You can move the robot"
+" out of collision with the ``joint_state_publisher_gui`` widget that "
+"should be floating around your screen somewhere."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:276
+#: fd5ebbb0f5634532bf131a4ad11b932f
+msgid ""
+"Now your motion planner is using both Descartes and OMPL to intelligently"
+" plan motions!"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:278
+#: 16266a4a782e4ae187aa58d3948d06c4
+msgid ""
+"Feel free to try to move the start position around and see if you can "
+"give it slightly more complicated motions to force OMPL to move in a way "
+"other than just a joint interpolation."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:281
+#: 651ddbfed1b448778b3c82579cf12232
+msgid "Add Time Parameterization and Collision Checking to the Pipelines"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:283
+#: ac0121f03fb9475eae17be35b18b495b
+msgid ""
+"You might have started to notice that all the motions you're trying to "
+"preview seem to move really slow. This is because we haven't done any "
+"time parameterization. By default Tesseract just assigns 1 second jumps "
+"in time between adjacent states, meaning a trajectory with 60 states is "
+"going to take a full minute to execute. Let's resolve this by adding a "
+"time parameterization to each of the 3 pipelines we've been modifying."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:285
+#: c6fb2bfbbc874e6bb310fa6ef95fd62c
+msgid ""
+"After Descartes in the Cartesian pipeline and after OMPL in the "
+"Transition and Freespace pipelines add a task called "
+"``IterativeSplineParameterizationTask`` of class "
+"``IterativeSplineParameterizationTaskFactory``. This task does not take "
+"the field ``format_results_as_input``."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:339
+#: be544bbda7a946c9add4b79bbed82c36
+msgid ""
+"Once you've properly done this you should have much smoother and more "
+"timely trajectories planning."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:341
+#: 39188e3e359048269a0489b7b7af0232
+msgid ""
+"Now you have trajectories being produced that `SHOULD` always be "
+"collision free, but sometimes things slip through. Let's add a contact "
+"checker to make sure each of our pipelines are outputting safe "
+"trajectories. Add a ``DiscreteContactCheckTask`` of class "
+"``DiscreteContactCheckTaskFactory`` just before the "
+"``IterativeSplineParameterizationTask`` in each of the 3 pipelines we've "
+"been modifying. (Again this is without the ``fromat_result_as_input`` "
+"field)"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:403
+#: b8ae4e7c3f3c495c9de00965af13a2a9
+msgid ""
+"Congratulations! You now have a fully functional planning pipeline that "
+"can solve a wide range of planning applications. Continue on in this "
+"exercise to make this planning pipeline more robust."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:406
+#: 8b384df43f174d71b0d7614676a7e816
+msgid "Running Descartes Globally"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:408
+#: a629455c1f6f4c6f9fb23f29912831aa
+msgid ""
+"You might have noticed that often your robot seems to be doing odd jumps "
+"between rasters that seem unnecessary to you. You're right, these are "
+"unnecessary, but as of now your pipeline is dictacting that Descartes is "
+"used to find the optimal path on each raster by itself, it doesn't take "
+"all the waypoints into consideration. To address this we're going to "
+"modify the fourth and final pipeline that we've yet to touch, "
+"``SNPPipeline``. This pipeline is the toplevel pipeline that can see "
+"every waypoint throughout our process."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:410
+#: e3978fd193394aecb5e349cddca3b1cd
+msgid "As of right now our ``SNPPipeline`` looks like this:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:416
+#: 1f76c6281c7d4c67975ea5b3a400dadf
+msgid ""
+"The highlighted node is where all the Cartesian, transition and freespace"
+" plans occur. More detail of this graph can be found in the "
+"``/tmp/ScanNPlanPipelineResults.dot``, an example of which is shown here:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:422
+#: 3a9aa6e53c8c445baa0ccc8883bc1609
+msgid ""
+"By adding a Descartes step before the ``RasterMotionTask`` we can "
+"actually generate joint states before any of the other pipelines are run."
+" Then when we get to the Cartesian pipelines it will already have joint "
+"solutions, so actually we'll be able to remove the Descartes steps from "
+"there."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:424
+#: 7921ac88cf764dcaada1fd4e368d7cff
+msgid "The new ``SNPPipeline`` with Descartes added should now look like this:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:498
+#: c2e505b7f0424ad3bc24c55802509e1f
+msgid ""
+"Go ahead and try and remove the Descartes task from the Cartesian "
+"pipeline on your own. Otherwise you can reveal the spoiler of what it "
+"will look like"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:551
+#: 0d8ae5c688aa47d3ae2ee88dd3c8ba64
+msgid ""
+"Running the application with this latest pipeline should result in the "
+"best trajectory you've seen up to this point. There should be much less "
+"motion between rasters as they have been globally optimized together."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:554
+#: 15124ccc7b464ba4931ba44c62d7a2bc
+msgid "Modifying the Descartes Profile"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:556
+#: 5996f03fc19b48609bb7c4a2faad8259
+msgid ""
+"Up to this point we've only modified the pipeline by modifying a single "
+"yaml file. That will change in this step as we start to get into the "
+"weeds to the parameters of all these planners."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:558
+#: 5bc55338758d4d3abb410bfd10f220a8
+msgid ""
+"Open up the file ``snp_motion_planning/src/planner_profiles.hpp``. You'll"
+" see several sections where we are going to put code. Right now focus on "
+"the section that looks like:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:566
+#: 0dcbe68d5c6e4e86bf4d15cefb7e29b4
+msgid ""
+"It's here that we're going to implement a custom profile for the "
+"Descartes step in our planner."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:568
+#: 33ec795d944b4fc7975ea9b4055e90d1
+msgid ""
+"One capability of Descartes is the ability to sample waypoints. For our "
+"application we are using a circular tool where orientation around the "
+"tool-z does not matter. This means we are only constrained on 5 degrees "
+"of freedom and can freely rotate around the z-axis. Replace this fill "
+"code comment with the following code:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:577
+#: 53b456c77a1a47f7a5cfe3add435cde5
+msgid "This does 2 things:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:579
+#: 32d98b9a4d2349b79528327ad2dea4ee
+msgid ""
+"Allows more use of your computer's capabilities by running with multiple "
+"threads (here it is set to the number of available threads on your "
+"system)"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:581
+#: ed382dd58868402fb1153fe9ef065931
+msgid ""
+"Samples each waypoint at 30 degree increments around the z-axis. This "
+"will alllow for more optimal trajectories while still reaching all the "
+"waypoints."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:583
+#: 03692d101da14780b62fcd2cb3a042d6
+msgid ""
+"Rebuild your workspace and relaunch your application to test this out. "
+"You should notice a slightly smoother trajectory. Feel free to play with "
+"the sampling step size, the smaller the step size the more samples which "
+"leads to longer planning times, but potentially better solutions."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:585
+#: 86d61af5f74f497998e17aad1d63c925
+msgid ""
+"Unlike the yaml file, every time you modify this ``.hpp`` file you will "
+"have to rebuild and relaunch your application."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:588
+#: 2ca87c0540434dc5adfc9c1b959f508b
+msgid "Modifying the OMPL Profile"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:590
+#: 785b08a12d194b9ba68e65c971423e62
+msgid ""
+"Just like we improved Descartes we can improve OMPL through a custom "
+"profile. Copy and past the following code into your OMPL fill code "
+"section:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:610
+#: f8ab67ca15ef42c4b6c54bd77b40fb95
+msgid ""
+"The comments here do a pretty good job of explaining what is happening. "
+"We are modifying the allowed planning time and then replacing the default"
+" planners (RRT) with 2 RRTConnect planners that each run in their own "
+"thread trying to find a solution. With RRTConnect you might notice your "
+"freespace and transition motions look much smoother, this is from "
+"RRTConnect's algorithm planning from the start and goal simultaneously."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:612
+#: 568bffb6e50f4b6587bdb1ff03a68730
+msgid ""
+"Feel free to explore other OMPL planners available in Tesseract which can"
+" be found in "
+"``tesseract_motion_planners/include/tesseract_motion_planners/ompl/ompl_planner_configurator.h``."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:615
+#: f638f24cf94c40f5b9fa3347e8ec9284
+msgid "Adding TrajOpt"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:617
+#: 5487a36b69e2449692e6c69928391a96
+msgid ""
+"First we're going to go back to the yaml file where we'll add a TrajOpt "
+"task to the Cartesian, freespace and transition pipeline. The task should"
+" be called ``TrajOptMotionPlannerTask`` and of class "
+"``TrajOptMotionPlannerTaskFactory`` (with ``format_result_as_input: "
+"false``) In the Cartesian pipeline this should go right after "
+"``MinLengthTask`` and for the freespace and transition pipelines "
+"immediately following ``OMPLMotionPlannerTask``."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:747
+#: 401484a7f4ff4973b84a0c5696ef32f6
+msgid ""
+"On top of adding this to the pipelines we are going to set up a profile "
+"for TrajOpt. TrajOpt is unique in that it has multiple profiles to set it"
+" up. Today we will be going over 2 of the 3. The ``TrajOptPlanProfile`` "
+"deals with waypoint level optimization and the "
+"``TrajOptCompositeProfile`` deals with trajectory level optimization."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:749
+#: e8f777d8f27b41329cafe401a110512c
+msgid "Replace"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:757
+#: c712c0f7efe64d2bbbb9ae2638cf3799
+msgid "with the following:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:764
+#: 0175f66cc71446629380ba505736e286
+msgid ""
+"This tells TrajOpt that Cartesian waypoints all must be followed with a "
+"cost of 5.0 in all dimensions except for rotation about Z, which we set "
+"to 0.0. This is critical because in our application we can freely rotate "
+"around Z and we previously configured Descartes to do just this. If we "
+"enforced a cost on rotation about Z then TrajOpt could potentially "
+"undermine the results from Descartes."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:766
+#: a0dd722d9b8848eba99afc80008eed55
+msgid "Next replace the TrajOpt composite section with:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:783
+#: 63e40f3ed34648bcaf8a295b8905736b
+msgid ""
+"This will enforce smoothing of the motion and set the collision avoidance"
+" parameters."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:785
+#: 38c116f2b34f4013ac5779ab0b8aa8e3
+msgid ""
+"Now rebuild and run your application. You should see very smooth motions "
+"throughout the whole process."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:787
+#: eb80b5ef5ebd4d83814ba9a6311332a8
+msgid ""
+"Congratulations! You have made a robust planner ready for all sorts of "
+"environments."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:790
+#: a8c19746f22d4e0f9addc75fb6e3d3f2
+msgid "Bonus Material"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:792
+#: 018af2f2ffd14c30906482f89fee7941
+msgid "Continue on if you want to further improve your planning pipelines"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:795
+#: 89c64074771343b685586b5fceae1100
+msgid "Add Custom Tasks to Your Pipelines"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:797
+#: 5aaa54d3e1ca430488922cee29e29ef1
+msgid ""
+"In this repo we've also created our own custom tasks which can be found "
+"in the ``snp_motion_planning/src/plugins/tasks`` directory. These classes"
+" are called ``ConstantTCPSpeedTimeParameterizationTaskFactory`` and "
+"``KinematicLimitsCheckTaskFactory``."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:799
+#: 1ec387e00b7f4bb8a29747031d639b43
+msgid ""
+"We often want to have a constant TCP speed when performing processes on "
+"the surface. In our application with is usually during Cartesian and "
+"transition motions. Try replacing ``IterativeSplineParameterizationTask``"
+" with a task using the class "
+"``ConstantTCPSpeedTimeParameterizationTaskFactory`` in the Cartesian and "
+"transition pipeline."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:801
+#: 444eb22095424f20a0cd77c6adede9d1
+msgid ""
+"Also, it's always good to make sure you're staying inside all your "
+"kinematic limits. Try adding a task using the class "
+"``KinematicLimitsCheckTaskFactory`` to the end of each of the Cartesian, "
+"transition, and freespace pipelines."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:871
+#: 0616d6f14d6343b8a3e6b0d120e03a26
+msgid ""
+"When running your application with these changes you should notice nice "
+"smooth motions and constant speeds on the surface."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:874
+#: 77c53cb4ed37430d8abb26db6eb6b770
+msgid "CHALLENGE"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:876
+#: 15f954d999144953a4a04e004ea1ea8a
+msgid "Try and recreate the transition pipeline seen here:"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:883
+#: 20bfa4ca8c74450d975a6eed05b7f0df
+msgid ""
+"This pipeline will first try and do a TrajOpt solve for transitions "
+"because most of the time OMPL is going to be overkill for these small "
+"motions."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:885
+#: fe3a54d352c4430899d6e1423f2ee326
+msgid ""
+"You'll have to figure this one out on your own as there is no solution "
+"posted for it."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:887
+#: c039ff9f7e154df2b0cbc3e1b2fbd96e
+msgid "Tasks names have to be unique, but are arbitrary."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:890
+#: eca363ca749b40b4b971f76c34cb6550
+msgid "Want to do More?"
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:891
+#: fe16482e57924960be6c64a23ec0b181
+msgid ""
+"Try modifying parameters in the ``snp_tpp_app`` widget to see how "
+"different settings effect the generated toolpath and your resulting "
+"motion plans."
+msgstr ""
+
+#: ../../_source/session8/Motion-Planning-with-Tesseract.rst:892
+#: 52174643250c43629dffb2c1ec776e9a
+msgid "Try to make your own custom pipeline not mentioned here."
+msgstr ""
+

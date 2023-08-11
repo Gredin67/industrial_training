@@ -1,0 +1,335 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:1
+#: 03cb2e7a9c804cb694fffb6edab5e057
+msgid "Installing Packages"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:3
+#: b81f47b9b13548b98718618a7445f4d0
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:4
+#: 50209abbc30d4016a68879729378290e
+msgid ""
+"Many of the coolest and most useful capabilities of ROS already exist "
+"somewhere in its community. Often, stable resources exist as easily "
+"downloadable debian packages. Alternately, some resources are less tested"
+" or more \"cutting edge\" and have not reached a stable release state; "
+"you can still access many of these resources by downloading them from "
+"their repository (usually housed on Github). Getting these git packages "
+"takes a few more steps than the debian packages. In this module we will "
+"access both types of packages and install them on our system."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:6
+#: d346b3dec4804dd4a1a85cb31277e204
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:7
+#: 88b40b794c3b46f1a5599e57eed87779
+msgid "apt-get usage"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:9
+#: 21d4a3aeba3d4660b047956716c0f7f3
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:10
+#: 3ff5df5608db41b484b8016398e78dc4
+msgid "Ubuntu apt-get How To"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:12
+#: 2b75ccc2245e46adafea78d7eab48db8
+msgid "Git Get Repo"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:14
+#: 00e0c64b3d234a76804d07fd4366aa40
+msgid "Git Clone Documentation"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:16
+#: 614d1982bd4843a1b30098341bcca4a4
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:17
+#: 12bc144179f24cc48d24fc7f60a774ad
+msgid ""
+"We have a good installation of ROS, and we have an idea of some packages "
+"that exist in ROS that we would like to use within our program. We have "
+"found a package which is stable and has a debian package we can download."
+" We've also found a less stable git package that we are interested in. Go"
+" out into the ROS world and download these packages!"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:19
+#: 7424207c901248f2b4c5e0ac583a9828
+msgid ""
+"A certain message type exists which you want to use. The stable ROS "
+"package is called: calibration_msgs"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:21
+#: 917ccf7a535d4c5e9ec60c6bfd10b19e
+msgid ""
+"You are using an AR tag, but for testing purposes you would like a node "
+"to publish similar info : fake_ar_publisher"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:23
+#: 6241787ddf2b444cb88f2027e25d8376
+msgid ""
+"Your goal is to have access to both of these packages' resources within "
+"your package/workspace:"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:25
+#: fa45eb8a161e411eb39d503015397c4f
+msgid "calibration_msgs (using apt-get)"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:27
+#: 06e0cad20f684001a617933487156ab5
+msgid "fake_ar_publisher (from git)"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:29
+#: 4246ebf6329e479d995bae50a3ce27fc
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:31
+#: 6035dd9ae8fb40efb4d4f727e06fa3a6
+msgid "Install Package from apt Repository"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:33
+#: 7d9dcde3ed25400b9fa81043a0077c03
+msgid "Open a terminal window. Type roscd calibration_msgs."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:39
+#: ca863ca222744a669c261899440de253
+msgid ""
+"This command changes the working directory to the directory of the ROS "
+"calibration_msgs package."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:40
+#: 07fc528a678046aea38982b8745d94ee
+msgid ""
+"You should see an error message `No such package/stack 'calibration_msgs'"
+" ."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:41
+#: 497e6a415624450a94a513a5e174f979
+msgid "This package is not installed on the system, so we will install it."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:43
+#: 422c4c691de54d24ab7ea1f9d1084900
+msgid "Type apt install ros-melodic-calibration-msgs."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:49
+#: b90d1f0ee5fb4ce6bf5fe2189910d023
+msgid ""
+"The program will say it cannot install the package, and suggests that we "
+"must run the program as root."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:50
+#: dacbc5d152134ecb9fa5bd55a8a3e87c
+msgid "Try pressing the TAB key while typing the package name."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:51
+#: 3b57e6d70a3846578f95c84df288ae8d
+msgid ""
+"The system will try to automatically complete the package name, if "
+"possible."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:52
+#: a19e078af2dd4b1d9fb2728e7bdfb708
+msgid ""
+"Frequent use of the TAB key will help speed up entry of many typed "
+"commands."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:54
+#: f7016733a7a74b7e9846a7cc67663f36
+msgid "Type sudo apt install ros-melodic-calibration-msgs."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:60
+#: 5a20c296f3bf416cba0b48339ca92eed
+msgid ""
+"Note the use of the sudo command to run a command with \"root\" "
+"(administrator) privileges."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:61
+#: 5832573e29764583b9a8a787154ec406
+msgid ""
+"Enter your password, and (if asked) confirm you wish to install the "
+"program."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:63
+#: ff3eb482ae704d3588a97075c7be9d60
+msgid "Type roscd calibration_msgs again."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:69
+#: 026163f52f194364a21e21e95e7a7ad4
+msgid ""
+"This time, you will see the working directory change to "
+"/opt/ros/melodic/share/calibration_msgs."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:71
+#: 94050cce730f4ca4a4beeb22c1561870
+msgid "Type sudo apt remove ros-melodic-calibration-msgs to remove the package."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:77
+#: 1f58f37fc0974666a978f53a5e849886
+msgid ""
+"Don't worry. We won't be needing this package for any future exercises, "
+"so it's safe to remove."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:79
+#: 13535489a68e4461b0ba6dac989f0876
+msgid "Type cd ~ to return to your home directory."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:85
+#: a4d8924d0d4241388da1e515619f17a3
+msgid "Download and Build a Package from Source"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:87
+#: 1150b173e26041d49d0058d0ad84bffd
+msgid "Identify the source repository for the desired package:"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:88
+#: 3ae2472b7568414885d6f2eec09c6f60
+msgid "Go to github."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:89
+#: 874ac8c027214d43ade3929ccdff9dd6
+msgid "Search for fake_ar_publisher."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:90
+#: f17a81c971654a7fa6d0da2ceebee933
+msgid ""
+"Click on this repository, and look to the right for the Clone or "
+"Download, then copy to clipboard."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:92
+#: 8765867062ed44a386090841da7de65a
+msgid ""
+"Clone the fake_ar_publisher repository into the catkin workspace's src "
+"directory."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:99
+#: fe436fecf546432eba02750bf850c392
+msgid ""
+"Use Ctrl-Shift-V to paste within the terminal, or use your mouse to "
+"right-click and select paste"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:100
+#: 1f08babb2d284ff8954c81f48f124863
+msgid ""
+"Git commands are outside of the scope of this class, but there are good "
+"tutorials available here"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:102
+#: 9ca4c336b61e489a88ddbd0a6933b204
+msgid ""
+"Build the new package using catkin build<BR> The build command can be "
+"issued from anywhere inside the catkin workspace"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:105
+#: 5c5dfde639fe4a0392411aa12b452330
+msgid ""
+"Once the build completes, notice the instruction to \"re-source setup "
+"files to use them\"."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:107
+#: 59e86f2d8fe349d9a48c2286905b492d
+msgid ""
+"In the previous exercise, we added a line to our ~/.bashrc file to "
+"automatically re-source the catkin setup files in each new terminal."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:108
+#: c0b16b7de6da4e4a93337ce5e2996890
+msgid ""
+"This is sufficient for most development activities, but you may sometimes"
+" need to re-execute the source command in your current terminal (e.g. "
+"when adding new packages):"
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:114
+#: 72460112d7ec4fde9444216eefb6d9a1
+msgid ""
+"Once the build completes, explore the build and devel directories to see "
+"what files were created."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:116
+#: 7422cdb0fe494eb2acd8a8ca7487101e
+msgid ""
+"Run rospack find fake_ar_publisher to verify the new packages are visible"
+" to ROS."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:122
+#: 632cfb2debb74091b40a7dcf5c582a3f
+msgid "This is a helpful command to troubleshoot problems with a ROS workspace."
+msgstr ""
+
+#: ../../_source/session1/ros1/2-Installing-Existing-Packages.md:123
+#: 639cb3d759eb4908b9c89f95e10db2cb
+msgid ""
+"If ROS can't find your package, try re-building the workspace and then "
+"re-sourcing the workspace's setup.bash file."
+msgstr ""
+

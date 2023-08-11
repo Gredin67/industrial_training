@@ -1,0 +1,814 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session5/OpenCV-in-Python.md:1
+#: e95b6c9bf9ee4ef28317f8e45890d4b5
+msgid "OpenCV Image Processing (Python)"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:2
+#: eb029285ca0e4667b5b5b3017b868da8
+msgid ""
+"In this exercise, we will gain familiarity with both OpenCV and Python, "
+"through a simple 2D image-processing application."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:4
+#: 84ee89b28e0241f580c5d256fcdf575e
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:5
+#: a98356127f7d4ee1b7212311a6daf57f
+msgid ""
+"OpenCV is a mature, stable library for 2D image processing, used in a "
+"wide variety of applications.  Much of ROS makes use of 3D sensors and "
+"point-cloud data, but there are still many applications that use "
+"traditional 2D cameras and image processing."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:7
+#: b01409f5d7c84dfc8efae3e7b6e2e4d1
+msgid ""
+"This tutorial uses python to build the image-processing pipeline.  Python"
+" is a good choice for this application, due to its ease of rapid "
+"prototyping and existing bindings to the OpenCV library."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:9
+#: 2fadb48944f746789ea5f6f9382f31ea
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:10
+#: f89bdf920063434093d606089f0e44fb
+msgid "OpenCV Website"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:11
+#: 42130ea188ab4efa8fcf209ad8aac4e4
+msgid "OpenCV API"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:12
+#: fd709113cb7245b7873b9b5ed16d8306
+msgid "OpenCV Python Tutorials"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:13
+#: 029be1bcff684069b8a001ede121ca9f
+msgid "ROS cv_bridge package (Python)"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:14
+#: e287c4b63e5c4240a0151492b9118022
+msgid "Writing a Publisher and Subscriber (Python)"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:15
+#: 542fd15c273b43b18ed7d524f2d3254f
+msgid "sensor_msgs/Image"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:18
+#: 12cd1ecb8cd54af4b241ccb579985925
+msgid "Problem Statement"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:19
+#: cf328e12d32d4fb9ad46534cb2f490f3
+msgid ""
+"In this exercise, you will create a new node to determine the angular "
+"pose of a pump housing using the OpenCV image processing library.  The "
+"pump's orientation is computed using a series of processing steps to "
+"extract and compare geometry features:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:21
+#: 65d72d379ff243e3b1b25ae1e6cd3018
+msgid "Resize the image (to speed up processing)"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:22
+#: d914b20b44cf470ba0d71ae7beeaaef4
+msgid "Threshold the image (convert to black & white)"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:23
+#: 22d20611c66241f39163930a23e9f31b
+msgid "Locate the pump's outer housing (circle-finding)"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:24
+#: 056eab3ead904858b251d853f6211c84
+msgid "Locate the piston sleeve locations (blob detection)"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:25
+#: 382f5044561646bf9182f391addc2bf0
+msgid "Estimate primary axis using bounding box"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:26
+#: 19e510335bb946b78c49b65a7c950473
+msgid "Determine orientation using piston sleeve locations"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:27
+#: 446d506799f147a8bac89c582e5c3951
+msgid "Calculate the axis orientation relative to a reference (horizontal) axis"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md
+#: ../../_source/session5/OpenCV-in-Python.md:29
+#: 3e1453caffe84f76860030ac3944d490 4f3dc4910ee3429d8b52ce85648400be
+msgid "pump images"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:31
+#: 422b91f51f6e46ae96d582f18ef92abf
+msgid "Implementation"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:33
+#: 652c3a3a259947fa9e65170398260203
+msgid "Create package"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:34
+#: 70cdf6e5f0344617908110fa24b7b56e
+msgid ""
+"This exercise uses a single package that can be placed in any catkin "
+"workspace. The examples below will use the ~/catkin_ws workspace from "
+"earlier exercises."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:36
+#: eb57ad1c28ce4c5b8684ed2fe3fac545
+msgid ""
+"Create a new detect_pump package to contain the new python nodes we'll be"
+" making:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:42
+#: d8cdb08ebff243c696e0eaa7cef599ee
+msgid "all ROS packages depend on rospy"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:43
+#: 954f1834fb9640baa7a81e6f57c6fef2
+msgid ""
+"we'll use cv_bridge to convert between ROS's standard Image message and "
+"OpenCV's Image object"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:44
+#: aa733346f5a74a5d91d396cd24609ca1
+msgid ""
+"cv_bridge also automatically brings in dependencies on the relevant "
+"OpenCV modules"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:46
+#: 1b560be88dc442429d192f861c2937bf
+msgid "Create a python module for this package:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:53
+#: b304f7f988194ab384cc47594da17cb1
+msgid ""
+"For a simple package such as this, the Python Style Guide recommends this"
+" simplified package structure."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:54
+#: b1fba6d4e7e944c88520b519ac674396
+msgid ""
+"More complex packages (e.g. with exportable modules, msg/srv defintions, "
+"etc.) should us a more complex package structure, with an __init__.py and"
+" setup.py."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:55
+#: 02320ff50c4f45afb51da2753e52f6ae
+msgid "reference Installing Python Scripts"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:56
+#: ce7b0a2664104491ad4bef897df21dea
+msgid "reference Handling setup.py"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:58
+#: 2304345218664d15aa9693b55b052e45
+msgid "Create an Image Publisher"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:59
+#: 7e045131248b4bf7bb701418046e57b5
+msgid ""
+"The first node will read in an image from a file and publish it as a ROS "
+"Image message on the image topic."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:61
+#: 8473fcdd93484ea08710a841ee0f8c96
+msgid ""
+"Note: ROS already contains an image_publisher package/node that performs "
+"this function, but we will duplicate it here to learn about ROS "
+"Publishers in Python."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:63
+#: 11c4a925178243739e57dad8b63c74b7
+msgid ""
+"Create a new python script for our image-publisher node "
+"(nodes/image_pub.py).  Fill in the following template for a skeleton ROS "
+"python node:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:80
+#: eb98d5bedc964866bb73a1bc7c8435bb
+msgid "Allow execution of the new script file:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:86
+#: 21d00b68f933426c9492dff75cae2d40
+msgid "Build the package and run the image publisher:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:94
+#: cb7ddbdf4d044d9f8a68feff3e674983
+msgid "You should see the \"node started\" message"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:96
+#: e78a99eed11d4cf0a865855e1b197d59
+msgid ""
+"Read the image file to publish, using the filename provided on the "
+"command line"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:98
+#: e5787541c6bf4ae9a685aad9b55a2d26
+msgid "Import the sys and cv2 (OpenCV) modules:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:105
+#: 22d8e290cb444bde982aad7998eaa0ab
+msgid "Pass the command-line argument into the start_node function:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:112
+#: 2696205cacb24505b3a60795b8a9f5b0
+msgid ""
+"Note the use of rospy.myargv() to strip out any ROS-specific command-line"
+" arguments."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:114
+#: 6579981ed9db4a81b7469264161af718
+msgid ""
+"In the start_node function, call the OpenCV imread function to read the "
+"image.  Then use imshow to display it:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:122
+#: c046aead31a44f52ae4e872c2a975b93
+msgid "Run the node, with the specified image file:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:127
+#: 624ea2c61ebf4bafb635d59ea661fe25
+msgid "You should see the image displayed"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:128
+#: 5991723acdb44e13aebb160932b0918c
+msgid "Comment out the imshow/waitKey lines, as we won't need those any more"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:129
+#: c3c9ad108ac841bcb79a3b0bf269c7a9
+msgid ""
+"Note that you don't need to run catkin build after editing the python "
+"file, since no compile step is needed."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:131
+#: 9218d38912cc4701be77639d923937f3
+msgid "Convert the image from OpenCV Image object to ROS Image message:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:133
+#: 86531d9847044dec8683884471268362
+msgid "Import the CvBridge and Image (ROS message) modules:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:140
+#: a0329aa7aa9d440d98bdde5141a99fdf
+msgid "Add a call to the CvBridge cv2_to_imgmsg method:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:147
+#: b7f37f16e2d64801a4744d8cb372969f
+msgid ""
+"Create a ROS publisher to continually publish the Image message on the "
+"image topic.  Use a loop with a 1 Hz throttle to publish the message."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:156
+#: 6f5960727769474eb8d2f3414666c341
+msgid "Run the node and inspect the newly-published image message"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:157
+#: f1a45033bb604e64b42d57d82de8d2e6
+msgid "Run the node (as before):"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:163
+#: c0545cb113164decbae5df8dec8fe50a
+msgid "Inspect the message topic using command-line tools:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:171
+#: 6d41a880360b46abb69cf708dae85d5d
+msgid "Inspect the published image using the standalone image_view node"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:177
+#: 5d5d29a3e0d4419891e2080112243e67
+msgid "Create the Detect_Pump Image-Processing Node"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:178
+#: 6daa25cbffc2419791ec4713b0dee102
+msgid ""
+"The next node will subscribe to the image topic and execute a series of "
+"processing steps to identify the pump's orientation relative to the "
+"horizontal image axis."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:180
+#: 2eaf1eec60b64426b1749c3e20a579d4
+msgid ""
+"As before, create a basic ROS python node (detect_pump.py) and set its "
+"executable permissions:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:207
+#: c4addfc18ce744a88b041ac32bcccb81
+msgid ""
+"Note that we don't have to edit CMakeLists to create new build rules for "
+"each script, since python does not need to be compiled."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:209
+#: 8c88b0bf14844ac8848da17697ee43ee
+msgid ""
+"Add a ROS subscriber to the image topic, to provide the source for images"
+" to process."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:211
+#: ec97537118ef469fb00d984bfb217e33
+msgid "Import the Image message header"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:217
+#: 07b98617a0fd4a70a33da6898f874b24
+msgid ""
+"Above the start_node function, create an empty callback (process_image) "
+"that will be called when a new Image message is received:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:226
+#: 8cc5d3a299a14385b419d342f237a00e
+msgid ""
+"The try/except error handling will allow our code to continue running, "
+"even if there are errors during the processing pipeline."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:228
+#: 5d78535389d84a3f9b59e9436a6ab48b
+msgid "In the start_node function, create a ROS Subscriber object:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:229
+#: a263ff002ffa419793af202f8223fa05
+msgid "subscribe to the image topic, monitoring messages of type Image"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:230
+#: 47d2b845fe6b44cf8712eef3c99bf072
+msgid "register the callback function we defined above"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:237
+#: 9af79b363cb04fd7907eab539fc51d2d
+msgid "reference: rospy.Subscriber"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:238
+#: edeae666ee1d422b893d04aead51284e
+msgid "reference: rospy.spin"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:240
+#: 704aa3a45e214b0985429ad4e00f2ff2
+msgid ""
+"Run the new node and verify that it is subscribing to the topic as "
+"expected:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:248
+#: 32808c9fb5d64fbd8f76ba4b61175047
+msgid ""
+"Convert the incoming Image message to an OpenCV Image object and display "
+"it As before, we'll use the CvBridge module to do the conversion."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:251
+#: 9fa784d5d67247569d957ce615288ad9
+msgid "Import the CvBridge modules:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:257
+#: ab395a0bbe0b4a7b9287b7ead3d8a5ca
+msgid ""
+"In the process_image callback, add a call to the CvBridge imgmsg_to_cv2 "
+"method:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:264
+#: a9c24b93e01c41a5a4e97f1a60712b04
+msgid ""
+"This code (and all other image-processing code) should go inside the try "
+"block, to ensure that processing errors don't crash the node."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:265
+#: 642dc77423e94d0e9391e8281f517758
+msgid ""
+"This should replace the placeholder pass command placed in the try block "
+"earlier"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:267
+#: 6fa16174e37b465f9f9b1394a554b8b5
+msgid ""
+"Use the OpenCV imshow method to display the images received.  We'll "
+"create a pattern that can be re-used to show the result of each image-"
+"processing step."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:269
+#: b224fc5314594df484793b0daf2b8147
+msgid "Import the OpenCV cv2 module:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:275
+#: 745d0a66b7c84b67af4df3602da91a59
+msgid "Add a display helper function above the process_image callback:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:283
+#: 503335b9c6df428f818b28ad0067c8d5
+msgid "Copy the received image to a new \"drawImg\" variable:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:289
+#: 9c503e8319c949d4bf67ee02b572110b
+msgid ""
+"Below the except block (outside its scope; at process_image scope, "
+"display the drawImg variable:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:296
+#: 86e803288ff7449698571e16f0fe9482
+msgid "Run the node and see the received image displayed."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:298
+#: 1693354fec74459fa4e29ed6d7edbe8e
+msgid ""
+"The first step in the image-processing pipeline is to resize the image, "
+"to speed up future processing steps.  Add the following code inside the "
+"try block, then rerun the node."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:305
+#: 43f56407928244a1a346ef8754386193
+msgid "you should see a smaller image being displayed"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:306
+#: 8979a03e8b0f49109a60279621764eb3
+msgid "reference: resize()"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:308
+#: b1131d685dfd46f9bcc28846e26ba861
+msgid ""
+"Next, convert the image from color to grayscale.  Run the node to check "
+"for errors, but the image will still look the same as previously."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:315
+#: 05ea22d7030744ab91ddb37984880b00
+msgid ""
+"Even though the original image looks gray, the JPG file, Image message, "
+"and orig OpenCV image are all 3-channel color images."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:316
+#: 1b732535c3cc43f1a57700c8c79c9cb7
+msgid ""
+"Many OpenCV functions operate on individual image channels.  Converting "
+"an image that appears gray to a \"true\" 1-channel grayscale image can "
+"help avoid confusion further on."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:317
+#: fab90910f594470b82cd53d139959702
+msgid ""
+"We convert back to a color image for drawImg so that we can draw colored "
+"overlays on top of the image to display the results of later processing "
+"steps."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:318
+#: 66db57ae5e474e2a9c6ec57c9dc1ad77
+msgid "reference: cvtColor()"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:320
+#: 75e81a8ec9f2466ca46af8c8ec7c20dc
+msgid ""
+"Apply a thresholding operation to turn the grayscale image into a binary "
+"image.  Run the node and see the thresholded image."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:329
+#: 1ba25c2ac9b0417eb4bf45d0f32c4261
+msgid ""
+"You should experiment with the threshVal paramter to find a value that "
+"works best for this image.  Valid values for this parameter lie between "
+"[0-255], to match the grayscale pixel intensity range.  Find a value that"
+" clearly highlights the pump face geometry.  I found that a value of 150 "
+"seemed good to me."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:331
+#: e80f1ec3975c468f994dfbd977953e1c
+msgid "reference threshold"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:333
+#: e426fdca5f584210a2db7ba67737acd1
+msgid "Detect the outer pump-housing circle."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:335
+#: 4f1cb8f5edc7471785bc561f0fb3b03a
+msgid ""
+"This is not actually used to detect the pump angle, but serves as a good "
+"example of feature detection.  In a more complex scene, you could use "
+"OpenCV's Region Of Interest (ROI) feature to limit further processing to "
+"only features inside this pump housing circle."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:337
+#: ea5e4c4c2ce24c99b4f2a9bb18f9a945
+msgid "Use the HoughCircles method to detect a pump housing of known size:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:345
+#: b18c164fe8c74a53890562a37234b21c
+msgid "reference: HoughCircles"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:347
+#: d09819e2469849c6929e546df8552a6e
+msgid ""
+"Add a function to display all detected circles (above the process_image "
+"callback):"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:357
+#: 624bba05a4584b06a23d50595f5164c5
+msgid ""
+"Below the circle-detect, call the display function and check for the "
+"expected # of circles (1)"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:369
+#: 2969281fbb484dccb3d0a3687969b199
+msgid "Run the node and see the detected circles."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:371
+#: fc53ef3318a44918a784f3c7e120e36b
+msgid ""
+"Experiment with adjusting the param2 input to HoughCircles to find a "
+"value that seems to work well.  This parameter represents the sensitivity"
+" of the detector; lower values detect more circles, but also will return "
+"more false-positives."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:372
+#: be4fb445363d4991bea164a1230da0dd
+msgid ""
+"Tru removing the min/maxRadius parameters or reducing the minimum "
+"distance between circles (4th parameter) to see what other circles are "
+"detected."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:373
+#: ef5321cb4c6f42fe84ed00d1285ff666
+msgid "I found that a value of param2=7 seemed to work well"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:375
+#: ad9ac4a852e34109a90a20b5e0ade17e
+msgid "Detect the piston sleeves, using blob detection."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:377
+#: b27ee5e92ebd47b8835ccc2000ef032c
+msgid ""
+"Blob detection analyses the image to identify connected regions (blobs) "
+"of similar color.  Filtering of the resulting blob features on size, "
+"shape, or other characteristics can help identify features of interest.  "
+"We will be using OpenCV's SimpleBlobDetector."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:379
+#: aeffd14e779642e49ad47c5ce3fd14c8
+msgid "Add the following code to run blob detection on the binary image:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:391
+#: 95ab08bd0cfc4d96a70161e74518ac0e
+#, python-format
+msgid ""
+"Note the use of an Area filter to select blobs within 20% of the expected"
+" piston-sleeve area."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:392
+#: 59619c29b056465a9715d5a9f28d1e8b
+msgid ""
+"By default, the blob detector is configured to detect black blobs on a "
+"white background. so no additional color filtering is required."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:394
+#: 6571d5c24ce543e59ad192281a7eda2d
+msgid ""
+"Below the blob detection, call the OpenCV blob display function and check"
+" for the expected # of piston sleeves (7):"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:403
+#: 3a50503041ed46dcb5efb79bc545dafc
+msgid "Run the node and see if all piston sleeves were properly identified"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:405
+#: 85af7432664b4f8287637e24a5c745fe
+msgid "Detect the primary axis of the pump body."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:407
+#: 9ff290a4ec0742d3bf8357e252eeab21
+msgid ""
+"This axis is used to identify the key piston sleeve feature.  We'll "
+"reduce the image to contours (outlines), then find the largest one, fit a"
+" rectangular box (rotated for best-fit), and identify the major axis of "
+"that box."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:409
+#: 060e941ed75f44b3bf269932542e071e
+msgid "Calculate image contours and select the one with the largest area:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:417
+#: 2d36024a771f490a9800c8afd57ba8ff
+msgid "Fit a bounding box to the largest contour:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:423
+#: 5a917e29084342899f78d48f7e6c68f4
+msgid ""
+"Copy these 3 helper functions to calculate the endpoints of the "
+"rectangle's major axis (above the process_image callback):"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:449
+#: f179d033995341d7aa93a091947e569b
+msgid ""
+"Call the rect2centerline function from above, with the bounding rectangle"
+" calculated earlier.  Draw the centerline on top of our display image."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:456
+#: 19f5adfdede741538f538b063333d5ef
+msgid ""
+"The final step is to identify the key piston sleeve (closest to "
+"centerline) and use position to calculate the pump angle."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:458
+#: e62f5981a0fa4ba4bc54ee05f8a92755
+msgid ""
+"Add a helper function to calculate the distance between a point and the "
+"centerline:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:467
+#: 2a96576cc5424753922706a9fa8d5c81
+msgid ""
+"Call the ptLineDist function to find which piston blob is closest to the "
+"centerline.  Update the drawImg to show which blob was identified."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:475
+#: 86f23d2882df4d3eb211d0222c903b12
+msgid ""
+"Calculate the angle between the 3 key points: piston sleeve centerpoint, "
+"pump center, and an arbitrary point along the horizontal axis (our "
+"reference \"zero\" position)."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:477
+#: da7bdeb44571435d803102f185c9ebfa
+msgid "Add a helper function findAngle to calculate the angle between 3 points:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:488
+#: 1325c6932ceb41aeb55efc7b61160f91
+msgid "Call the findAngle function with the appropriate 3 keypoints:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:499
+#: a1b411e5215e4154a785bcc4f08e6cc9
+msgid ""
+"You're done!  Run the node as before.  The reported pump angle should be "
+"near 24 degrees."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:501
+#: dc03010427b94fed89aa339520b91b17
+msgid "Challenge Exercises"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:502
+#: a8ea294e1dfe4c51be776d421d0b10b2
+msgid ""
+"For a greater challenge, try the following suggestions to modify the "
+"operation of this image-processing example:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:504
+#: 3a5cec96d20c487a823a9788434f0bae
+msgid ""
+"Modify the image_pub node to rotate the image by 10 degrees between each "
+"publishing step.  The following code can be used to rotate an image:"
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:513
+#: 23685c8a8f1f4c9cb61f816d004689b7
+msgid ""
+"Change the detect_pump node to provide a service that performs the image "
+"detection.  Define a custom service type that takes an input image and "
+"outputs the pump angle.  Create a new application node that subscribes to"
+" the image topic and calls the detect_pump service."
+msgstr ""
+
+#: ../../_source/session5/OpenCV-in-Python.md:515
+#: 316b01e1fb6747c7af8a1beb4163ee41
+msgid ""
+"Try using HoughCircles instead of BlobDetector to locate the piston "
+"sleeves."
+msgstr ""
+

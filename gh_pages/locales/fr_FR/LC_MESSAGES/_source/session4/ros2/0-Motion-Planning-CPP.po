@@ -1,0 +1,265 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:1
+#: a7ed47bf7c2f425a89386374148704ed
+msgid "Motion Planning using C++"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:2
+#: cc2c4438b24d468ba57bfa3fc015eb26
+msgid ""
+"In this exercise, we'll explore MoveIt's C++ interface to programatically"
+" move a robot."
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:5
+#: ab19948951364c3da269e507a1bfc410
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:6
+#: 0133088d82ba4bf29333f93c43fd181d
+msgid ""
+"Now that we’ve got a working MoveIt! configuration for your workcell and "
+"we’ve played a bit in RViz with the planning tools, let’s perform "
+"planning and motion in code. This exercise will introduce you to the "
+"basic C++ interface for interacting with the MoveIt! node in your own "
+"program. There are lots of ways to use MoveIt!, but for simple "
+"applications this is the most straight forward."
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:8
+#: bc0710ba2a784c52878e0cb8b8ab16ab
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:9
+#: 3467a80ae1c847378364e516dc82b652
+msgid "MoveIt-Cpp tutorial"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:11
+#: 220c5987b54b46a297c7b46c1469ac7c
+msgid "3. Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:12
+#: c0cbac3b683d45cf8d1acb8891f4f5d5
+msgid "MoveIt! Tutorials"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:13
+#: 45847231ca2b43989e35fccbd4ef89f1
+msgid "MoveIt! home-page"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:15
+#: 8b10ee1ab1f448128f08ce7bc5d8da4e
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:16
+#: 56f710697f0541ad96adc54f3c117d33
+msgid "In this exercise, your goal is to modify the myworkcell_core node to:"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:18
+#: 3e4ca4b9aeb449838734215ab6039b61
+msgid ""
+"Use the MoveItCpp API to enable planning and execution of the robot from "
+"within your C++ program."
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:19
+#: 20a52870d5e54a9f9b6832ff19db057d
+msgid ""
+"Move the robot’s tool frame to the center of the part location as "
+"reported by the service call to your vision node."
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:21
+#: 887c3aaee8aa489cb9e0fdaafab9d35c
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:23
+#: e69432389009409d98a7fa622eaadf0b
+msgid "MoveItCpp"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:25
+#: 0a1e215a41c14efd8cfc1335dca92ccf
+msgid ""
+"For this exercise we will use MoveIt's MoveItCpp API, which lets us "
+"directly call into the MoveIt libraries from our C++ application. This "
+"API is new in ROS2. ROS1 used a similar MoveGroupInterface API (still "
+"available in ROS2), which uses ROS services and actions to send commands "
+"to a standalone MoveIt node."
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:27
+#: 4d5b4dc3618c4541bd7dc3291a06aeb2
+msgid ""
+"Add dependencies on the MoveIt packages moveit_msgs and "
+"moveit_ros_planning_interface to myworkcell_core/CMakeLists.txt:"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:38
+#: a7e6428c60464f0e8d006c4b0d429cc9
+msgid "and to package.xml:"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:45
+#: ac4676d993214ec5a87168903c1196f9
+msgid ""
+"Open myworkcell_core/src/myworkcell_node.cpp. We'll first add the needed "
+"MoveItCpp objects as new class members of the node. Add the following "
+"lines in the private section of the ScanNPlan node:"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:53
+#: 57e592ca23bb4da4b56492987d95d418
+msgid "Add the required includes for these objects at the top of the file:"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:60
+#: 48c3314294f340eeb144c051cc697cff
+msgid ""
+"Create a new setup() function inside ScanNPlan after the constructor and "
+"above start. We'll use this function to initialize the MoveIt objects "
+"after the node has started."
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:77
+#: 4dcd3917d73f43e1a857cd44f9ca739a
+msgid "Planning"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:79
+#: c56a119e40e3470a96655021c19ea74c
+msgid ""
+"In the ScanNPlan class's start method, use the response from the "
+"LocalizePart service to initialize a new move_target variable:"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:87
+#: fdf414184ca649778fd907e49ae6de54
+msgid "Make sure to place this code after the call to the vision_node's service."
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:88
+#: 3cd868aafb0843dd89f29ac2b6908b41
+msgid ""
+"You may need to provide another include for this datatype: #include "
+"<geometry_msgs/msg/pose_stamped.hpp>."
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:90
+#: 5b05352c286743e6a4af4ba65eeb0ad4
+msgid ""
+"We'll use the PlanningComponent object to plan to this target, but it "
+"needs additional information about where the robot will start from and "
+"which part of the robot should move to the target. Add the following "
+"lines to get the current robot state and the name of end effector link:"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:106
+#: 5ea9cdb62d33411b96e8689674a131ce
+msgid "Now we can add the main functionality, the calls to plan and execute:"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:129
+#: 18df7c233702476894c9cba15f99941d
+msgid ""
+"Currently, MoveIt2 uses many parameters that are not declared ahead of "
+"time. To enable this, we have to construct our ROS2 node with an option "
+"to automatically declare parameters when they are set in a launch file. "
+"Modify the ScanNPlan constructor to start with the following:"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:140
+#: b1385bb174614a28a3e9091b6fe611b2
+msgid ""
+"Note that the previous declare_parameter will now throw an exception if "
+"the parameter gets automatically declared which is why we first check if "
+"the parameter already exists now."
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:142
+#: c025bd9c70914c25ae655bc3cfe9af7c
+msgid "Execution"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:144
+#: f3bebe39971b45e1b40446b45e7c13ad
+msgid ""
+"The plan and execute functions are all that's needed to get your "
+"manipulator to move (with the right parameters) but we need to tweak the "
+"ROS \"spin\" behavior to allow those functions to run properly.  Inside "
+"the main function, insert the following lines before you call app->start:"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:155
+#: d385e5b940ce4ca79fe482fe5f1597fb
+msgid ""
+"This lets ROS process callbacks in a separate worker thread while the "
+"main thread remains available for us to define our application logic.  "
+"This implies we can no longer call any spin functions in the main thread "
+"now. Replace the call to spin_until_future_complete in the start function"
+" with a function to simply wait for the future to be ready:"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:162
+#: affd545ff4584d18a9022c373bf9ba9b
+msgid ""
+"Finally, before calling rclcpp::shtudown(), wait for the thread to rejoin"
+" the main process."
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:168
+#: 93cbde7f00b84d859743fea3c785aac9
+msgid "Launch files and testing"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:170
+#: 54f1c80b8ca64fd08f4412eae933b6c3
+msgid "Open your workcell.launch.py and replace it with the following contents:"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:294
+#: 00472c3ab60845b09978a7989ce8a0e1
+msgid ""
+"Note that this uses the same set of helper functions as previous launch "
+"files"
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:295
+#: c186c9ee23594d7994722f961a0d1247
+msgid ""
+"All of the extra complexity is used to build the set of parameters for "
+"the myworkcell_node node."
+msgstr ""
+
+#: ../../_source/session4/ros2/0-Motion-Planning-CPP.md:297
+#: cefba305fa0d47758315a56eaf10f2b7
+msgid "Now let's test the system!"
+msgstr ""
+

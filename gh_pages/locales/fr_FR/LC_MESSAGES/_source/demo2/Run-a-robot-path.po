@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo2/Run-a-robot-path.md:1 e51867367f97459b91b9a6354f5e5e85
+msgid "Run a Robot Path"
+msgstr ""
+
+#: ../../_source/demo2/Run-a-robot-path.md:2 2406a2d9206144928134a9ef98b596cb
+msgid ""
+"In this exercise, we will convert our Descartes path into a MoveIt! "
+"trajectory and then send it to the robot."
+msgstr ""
+
+#: ../../_source/demo2/Run-a-robot-path.md:4 cbc1c18fde2744af94d2f99fedfd1333
+msgid "Locate Exercise Source File"
+msgstr ""
+
+#: ../../_source/demo2/Run-a-robot-path.md:6 469f8f25249a4d80bb1a6b7ab6048d5d
+msgid ""
+"Go to the main application source file located in "
+"plan_and_run/src/plan_and_run_node.cpp."
+msgstr ""
+
+#: ../../_source/demo2/Run-a-robot-path.md:7 51da7835c45745eb92fe86beab7e89cc
+msgid "In the main program, locate the function call to application.runPath()."
+msgstr ""
+
+#: ../../_source/demo2/Run-a-robot-path.md:8 cfcf0e5ab252451fac02a4b2e1721b4a
+msgid ""
+"Go to the source file for that function located in the "
+"plan_and_run/src/tasks/run_path.cpp."
+msgstr ""
+
+#: ../../_source/demo2/Run-a-robot-path.md:9 fd4d0d4deb4140ae882df1235ec3ad6b
+msgid ""
+"Alternatively, in QTCreator, click on any part of the function and press "
+"\"F2\" to bring up that file."
+msgstr ""
+
+#: ../../_source/demo2/Run-a-robot-path.md:10 c37e10ebff9d45b9ad62cd98597d2911
+msgid ""
+"Comment out the first line containing the ROS_ERROR_STREAM( ... entry so "
+"that the function does not quit immediately."
+msgstr ""
+
+#: ../../_source/demo2/Run-a-robot-path.md:12 a327ea5466954bc7823aec1543119bf4
+msgid "Complete Code"
+msgstr ""
+
+#: ../../_source/demo2/Run-a-robot-path.md:14 d0d08e75ee054fd7b9994a513ae1c0d1
+msgid ""
+"Find comment block that starts with /*  Fill Code: and complete as per "
+"described."
+msgstr ""
+
+#: ../../_source/demo2/Run-a-robot-path.md:16 e1b3bb64761c499489f20a23c17ecd41
+msgid "Replace every instance of [ COMPLETE HERE ] accordingly."
+msgstr ""
+
+#: ../../_source/demo2/Run-a-robot-path.md:18 059d2e1d41ca449294be4eb7d192a31f
+msgid "Build Code and Run"
+msgstr ""
+
+#: ../../_source/demo2/Run-a-robot-path.md:20 20c4c63371494df2ae9a0d610e088217
+msgid "cd into your catkin workspace and run catkin build"
+msgstr ""
+
+#: ../../_source/demo2/Run-a-robot-path.md:21 13d4d51ab1394ceea6c5660eb596da08
+msgid "Then run the application launch file:"
+msgstr ""
+
+#: ../../_source/demo2/Run-a-robot-path.md:26 2b778713e299469fba5834f1c1f0f3b5
+msgid "API References"
+msgstr ""
+
+#: ../../_source/demo2/Run-a-robot-path.md:28 27fa53de3a504f04889d8410450f65ee
+msgid "MoveGroupInterface::move()"
+msgstr ""
+

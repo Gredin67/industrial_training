@@ -1,0 +1,345 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session7/ROS2-Basics.md:1 1ec3248c8a7d4ac8a2c50f809018775a
+msgid "ROS2 Basics Exercise"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:3 3531760786fc4535a8b2395cf2a2be42
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:5 5cd791913cea4372a2c1110060e9098c
+msgid ""
+"Our goal for this exercise is to go through the basic ROS2 commands to "
+"understand how they work. We will not be writing any code during this "
+"exercise, instead we will just run through a few commands in the shell."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:9 755e12d08a11468e8500bf963cf552d9
+msgid "Workspaces and packages"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:11 15bb650a88d24753ad68e4a94d8dc671
+msgid ""
+"Start by creating a new ROS2 workspace. As with catkin in ROS1, a "
+"workspace consists of a folder with a src/ subdirectory."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:18 f0043db7788b4f4cb828c6eac72053a9
+msgid ""
+"Clone the ROS2 demos examples repositories which we will use to run some "
+"examples. When building existing packages from source, it is important to"
+" verify the code version as the most recent version may have changes "
+"incompatible with the current release. Here we checkout the repositories "
+"to the eloquent release branch when cloned."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:29 5d129209e5c64b97a319f492b46eba62
+msgid ""
+"Install any required dependencies for the repositories using rosdep. This"
+" step is the same as in ROS1 since rosdep is installed as a system tool."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:37 261d75db4ad445ab84a5fdaa389a0f31
+msgid "Building packages"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:39 21f0cfa618a74ac5884a3c418f9e0b78
+msgid ""
+"ROS2 uses colcon as the build tool for ROS packages. Colcon is installed "
+"separately from ROS distributions as a pure Python package. It is always "
+"available in the user's PATH without sourcing a workspace setup file."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:43 9ea502a2ad5a497a8d3ecc72ea1b2cad
+msgid ""
+"Run colcon -h to see a short help summary and a list of verbs that can be"
+" used. Run colcon build -h to see the help description for the build "
+"verb."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:46 b1409849abcc4e1a81499810dcc12e1f
+msgid ""
+"Run colcon list and colcon info to see infomation about what packages are"
+" currently in the workspace. Colcon can be directed to ignore packages if"
+" a directory contains an empty file named COLCON_IGNORE."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:50 55659e2648fb42a3bfc039465f32ad93
+msgid ""
+"Build the workspace. This will require a setup script to be sourced so "
+"Ament can find the required dependent ROS packages. Check your .bashrc "
+"file and either change or remove any line that sources a ROS1 setup file "
+"at the end of the file. Remember if you change your .bashrc to start a "
+"terminal for it to take effect."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:60 8ae92741e8c54280be94e54f969f98c1
+msgid ""
+"Important: Unlike catkin tools, colcon looks for packages and will create"
+" its output folders wherever you run it. Be sure you are in the workspace"
+" root before running it."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:63 2f9ff79169f5402a8b0986f979d437a2
+msgid ""
+"Colcon does not currently have a clean verb. To rebuild a workspace from "
+"scratch, you must remove the generated outputs manually: rm -r build/ "
+"install/ log/"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:66 953b34b8db8249a5b3abe1ca898623f3
+msgid ""
+"Source the newly-built workspace. Inside the new install/ folder will be "
+"both setup.bash and local_setup.bash files. The setup.bash will configure"
+" a terminal environment to see the workspace packages as well as the "
+"environment the workspace was built in. local_setup.bash will add the "
+"workspace packages to the current environment."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:71 79fc380f69b44571abf4c42bd2f026f5
+msgid ""
+"If you keep your .bashrc to source /opt/ros/eloquent/setup.bash then you "
+"should only need to run source install/local_setup.bash"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:74 dc631b8133bb4aed96a381d399535af0
+msgid "Otherwise, run source install/setup.bash"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:76 916108b3f7524db38ddb6f72b8eeeaa3
+msgid "The ros2 command"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:78 9fc0955e72ef4a1d8ae4a3eab634ba13
+msgid ""
+"ROS2 replaces the set of ros* command line tools with subcommands of a "
+"single ros2 command. Briefly we'll run through some of ones that may be "
+"useful for a developer."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:81 cc2dfe84e2b14678b21b9e482a3f991c
+msgid "ros2 pkg"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:83 da6d0c28537343ceaf21cdc004c92256
+msgid "Shows information about ROS packages visible in the current environment"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:85 fafe83b177924745b79b4c73ab2ef4c3
+msgid "Use ros2 pkg list to see a list of all visible packages"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:87 d29d0fcdbeba44509d5f53d283d699a7
+msgid ""
+"Use ros2 pkg executables to see a list of executables made available by a"
+" package. E.g., ros2 pkg executables tf2_ros"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:90 01646f2618ff4161a7e6adf21fc879ab
+msgid "Use ros2 pkg prefix to get the installation location of package"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:92 061ed7c7cf9d4552898435c65b0c37f3
+msgid "ros2 run"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:94 b0e1c420aa7a40b0a2aebd3fba88591a
+msgid ""
+"Runs executables provided by a package (ros2 run <package_name> "
+"<executable_file>)"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:96 4fcd7e458ec24ff384e61a0b4acaaf1d
+msgid "Open two terminals sourced to the ros2_ws workspace."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:98 14bd827eafe541f58250634535e62aa3
+msgid ""
+"In the first one, run ros2 run demo_nodes_cpp listener. Tab completion "
+"should be available so you don't have to type the full package and "
+"executable names."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:101 f1526aac98ee41dab912065b6240a75d
+msgid ""
+"In the second, run ros2 run demo_nodes_cpp talker. You should now start "
+"to see a string message start to be printed repeatedly on both terminals."
+" Leave both nodes running."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:105 95d8610ef36f46cb8f2c3c687aff7662
+msgid ""
+"Note: You did not need to start a ROS master process before running "
+"nodes. The two nodes discovered each other on the network in a "
+"decentralized way as they started up."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:108 42daebdcfb744e35a1ce507c26667bed
+msgid "ros2 node"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:110 df489a1b6f95454a851fb7c4100360dc
+msgid "Shows information about currently running ROS nodes."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:112 3ed24ad6ac0d4995968b751862768c07
+msgid "Open a third terminal sourced to the ros_ws workspace."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:114 7d6b48065aa3454e8fe0d0aa8fcd8272
+msgid "Run ros2 node list to see a list of running nodes"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:116 2b748e6dc240413ebf82b2d612577ff1
+msgid ""
+"Run ros2 node info /talker to see the topics and services the talker node"
+" is using"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:118 e7e58b312f674911ab7fa23f3ec32d6b
+msgid "ros2 topic"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:120 eff4fd85cd8742df8e29808a04633198
+msgid "Shows information about topics currently used by one or more nodes."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:122 3b22710b431a4624b7acfc28cced1a45
+msgid "Run ros2 topic list to see currently published topics"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:124 0baee72b5ae14cb390d1d5ac06c4c5fc
+msgid ""
+"Run ros2 topic info /chatter to see information about the topic the "
+"talker node is publishing"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:126 41ac4550b07d48d8b31cf3e5cbbe5bbb
+msgid ""
+"Run ros2 topic echo /chatter to locally subscribe to the /chatter topic "
+"and print it on the terminal"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:129 f1e856b43a0148b3ba370bc46416421c
+msgid "Run ros2 topic -h for a list of more available subcommands"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:131 8f1b9283acc549c2b01e22c2dea5b017
+msgid "ros2 service/srv"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:133 c3a8bb16fc034a05856e212cbfdd8247
+msgid "Shows information about ROS services."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:135 3878d394ee5e4dd4b49f5c624d496038
+msgid ""
+"Either stop the talker and listener nodes with Ctrl-C or open two more "
+"terminals."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:137 5eb55447fc81405bb02a2f9fd5fcd4b0
+msgid "In the first terminal, run ros2 run demo_nodes_cpp add_two_ints_server"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:139 260a7c2f171f4fd19408e170078340c8
+msgid ""
+"In the second terminal, run ros2 service list -t to show currently "
+"available services and what type they are."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:142 b0ddc508803943d2b53480949f62e6e7
+msgid ""
+"Run ros2 srv show example_interfaces/srv/AddTwoInts to see the service "
+"definition of the /add_two_ints service. Notice the names and types of "
+"the fields used in the service request."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:145 037880c392de449d831da8706311a446
+msgid ""
+"Run ros2 service call /add_two_ints example_interfaces/srv/AddTwoInts "
+"'{a: 1, b: 2}' to manually call the service. The fields of the service "
+"request must be set using a YAML dictionary that specifies the field "
+"names and values."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:149 dfcdb1ba697646f286d06ed181a5c2dc
+msgid "ros2 launch"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:151 b87d592c88af44158db9f2004e807d10
+msgid "Start an installed launch file (ros2 launch <package_name> <launch_file>)"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:153 6396637e7e1f4d47aefe28d2a01be8a8
+msgid "Close any currently running nodes"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:155 f28588c93b6847e6a8513908cb1354c1
+msgid ""
+"Run ros2 launch dummy_robot_bringup dummy_robot_bringup.launch.py. Again,"
+" tab completion should be able to help here. Notice the .py suffix on the"
+" launch file, it's just a python script."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:158 ffbac47671114981b4967211209b0a69
+msgid ""
+"This starts five nodes that can inspected with the above command line "
+"tools. You might notice a /joint_states topic publishing changing values "
+"and a /scan topic publishing simulated 2D laser scanner data. Let's "
+"visualize them."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:162 c63c5d1d348d4c9d81f9e3f641bb81f2
+msgid "RViz"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:164 27e4530c55e247d3a482242e7393b110
+msgid ""
+"RViz has been renamed to rviz2 and substantially rewritten for ROS2 but "
+"appears more-or-less the same from the user's point-of-view."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:167 c6a80410814d477ba96e4cf13b9de9f0
+msgid ""
+"In a free terminal, run rviz2 while the dummy robot launch file is still "
+"running."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:169 410051f0a90449a3aa95b89be76364bb
+msgid "Change the 'Fixed Frame' to 'world'"
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:171 cd4e125ece4b44c4973d83f4e5dfe311
+msgid ""
+"Add a RobotModel display type. Expand the display options and set "
+"'Description Source' to 'Topic' and 'Description Topic' to "
+"'/robot_description'. You should now see a robot moving on your screen."
+msgstr ""
+
+#: ../../_source/session7/ROS2-Basics.md:175 b778010467e6406bb897690aed44befa
+msgid ""
+"Add a LaserScan display and have it display the '/scan' topic. You should"
+" start to see 2D laser scan data appear as if the scanner were attached "
+"to the end of the robot. Getting intermittent transform errors is normal."
+msgstr ""
+

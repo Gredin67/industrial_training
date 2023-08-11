@@ -1,0 +1,206 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:1
+#: e255db9ffa154d7f9fa3155077ce80ad
+msgid "Coordinate Tranforms using TF"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:2
+#: 295ecee9f3da49a2be67dbaa74a1aaa6
+msgid ""
+"In this exercise, we will explore the terminal and C++ commands used with"
+" TF, the transform library."
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:4
+#: 6b6eb9faf7e248558cc031b6e087e83b
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:5
+#: efb1546032514a50a4bace90827f1888
+msgid ""
+"It’s hard to imagine a useful, physical “robot” that doesn’t move itself "
+"or watch something else move. A useful application in ROS will inevitably"
+" have some component that needs to monitor the position of a part, robot "
+"link, or tool. In ROS, the “eco-system” and library that facilitates this"
+" is called TF. TF is a fundamental tool that allows for the lookup the "
+"transformation between any connected frames, even back through time. It "
+"allows you to ask questions like: “What was the transform between A and B"
+" 10 seconds ago.” That’s useful stuff."
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:9
+#: 9a5acf5df85e4416a0ed2d8d179c2765
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:10
+#: ef7b6de6b89e4d2eb677c491634b23a7
+msgid "ROS TF2 Listener Tutorial"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:12
+#: 09dc8c5598454249adad5c945c2a1562
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:13
+#: badee425a1fa4d73ab7b3e79f3799840
+msgid "Wiki Documentation"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:14
+#: f0017f909b8a48b6b4e6265c7cae771c
+msgid "TF2 Tutorials"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:15
+#: acb643298d26448e8c147fc81bff23d5
+msgid "TF2 Buffer API"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:17
+#: c94c7fec4feb415e968a3158787bc35b
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:18
+#: 25160a961c704b94a47e27f415b21a0c
+msgid ""
+"The part pose information returned by our (simulated) camera is given in "
+"the optical reference frame of the camera itself. For the robot to do "
+"something with this data, we need to transform the data into the robot’s "
+"reference frame."
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:20
+#: ebe171191de94c57abcfaf9f7577ba7d
+msgid ""
+"Specifically, edit the service callback inside the vision_node to "
+"transform the last known part pose from camera_frame to the service "
+"call’s base_frame request field."
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:23
+#: 5b755e938e0c44b69b8016fe66a6f0bb
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:25
+#: 467955248e8e4c0d83331becb12f8ce6
+msgid ""
+"Specify tf2_ros and tf2_geometry_msgs as dependencies of your core "
+"package."
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:27
+#: 5a4213b2c92d4634acd76d8d90e78cff
+msgid ""
+"Edit package.xml (+2 lines) and CMakeLists.txt (+4 lines) as in previous "
+"exercises"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:29
+#: 61ff14353a884c6ca38ed8d55591fcd5
+msgid ""
+"Add tf2_ros::Buffer and tf2_ros::TransformListener objects to the vision "
+"node (as class members variables)."
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:39
+#: 5658d2bf94f146c6a14b2a803ab0cc6f
+msgid "Also add include lines to be able to work with geometry_msgs types:"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:46
+#: 88954b075c9648b58635925f75528a62
+msgid ""
+"The transform listener must be constructed using the buffer. Initialize "
+"it in the class constructor:"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:55
+#: 4f2d3fcdf8af4ff485fb92d293c64a17
+msgid ""
+"Add code to the existing localizePart method to convert the reported "
+"target pose from its reference frame (\"camera_frame\") to the service-"
+"request frame:"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:57
+#: b8974f56b7a54acea138eab9062cbbb7
+msgid ""
+"Remove the placeholder line from a previous exercise that sets the "
+"resulting pose equal to the pose from the last message"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:63
+#: b682c5f4d2964f8bb14320334a4713d9
+msgid ""
+"To perform a coordinate transformation, we will use a stamped pose object"
+" which bundles a 3D pose with metadata about what coordinate system the "
+"pose is in, which is known as a header. These pieces of data both come "
+"from the message received by the marker publisher:"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:71
+#: cf50d4b12d9b494e933de5625ceac1d8
+msgid ""
+"Use the buffer object to transform this PoseStamped object to another "
+"coordinate frame, specified by the frame in the service request:"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:77
+#: 964ec1b7d7144ea1a2feed680e07873a
+msgid ""
+"Note: The buffer looks up the transformation between the camera frame and"
+" the base frame at the specific time when the message was first "
+"generated, which is also recorded in the header of the message."
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:78
+#: e8bbf55eec3943618f6b6baaf114a63d
+msgid ""
+"There are many other Stamped versions messages besides PoseStamped. Most "
+"of them can also be transformed to different coordinate system using the "
+"same method."
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:80
+#: e8f0dfe37f1243e597ec92bdb6ce82d5
+msgid "Return the transformed pose in the service response."
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:86
+#: 688dceddbae34d3b8335bbd9c0ce9cf3
+msgid "Run the nodes to test the transforms:"
+msgstr ""
+
+#: ../../_source/session3/ros1/2-Coordinate-Transforms-using-TF.md:94
+#: 1bd8b4b74b2b46e697136bb326d1f354
+msgid ""
+"Change the \"base_frame\" parameter in workcell.launch (e.g. to "
+"\"table\"), relaunch the workcell.launch file, and note the different "
+"pose result.  Change the \"base_frame\" parameter back to \"world\" when "
+"you're done."
+msgstr ""
+

@@ -1,0 +1,68 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo1/0-Introduction.rst:2 1ae6238503d542d49571b3607e1c8637
+msgid "Perception-Driven Manipulation Introduction"
+msgstr ""
+
+#: ../../_source/demo1/0-Introduction.rst:6 670ce7f9e3034b3bbd2e161f854f74ca
+msgid "Goal"
+msgstr ""
+
+#: ../../_source/demo1/0-Introduction.rst:8 91b2d4853f1b493babd60da09c74af17
+msgid ""
+"The purpose of these exercises is to implement a ROS node that drives a "
+"robot through a series of moves and actions in order to complete a pick "
+"and place task.  In addition, they will serve as an example as to how to "
+"integrate a variety of software capabilities (perception, controller "
+"drivers, I/O, inverse kinematics, path planning, collision avoidance, "
+"etc) into a ROS-based industrial application."
+msgstr ""
+
+#: ../../_source/demo1/0-Introduction.rst:17 ccf6619b76f8416bb239455a912272a5
+msgid "Objectives"
+msgstr ""
+
+#: ../../_source/demo1/0-Introduction.rst:19 5294aa6753dd42ca9a87407277739efa
+msgid ""
+"Understand the components and structure of a real or simulated robot "
+"application."
+msgstr ""
+
+#: ../../_source/demo1/0-Introduction.rst:21 287274409f0e45058f10458c6eafa147
+msgid "Learn how to command robot moves using Moveit!."
+msgstr ""
+
+#: ../../_source/demo1/0-Introduction.rst:22 5adfd04c484047678ff7ecbb8cc48ea9
+msgid "Learn how to move the arm to a joint or Cartesian position."
+msgstr ""
+
+#: ../../_source/demo1/0-Introduction.rst:23 a2855f9404924a0d8c5d2d7451c9eb62
+msgid "Leverage perception capabilities including AR tag recognition and PCL."
+msgstr ""
+
+#: ../../_source/demo1/0-Introduction.rst:24 a213fc3247aa4b8eb1426fc4eea6f99d
+msgid "Plan collision-free paths for a pick and place task."
+msgstr ""
+
+#: ../../_source/demo1/0-Introduction.rst:25 0c65a48698e743eb91fe4d68b0a4eb77
+msgid "Control robot peripherals such as a gripper."
+msgstr ""
+

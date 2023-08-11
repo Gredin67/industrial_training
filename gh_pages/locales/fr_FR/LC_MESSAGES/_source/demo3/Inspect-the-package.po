@@ -1,0 +1,200 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo3/Inspect-the-package.md:1
+#: dcbfa170e8814dd08894ff3bc7ae07a6
+msgid "Inspect the \"pick_and_place\" Package"
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:2
+#: a3f11fbffee04037ad4a4421e2e61822
+msgid ""
+"In this exercise, we will get familiar with all the files that you will "
+"be interacting with throughout the next exercises."
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:4
+#: 2ad9707af5c74e14b4a8d72f6b6ee3e7
+msgid "Acquire and initialize the workspace"
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:12
+#: 863f172d1c4b46c9b4b4215d084788ca
+msgid "Download source dependencies"
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:13
+#: f0f87721d3c642f8ae63678cea9a0b5b
+msgid ""
+"Use the wstool command to download the repositories listed in the "
+"src/.rosinstall file"
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:19
+#: 40880e2ad495432da50c93357a9efd4f
+msgid "Download debian dependencies"
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:20
+#: 9dac09ab125d4348a35dff4388d0d9ee
+msgid ""
+"Make sure you have installed and configured the rosdep tool. Then, run "
+"the following command from the /src directory of your workspace."
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:26
+#: 5495c1f5b2e447f48f8f3450617eec47
+msgid "We also need to install glfw."
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:30
+#: 525e67db2d0f431291cd2dfaaf07c41a
+msgid "Build your workspace"
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:34
+#: c0a08b994f304647bac6c42a7cab6996
+msgid ""
+"If the build fails then revisit the previous two steps to make sure all "
+"the dependencies were downloaded."
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:37
+#: f368322e6e854754843a0fbcabc3aa2f
+msgid "Source the workspace"
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:38
+#: 2a7ab1280f274e398db4a2f4616ce381
+msgid "Run the following command from your workspace parent directory"
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:43
+#: 64de464ea7944f24836b56cd156e2eb8
+msgid "Explore your workspace"
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:44
+#: 303f53823f27448898eabb251b3538fa
+msgid "Your workspace contains 7 packages"
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:46
+#: 14152d6ba7c84416b64375048bf4aafe
+msgid ""
+"pick_and_place - This is the main pick and place package. It contains the"
+" main pick and place node and the launch file to bring up the system."
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:47
+#: b3e619710c33481a89e3330a45af32ab
+msgid ""
+"pick_and_place_perception - This package contains the perception "
+"pipeline. We will develop a PCL algorithm to use a 3D camera to detect a "
+"pick object and pass its location to the pick and place node."
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:48
+#: 918b2ce5f4374f30a5bbdb8e21db8cbe
+msgid ""
+"pick_and_place_support - This package contains the support files for the "
+"system. This is where files such as the robot model are stored. It also "
+"contains code for camera calibration."
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:49
+#: 56888090e9ec4419b4549c8a21ffdba2
+msgid ""
+"gl_depth_sim - This package simulates a 3D camera by using OpenGL to "
+"convert a mesh and a camera pose into a point cloud. It was installed "
+"from github by wstool."
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:50
+#: e30ca1026a3f4fe1908e48c8cfb04cbe
+msgid ""
+"tesseract - This package runs the planning environment. It contains tools"
+" for robot path planning, collision checking, and visualization. It was "
+"installed from github by wstool."
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:51
+#: 52036e511d9c48868cc97d302c88fd1a
+msgid ""
+"trajopt - This package contains the trajopt motion planner. We will use "
+"this to path plan - optimizing for collision avoidance, following a set "
+"of desired waypoints, and meeting physical robot constraints. It was "
+"installed from github by wstool."
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:52
+#: 2fee48f8d17d498584e7d260163a247b
+msgid ""
+"iiwa_stack - This package contains the hardware driver for controlling a "
+"KUKA iiwa collaborative robot. It also contains the robot description "
+"that is used for simulation and path planning. It was installed from "
+"github by wstool."
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:54
+#: ac0fe663cdad456ead400a4f2922c6d8
+msgid "Look into the src directory"
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:55
+#: 2ed7412c909c4a0ebe17db7e996aca15
+msgid ""
+"Looking into the src directory of the main pick_and_place package, you "
+"will see the following:"
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:57
+#: c1f5600142bc4c06b6aae134e674ec92
+msgid "Nodes:"
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:59
+#: fbe2ad91734c402ba01230f6c95e710b
+msgid ""
+"test_bed_core_node.cpp : Main application thread. Contains all necessary "
+"headers and function calls to perform a scripted pick and place "
+"operation."
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:61
+#: 1d366a8436444a5b8e28c3b8234f9cd8
+msgid ""
+"sensor_simulator_3d.cpp : Simulates data from a 3D camera sensor. Only "
+"used in simulation."
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:63
+#: 9d2c0e15b18a4dbba04e6729038df027
+msgid "Utilities"
+msgstr ""
+
+#: ../../_source/demo3/Inspect-the-package.md:64
+#: 6107ce81dd884a17a2cd1bcc505b44b9
+msgid ""
+"trajopt_pick_and_place_constructor.cpp : Contains source code for trajopt"
+" pick and place helper functions. This is where the majority of the "
+"trajopt implementation will be."
+msgstr ""
+

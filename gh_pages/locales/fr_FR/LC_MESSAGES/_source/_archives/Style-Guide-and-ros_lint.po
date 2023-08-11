@@ -1,0 +1,117 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:1
+#: bfeda9af53a64290ac7c7893b3792ad6
+msgid "ROS Style Guide and ros_lint"
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:3
+#: 22012d34e58d4ca586317acd84c250b6
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:4
+#: 5b12a261ff4f45e38f907a2caec9926c
+msgid ""
+"The ROS Scan-N-Plan application from Exercise 4.0 is complete, tested and"
+" documented.  Now we want to clean up the code according to the style "
+"guide so other developers can easily understand our work."
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:6
+#: 4470362866a34e79bc4220a8a4e4f635
+msgid "Information and Resources"
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:8
+#: 5c8cae574e4c4698848b63deeffd02af
+msgid "The Official ROS C++ Style Guide"
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:10
+#: a8c0dc341d5545d6acfff1229ded46ed
+msgid "Automated Style Guide Enforcement"
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:12
+#: ada72f70573c4bf78990fbc736a53b14
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:13
+#: 3d247d96b0e9411b8b9ed962584b8adc
+msgid ""
+"We have completed and tested our Scan-N-Plan program from Exercise 4.0 "
+"and we need to release the code to the public. Your goal is to ensure the"
+" code we have created conforms to the ROS C++ Style Guide."
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:15
+#: f0cfc1daeda540b5b34419a03d144f98
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:17
+#: ca37da488fe446c3aeb3d4d2d1c59c57
+msgid "Configure Package"
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:19
+#: f7a0537bde41459885d3b3dab24272ed
+msgid ""
+"Add a build dependency on roslint to your myworkcell_core package's "
+"package.xml:"
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:25
+#: ccc15d03fc624b9f976945c3cc9aef09
+msgid "Add roslint to the find_package(...) command in the CMakeLists.txt file:"
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:34
+#: 7737ba3725604792a577a0a0cc12cc77
+msgid "Invoke roslint from the CMakeLists.txt file"
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:40
+#: 56585d0d0f2043b784dd839df3f726da
+msgid "Run roslint"
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:41
+#: 1aa8d8330d2f4569a0834927d1d1c158
+msgid "To run roslint:"
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:46
+#: a59e6882079841398ad81b209a5fb6c9
+msgid ""
+"The output of roslint for the ScanNPlan class from Exercise 4.0 indicates"
+" that there are several issues regarding formatting"
+msgstr ""
+
+#: ../../_source/_archives/Style-Guide-and-ros_lint.md:62
+#: e326fc6757bb427f9c0ceb8ecf46647b
+msgid ""
+"Once these issues are corrected, the output of roslint should look like "
+"this:"
+msgstr ""
+

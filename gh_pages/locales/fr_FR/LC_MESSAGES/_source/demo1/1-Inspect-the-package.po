@@ -1,0 +1,223 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:2
+#: 93b65c300fb04783aaca26176c14c98d
+msgid "Inspect the ``pick_and_place_application`` Package"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:4
+#: 653a1871cb0d4c4bbafef397b347bf12
+msgid ""
+"In this exercise, we will get familiar with all the files that you will "
+"be interacting with throughout the next exercises."
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:9
+#: 3ee5a7f45ef04cabaf1b6db327d87a65
+msgid "Acquire the Workspace"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:18
+#: f772a0c9acb74645890dcd8029802704
+msgid "Locate and navigate into the package"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:26
+#: 8328bdc20d5444c58c374e4aaece3601
+msgid "Look into the ``launch`` directory"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:28
+#: 04e4c57a6c7c481f9514a4b321fe0509
+msgid "``application_setup.launch.py``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:30
+#: 571c057842e94942872f1d03b3178cb4
+msgid ""
+"Brings up the entire ROS system (MoveIt!, Rviz, perception nodes, ROS-I "
+"drivers, robot I/O peripherals)"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:32
+#: c9ccbe8d9d8742f08841d28201561d73
+msgid "``application_run.launch.py``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:34
+#: e1ed510ce61f4ab68abf952bd4518837
+msgid "Runs your pick and place node."
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:38
+#: 04a1fac027574b59802a0d1c78fe9864
+msgid "Look into the ``config`` directory"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:40
+#: eec36a46555a47e783bcfe02afc354aa
+msgid "``pick_and_place_parameters.yaml``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:42
+#: bdf6658f6cbb4f3899b8eceaa384a7c6
+msgid "List of parameters read by the pick and place node."
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:44
+#: 95761062b22849c7904f337c833d19a4
+msgid "``rviz_config.rviz``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:46
+#: ad5a77f8a177494d820e13b6380bab4c
+msgid "Rviz configuration file for display properties."
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:48
+#: d10ac253ecb4455cb97d4a52e390bf4d
+msgid "``target_recognition_parameters.yaml``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:50
+#: b61cda6d2e6f4438ab418abf12797100
+msgid ""
+"Parameters used by the target recognition service for detecting the box "
+"from the sensor data."
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:52
+#: 380bbf20839840a9b2ed871126e8e135
+msgid "``fake_obstacles_cloud_descriptions.yaml``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:54
+#: de62ed50a10a4d869bcbf50c1b218be1
+msgid ""
+"Parameters used to generate simulated sensor data (simulated sensor mode "
+"only)."
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:58
+#: 8e2a1c85a62d442da00311533959d9f3
+msgid "Look into the ``src`` directory"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:60
+#: 40cbab35816145358ec0e39ac41e4269
+msgid "``nodes/``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:62
+#: fdd53cd1bf2b44daa44d6ef568704478
+msgid "``pick_and_place_node.cpp``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:64
+#: 807bdf48e69646289d12fbe72c1759a2
+msgid ""
+"Main application thread. Contains all necessary headers and function "
+"calls."
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:66
+#: 0c157f7ab92744f996efd7310a26018c
+msgid "``tasks/``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:68
+#: 70d17eb8775a4392adb242c5f394148c
+msgid "``create_motion_plan.cpp``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:69
+#: 5453ed7405d146a5a98f50d6c02650e0
+msgid "``create_pick_moves.cpp``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:70
+#: c748a6418e884d11abab13a7eb1e26de
+msgid "``create_place_moves.cpp``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:71
+#: 586a603f4d86428783e25a9055d79b23
+msgid "``detect_box_pick.cpp``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:72
+#: 2eb8e6c2330e405f89e7c6970be88abe
+msgid "``initialize.cpp``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:73
+#: 4ea2263aba3b47e09626cb58bd6f1cdb
+msgid "``move_to_wait_position.cpp``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:74
+#: cf0194dac79147d9902c3364c27310b0
+msgid "``pickup_box.cpp``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:75
+#: c1f0ec60998a4171b92043be23fe2c22
+msgid "``place_box.cpp``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:76
+#: e9fa9956f5604443a4a397ae9edd0a68
+msgid "``reset_world.cpp``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:77
+#: 77cbdd8e9304479f92df979dd0481e3f
+msgid "``set_attached_object.cpp``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:78
+#: c88acc04fd324e8b92953cd450e696cf
+msgid "``set_gripper.cpp``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:80
+#: accff172e29a4169b31c0c71f0d457a1
+msgid ""
+"The ``tasks`` directory contains source files with incomplete function "
+"definitions. You will fill with code where needed in order to complete "
+"the exercise."
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:82
+#: 659e9fe6ecfa492496103063cd74c05b
+msgid "``utilities/``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:84
+#: f22b1d3bd395496ea627429fb859e6ae
+msgid "``pick_and_place_utilities.cpp``"
+msgstr ""
+
+#: ../../_source/demo1/1-Inspect-the-package.rst:86
+#: 5552ae00413143b5973222a944386393
+msgid "Contains support functions that will help you complete the exercise."
+msgstr ""
+

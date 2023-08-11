@@ -1,0 +1,239 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/_archives/Unit-Testing.rst:2 09eba0b339ae4cca87b668080c49ad5a
+msgid "Unit Testing"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:4 f9393969dfce447bbe51e3c911f37ee9
+msgid ""
+"In this exercise we will write a unit tests in the `myworkcell_core` "
+"package."
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:7 780bd10f176e4305955e1d84d066903d
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:9 94b1a3d6c32540f6ae395157122ff688
+msgid ""
+"The ROS Scan-N-Plan application from Exercise 4.0 is complete and "
+"documented.  Now we want to test the program to make sure it behaves as "
+"expected."
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:12 7187ab5e024a4f8aa1da4e3a96bd44f0
+msgid "Information and Resources"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:14 56eab0d1425d4c63af3986b782d5f30a
+msgid ""
+"`Google Test "
+"<https://github.com/google/googletest/blob/master/googletest/docs/primer.md>`__:"
+" C++ XUnit test framework"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:16 721e3886fdd44764b6722101459d315b
+msgid ""
+"`rostest <http://wiki.ros.org/rostest>`__: ROS wrapper for XUnit test "
+"framework"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:18 2058060e6a024e729e7c9da0fd242b64
+msgid ""
+"`catkin testing <http://catkin-"
+"tools.readthedocs.io/en/latest/verbs/catkin_build.html?highlight=run_tests"
+"#building-and-running-tests>`__: Building and running tests with catkin"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:21 d9926e0e70ac4755a720fc916aa3d22c
+msgid "Problem Statement"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:23 ac5cdb17a424417fbf7c22baf0fc89ed
+msgid ""
+"We have completed and and documented our Scan-N-Plan program.  We need to"
+" create a test framework so we can be sure our program runs as intended "
+"after it is built. In addition to ensuring the code runs as intended, "
+"unit tests allow you to easily check if new code changes functionality in"
+" unexpected ways.  Your goal is to create the unit test frame work and "
+"write a few tests."
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:26 d1f0cba91235497ea612cd6903ec8667
+msgid "Guidance"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:29 2d3ef1c583104a34891574cfcbb912f0
+msgid "Create the unit test frame work"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:31 c3f021328b77410fa3e54925b0754f48
+msgid ""
+"Create a `test` folder in the `myworkcell_core/src` folder. In the "
+"workspace directory:"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:40 abc0125158204d1d94ca11253d96c1d5
+msgid "Create utest.cpp file in the `myworkcell_core/src/test` folder:"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:46 8c1048c63140433ca2e889829d6471b6
+msgid "Open utest.cpp in QT and include ros & gtest:"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:53 0e8d035f459540e79d26ee93cebef4a7
+msgid ""
+"Write a dummy test that will return true if executed. This will test our "
+"framework and we will replace it later with more useful tests:"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:62 c36f84137fa542509f7ec437f4292aab
+msgid ""
+"Next include the general main function, which will execute the unit tests"
+" we write later:"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:72 4033a76a924f420daae2d013dd11a512
+msgid ""
+"Edit `myworkcell_core/CMakeLists.txt` to build the u_test.cpp file.  "
+"Append CMakeLists.txt:"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:82 7f0c080fb68a4750b1aa59f92ad404c6
+msgid "Create a test folder under `myworkcell_core`"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:89 589b89f3b9ed43c79b3de2aec5d94646
+msgid "Create a test launch file:"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:95 56dec5e384db45e3a5875ed46c0da5d2
+msgid "Open the `utest_launch.test` file in QT and populate the file:"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:105
+#: 56b6a52649b84af7a5a83614ed2ac421
+msgid "Build and test the framework"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:111
+#: f5bf35f90b694185ac351d8db575ad2b
+msgid ""
+"The console output should show (buried in the midst of many build "
+"messages):"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:125
+#: 2d961e6ccedf429180431801918682be
+msgid ""
+"This means our framework is functional and now we can add usefull unit "
+"tests."
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:127
+#: b3524fec838f4417a52b615f28f12c0b
+msgid ""
+"You can also run tests directly from the command line, using the launch "
+"file we made above: `rostest myworkcell_core utest_launch.test`.  Note "
+"that test files are not built using the regular `catkin build` command, "
+"so use `catkin run_tests myworkcell_core` instead."
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:130
+#: 75899c9d32be4bd7a0581420ffbe1513
+msgid "Add stock publisher tests"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:132
+#: a6f95a89a18144398e9512c3f090a293
+msgid ""
+"The rostest package provides several tools for inspecting basic topic "
+"characteristics `hztest <http://wiki.ros.org/rostest/Nodes#hztest>`__, "
+"`paramtest <http://wiki.ros.org/rostest/Nodes#paramtest>`__, `publishtest"
+" <http://wiki.ros.org/rostest/Nodes#publishtest>`__.  We'll add some "
+"basic tests to verify that the `fake_ar_publisher` node is outputting the"
+" expected topics."
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:134
+#: 0820e57c8c2c4f18b536f1b5746f9289
+msgid "Add the test description to the `utest_launch.test` file:"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:150
+#: ../../_source/_archives/Unit-Testing.rst:215
+#: 2cd39f164b474dbd885341f4c61fde90 93e0dc06f9304ae39408b856151f06c2
+msgid "Run the test:"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:156
+#: ../../_source/_archives/Unit-Testing.rst:227
+#: 71998a10d8f94e3b9f1654edc977a98f 92bfb3bec9a94580b8afcfcd783a2d80
+msgid "You should see:"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:158
+#: 67432ac39c824659bf504e2d76dac1cc
+msgid "Summary: 2 tests, 0 errors, 0 failures"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:161
+#: abb6f384c50f4c44b6ba1f39a150a7ca
+msgid "Write specific unit tests"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:163
+#: cb52f52e2a6e4c4ca9058245ad3e35ce
+msgid ""
+"Since we will be testing the messages we get from the fake_ar_publisher "
+"package, include the relevant header file (in `utest.cpp`):"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:169
+#: b90fcc411b3544f1b1ec5ba05150e30b
+msgid "Declare a global variable:"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:175
+#: a945b91d4dab4f6780be038a7beb6f86
+msgid ""
+"Add a subscriber callback to copy incoming messages to the global "
+"variable:"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:184
+#: ad76a8fcecb949ff8b16836ac7fb0a62
+msgid "Write a unit test to check the reference frame of the ar_pose_marker:"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:198
+#: 84772a4aec564c88bbd92fdb5c826c04
+msgid ""
+"Add some node-initialization boilerplate to the main() function, since "
+"our unit tests interact with a running ROS system.  Replace the current "
+"main() function with the new code below:"
+msgstr ""
+
+#: ../../_source/_archives/Unit-Testing.rst:221
+#: 6b3d4eac2a9448689fb4877591ab7565
+msgid "view the results of the test:"
+msgstr ""
+

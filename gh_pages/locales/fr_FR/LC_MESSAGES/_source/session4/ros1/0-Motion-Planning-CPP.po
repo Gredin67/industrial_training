@@ -1,0 +1,228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:1
+#: a76c9c58f48b4cb28b3e4a65877db861
+msgid "Motion Planning using C++"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:2
+#: b0401025ac4244abb55cda96e4bea328
+msgid ""
+"In this exercise, we'll explore MoveIt's C++ interface to programatically"
+" move a robot."
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:5
+#: 4f39c8039d394da0901fbe2d46ee72a6
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:6
+#: eb3f8f99986942dc807af962f89b2d01
+msgid ""
+"Now that we’ve got a working MoveIt! configuration for your workcell and "
+"we’ve played a bit in RViz with the planning tools, let’s perform "
+"planning and motion in code. This exercise will introduce you to the "
+"basic C++ interface for interacting with the MoveIt! node in your own "
+"program. There are lots of ways to use MoveIt!, but for simple "
+"applications this is the most straight forward."
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:8
+#: 27b890b75943402d83f4775fe74cb170
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:9
+#: f7e25bc77758418a8053566a24e81c84
+msgid "Move Group Interface tutorial"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:11
+#: daa30a061f734dcf8e50ebc1654fe180
+msgid "3. Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:12
+#: d76f3331984e4d01bb3db9466223cbdd
+msgid "MoveIt! Tutorials"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:13
+#: b07f8c6b304b4b4f80cb5c05dec5e006
+msgid "MoveIt! home-page"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:15
+#: d6b2f472355a49b5a50dd2188fc40254
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:16
+#: f0c2b09ef178413fb58d750bc10761cb
+msgid "In this exercise, your goal is to modify the myworkcell_core node to:"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:18
+#: 39213002d9ae499cb39477772dbeddca
+msgid ""
+"Move the robot’s tool frame to the center of the part location as "
+"reported by the service call to your vision node."
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:20
+#: 37b1df715bc04b87abdf87af0126389e
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:22
+#: e71d56592116454482c1dcbf6054b6aa
+msgid "Edit your myworkcell_node.cpp file."
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:24
+#: c94a2876e2f44d25be0339d90fdc6f38
+msgid ""
+"Add #include <tf/tf.h> to allow access to the tf library (for frame "
+"transforms/utilities)."
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:26
+#: 9f6ca7559c914504b98e33f61c86c61c
+msgid ""
+"Remember that we already added a dependency on the tf package in a "
+"previous exercise."
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:28
+#: 9e59af0bb9aa444db2ff04f09501d7ab
+msgid ""
+"In the ScanNPlan class's start method, use the response from the "
+"LocalizePart service to initialize a new move_target variable:"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:34
+#: 3424b5c0f99346e4b42f6664029c22ab
+msgid "make sure to place this code after the call to the vision_node's service."
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:36
+#: 40a347bca30b4ceeb6d825f4d5dd337e
+msgid ""
+"Use the MoveGroupInterface to plan/execute a move to the move_target "
+"position:"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:38
+#: 796cca82105f4daca4a9919a9e020a4e
+msgid ""
+"In order to use the MoveGroupInterface class it is necessary to add the "
+"moveit_ros_planning_interface package as a dependency of your "
+"myworkcell_core package. Add the moveit_ros_planning_interface dependency"
+" by modifying your package's CMakeLists.txt (2 lines) and package.xml (1 "
+"line) as in previous exercises."
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:40
+#: 0a0c11719c294a5fb08a5c18e6e1d9f1
+msgid ""
+"Add the appropriate \"include\" reference to allow use of the "
+"MoveGroupInterface:"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:46
+#: ce1b34881f564e869c7c92d5f0b72b33
+msgid ""
+"Create a moveit::planning_interface::MoveGroupInterface object in the "
+"ScanNPlan class's start() method. It has a single constructor that takes "
+"the name of the planning group you defined when creating the workcell "
+"moveit package (“manipulator”)."
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:52
+#: 798576bdec5341af97a1d1f505bbb756
+msgid ""
+"Set the desired cartesian target position using the move_group object’s "
+"setPoseTarget function. Call the object's move() function to plan and "
+"execute a move to the target position."
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:61
+#: 19e6e4ef9eb64cb69798e0d69051ff6e
+msgid ""
+"As described here, the move_group.move() command requires use of an "
+"\"asynchronous\" spinner, to allow processing of ROS messages during the "
+"blocking move() command.  Initialize the spinner near the start of the "
+"main() routine after ros::init(argc, argv, \"myworkcell_node\"), and "
+"replace the existing ros::spin() command with ros::waitForShutdown(), as "
+"shown:"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:70
+#: fc2464ced1354493b9dd538237c51a32
+msgid "Test the system!"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:78
+#: de30da49fa9e4e67a6120c64e52f87da
+msgid "More to explore..."
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:79
+#: c9c91b3d87484df28b5a0561c266f28b
+msgid ""
+"In RViz, add a \"Marker\" display of topic \"/ar_pose_visual\" to confirm"
+" that the final robot position matches the position published by "
+"fake_ar_publisher"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:80
+#: f8f36a358a4a450483b26df02f286a90
+msgid "Try repeating the motion planning sequence:"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:81
+#: 466483fb23b340a5b70ac00e3f10db66
+msgid ""
+"Use the MoveIt rviz interface to move the arm back to the \"allZeros\" "
+"position"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:82
+#: 4ca3faf21f52452eb466944e82235bc2
+msgid "Ctrl+C the workcell.launch file, then rerun"
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:83
+#: 163726265a79424fbd788cf8ce218ac9
+msgid ""
+"Try updating the workcell_node's start method to automatically move back "
+"to the allZeros position after moving to the AR_target position.  See "
+"here for a list of move_group's available methods."
+msgstr ""
+
+#: ../../_source/session4/ros1/0-Motion-Planning-CPP.md:84
+#: 5d5580e3f9804e32bd41d56ec318a41b
+msgid ""
+"Try moving to an \"approach position\" located a few inches away from the"
+" target position, prior to the final move-to-target."
+msgstr ""
+

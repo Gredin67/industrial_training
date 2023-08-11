@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo1/2-Package-Setup.rst:2 0ce72ea625e64cfd820b358f47e79915
+msgid "Package Setup"
+msgstr ""
+
+#: ../../_source/demo1/2-Package-Setup.rst:4 15d8c884775841e18d272a32cf815dd7
+msgid ""
+"In this exercise, we will get dependencies and configure the package for "
+"the Qt Creator IDE."
+msgstr ""
+
+#: ../../_source/demo1/2-Package-Setup.rst:9 1e1ffc50375d4251950ff8525a0e0707
+msgid "Download debian dependencies"
+msgstr ""
+
+#: ../../_source/demo1/2-Package-Setup.rst:11 92f48ae259bb45b2838d776310baef09
+msgid ""
+"Make sure you installed and configured the `rosdep tool "
+"<http://wiki.ros.org/rosdep>`_."
+msgstr ""
+
+#: ../../_source/demo1/2-Package-Setup.rst:13 bf1ed8b19eaf452c98084d1ac41dc63a
+msgid ""
+"Then, run the following command from the :file:`src` directory of your "
+"workspace:"
+msgstr ""
+
+#: ../../_source/demo1/2-Package-Setup.rst:21 678a49cad4b0439db3787c684205b2f8
+msgid "Build your workspace"
+msgstr ""
+
+#: ../../_source/demo1/2-Package-Setup.rst:29 16cc87d650f24fe68226a21c973a65b8
+msgid ""
+"If the build fails then revisit the previous two steps to make sure all "
+"the dependencies were downloaded."
+msgstr ""
+
+#: ../../_source/demo1/2-Package-Setup.rst:33 f1abe8ad48044566af5e678bae7bcbe7
+msgid "Source the workspace"
+msgstr ""
+
+#: ../../_source/demo1/2-Package-Setup.rst:35 ee5d3b8d3709432ab3ec866f6f91ee49
+msgid ""
+"In a new terminal (where you didn't build the workspace), run the "
+"following command from your workspace parent directory to enable the ROS "
+"tools to see the new packages"
+msgstr ""
+
+#: ../../_source/demo1/2-Package-Setup.rst:43 e652f728f8c248e89d31331817926851
+msgid "Import Package into QTCreator"
+msgstr ""
+
+#: ../../_source/demo1/2-Package-Setup.rst:45 b199e01aed334289862077c8bed2ec4e
+msgid ""
+"In QTCreator select the following menu item: :menuselection:`File --> New"
+" File or Project`."
+msgstr ""
+
+#: ../../_source/demo1/2-Package-Setup.rst:48 7c6d3fdf1cc045f5883220b96bb1bc79
+msgid ""
+"In the dialog that appears, on the left select :guilabel:`Other Project` "
+"and in the middle section select :guilabel:`ROS Workspace`. Confirm your "
+"selection with the :guilabel:`Choose` button."
+msgstr ""
+
+#: ../../_source/demo1/2-Package-Setup.rst:52 ca51a26d946f42a2bd7924a1a8e3631d
+msgid ""
+"Choose a name for your workspace, select ``/opt/ros/humble/`` as the ROS "
+"distribution, select ``colcon`` as the build system, and provide the path"
+" to your ``perception_ws`` directory as the workspace path. Click "
+":guilabel:`Next` and :guilabel:`Finish` to complete the setup."
+msgstr ""
+
+#: ../../_source/demo1/2-Package-Setup.rst:57 94424a6ea49f41708f7dd40406b866bc
+msgid ""
+"Rebuild the workspace inside of QTCreator, to create the metadata "
+"required for IDE code completion."
+msgstr ""
+
+#: ../../_source/demo1/2-Package-Setup.rst:61 d0571dca16e84adeacf567d6ccfca660
+msgid "Open the Main Thread Source File"
+msgstr ""
+
+#: ../../_source/demo1/2-Package-Setup.rst:63 2cf6b6e7080245b89509083abc910dee
+msgid ""
+"In the :guilabel:`Edit` tab, open the file "
+":file:`pick_and_place_node.cpp` in the directory ``[workspace source "
+"directory]/pick_and_place_application/src/nodes``"
+msgstr ""
+

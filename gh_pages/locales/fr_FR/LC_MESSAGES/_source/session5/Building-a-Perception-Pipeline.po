@@ -1,0 +1,1035 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:2
+#: fea097d034584da8b1534575f4ac25fd
+msgid "Building a Perception Pipeline"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:3
+#: 0c2a6edc5676499aaae506c0d0ef3c90
+msgid ""
+"In this exercise, we will fill in the appropriate pieces of code to build"
+" a perception pipeline. The end goal will be to broadcast a transform "
+"with the pose information of the object of interest."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:6
+#: c761ca815cf44e67b03b65959543e790
+msgid "Prepare New Workspace:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:7
+#: 46ee3171aee945b08158ecd4333cbd85
+msgid ""
+"We will create a new workspace, since this exercise does not overlap with"
+" the previous exercises."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:9
+#: efa254fb8fa040a9a4649aa195fe01e7
+msgid ""
+"Disable automatic sourcing of your previous workspace in your ``.bashrc``"
+" if you had any:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:11
+#: 580b0a9e53cd46cfa6e4ab3eb1d5caf4
+msgid ""
+"This means you'll need to manually source the setup file from your new "
+"colcon workspace in each new terminal window."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:13
+#: bdf7122e71934af2b5a59cb09773e11a
+msgid "Source ROS 2 into your environment"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:19
+#: 1205017db8e341c28696621250d02e96
+msgid ""
+"Copy the template workspace layout and files (if you haven't done "
+"exercise 4.1):"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:27
+#: 6550e6d56edc4276b163db3a46932fab
+msgid "Initialize and Build this new workspace"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:33
+#: 81947626230a4e7488314821c2d7efb8
+msgid "Source the workspace"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:39
+#: b62340a229f14c91a659f08832ce006e
+msgid "Copy the PointCloud file from prior Exercise 4.2:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:45
+#: 2ad0d230e9a240e593aacdd7ba7968a0
+msgid "Import the new workspace into your QTCreator IDE (if using QTCreator):"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:47
+#: 4b8036f825654ee9bc3e92413a00640d
+msgid ""
+"In QTCreator: `File -> New File or Project -> Other Project -> ROS "
+"Workspace -> ~/perception_ws`"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:48
+#: efcbe930741b4d32b5e12d32c5ad7118
+msgid "Don't forget to check the ROS distro and the build system!"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:51
+#: 07c39877b2eb497887b97d4df7ba2d83
+msgid "Intro (Review Existing Code)"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:52
+#: e36fe8c32986498188967d61e7a3ac88
+msgid ""
+"Most of the infrastructure for a ROS node has already been completed for "
+"you; the focus of this exercise is the perception algorithms/pipleline. "
+"The `CMakelists.txt` and `package.xml` are complete and an executable has"
+" been provided. You could run the executable as is, but you would get "
+"errors. At this time we will explore the source code that has been "
+"provided - browse the provided `perception_node.cpp` file. The following "
+"are highlights of what is included."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:54
+#: 98317c93c36544c7b368b0d2b2d6c292
+msgid "Headers:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:56
+#: 340b36878afc426cb85e367093d3fd30
+msgid ""
+"We have provided several headers for the various libraries and packages "
+"you will need."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:58
+#: d9e7d86dee604d9d8b964adc355d8d97
+msgid "int main():"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:60
+#: 08cf529057c14cd2a7200aaff55ef16d
+msgid "The ``main`` function has been provided."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:62
+#: c23114062a974a3597cb64e068b2a56c
+msgid "class PerceptionNode():"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:64
+#: 7b71578528e3430c821f4077036b7d66
+msgid ""
+"A ``PerceptionNode()`` class that inherits from ``rclcpp::Node`` has been"
+" provided. Parts of it will need to be edited as you go."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:66
+#: eaca276f08224ba99f5fc534864b2252
+msgid "ROS initialization:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:68
+#: ab001667a3114e3fb263df5d397eef8d
+msgid "Both ``rclcpp::init`` and ``rclcpp::spin`` have been called/initialized."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:70
+#: 10c8efb13bf343eba6d9e0d5160b5ec3
+msgid "Launch file:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:72
+#: e38dcba8241e49c0b9e330cf8f9a5a59
+msgid ""
+"A launch file has been provided for you. The parameters within it will "
+"need to be edited later in the exercise."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:74
+#: 2f29667e76bb472da0557848ee9ad13d
+msgid "Set up parameters:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:76
+#: 575aa0d2c8f94f6985ba06c9476fe3a6
+msgid ""
+"Currently there are three string parameters included in the example: the "
+"world frame, the camera frame and the topic being published by the "
+"camera. More parameters will be added later."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:78
+#: a02d8715b7da49578413b931a7b0d3ba
+msgid "Set up publishers:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:80
+#: c3cce81a7c624dc4b6023e76a08b486d
+msgid ""
+"Two publishers have been set up to publish ros messages for point clouds."
+" It is often useful to visualize your results when working with image or "
+"point cloud processing."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:82
+#: 38b95c8d36694d08b33f4fabd0424ace
+msgid "Listen for PointCloud2:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:84
+#: bb41127dedc640e2b65d9231cad2f2d3
+msgid "A subscriber has been set up to listen for new point clouds."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:86
+#: bbd800786c6b42bfa8952599884a6866
+msgid "Transform PointCloud2 (within callback):"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:88
+#: 51465a99a1a24bff9313d982e415970b
+msgid ""
+"While we could work in the camera frame, things are more "
+"understandable/useful if we are looking at the points of a point cloud in"
+" an xyz space that makes more sense with our environment. In this case we"
+" are transforming the points from the camera frame to a world frame."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:90
+#: 88aefe217088436e9946618d6592afe3
+msgid "Convert PointCloud2 (ROS to PCL) (within callback)"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:92
+#: fa60efc75fc54d03872cfb015faa6857
+msgid "Convert PointCloud2 (PCL to ROS) and publish (within callback):"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:94
+#: d05a02b23fa244329fc13f0ff6c2ae11
+msgid ""
+"This step is not necessary, but visualizing point cloud processing "
+"results is often useful, so conversion back into a ROS type and creating "
+"the ROS message for publishing is done for you."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:96
+#: e702fea9e10c4c68818c356850b38bae
+msgid ""
+"So it seems that a lot has been done! Should be easy to finish up. All "
+"you need to do is fill in the middle section."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:99
+#: 82cd6827d62042f6949cfddb03182ed3
+msgid "Primary Task: Filling in the blanks"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:100
+#: c7dc1a9839fc49909ff35ebfcb2c7270
+msgid ""
+"The task of filling in the middle section containing the perception "
+"algorithms is an iterative process, so each step has been broken up into "
+"its own sub-task."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:103
+#: 2f827bc0ee324094a0b5a6b99385be74
+msgid "Implement Voxel Filter"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:105
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:191
+#: cce2e9d708a7409c99f763c6d52e452a eeaf95c6e4f940b69e095f02525403df
+msgid "Change code:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:107
+#: ffd1ae2079804d25a9c03f708d571e87
+msgid ""
+"The first step in most point cloud processing pipelines is the voxel "
+"filter. This filter not only helps to downsample your points, but also "
+"eliminates any NAN values so that any further filtering or processing is "
+"done on real values. See  `PCL Voxel Filter Tutorial "
+"<https://pcl.readthedocs.io/projects/tutorials/en/latest/voxel_grid.html>`_"
+" for more in-depth explanations of the code."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:109
+#: c6757103a6a24c9fbd26985203f6382f
+msgid "Within ``perception_node.cpp``, find section"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:117
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:203
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:268
+#: 09454db887fd44c4999101fa58c85140 6811fb2dfc4b48228cd9ec1d5818eed5
+#: c8724878beaf407597ed27eb62806b22
+msgid "Copy and paste the following code beneath that banner."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:128
+#: 25da906a9cc64467b2177ed0bc213ad1
+msgid "Update Publisher Within ``perception_node.cpp``, find section"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:138
+#: 7a2025e87ce243aab28a72468d27b868
+msgid ""
+"Replace ``cloud`` with ``*cloud_voxel_filtered`` in the call to "
+"``publishPointCloud(...)`` to publish your new filtered point cloud. Take"
+" a look at the function and see how we converted our point cloud to a ROS"
+" message in order to publish it."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:140
+#: 576d7128a00c4473a31985aea81f2da8
+msgid ""
+"For each type of filter we will create a new publisher. It is often "
+"useful to view the results of multiple filters at once in Rviz and just "
+"toggle different clouds."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:142
+#: 32ffbe5bf2574e93af9441d52bb2c6ab
+msgid "Compile and source"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:150
+#: 268f642465a548bcaf3f31f26a7c9563
+msgid "Viewing Results"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:151
+#: 7362d700ee6a427996cba89e822803db
+msgid ""
+"Run the (currently small) perception pipeline (each line should be run in"
+" a separate terminal). Note: In rviz change the global frame to "
+"**kinect_link**."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:170
+#: 3d6d5951cb554148826134056ba73249
+msgid "View results"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:172
+#: 7828c3f21e0d4f3f90d2fe632bccbe2f
+msgid ""
+"Within Rviz, add two *PointCloud2* Displays subscribed to the topics "
+"\"voxel_cluster\" and \"kinect/depth_registered/points\". What you see "
+"will be the results of the voxel filter overlaid on the original point "
+"cloud."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:177
+#: d0dfecd262c2437ca5e34e6a65583eaf
+msgid ""
+"When you are done viewing the results, try changing the voxel filter size"
+" from 0.002 to 0.100 and view the results again.  Reset the filter to "
+"0.002 when done."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:179
+#: 11fd9633d2db435ea449efefadf6ba9f
+msgid ""
+"To see the results of this change, use Ctrl+C to kill the perception "
+"node, re-build, and re-run the perception node. If you'd like, you can "
+"create a new parameter for the voxel filter size to make editing the "
+"parameter much easier."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:181
+#: 797ca139e0874055b7f8314e4c029ce9
+msgid ""
+"You do not need to stop any of the other nodes (rviz, pcd_to_pointcloud, "
+"etc)."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:183
+#: 8a9b585a351c4ff6919b17bfd765ae93
+msgid ""
+"Changing ColorTransformer to FlatColor will allow you to edit the color "
+"of the point clouds. Making them different colors may make differences "
+"easier to see as we add more filtered outputs."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:185
+#: 40326b119eac497ea92af8f1f86670f4
+msgid ""
+"When you are satisfied with the voxel filter, use Ctrl+C to stop the "
+"perception node."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:189
+#: 3481ace21ed54ff08f9a190fb1a8c599
+msgid "Implement Pass-through Filters"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:193
+#: 87b1a0ace1ed47ff82aa9819cdbaec32
+msgid ""
+"The next set of useful filtering to get the region of interest, is a "
+"series of pass-through filters. These filters crop your point cloud down "
+"to a volume of space (if you use x y and z filter). At this point you "
+"should apply a series of pass-through filters, one for each the x, y, and"
+" z directions. See `PCL Pass-Through Filter Tutorial "
+"<https://pcl.readthedocs.io/projects/tutorials/en/latest/passthrough.html>`_"
+" for hints, or use code below."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:195
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:349
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:431
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:497
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:555
+#: 0183f31c55944f289408d5e4e1dacfb7 08bbb5dd028244eeaec078e124720365
+#: 878e13d675f64b008a5c73fbbdeb73d0 cd942956149d48a0b042e215fe603426
+#: e8084701015e4aa6b0e48278006f62af
+msgid "Within perception_node.cpp, find section"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:205
+#: cbe8b4548a3d49d3910e6e3a3e4c2cac
+msgid ""
+"Here we are setting our filters for the x, y, and z axes as well as the "
+"limits for each."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:230
+#: eef1990d9e454370ae8966527573093c
+msgid "*You can change the filter limit values to see different results.*"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:232
+#: fafc6609dd8b438e9b39a12780f346d5
+msgid ""
+"Find where the publishers are created and make a new one called "
+"``passthrough_publisher_`` that publishes to the topic "
+"\"passthrough_cluster\"."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:234
+#: 7fdfcfa8af2a46de8ef47c01b6f0f080
+msgid ""
+"Find where you previously published the last point cloud and now publish "
+"your final Passthrough Filter result (``xyz_filtered_cloud``) to your "
+"newly made topic."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:236
+#: 89a035959c5e4d53a2931fac238a5d25
+msgid "Re-build and restart your node."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:244
+#: a90030bf5e29433e86ea8ad6e61b1519
+msgid ""
+"View results Add this new topic (\"passthrough_cluster\") to your RViz "
+"display. Try toggling each point cloud on and off to view the "
+"differences. Compare the PointCloud2 displays based on the "
+"``/kinect/depth_registered/points`` (original camera data), "
+"``object_cluster`` (voxel filter), ``passthrough_cluster`` (latest "
+"processing step) topics.  Part of the original point cloud has been "
+"\"clipped\" out of the latest processing result."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:250
+#: be29ec136c0a4130bbbee22899daf2c6
+msgid ""
+"Try modifying the X/Y/Z FilterLimits (e.g. +/- 0.5), re-build, and re-"
+"run.  Observe the effects in rviz.  When complete, reset the limits to "
+"+/- 1.0."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:252
+#: baefa87a40ed4ba79a0b1524c6f7a78a
+msgid ""
+"When you are satisfied with the pass-through filter results, press Ctrl+C"
+" to kill the node. There is no need to close or kill the other "
+"terminals/nodes."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:255
+#: 27ea66ae4623419aa1bf09cbf22be299
+msgid "Plane Segmentation"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:256
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:345
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:427
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:493
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:602
+#: 1de4d816606e4187913b05ac694d320e 5243abc0233a4ac889b817157ece5c80
+#: a19d1106a27440219f9db20d56218156 b7b6a61692574af3a934036f745a0792
+#: ffe03550625545c8bfd55830ad597621
+msgid "Change code"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:258
+#: b6141cb09cfb4fcdabb92a5f8804e085
+msgid ""
+"This method is one of the most useful for any application where the "
+"object is on a flat surface. In order to isolate the objects on a table, "
+"you perform a plane fit to the points, which finds the points which "
+"comprise the table, and then subtract those points so that you are left "
+"with only points corresponding to the object(s) above the table. This is "
+"the most complicated PCL method we will be using and it is actually a "
+"combination of two: the RANSAC segmentation model, and the extract "
+"indices tool. An in depth example can be found on the `PCL Plane Model "
+"Segmentation Tutorial "
+"<https://pcl.readthedocs.io/projects/tutorials/en/latest/planar_segmentation.html>`_;"
+" otherwise you can copy the below code snippet."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:260
+#: 67f83ab794134848ac916b261c6c4f13
+msgid "Within perception_node.cpp, find section:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:270
+#: c19abccfa6654c17b6602f2c615ba90c
+msgid "First, we set up a few new point clouds."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:279
+#: c2324d45fd7b4df2bc5985b5ef3952cc
+msgid ""
+"Next we create the segmentation object for the planar model and set the "
+"parameters."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:292
+#: 3b125298df5c418584439e466c12bc0d
+msgid ""
+"Now we can segment the largest planar component from the cropped point "
+"cloud."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:303
+#: a52df2a2ffab40bab1025cf66a41d52d
+msgid ""
+"Once you have the inliers (points which fit the plane model), then you "
+"can extract the indices within the pointcloud data structure of the "
+"points which make up the plane."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:318
+#: a676ae66b49e410897526cf3f3b24f06
+msgid ""
+"Then of course you can subtract or filter out these points from the cloud"
+" to get only points above the plane."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:326
+#: b478add02a474a7696af66ea919a4c6e
+msgid ""
+"Find where the publishers are created and make a new one called "
+"``plane_publisher_`` that publishes to the topic \"plane_cluster\"."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:328
+#: d9cfe2dcd7924ecab67740a4d87ea583
+msgid ""
+"Find where you previously published the last point cloud and now publish "
+"your plane-fit outliers result (``*cloud_f``) to your newly made topic."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:330
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:415
+#: 213473a59ef94014a50c9244f5d61811 911b034194564266869f98051eab6334
+msgid "Compile and run, as in previous steps."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:332
+#: 0de16d99d3bc400095d4c642a450b47e
+msgid "Evaluate Results"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:334
+#: dcecbf723c1a4c33bf29d0c1a153c425
+msgid ""
+"Within Rviz, compare PointCloud2 displays based on the "
+"``/kinect/depth_registered/points`` (original camera data) and your new "
+"topic.  Only points lying above the table plane remain in the latest "
+"processing result."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:338
+#: a6173d8b694c475597e329b3095d2d13
+msgid ""
+"When you are done viewing the results you can go back and change "
+"the\"setMaxIterations\" and \"setDistanceThreshold\" values to control "
+"how tightly the plane-fit classifies data as inliers/outliers, and view "
+"the results again.  Try using values of ``MaxIterations=100`` and "
+"``DistanceThreshold=0.010``"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:340
+#: 88e098d9cd3e4058abd893df8739c00a
+msgid ""
+"When you are satisfied with the plane segmentation results, use Ctrl+C to"
+" kill the node. There is no need to close or kill the other "
+"terminals/nodes."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:344
+#: ed654c5c63c84c248a3e3ad98d67ad34
+msgid "Euclidean Cluster Extraction"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:347
+#: 6f7eccb404d8461998daac2b51533150
+msgid ""
+"This method is useful for any application where there are multiple "
+"objects. This is also a complicated PCL method. A more in-depth "
+"explanation of the code can be found at `PCL Euclidean Cluster Extraction"
+" Tutorial "
+"<https://pcl.readthedocs.io/en/latest/cluster_extraction.html>`_."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:357
+#: 8bdca5504c9149308e6a392e79f26ab6
+msgid "Copy and paste the following code beneath the banner."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:359
+#: 6c5dc25b88664f6cbc04c448d6c8a9ad
+msgid ""
+"First we create a KdTree object to use as the search method of our "
+"cluster extraction."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:368
+#: fdf0c09db2e34f489b6fbcaedfb13aa4
+msgid ""
+"Next we create a vector of PointIndices that will save the indices of our"
+" detected clusters. Here, we will also set the tolerance, minimum cluster"
+" size, and maximum cluster size for our search."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:384
+#: c2fbd022f412416c85a5658e73bf1ec2
+msgid ""
+"Now we can begin looping through our extracted clusters and separate them"
+" out of our vector of PointIndices in order to create a new point clouds."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:411
+#: 899046a85ce6436ab4ccc587f1a3d76e
+msgid ""
+"Find where the publishers are created and make a new one called "
+"``euclidean_publisher_`` that publishes to the topic "
+"\"euclidean_cluster\"."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:413
+#: 7ce4ca71e54c4ba7b157d274886d2088
+msgid ""
+"Find where you previously published the last point cloud and now publish "
+"your largest cluster (``*(clusters.at(0))``) to your newly made topic."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:417
+#: 14a4a935aba947bc93e9a57130e74257
+msgid ""
+"View results in rviz.  Experiment with ``setClusterTolerance``, "
+"``setMinClusterSize``, and ``setMaxClusterSize`` parameters, observing "
+"their effects in rviz."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:422
+#: 42d04ed3d9884b5db357a0a059fdb626
+msgid ""
+"When you are satisfied with the cluster extraction results, use Ctrl+C to"
+" kill the node. There is no need to close or kill the other "
+"terminals/nodes."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:425
+#: 68f9d018bddb42c1971fb94fcdbf1b2d
+msgid "Create a CropBox Filter (Optional)"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:429
+#: 98561498c6e14f9ab7cd080c2091b815
+msgid ""
+"This method is similar to the pass-through filter from Sub-Task 2, but "
+"instead of using three pass-through filters in series, you can use one "
+"CropBox filter. Documentation on the CropBox filter and necessary header "
+"file can be found `here "
+"<https://pointclouds.org/documentation/classpcl_1_1_crop_box.html>`_."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:439
+#: 8e0c0b961c854a96be847d561bb8b8dd
+msgid ""
+"This CropBox filter should replace your passthrough filters so you may "
+"delete or comment out the passthrough filters. There is no PCL tutorial "
+"to guide you, only the PCL documentation at the link above. The general "
+"setup will be the same (set the output, declare instance of filter, set "
+"input, set parameters, and filter)."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:441
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:507
+#: 94ec37f3c0134616a347695e166cf721 ab47f2f5a0dc42269be7a93d44c29f84
+msgid "Set the output cloud:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:447
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:514
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:622
+#: 21e35d6c1ea94f99a1cb384a6897bded 8a8f7374aad54f97a5273b2c02b018c3
+#: fe23d32fadb942758d243ad2ea5d4342
+msgid "Declare instance of filter:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:453
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:520
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:686
+#: 161932ec993749ab8f0933e19f4e5e53 5878277eef334566bb22a02b0ffe6a55
+#: 904365436e544b01bbb7c506a3441c74
+msgid "Set input:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:459
+#: 7abaca33896640f9947f85e7c511178e
+msgid ""
+"Set parameters - looking at documentation, CropBox takes an Eigen "
+"Vector4f as inputs for max and min values:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:468
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:533
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:699
+#: 156e3ad34b224f9eb51fa8e341bdaf39 3ba0c2ad98384635b64d7346288bf77c
+#: 5e74cd9aa86a43bd8bef6cc01ec66d59
+msgid "Filter:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:474
+#: 34c667ef989440829a2d17916146e088
+msgid ""
+"If you delete or comment out the passthrough filters and have already "
+"written the plane segmentation code, then make sure you update the name "
+"of the cloud you are passing into the plane segmentation. Replace "
+"zf_cloud with xyz_filtered_cloud:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:481
+#: 1a236d7f3a8e4d0b8a175f050ed0f2b3
+msgid ""
+"Find where you publish your filtered clouds and replace the cloud for the"
+" passthrough filter with your new filtered results "
+"(``xyz_filtered_cloud``)."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:483
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:543
+#: a442464b48964be1bb17d790dc323cc0 def0d2437bff45c1aabe20d8bb7a4fbb
+msgid "Compile and run, as in previous steps"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:485
+#: 6da4aa7a1f0941b88bc192ee1ec3782d
+msgid ""
+"The following image of the CropBox filter in use will closely resemble "
+"the Plane Segmentation filter image."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:491
+#: 8d78866c3c9942b989ac2089ea7281a0
+msgid "Create a Statistical Outlier Removal"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:495
+#: 6ca645e301714324899978bf36e3f75c
+msgid ""
+"This method does not necessarily add complexity or information to our end"
+" result, but it is often useful. A tutorial can be found `here "
+"<https://pcl.readthedocs.io/projects/tutorials/en/latest/statistical_outlier.html>`_."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:505
+#: 176a7eeda6164272952cd7f860866233
+msgid ""
+"The general setup will be the same (set the output, declare instance of "
+"filter, set input, set parameters, and filter)."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:526
+#: aff82bf119f14a06b4a3e189d119a426
+msgid ""
+"Set parameters - looking at documentation, S.O.R. uses the number of "
+"neighbors to inspect and the standard-deviation threshold to use for "
+"outlier rejection:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:539
+#: ee4715213a47493e92811c1a2d1ae740
+msgid ""
+"Find where the publishers are created and make a new one called "
+"``stat_publisher_`` that publishes to the topic \"stat_cluster\"."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:541
+#: 6993c984c81145cb828a3ccb54f456e2
+msgid ""
+"Find where you previously published the last point cloud and now publish "
+"your new filtered results (``*sor_cloud_filtered``) to your newly made "
+"topic."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:549
+#: d6da737c72104bbd9e2c5b735fda270e
+msgid "Create a Broadcast Transform"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:551
+#: 2f9becc866a4420ba1642ab18727bc2b
+msgid ""
+"While this is not a filter method, it demonstrates how to publish the "
+"results of a processing pipeline for other nodes to use.  Often, the goal"
+" of a processing pipeline is to generate a measurement, location, or some"
+" other message for other nodes to use.  This sub-task broadcasts a TF "
+"transform to define the location of the largest box on the table.  This "
+"transform could be used by other nodes to identify the "
+"position/orientation of the box for grasping."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:553
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:720
+#: 9019ba13fee54a1ba03f4d0fd9864d2e 969449e84c344cafaeea3d14bb7c343e
+msgid "Change/Insert code"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:563
+#: 20fa02373941438f88412297c6219274
+msgid ""
+"You can follow along with the `ROS Tutorial "
+"<https://docs.ros.org/en/galactic/Tutorials/Intermediate/Tf2/Writing-A-Tf2"
+"-Broadcaster-Cpp.html>`_."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:565
+#: e6d5bd55b7e34d2798f1dc29822b59d8
+msgid ""
+"You'll notice that we have already created a ``tf2_ros::Buffer`` and a "
+"``tf2_ros::TransformListener`` for you in the initialization of our "
+"class. Create a transform using these:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:589
+#: c49714fe296444aeba6cf1037efc311a
+msgid ""
+"Remember that when you set the origin or set the rpy, this is where you "
+"should use the results from all the filters you've applied. At this point"
+" the origin is set arbitrarily to the first point within. Broadcast that "
+"transform:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:595
+#: 984f565ecdcb49d5b9f2997e5a736f07
+msgid ""
+"Compile and Run as usual.  In this case, add a TF display to Rviz and "
+"observe the new \"part\" transform located at the top of the box."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:598
+#: a3832ecff3cc458e9d787f4df0a188ca
+msgid "Create a Polygonal Segmentation"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:600
+#: 0fa683f0b0ff4448b4f571c228f760de
+msgid ""
+"When using sensor data for collision detection, it is sometimes necessary"
+" to exclude \"known\" objects from the scene to avoid interference from "
+"these objects.  MoveIt! contains methods for masking out a robot's own "
+"geometry as a \"Self Collision\" filtering feature.  This example shows "
+"how to do something similar using PCL's Polygonal Segmentation filtering."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:604
+#: 047af355296b4e0b9499992389157317
+msgid ""
+"This method is similar to the plane segmentation from Sub-Task 3, but "
+"instead of segmenting out a plane, you can segment and remove a prism. "
+"Documentation on the PCL Polygonal Segmentation can be found `here "
+"<https://pcl.readthedocs.io/projects/tutorials/en/latest/hull_2d.html>`_."
+" The goal in this sub-task is to remove the points that correspond to a "
+"known object (e.g. the box we detected earlier). This particular filter "
+"is applied to the entire point cloud (original sensor data), but only "
+"after we've already completed the processing steps to identify the "
+"position/orientation of the box."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:606
+#: 9050d31691b64ecf902c773e71fffee6
+msgid "Within perception_node.cpp find section"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:614
+#: d23d70a92e8b4a05aba074bf6d9f9993
+msgid "Set the input cloud:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:628
+#: 13c10897488744599d02d7aeb385205d
+msgid "Set extraction indices:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:634
+#: 74e5611ffd254a7e9577d5c9c59d0f70
+msgid "Set input and output:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:641
+#: 29bcb7b6fb6d44a08a2ec5acee4da500
+msgid ""
+"Set parameters - looking at documentation, ExtractPolygonalPrismData uses"
+" a pointcloud defining the polygon vertices as its input."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:678
+#: 7e060151d1554a578b9be85be9849355
+msgid "Segment:"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:684
+#: 9ae159e6bbf242478e5a7aca8b2710c8
+msgid ""
+"Remember that after you use the segmentation algorithme that you either "
+"want to include or exclude the segmented points using an index "
+"extraction."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:693
+#: 7fa7cd1ad88f4709bb834ab41159290b
+msgid ""
+"This time, we invert the index extraction, so that we remove points "
+"inside the filter and keep points outside the filter."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:705
+#: 7f023216621a4ed180d38ef323271884
+msgid ""
+"Find where the publishers are created and make a new one called "
+"``polygon_publisher_`` that publishes to the topic \"polygon_cluster\"."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:707
+#: 499bbcbbaf4a4e5ab0341cc371428c32
+msgid ""
+"Find where you previously published the last point cloud and now publish "
+"your new filtered results (``*prism_filtered_cloud``) to your newly made "
+"topic."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:709
+#: d077158108d047228662d5352a5b23e9
+msgid "Compile and run as before."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:713
+#: ecb6f9155cf34452b3715b58c43a89bd
+msgid "Notice that the target box has been removed from the point cloud display."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:716
+#: a8758ba7f8324a4590e38bca8e94f716
+msgid "Using Parameters"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:718
+#: ea81f5d3f1874afab02c2cc4f6ddb661
+msgid ""
+"While this is not a filter method, it is useful when using PCL or other "
+"perception methods because of the number of parameters used in the "
+"different methods."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:722
+#: 7e03eb4ceb1e4ed39f3b1905a6273fdb
+msgid ""
+"For this exercise, we will be declaring the parameters from within "
+"``processing_node.launch.py``."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:724
+#: d5d26f7a55c1491a9d98e171af9a9f69
+msgid "In ``perception_node.cpp``, find section"
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:732
+#: 772af6c6c1b14e638d9d92e8a1acfdfa
+msgid ""
+"Notice our use of ``rclcpp::NodeOptions()`` at the start of our class "
+"declaration. In our node we use ``get_parameter_or(...)`` to get each "
+"parameter or give it a default value if no value has been assigned yet. "
+"This way of calling a parameter will return a ``rclcpp::Parameter`` "
+"object (unlike in ROS 1 that returned an instance of the parameter's "
+"type, i.e. a string). You will then need to retrieve the value of the "
+"parameter using ``.value()`` or a more specific ``.as_string()``, "
+"``.as_int()``, ``.as_double()``, etc."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:734
+#: d9a2b7fe0a344b3ca549dfc954f663d8
+msgid ""
+"Take a look at the 3 parameters we have already created for you "
+"(cloud_topic, world_frame, camera_frame) and how we have declared them in"
+" both our node and launch file. Try creating some new parameters to "
+"replace some of our hard-coded values in our filters and test them out. "
+"Below is an example of some of the parameters you could have set."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:756
+#: d4968ecdf31f47698404394796e9115d
+msgid ""
+"You will need to edit both ``perception_node.cpp`` and "
+"``processing_node.launch.py``."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:758
+#: c5c69e5eaf44444cb75209d35f3a1f3a
+msgid "When you are satisfied with the results, go to each terminal and *CTRL-C*."
+msgstr ""
+
+#: ../../_source/session5/Building-a-Perception-Pipeline.rst:760
+#: 008e585ba1344365a461177a49755c24
+msgid ""
+"You're all done! So it's best to make sure everything is wrapped up and "
+"closed."
+msgstr ""
+

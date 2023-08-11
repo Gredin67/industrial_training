@@ -1,0 +1,380 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:1
+#: 824640f4a434425c82b63a51fa812a84
+msgid "Installing Packages"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:3
+#: 53a9eaaeca104b369763240250331d90
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:4
+#: e3f16a03fd91484b8c2b5e30f2f1730c
+msgid ""
+"Many of the coolest and most useful capabilities of ROS already exist "
+"somewhere in its community. Often, stable resources exist as easily "
+"downloadable debian packages. Alternately, some resources are less tested"
+" or more \"cutting edge\" and have not reached a stable release state; "
+"you can still access many of these resources by downloading them from "
+"their repository (usually housed on Github). Getting these git packages "
+"takes a few more steps than the debian packages. In this module we will "
+"access both types of packages and install them on our system."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:6
+#: 1ae7de5b03624471a13d1f6a47148ef1
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:7
+#: b5e1a44553a0401ca88e8c9b0efd75e0
+msgid "apt-get usage"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:9
+#: 305ce242854c49d4be75f2adf619ae16
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:10
+#: 2b7a4c880bd940bd94ead9c0103d776b
+msgid "Ubuntu apt-get How To"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:12
+#: aa65ab8e642a434cba4250c4075631f8
+msgid "Git Get Repo"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:14
+#: 5e01dd66e4e046b587c4336e2df1d612
+msgid "Git Clone Documentation"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:16
+#: f04d3b8bbded4f18b4fb1ea9de2e6471
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:17
+#: 5335d169728d4bf5a9baae0a8de01c20
+msgid ""
+"We have a good installation of ROS, and we have an idea of some packages "
+"that exist in ROS that we would like to use within our program. We have "
+"found a package which is stable and has a debian package we can download."
+" We've also found a less stable git package that we are interested in. Go"
+" out into the ROS world and download these packages!"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:19
+#: 11090249adc44eb2b5f3d0556fd0fdee
+msgid ""
+"A certain message type exists which you want to use. The stable ROS "
+"package is called: nav_2d_msgs"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:21
+#: f785184b960549b4a73aab29cf501aeb
+msgid ""
+"You are using an AR tag, but for testing purposes you would like a node "
+"to publish similar info : fake_ar_publisher"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:23
+#: 6bcbea36e035454fbe11eb0a33e06ecb
+msgid ""
+"Your goal is to have access to both of these packages' resources within "
+"your package/workspace:"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:25
+#: 9fe2065094b341d19658b5bc6b18b9d3
+msgid "nav_2d_msgs (using apt-get)"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:27
+#: c3269ab1b8a54f0492c2b9240f657b45
+msgid "fake_ar_publisher (from git)"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:29
+#: b3b894e5ae974861b281577a82643113
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:31
+#: 95b0fbac6258408a8f2250d28bb57e4e
+msgid "Install Package from apt Repository"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:33
+#: 427658179b714a6eafcf4a19924cee6b
+msgid "Open a terminal window. Use the ros2 pkg command to search for a package."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:40
+#: 50f2d18466954a7b9aa1a8dda6e33e23
+msgid ""
+"If successful, this command prints the directory where ROS nav_2d_msgs "
+"package is installed."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:41
+#: 52324d4f3d024275b82fe5634ace9cf9
+msgid "You should see an error message Package not found."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:42
+#: 5f3cc6ba38274e858755320d27ec9c17
+msgid "This package is not installed on the system, so we will install it."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:45
+#: fb422b8073c049ad941265a49d960bd6
+msgid "Use the APT package manager to try to install the package."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:51
+#: caecce690a6940098c7bf022b28fb815
+msgid "Note the naming convention for the APT package name:"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:52
+#: 3972f969c89a4e3d807ca2b8b24e6fd8
+msgid "ROS APT packages follow this naming pattern: ros-<distro>-<package>."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:53
+#: b1ab624c3cff4ef8839fd9eaac9fd4d3
+msgid "underscores (\"_\") in the package name are replaced with dashes (\"-\")."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:54
+#: d1dc6e786fb444638fb3b3975960918f
+msgid ""
+"The program will say it cannot install the package, and suggests that we "
+"must run the program as root."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:55
+#: 606dbb5ffe9945769c56cdc22006e90f
+msgid "Try pressing the TAB key while typing the package name."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:56
+#: cbb5675ec690483cac36d59789e52ee5
+msgid ""
+"The system will try to automatically complete the package name, if "
+"possible."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:57
+#: 500d7d99f6994b0e98046aee473740ea
+msgid ""
+"Frequent use of the TAB key will help speed up entry of many typed "
+"commands and provide early detection of typing errors or environment-"
+"setup issues."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:60
+#: 2fdc9a18cd8f428989a4d8c8689b3843
+msgid "Install using sudo."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:66
+#: 910af72b745e4bc7a7111272d5ab8d2c
+msgid ""
+"Note the use of the sudo command to run a command with \"root\" "
+"(administrator) privileges."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:67
+#: 20bc2beb879447f8ada54871da3b304a
+msgid ""
+"Enter your password, and (if asked) confirm you wish to install the "
+"program."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:70
+#: e2a0ce14e287487089c62155520b1b62
+msgid "Search for the package again."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:76
+#: 2051056a47d742229a786ffd9bb64777
+msgid ""
+"Linux Tip: use the up/down arrow keys to scroll through previous command "
+"history, to avoid re-typing common commands."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:77
+#: e3a61d9ab11945e59831cc2713226d91
+msgid "This time, you will see a directory output of /opt/ros/humble."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:80
+#: de30053bcad44d07a01fb200aa411ac5
+msgid "Remove the package from the system."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:86
+#: fe7d20d536814a75b7e2239aefe8c90f
+msgid ""
+"Don't worry. We won't be needing this package for any future exercises, "
+"so it's safe to remove."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:89
+#: 60f23e4db6db4edeb291e4260cad5905
+msgid "Download and Build a Package from Source"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:91
+#: fc56d4d36bdb4bf4b18b8b429aa523c0
+msgid "Identify the source repository for the desired package:"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:92
+#: e5cbbbd75dac40f5b139d34beed06652
+msgid "Go to github."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:93
+#: 2c843a2e049042459522c8cf545ac86c
+msgid "Search for fake_ar_publisher."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:94
+#: 06377c69e95643e2bc90dc10df2c4523
+msgid ""
+"Click on this repository, and look to the right for the Code link, then "
+"copy the URL listed under Clone to the clipboard."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:96
+#: 91488fb5f8e7439bb7fd2dc8959117ff
+msgid ""
+"Open a new terminal and clone the fake_ar_publisher repository into the "
+"workspace's src directory."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:103
+#: 767305ce5a384f82ac6550488825ae2d
+msgid ""
+"Use Ctrl-Shift-V to paste within the terminal, or use your mouse to "
+"right-click and select paste"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:104
+#: 9fb8ccf1ad264d8d95a026d05c73b696
+msgid ""
+"Git commands are outside of the scope of this class, but there are good "
+"tutorials available here"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:105
+#: 58f715e2409542ae92fb48c78e52d765
+msgid ""
+"Specifying the correct branch name with the -b is important since "
+"repositories often contain multiple incompatible versions on different "
+"branches."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:107
+#: a06647b9d3ff41d7ba754c33d3aa886d
+msgid "Use ros2 pkg prefix to see if this package is visible from ROS:"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:113
+#: 374344d1668d4375baa0340d58b5ce6c
+msgid ""
+"You may see an error (\"ros2: command not found\").  Remember that none "
+"of the ROS commands are visible until you've sourced the base ROS distro "
+"setup.bash file (either directly, or chained through your development "
+"workspace's setup.bash)."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:115
+#: 3363695d12174b8daf2c896e8fb8aa25
+msgid ""
+"Even after you've sourced the appropriate setup.bash file, the package is"
+" still not visible.  Packages you download as source must first be built "
+"before they're visible to ROS."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:117
+#: eabdb71839784c1c956db0d5e3c833b8
+msgid ""
+"Switch back to your \"build terminal\" and build the new package using "
+"colcon build"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:119
+#: d65754bb246e4eddad7a0c6ff17bbe13
+msgid "remember this command must be run from your workspace root (~/ros2_ws/)"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:121
+#: d7777295b7a54351b1c51fb17970eda7
+msgid ""
+"Once the build completes, explore the build and install directories to "
+"see what files were created."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:123
+#: bfd5af1b457249aab9f26dc25bebff77
+msgid ""
+"Switch back to your 2nd terminal and again use ros2 pkg prefix to see if "
+"ROS can find the package."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:125
+#: 3687ae21d5114ac38008df8ba13093ee
+msgid ""
+"This is a helpful command to troubleshoot problems with a ROS workspace."
+"  If this command can't find your package, other nodes can't either."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:126
+#: 8dd898a7553b460c80ea1ddae9884d2f
+msgid ""
+"The package is still not visible to ROS.  Even if you've previously "
+"sourced the setup.bash file in this terminal, you must re-source the "
+"setup file after adding new packages to the terminal.  You don't need to "
+"re-source the file after small changes (like recompiling code edits)."
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:128
+#: 94f1572651e8469c9be0ea5f6d2701d7
+msgid ""
+"Re-run the source command to make the new package visible to ROS, then "
+"verify that ROS can see it using the ros2 pkg prefix command:"
+msgstr ""
+
+#: ../../_source/session1/ros2/2-Installing-Existing-Packages.md:135
+#: b577f2c8c798465abfe2a4ec217294a5
+msgid ""
+"remember to use TAB while typing.  This can be an even quicker test than "
+"using the ros2 pkg prefix command."
+msgstr ""
+

@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:1
+#: e434b661b4174164971758ea87aad5d8
+msgid "ROS Setup"
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:2
+#: 87234de1fd5b429fa13e98348c817a6f
+msgid "In this exercise, we will setup ROS to be used from the terminal."
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:5
+#: 70ddd5aa424c4b79b75345cfa99015a1
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:6
+#: ba209e230edc4613b5629dfa3c84f8b0
+msgid ""
+"In order to start programming in ROS, you should know how to install ROS "
+"on a new machine as well and check that the installation worked properly."
+" This module will walk you through a few simple checks of your installed "
+"ROS system. Assuming you are working from the VM, you can skip any "
+"installation instructions as ROS is already installed."
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:8
+#: 97d2c0c5f9e04a728780d0753314f993
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:9
+#: 78275f05f17244fcafcfd37417cf6020
+msgid "Configuring ROS"
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:11
+#: 7eec09c8cdcd4f7792928f3c5fd75d7b
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:12
+#: e88bb09711f548abbc6d3d71963e809f
+msgid "ROS2 Humble Installation Instructions"
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:14
+#: ffb44b6c436d4610a6f69cc392ae419e
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:15
+#: b601f617e0894c61bd7975920df267ae
+msgid ""
+"We believe we have a good installation of ROS but let's test it to make "
+"sure."
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:17
+#: b1af4976c35b4b8fa687105c91d43ca4
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:18
+#: 8a875931fae242f19cb517427a686ab0
+msgid "Check Environment"
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:19
+#: ba0b89472d564390853a318d2a59b993
+msgid ""
+"If you are ever having problems finding or using your ROS packages make "
+"sure that you have your environment properly setup. A good way to check "
+"is to ensure that environment variables that ROS sets are present:"
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:26
+#: 3e201fe0d8bd41bc8158375c1aaab45f
+msgid "If they are not then you might need to 'source' some setup.*sh files."
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:32
+#: 8ea0b3b189c04786b3f2054e7dae2a1d
+msgid ""
+"Now repeat the check from above and verify that the environment variables"
+" are now present."
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:34
+#: 237f488f363a435f9a72c3e530350971
+msgid ""
+"In a \"bare\" ROS install, you will need to run the \"source\" command on"
+" every new shell you open to have access to the ROS commands.  If your "
+"project only uses a single distribution, it can be helpful to configure "
+"our ~/.bashrc file to automatically source this setup file for each new "
+"terminal window.  See here for details. If you will be using multiple ROS"
+" distributions on one machine, then you do NOT want this auto-sourcing "
+"behavior. The auto-sourcing will always source the same distribution, and"
+" sourcing another distribution after this can cause issues. This will not"
+" be an issue in this class as we will exclusively using ROS 2 Humble."
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:36
+#: 765a0eb757194789aa7c0bf5cb3c20d1
+msgid ""
+"Open a new terminal window and source the ROS2 \"humble\" distribution.  "
+"Experiment with terminal windows, sourcing, and checking your environment"
+" until you are comfortable with this concept."
+msgstr ""
+
+#: ../../_source/session1/ros2/0-ROS-Setup.md:38
+#: 0f5b7c4ba4844990a2d3cf20e024310c
+msgid ""
+"Remember to source the appropriate setup script in every new terminal "
+"window you open.  Forgetting this step is a common error among new ROS "
+"users."
+msgstr ""
+

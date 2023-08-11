@@ -1,0 +1,310 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:1
+#: 357622f2c584492280fb3ca6d6e5c211
+msgid "Setting up a 3D sensor"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:3
+#: c7787e3b9483491da277951077c32044
+msgid ""
+"In this exercise, we will setup an Intel RealSense camera to work with "
+"our robotic workcell. In this demo we will use the Intel RealSense D415 "
+"though a wide range of 3D sensors could be used to publish a ROS point "
+"cloud and allow for seamless integration with the rest of the robotic "
+"system. The RealSense ROS package can be found on the wiki."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:6
+#: dc8e673ecbd542e89b8f0dee55d81860
+msgid "Installing the RealSense SDK"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:8
+#: 231b3a10219e4598a78c25145e1fba34
+msgid "Check your Ubuntu kernel and ensure that it is 4.4, 4.10, 4.13, or 4.15"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:13
+#: 0cb0dfc49d934452aa3c85da39f8d019
+msgid "Register the server's public key"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:18
+#: 8348fc054f534317a896ebd69659361e
+msgid "Add the server to the list of repositories"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:24
+#: fac4dd1fc1ce4ff592488006a9419408
+msgid "Install RealSense demos and utilities"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:32
+#: 998a7ee64e6d4e698d06221adb6324e7
+msgid ""
+"Test the install by connecting the RealSense camera and running the "
+"viewer utility in the terminal."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:37
+#: 716fceac9918485ba032f311f9b6e54a
+msgid ""
+"Make sure the camera is being recognized as a USB 3.0+ device. If that is"
+" not the case, verify that the USB cable used is a 3.0 cable. It also "
+"occurred that for long usb cables (>3 m), using an external USB card "
+"helps reliability. Regardless, occasional power cycling (unplugging and "
+"replugging the USB) may be required. If problems arise during this "
+"process, see the librealsense documentation."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:40
+#: 1bfda203512b41b4b833b173a8866854
+msgid "Installing ROS package"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:42
+#: d00e1f2a19c243cf80b1a8ab7a5c6f06
+msgid ""
+"The ROS package to interface with the RealSense camera now needs to be "
+"cloned into your workspace. To do this, navigate into your /src directory"
+" and run the following:"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:47
+#: 0023f8afdd20493a8b45198e40be7ccf
+msgid "Next, build your workspace:"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:51
+#: 3971d206a3b042898ace536c2edd1840
+msgid "If errors occur, make sure that the RealSense SDK was correctly installed."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:53
+#: ef84611544824bddaf70fd10de516038
+msgid "The calibration makes use of another package. Install it now:"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:58
+#: ed98de8d27804d39889a216d8d8d8355
+msgid ""
+"Run the demo launch file to verify that the ROS interface is working. You"
+" should see an RGBD image displayed in RVIZ. As usual, you may need to "
+"source your workspace again if you have added new packages. Do this with "
+"source devel/setup.bash from the root of your workspace."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:63
+#: d73b4c47d7204d359a1888c6695d4a34
+msgid ""
+"Note: The Realsense ROS package only supports specific versions of the "
+"Realsense SDK. While in realsense-viewer make note of the release number,"
+" and make sure that the branch of the ROS package you are using is "
+"compatible. To pull a specific release (in this case 2.1.2), use"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:68
+#: 548ac417bfb04db2a74e0b80493fce00
+msgid ""
+"Further, you may need to update the camera firmware version. To do that, "
+"see Intel's documentation. It is recommended that you use the latest "
+"production release."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:70
+#: d871aef8982447bf96083c5f03be3edf
+msgid "Calibration"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:72
+#: 617ee797195d4a4282363c60d3177260
+msgid "The General Idea"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:73
+#: f055c205ca88470691a540e047ffa036
+msgid "Calibrating a camera in your workspace typically happens in two steps:"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:75
+#: 623efae3b29442709fe4db9b6e24bf29
+msgid ""
+"Calibrate the \"intrinsics\", the camera sensor & lens, using something "
+"like ROS' camera calibration package."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:76
+#: 9434dd907caf45c292e785dec741f5cd
+msgid ""
+"Armed with the intrinsics, calibrate the \"extrinsics\", or the pose of "
+"the camera in your workcell."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:78
+#: a68bdc2cf3074d7a8cded52d363d10a1
+msgid ""
+"In our case, the RealSense intrinsics have been calibrated at the "
+"factory. This leaves only the second step."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:80
+#: 2ee887c2d86b48beb7c9ab7a07bb3c25
+msgid "Terminology"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:81
+#: 452f3416002a4e5da77b90b639c915e1
+msgid ""
+"Extrinsic Parameters: \"the extrinsic parameters define the position of "
+"the camera center and the camera's heading in world coordinates\" [ref]. "
+"An extrinsic calibration thus tries to find WHERE your camera is "
+"positioned relative to some frame of reference, usually the base or the "
+"wrist of a robot."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:82
+#: 2dcff33f68e340cc86c24864304e9ad2
+msgid ""
+"Intrinsic Parameters: Within the context of cameras, these parameters "
+"define how points in 3D space are projected into a camera image. They "
+"encompass internal properties of the camera sensor and lens such as focal"
+" length, image sensor format, and principal point. An intrinsic "
+"calibration tries to solve these."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:83
+#: 6b095432523c429a9d497f9ad913666c
+msgid ""
+"Rectified Image: Real world cameras and their lenses are NOT perfectly "
+"described by the commonly used pinhole model of projection. The "
+"deviations from that model, called distortions, are estimated as part of "
+"intrinsic calibration and are used in software to produce an "
+"\"undistorted\" image called the rectified image. In our case, the "
+"RealSense driver will do it for us."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:85
+#: 06817f07576545d5982f40ce0a199d79
+msgid "Setting up Calibration"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:87
+#: d507e256a13f4579ae22bde0eafb5480
+msgid ""
+"The calibration for this exercise is based upon an AR Tag. The AR Tag can"
+" be found in pick_and_place_support/config. Print it off then measure and"
+" make note of the actual, printed size of the black square."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:89
+#: afda3aa11cbb42648c9584ab3de06268
+msgid ""
+"Next, we need to place the AR tag at a known location relative to the "
+"robot. Since we are still simulating the robot, we will do this by "
+"aligning the AR tag with the hole pattern on the bottom of the workcell. "
+"Note that the holes are on a 2\" hole spacing, and the measurements are "
+"taken from the center of the iiwa base. The default values are for the "
+"center of the AR tag to be placed 12\" in front of the robot with "
+"positive x along the length of the workcell."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:91
+#: cd85f7e62f994dce90930b4520ead8e9
+msgid "Performing the Extrinsic Calibration"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:94
+#: baf464edffae430eb67092da36d609cc
+msgid ""
+"With the hardware set up, it is time to perform the calibration. The code"
+" has been written for you in "
+"pick_and_place_support/src/extrinsic_calibration.cpp."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:96
+#: a3f4dd8def4a409d8bfe493bb6bbf098
+msgid ""
+"Open calibration.launch in the pick_and_place_support package. Notice the"
+" first 5 arguments. sim_robot is a flag to set whether or not we will use"
+" the robot to locate the target or measure manually. targ_x is the "
+"location of the target when performing the calibration. marker_size is "
+"the size of the black square measured previously, in cm."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:98
+#: 2d910fbdcf204bf38d750cca3fedaa35
+msgid ""
+"Measure the location of the center of the AR tag, in metres. Note that x "
+"is along the length of the workcell and z is up with y defined to follow "
+"the right hand rule."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:100
+#: 77f5529e2ed346c898b9bfc5ee6ce148
+msgid ""
+"If more than one camera is connected, the serial number of the camera to "
+"be calibrated must be provided. The serial numbers of all connected "
+"cameras can be found by using rs-enumerate-devices."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:102
+#: 51f9920f765b4c149815818baa9b1819
+msgid ""
+"Launch the calibration script filling the values for the target location "
+"and size"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:108
+#: 54f462a872d040f98f0a77370f1818a7
+msgid ""
+"Record the output. The script should show the camera as a TF floating in "
+"space. After 60 iterations, the program will pause and display the "
+"calibration result in the format x y z roll pitch yaw. When the camera "
+"location appears to properly match reality, copy this pose."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:110
+#: 7b73f2750d214c7cbcb3ca18a538b689
+msgid ""
+"Update the camera location in "
+"pick_and_place/launch/pick_and_place.launch. Lines 38-43 publish the "
+"locations of the cameras for the system. Update these numbers with the "
+"values from calibration (they are in the same x y z roll pitch yaw "
+"format."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:112
+#: cac0bccbae7944e28878a1634ad2b281
+msgid "Running with  real camera and simulated robot"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-3D-sensor.md:114
+#: 152cac6d525848e1b2186865ed75bfc5
+msgid ""
+"With the camera calibrated, it is now time to run the system with a "
+"simulated robot but real depth camera. Since our code has already been "
+"tested in simulation, this is quite easy. First, update the camera serial"
+" numbers in pick_and_place/launch/bringup_realsense.launch. Then simply "
+"launch the same file as before while setting the sim_sensor flag to "
+"false:"
+msgstr ""
+

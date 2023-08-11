@@ -1,0 +1,276 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:1
+#: 43b1fdf0ed6c425299c46856a19c59e5
+msgid "Introduction to Perception"
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:2
+#: 7047124782d24cd99ea102df31e2ba81
+msgid ""
+"In this exercise, we will experiment with data generated from the Asus "
+"Xtion Pro (or Microsoft Kinect) sensor in order to become more familiar "
+"with processing 3D data. We will view its data stream and visualize the "
+"data in various ways under Rviz."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:4
+#: 8976ef8480b8400d9029671d4105d96c
+msgid "Point Cloud Data File"
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:5
+#: 77874ad04e8a4ff081fa0f4ba9d21071
+msgid ""
+"The start of most perception processing is ROS message data from a "
+"sensor.  In this exercise, we'll be using 3D point cloud data from a "
+"common Kinect-style sensor."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:7
+#: 69c99071ca1443649d338e2cad9c3ecd
+msgid ""
+"First, we want to publish the point cloud data as a ROS message to allow "
+"display in rviz."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:9
+#: 7218ff41428340da9b1994b2deb7ef07
+msgid ""
+"Create a new workspace for this exercise and copy over a point cloud file"
+" and a utility package."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:17
+#: 17d9738186dd410182d6b3d7aa41c180
+msgid "Source and build."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:25
+#: 602d9d43ec13461f940d295e27ca10a8
+msgid ""
+"Publish pointcloud messages from the pre-recorded table.pcd point cloud "
+"data file:"
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:31
+#: 7a3cb02a0cf5470cb77d018f543f28cc
+msgid "Verify that the orig_cloud_pcd topic is being published: ros2 topic list"
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:33
+#: 63c151ca709b42e4ba1108aba404487b
+msgid "Display the point cloud in RViz"
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:35
+#: f3529d4efefc46ebb9336a1525979858
+msgid "Start an RViz window, to display the results of point-cloud processing"
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:40
+#: 5e4b8a7a57e94bf784de5eaf01941503
+msgid "Make sure your global frame is set to map"
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:42
+#: 9b8002e75f7c4d28981a43effb19835e
+msgid "Add a PointCloud2 display item and set the desired topic."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:43
+#: e04f53535f8a4ebe81dd19bff0e44bdc
+msgid "Select Add at the bottom of the Displays panel"
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:44
+#: 2e2897b193c54b6a9a88633359d41c58
+msgid "Select PointCloud2"
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:45
+#: af6fd7581307460ea35ba13b7f7247e9
+msgid ""
+"Expand PointCloud2 in the display tree, and select a topic from topic "
+"drop down."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:46
+#: 2e4cd89d3e894951a95c50fd16c32a89
+msgid ""
+"Hint: If you are using the point cloud file, the desired topic is "
+"/orig_cloud_pcd."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:48
+#: 9ad9de5ad51b4292b933914b319ed3a7
+msgid "Experiment with PCL"
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:49
+#: ab156dc986374e05b8860d994929f015
+msgid ""
+"Next, we will experiment with various command line tool provided by PCL "
+"for processing point cloud data. There are over 140 command line tools "
+"available, but only a few will be used as part of this exercise. The "
+"intent is to get you familiar with the capabilities of PCL without "
+"writing any code, but these command line tools are a great place to start"
+" when writing your own.  Although command line tools are helpful for "
+"testing various processing methods, most applications typically use the "
+"C++ libraries directly for \"real\" processing pipelines.  The ROS-I "
+"Advanced training course explores these C++ PCL methods in more detail."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:51
+#: 8cd6dc0812d243c69a5d1855ec367d7b
+msgid ""
+"Each of the PCL commands below generates a new point cloud file (.pcd) "
+"with the result of the PCL processing command.  Use either the pcl_viewer"
+" to view the results directly or the pcd_to_pointcloud command to publish"
+" the point cloud data as a ROS message for display in rviz.  Feel free to"
+" stop the pcd_to_pointcloud command after reviewing the results in rviz."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:53
+#: 7a3a6d41fbd8416ca050de2e12ccfc58
+msgid "Downsample the point cloud using the pcl_voxel_grid."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:55
+#: 8aec178cbb6d4549abf00b0f8b2bba03
+msgid ""
+"Downsample the original point cloud using a voxel grid with a grid size "
+"of (0.05,0.05,0.05).  In a voxel grid, all points in a single grid cube "
+"are replaced with a single point at the center of the voxel.  This is a "
+"common method to simplify overly complex/detailed sensor data, to speed "
+"up processing steps."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:61
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:74
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:87
+#: 1401e38eaca44c838366af1cba7650e3 a7f321b6317445e9a54d0d693c443d2f
+#: f78c93aa4fb34a60b1bcd760766bec5e
+msgid "View the new point cloud in rviz.(optional)"
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:65
+#: b878e063d0a04e2b9612594b39056257
+msgid ""
+"Note: For the PointCloud2 in rviz change the topic to /table_downsampled "
+"to show the new data."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:67
+#: 4b5d41440cb24f148f0b2db1ea9917b4
+msgid ""
+"Extracting the table surface from point cloud using the "
+"pcl_sac_segmentation_plane."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:69
+#: 1cb348f5791b4310a273567c36967598
+msgid ""
+"Find the largest plane and extract points that belong to that plane "
+"(within a given threshold)."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:78
+#: 9bf3111a0ef24b77944d006d57d6f4c9
+msgid ""
+"Note: For the PointCloud2 in rviz change the topic to /only_table to show"
+" the new data."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:80
+#: f94a04d81fa14df789d1489d32cfa398
+msgid ""
+"Extracting the largest cluster on the table from point cloud using the "
+"pcl_sac_segmentation_plane."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:82
+#: c17d14d1691946f191d6c173962e2361
+msgid "Extract the largest point-cluster not belonging to the table."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:91
+#: 915bc5abc800403bb17cdb7bdd05f74e
+msgid ""
+"Note: For the PointCloud2 in rviz change the topic to /object_on_table to"
+" show the new data."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:93
+#: 5ae7c4dd9e904dbc846478e106f4561f
+msgid "Remove outliers from the cloud using the pcl_outlier_removal."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:94
+#: d08f95f8abe345c7b0a0effcf997c301
+msgid ""
+"For this example, a statistical method will be used for removing "
+"outliers.  This is useful to clean up noisy sensor data, removing false "
+"artifacts before further processing."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:99
+#: 2116f3f61e19412ba2000237f5113de3
+msgid "View the new point cloud in rviz. (optional)"
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:103
+#: 97bcf50d8d1a4b05bab9622e4bd895da
+msgid ""
+"Note: For the PointCloud2 in rviz change the topic to "
+"/table_outlier_removal to show the new data."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:105
+#: d19b16e8cef14859af5c3193d82de922
+msgid ""
+"Compute the normals for each point in the point cloud using the "
+"pcl_normal_estimation."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:106
+#: 37985e81c0414a948c3c3f0d3f0b5403
+msgid ""
+"This example estimates the local surface normal (perpendicular) vectors "
+"at each point.  For each point, the algorithm uses nearby points (within "
+"the specified radius) to fit a plane and calculate the normal vector.  "
+"Zoom in to view the normal vectors in more detail."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:112
+#: e1a4bb9e487849f3a1887c97dc6c1697
+msgid "Mesh a point cloud using the marching cubes reconstruction."
+msgstr ""
+
+#: ../../_source/session4/ros2/2-Introduction-to-Perception.md:113
+#: a706f0259d494f67a83832818b0785b6
+msgid ""
+"Point cloud data is often unstructured, but sometimes processing "
+"algorithms need to operate on a more structured surface mesh.  This "
+"example uses the \"marching cubes\" algorithm to construct a surface mesh"
+" that approximates the point cloud data."
+msgstr ""
+

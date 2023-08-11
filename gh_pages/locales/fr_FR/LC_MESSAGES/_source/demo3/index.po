@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo3/index.rst:4
+msgid "Demo 3.0 - Introduction"
+msgstr ""
+
+#: ../../_source/demo3/index.rst:4
+msgid "Demo 3.1 - Inspect the \"pick_and_place\" Package"
+msgstr ""
+
+#: ../../_source/demo3/index.rst:4
+msgid "Demo 3.2 - Package Setup"
+msgstr ""
+
+#: ../../_source/demo3/index.rst:4
+msgid "Demo 3.3 - Start in Simulation Mode"
+msgstr ""
+
+#: ../../_source/demo3/index.rst:4
+msgid "Demo 3.4 - Detect Box Pick Point"
+msgstr ""
+
+#: ../../_source/demo3/index.rst:4
+msgid "Demo 3.5 - Introduction to Trajopt"
+msgstr ""
+
+#: ../../_source/demo3/index.rst:4
+msgid "Demo 3.6 - Trajopt Costs and Constraints"
+msgstr ""
+
+#: ../../_source/demo3/index.rst:4
+msgid "Demo 3.7 - Create Pick and Place Helpers"
+msgstr ""
+
+#: ../../_source/demo3/index.rst:4
+msgid "Demo 3.8 - Moving to Hardware: Setting up a 3D sensor"
+msgstr ""
+
+#: ../../_source/demo3/index.rst:4
+msgid "Demo 3.9 - Moving to Hardware: Setting up a robot"
+msgstr ""
+
+#: ../../_source/demo3/index.rst:4
+msgid "Demo 3.10a - Setting up a Gripper: Schunk WSG050"
+msgstr ""
+
+#: ../../_source/demo3/index.rst:4
+msgid "Demo 3.10b - Setting up a Gripper: Suction Cup"
+msgstr ""
+
+#: ../../_source/demo3/index.rst:2 6a671da684604bf18995b359810fc0e6
+msgid "Application Demo 3 - Optimization Based Planning"
+msgstr ""
+

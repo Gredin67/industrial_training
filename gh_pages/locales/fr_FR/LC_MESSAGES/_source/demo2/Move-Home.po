@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo2/Move-Home.md:1 660e647b7b7d496fbbab6c335d5eaab2
+msgid "Move Home"
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:2 6cbc8922671e4878a830f2997c89cb1a
+msgid "In this exercise, we will be using MoveIt! in order to move the arm."
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:4 73da740403ff4b998e5678df58533426
+msgid "Locate Exercise Source File"
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:6 9d8a920daaae499ab44184d57418d158
+msgid ""
+"Go to the main application source file located in "
+"plan_and_run/src/plan_and_run_node.cpp."
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:7 7fa6ab94b5764f67b73d6af054ac7c0e
+msgid "In the main program , locate the function call to application.moveHome()."
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:8 9635452b0ef948919fd2e5d1cc9a82d2
+msgid ""
+"Go to the source file for that function located in the "
+"plan_and_run/src/tasks/move_home.cpp."
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:9 62c7fb1b3ef4492b9516fb9f8f8faaa6
+msgid ""
+"Alternatively, in QTCreator, click on any part of the function and press "
+"\"F2\" to bring up that file."
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:10 b2c8e40e46d640b3a30ce0fa60b80e90
+msgid ""
+"Comment out the first line containing the ROS_ERROR_STREAM( ... entry so "
+"that the function does not quit immediately."
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:12 01ad90b7f17e4bb9a0fc937f6b6bdb3f
+msgid "Complete Code"
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:13 ae5acba87cfc46ab910eb52a11243e6b
+msgid ""
+"Use the MoveGroupInterface::move() method in order to move the robot to a"
+" target."
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:14 83fb04b79c96475d97f0e9252a1db747
+msgid ""
+"The moveit_msgs::MoveItErrorCodes structure contains constants that you "
+"can use to check the result after calling the move() function."
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:15 3590b248e16b428fa6b3e567d377e7ad
+msgid ""
+"Find the comment block that starts with /*  Fill Code: and complete as "
+"per described."
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:17 779638431524453d8c1bdd3043f4e8c2
+msgid "Replace every instance of [ COMPLETE HERE ] accordingly."
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:19 215a4abec5734be2802462a803e07f43
+msgid "Build Code and Run"
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:21 a55ff59abde74f0eab85ff03d63af8e1
+msgid "cd into your catkin workspace and run catkin build"
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:22 31cdf2c6db9649ada6004060d82f9c6b
+msgid "Then run the application launch file:"
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:27 cf5c436a80ba4fadb718a3a227b0ad3b
+msgid "API References"
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:29 1b6b9e7936804099b1307244f97d490f
+msgid "setNamedTarget()"
+msgstr ""
+
+#: ../../_source/demo2/Move-Home.md:31 5bc61c08522648e88fdefaa1d692d62a
+msgid "MoveGroupInterface class"
+msgstr ""
+

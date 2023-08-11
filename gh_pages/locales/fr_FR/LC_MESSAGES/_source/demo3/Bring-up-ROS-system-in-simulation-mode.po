@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo3/Bring-up-ROS-system-in-simulation-mode.md:1
+#: 29f3160ddb134acabcc0df5322529a02
+msgid "Start in Simulation Mode"
+msgstr ""
+
+#: ../../_source/demo3/Bring-up-ROS-system-in-simulation-mode.md:2
+#: 838f2835c0e740ff91475fca71b54115
+msgid ""
+"In this exercise, we will start a ROS system that is ready to move the "
+"robot in simulation mode."
+msgstr ""
+
+#: ../../_source/demo3/Bring-up-ROS-system-in-simulation-mode.md:4
+#: 585862d5448a4120a1e9a594e6d3dc83
+msgid "Run setup launch file in simulation mode (simulated robot and sensor)"
+msgstr ""
+
+#: ../../_source/demo3/Bring-up-ROS-system-in-simulation-mode.md:6
+#: bea18898080b441497ecab07bd768df0
+msgid "In a terminal"
+msgstr ""
+
+#: ../../_source/demo3/Bring-up-ROS-system-in-simulation-mode.md:11
+#: 286516cfa0a3491797ac43d5fdc6c717
+msgid ""
+"Rviz will display all the workcell components including the robot in its "
+"default position."
+msgstr ""
+
+#: ../../_source/demo3/Bring-up-ROS-system-in-simulation-mode.md:13
+#: eb9c36352c474804bdb71c552eaed5e2
+msgid ""
+"Look into test_bed_core_node.cpp. This code is already complete. A "
+"service to find the pick target is being run, and a TrajOpt problem is "
+"set up to perform a pick and place operation. While the service to find "
+"the pick target is running, it will not find a pick and the path planning"
+" will not run. These will be the next tasks."
+msgstr ""
+

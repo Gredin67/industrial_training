@@ -1,0 +1,230 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session2/ros1/3-Parameters.md:1
+#: c467e7d6461c4eacbf233fdfa0e59c83
+msgid "Parameters"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:2
+#: 14c67cfd3bec412bb2ef71e8c066fe71
+msgid "In this exercise, we will look at ROS Parameters for configuring nodes||"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:4
+#: 5cb455f7700a468896aee8afc9aab991
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:5
+#: ef9f81e5f37b448abe59e2f79cc28375
+msgid ""
+"By this point in these tutorials (or your career), you've probably typed "
+"the words int main(int argc, char** argv) more times than you can count. "
+"The arguments to main are the means by which a system outside scope and "
+"understanding of your program can configure your program to do a "
+"particular task. These are command line parameters."
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:7
+#: 22673237c6d044b0a95fe0dedabc8161
+msgid ""
+"The ROS ecosystem has an analogous system for configuring entire groups "
+"of nodes. It's a fancy key-value storage program that gets brought up as "
+"part of roscore. It's best used to pass configuration parameters to nodes"
+" individually (e.g. to identify which camera a node should subscribe to),"
+" but it can be used for much more complicated items."
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:9
+#: 115f54af08ee4fbf84119bd2ab13577f
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:10
+#: 90371b3a42c34309bf9146b20cb22f20
+msgid "Understanding Parameters"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:12
+#: 807a0fd7fd9c475883a30a87dde7c853
+msgid "Further Information and Resource"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:13
+#: 3ff1e955de874382a8310e0cb2214c0a
+msgid "Roscpp tutorial"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:15
+#: a800cbce12894a25a28560e1bca2ce2f
+msgid "Private Parameters"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:17
+#: b8997f1885b24eeca22623267f81d9a8
+msgid "Parameter Server"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:20
+#: 71ad59e298f342d296f499abb8085466
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:21
+#: 7c8cc93448b040daa2f114217a4de2bb
+msgid "In previous exercises, we added a service with the following definition:"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:30
+#: 0e3a90a109694a5c850eda76b8599933
+msgid ""
+"So far we haven't used the request field, base_frame, for anything. In "
+"this exercise we'll use ROS parameters to set this field. You will need "
+"to:"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:32
+#: 666ab3e093e0405587273892524ab149
+msgid ""
+"Add a private node handle to the main method of the myworkcell_node in "
+"addition to the normal one."
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:33
+#: e1568cda0edf42669e463a0198e1dc8e
+msgid ""
+"Use the private node handle to load the parameter base_frame and store it"
+" in a local string object."
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:35
+#: 1ddf2f5560594a0db8b922acb4c5f45f
+msgid "If no parameter is provided, default to the parameter to \"world\"."
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:37
+#: b9c33bc073c7481f9979bf155a7239a8
+msgid ""
+"When making the service call to the vision_node, use this parameter to "
+"fill out the request::base_frame field."
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:38
+#: f9198076ba294584ad0da981a4a69a20
+msgid "Add a <param> tag to your launch file to initialize the new value."
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:40
+#: 6de3fcf8259240f59a87d931d3fb358e
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:42
+#: 6986444de576457cb65e765dc434e1ee
+msgid "Open up myworkcell_node.cpp for editing."
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:44
+#: caa06f7638df4a719649cba111aa0720
+msgid ""
+"Add a new ros::NodeHandle object to the main function, and make it "
+"private through its parameters. For more guidance, see the ros wiki on "
+"this subject."
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:50
+#: 5f1c8dad6d9d4dc487b0824429d3cc1e
+msgid ""
+"Create a temporary string object, std::string base_frame;, and then use "
+"the private node handle's API to load the parameter \"base_frame\"."
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:56
+#: 24bf962f46bb4b9db7a988e4c5910c77
+msgid ""
+"base_frame parameter should be read after the private_node_handle is "
+"declared, but before app.start() is called"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:58
+#: 0e562b707a154dc2a0ea15766eff148c
+msgid ""
+"Add a parameter to your myworkcell_node \"start\" function that accepts "
+"the base_frame argument, and assign the value from the parameter into the"
+" service request. Make sure to update the app.start call in your main() "
+"routine to pass through the base_frame value you read from the parameter "
+"server:"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:76
+#: f050d0a8e299485ca4ffe1f49dd75076
+msgid ""
+"srv.request should be set before passing it into the service call "
+"(vision_client.call(srv))"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:78
+#: 0f89c0d6a3904069a62c854391e9960d
+msgid ""
+"Now we'll add myworkcell_node to the existing workcell.launch file, so we"
+" can set the base_frame parameter from a launch file.  We'd like the "
+"vision_node to return the position of the target relative to the world "
+"frame, for motion-planning purposes.  Even though that's the default "
+"value, we'll specify it in the launch-file anyway:"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:86
+#: 5020b3d550a54e3b9ae3731c4017deea
+msgid "Try it out by running the system."
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:93
+#: 59c8e705296e43feb07d6cfee5cbca0e
+msgid "Press Ctrl+C to kill the running nodes"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:94
+#: bdd0ad80f0e64212a67bacdf8ae49d15
+msgid ""
+"Edit the launch file to change the base_frame parameter value (e.g. to "
+"\"test2\")"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:95
+#: 9b1370d8e9784da68aec29224849ae75
+msgid ""
+"Re-launch workcell.launch, and observe that the \"request frame\" has "
+"changed"
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:96
+#: 58ba804dfdfb4f62974d092e53c7294a
+msgid ""
+"The response frame doesn't change, because we haven't updated vision_node"
+" (yet) to handle the request frame.  Vision_node always returns the same "
+"frame (for now)."
+msgstr ""
+
+#: ../../_source/session2/ros1/3-Parameters.md:97
+#: e90e35e70ef34cf7b1cc03b36f94246f
+msgid "Set the base_frame back to \"world\""
+msgstr ""
+

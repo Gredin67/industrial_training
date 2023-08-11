@@ -1,0 +1,137 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:1
+#: fa2838e5babe416b90c0def3218660ae
+msgid "Generate a Semi-Constrained Trajectory"
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:2
+#: 15d33b9048234d58aa690f05fa3ec88a
+msgid ""
+"In this exercise, we will be creating a Descartes trajectory from an "
+"array of cartesian poses.  Each point will have rotational freedom about "
+"the z axis of the tool."
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:4
+#: ab598997db934a299f187279200709a3
+msgid "Locate exercise source file"
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:6
+#: 22b386c25bf34cd9b49b373cedd016f4
+msgid ""
+"Go to the main application source file located in "
+"plan_and_run/src/plan_and_run_node.cpp."
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:7
+#: 7a4b8b1a79524e16a6dd61f65e6e9850
+msgid ""
+"In the main program, locate the function call to "
+"application.generateTrajectory()."
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:8
+#: 6cda294891e14ab08e2ba0474b819751
+msgid ""
+"Go to the source file for that function located in the "
+"plan_and_run/src/tasks/generate_trajectory.cpp."
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:9
+#: 202e24cd43234b8aba40e17205d591a3
+msgid ""
+"Alternatively, in QTCreator, click on any part of the function and press "
+"\"F2\" to bring up that file."
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:10
+#: db72a25c23f14f2e9968257d2d6ca3c5
+msgid ""
+"Comment out the first line containing the ROS_ERROR_STREAM( ... entry so "
+"that the function does not quit immediately."
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:12
+#: 128832fe2fe54b71a311965d99a611f7
+msgid "Complete Code"
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:13
+#: 854b0935a2f049e69bfa1d643dcf25d8
+msgid ""
+"Observe how the 'createLemniscate()' is invoked in order to generate all "
+"the poses of the tool for the trajectory. Its poses are then used to "
+"create the Descartes Trajectory."
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:14
+#: ba1e24c804f445e7859365af73649f36
+msgid ""
+"Use the AxialSymmetric constructor to specify a point with rotational "
+"freedom about the z-axis."
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:15
+#: 0384bbcd1ece492194fe9db5aa8aa37c
+msgid ""
+"The AxialSymmetricPt::FreeAxis::Z_AXIS enumeration constant allows you to"
+" specify Z as the free rotational axis"
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:16
+#: 51b35b7f641148058bee1b4da95ec84a
+msgid ""
+"Find comment block that starts with /*  Fill Code: and complete as per "
+"described ."
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:18
+#: d692c0505a70415aa8f256688610a218
+msgid "Replace every instance of [ COMPLETE HERE ] accordingly."
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:20
+#: 859861979b4f453b9b700605ad9ca7ec
+msgid "Build Code and Run"
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:22
+#: e68a0a5b725e494689be7e9e8edfc0d6
+msgid "CD into your catkin workspace and run catkin build"
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:23
+#: 12c72bf007594a2aa117a3caaa48af66
+msgid "Then run the application launch file"
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:28
+#: b5ce0018a9d74dfaaebf97e7fe7c10c1
+msgid "API References"
+msgstr ""
+
+#: ../../_source/demo2/Generate-a-Semi-Constrained-Trajectory.md:30
+#: b9a9be76209a4ae5bba5dc89f5651ca0
+msgid "descartes_trajectory::AxialSymmetricPt"
+msgstr ""
+

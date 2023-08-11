@@ -1,0 +1,248 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:1
+#: 3f4c7895bf94467dae15d290c99c4caa
+msgid "Introduction to URDF"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:2
+#: 962f317fd9db4e1580cf60dc94bf925d
+msgid ""
+"In this exercise, we will explore how to describe a robot in the URDF "
+"format."
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:5
+#: 2a54f89bce7947339335bcd590aa74df
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:6
+#: fd76c6db71064d53b03f4a8909b32096
+msgid ""
+"Many of the coolest and most useful capabilities of ROS and its community"
+" involve things like collision checking and dynamic path planning. It’s "
+"frequently useful to have a code-independent, human-readable way to "
+"describe the geometry of robots and their cells. Think of it like a "
+"textual CAD description: “part-one is 1 meter left of part-two and has "
+"the following triangle-mesh for display purposes.” The Unified Robot "
+"Description Format (URDF) is the most popular of these formats today. "
+"This module will walk you through creating a simple robot cell that we’ll"
+" expand upon and use for practical purposes later."
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:9
+#: 3240b52ef3e34d5098ccae0ad05f8add
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:11
+#: 5c05c86bb59b4f6c87b39fbfb26d405d
+msgid "Building a Visual Robot Model with URDF from Scratch"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:13
+#: 83de780ecdbc4dfea299136b9d80d2da
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:15
+#: f6c77e07c42441e78e67a82e654fe5bd
+msgid "XML Specification"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:16
+#: 5e2519b401854207ab8df0ec35528076
+msgid "ROS Tutorials"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:17
+#: 448cc9c8c2104d88a4a08d18a3a015af
+msgid "XACRO Extensions"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:18
+#: 1da77b6179ee4f6d888ce4efd203d073
+msgid "SolidWorks to URDF Exporter"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:20
+#: d75d004a69b34b2b8f2ea5b8814dc09d
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:21
+#: 38262eef9bf84477a6c616c686452d66
+msgid ""
+"We have the software skeleton of our Scan-N-Plan application, so let’s "
+"take the next step and add some physical context. The geometry we "
+"describe in this exercise will be used to:"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:22
+#: cb3c76ec751f4115a73db9103b1a5eb2
+msgid "Perform collision checking"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:23
+#: 1f0cd47681a8431b808549b488237c43
+msgid "Understand robot kinematics"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:24
+#: a464aad8997a47cab7781fe9636b67d8
+msgid ""
+"Perform transformation math Your goal is to describe a workcell that "
+"features:"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:26
+#: 1742080abda840c9a09ac6a74b452c63
+msgid "An origin frame called world"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:27
+#: e9d86790194e432c9551a0d95bd16284
+msgid "A separate frame with “table” geometry (a flat rectangular prism)"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:28
+#: 327856665f9f441da52fbc6f6cd80b10
+msgid ""
+"A frame (geometry optional) called camera_frame that is oriented such "
+"that its Z axis is flipped relative to the Z axis of world"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:30
+#: aba537cbf8764b209365ce15a5d19345
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:31
+#: f653328270ee487fb8a72469892cf587
+msgid ""
+"Note: If you have not completed the previous tutorials, copy "
+"myworkcell_core and myworkcell_support packages from ~/industrial-"
+"training/exercises/2.3/ros2/src and git clone https://github.com/ros-"
+"industrial/fake_ar_publisher.git into your current workspace src folder."
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:33
+#: aef7f4b12f234645b8be4f77528567a3
+msgid ""
+"It’s customary to put describing files that aren’t code into their own "
+"“support” package. URDFs typically go into their own subfolder ''urdf/''."
+" See the abb_irb2400_support package. Add a urdf sub-folder to your "
+"application support package."
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:34
+#: 353bd49213614d0ba91e4d878109ff37
+msgid ""
+"Create a new workcell.urdf file inside the myworkcell_support/urdf/ "
+"folder and insert the following XML skeleton:"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:42
+#: 8ba56f7f118d4d62a2be157c25e1d256
+msgid ""
+"Add the required links. See the irb2400_macro.xacro example from an "
+"ABB2400.  Remember that all URDF tags must be placed between the <robot> "
+"... </robot> tags."
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:44
+#: 0e44a94bb56f4f5e845ffb3c95f56322
+msgid "Add the world frame as a \"virtual link\" (no geometry)."
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:50
+#: 7efa5632eb4f4df48b69d04358ef752c
+msgid ""
+"Add the table frame, and be sure to specify both collision & visual "
+"geometry tags. See the box type in the XML specification."
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:67
+#: 4e9bf0aa44ae472282fa30724a326513
+msgid "Add the camera_frame frame as another virtual link (no geometry)."
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:73
+#: 2eb3909a300b46a6a60d6bbce75bec49
+msgid ""
+"Connect your links with a pair of fixed joints  Use an rpy tag in the "
+"world_to_camera joint to set its orientation as described in the "
+"introduction."
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:89
+#: 8275191f9d11457cb88e01cb0a937565
+msgid ""
+"Add the urdf folder to the installation rule in your CMakeLists.txt so it"
+" gets installed where the launch file expects it to be."
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:95
+#: a56573c7813c4958b0a7982e028a16b1
+msgid ""
+"It helps to visualize your URDF as you add links, to verify things look "
+"as expected. Run a node that publishes the robot state based on your "
+"URDF."
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:101
+#: 1b605d3845d644a799b0ea3f2ccbcb11
+msgid ""
+"Note the syntax used to specify a starting parameter value to the node "
+"(--ros-args -p param_name:=param_value).  Also the use of cat file.urdf "
+"to pass the file contents as a string."
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:103
+#: 5f6170b6739b426f9b890bc98cea3500
+msgid "Now run the visualization tool Rviz in a separate terminal."
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:109
+#: 04d1d7f1987e4ca689e36ebf3facb93e
+msgid ""
+"The default RViz setup only shows a minimal amount of info.  You can add "
+"various Display elements to customize the display to show exactly what is"
+" needed.  Inside RViz add a RobotModel display and a TF display using the"
+" button in the lower left. Expand the settings for the added RobotModel "
+"display and select /robot_description for the field labeled Description "
+"Topic. Also make sure in the Global Options that Fixed Frame is set to "
+"world.  Consider saving this configuration (File -> Save Config) to the "
+"default RViz config file, so you don't need to repeat these setup steps "
+"again later."
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:111
+#: c1039ce3a4de4c72ac67753278ad60e1
+msgid "Challenge Exercise"
+msgstr ""
+
+#: ../../_source/session3/ros2/0-Intro-to-URDF.md:112
+#: effea9ce7b09487382ad512f4a4a1399
+msgid "Try adding legs to the table. How does this affect the collision geometry?"
+msgstr ""
+

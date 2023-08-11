@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo1/index.rst:4
+msgid "Demo 1.0 - Introduction"
+msgstr ""
+
+#: ../../_source/demo1/index.rst:4
+msgid "Demo 1.1 - Inspect the \"pick_and_place_exercise\" Package"
+msgstr ""
+
+#: ../../_source/demo1/index.rst:4
+msgid "Demo 1.2 - Package Setup"
+msgstr ""
+
+#: ../../_source/demo1/index.rst:4
+msgid "Demo 1.3 - Start in Simulation Mode"
+msgstr ""
+
+#: ../../_source/demo1/index.rst:4
+msgid "Demo 1.4 - Initialization and Global Variables"
+msgstr ""
+
+#: ../../_source/demo1/index.rst:4
+msgid "Demo 1.5 - Move Arm to Wait Position"
+msgstr ""
+
+#: ../../_source/demo1/index.rst:4
+msgid "Demo 1.6 - Open Gripper"
+msgstr ""
+
+#: ../../_source/demo1/index.rst:4
+msgid "Demo 1.7 - Detect Box Pick Point"
+msgstr ""
+
+#: ../../_source/demo1/index.rst:4
+msgid "Demo 1.8 - Create Pick Moves"
+msgstr ""
+
+#: ../../_source/demo1/index.rst:4
+msgid "Demo 1.9 - Pick Up Box"
+msgstr ""
+
+#: ../../_source/demo1/index.rst:4
+msgid "Demo 1.10 - Create Place Moves"
+msgstr ""
+
+#: ../../_source/demo1/index.rst:4
+msgid "Demo 1.11 - Place Box"
+msgstr ""
+
+#: ../../_source/demo1/index.rst:2 bac8e0ae0bdb44878de1a55d2c027631
+msgid "Application Demo 1 - Perception-Driven Manipulation"
+msgstr ""
+

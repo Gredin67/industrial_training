@@ -1,0 +1,239 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo3/Costs-and-Constraints.md:1
+#: 1edec15032dd4bdfa6b4784a90d2062b
+msgid "Costs and Constraints"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:4
+#: b8f99e4d5ada4e95a57e3cbe5bc65d56
+msgid ""
+"This section provides an overview of the common features of costs and "
+"constraints, the different types and their meaning, and a list of the "
+"currently avaible costs and constraints. Additional information can be "
+"found in the TrajOpt documentation as well as in the trajopt_examples "
+"package."
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:6
+#: 984d920d84c5467fa82b8a31ceea02d7
+msgid "Common Ground"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:9
+#: c31ade23c588492a92474d5c8b02b01a
+msgid ""
+"Costs and constraints are specific types of TermInfos in Trajopt. Many of"
+" the same types of terms can be used as either a cost or a constraint. "
+"This is set by setting the term_type member to either TT_COST or TT_CNT. "
+"When using the json interface, this is handled for you. Additionally, "
+"there is a TT_USE_TIME option that allows some terms to use time "
+"parameterization."
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:11
+#: 1164f0f378064ef3b4e8e7d9fd2ef773
+msgid ""
+"All terms also have an optional name parameter that you can set. When "
+"using Json, this defaults to the term type. In C++, name is empty by "
+"default."
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:15
+#: 31acc3a2867a435db628730a7fefd81b
+msgid "Adding Terms with Json"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:18
+#: 619ccdf6743d4a08ab3519eba0828b9b
+msgid ""
+"When constructing the problem using Json, it will run through a list of "
+"costs or constraints. Then you will need to specify the type of term "
+"(Joint Velocity, etc) and a member :code:params that contains all of the "
+"parameters for that type of term."
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:45
+#: 519b89c7904d403cb1941740484b58fb
+msgid "Adding Terms in C++"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:48
+#: 14d62e9b6ca143bc98289607085864c1
+msgid ""
+"When constructing the problem in C++, each term has a respective TermInfo"
+" object. Create a std::shared_ptr to the type of term you wish to add, "
+"update the parameter members of that object, and push_back that term to "
+"the end of cost_infos or cnt_infos of the ProblemConstructionInfo object."
+" If the term can be either a cost or a constraint, do not forget to set "
+"the term_type member to the proper enumeration accordingly."
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:80
+#: 32c54822860446d1831f8a7db2d00668
+msgid "Joint Level Terms"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:82
+#: 1c8ceebdbe7743f0b7db3c0ca3fa2810
+msgid "There are a number of joint level costs available in TrajOpt. These are:"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:84
+#: 0f952be03ee84e349b879102475fd95b
+msgid "Joint Position"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:85
+#: 8309348a102a4ec9a056665a4ad58b10
+msgid "Joint Velocity"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:86
+#: 88a0cdf50fd6416dbbd06cabcf21eb50
+msgid "Joint Acceleration"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:87
+#: e1b5835361f849e28da68eec0b7a3431
+msgid "Joint Jerk"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:89
+#: 208cfd165681422ea66720953144b78f
+msgid "Some important notes:"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:91
+#: 3c2bead9f7294f7ab044cddf155074e7
+msgid ""
+"Each of these is calculated from the joint position values using "
+"numerical differentiation. If the trajectory is too finely discretized, "
+"these values may be somewhat meaningless."
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:92
+#: f315f1a4053849cfacd7f27754dfdbec
+msgid ""
+"When time parameterization is disabled, these costs assume unit time "
+"steps. For instance, this means velocity is just x1-x0. This is a useful "
+"cost, but the user should be aware of what it means."
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:93
+#: a5e4a175c04f4adea0849e0c82d334fd
+msgid ""
+"Each of these costs have a target (required), an upper_tol (optional), "
+"and a lower_tol (optional)."
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:94
+#: 9faea6a234e04117b873c2cf789d2d34
+msgid ""
+"The target sets the desired value (usually 0) for all joints. Thus it "
+"should be a vector which length is the length of the DOF."
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:95
+#: 2a935f645a6d4c769997e8c5251ebc82
+msgid ""
+"If upper_tol==lower_tol==0 then an equality costs/cnt will be set with a "
+"squared error."
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:96
+#: b37d9e7e63e4446faf35defa2cc9e87e
+msgid ""
+"If upper_tol!=lower_tol then a hinge cost/cnt will be set, centered about"
+" the target and hinged at the tolerances."
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:97
+#: 3b4ae3f5157a4cd186cd40be408add5f
+msgid ""
+"Note: Sometimes this \"dead band\" of 0 cost can cause numerical issues. "
+"If one is needed, it is often advantageous to set a small equality cost "
+"in addition to a larger hinge cost."
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:99
+#: 0c8de96f9cb141bbb6fe32359f0a5138
+msgid "Cartesian Terms"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:101
+#: cb3a9cced5304c829cf6eeff3ce06e72
+msgid ""
+"Similarly, there are a number of Cartesian terms available in TrajOpt. "
+"These are:"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:103
+#: 937000c9504e44af9f009f98bd726147
+msgid "Dynamic Cartesian Pose (DynamicCartPoseTermInfo)"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:104
+#: 976e970c7aa44becb901ed7cf3c6acaf
+msgid "Cartesian Pose (CartPoseTermInfo)"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:105
+#: e9deb2d92976440a8e407dce2d976add
+msgid "Cartesian Velocity (CartVelTermInfo)"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:107
+#: 723a66a296ba481289ca747b77f240da
+msgid ""
+"Note: These make use of the FK and numeric gradient calculation and come "
+"with a higher computation cost than joint level costs. However, this is "
+"not significant for most cases, and it is often possible to solve even "
+"hundreds of these at once (see the puzzle_piece example)."
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:109
+#: dc1a951df67a4e90b09381052deb48a6
+msgid "Miscellaneous Terms"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:111
+#: 844ceb19c93042b99c41fba2d6d73d38
+msgid "Miscellaneous terms include:"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:113
+#: 87e2c1028b234a90bd2c203bc224813c
+msgid "Collision"
+msgstr ""
+
+#: ../../_source/demo3/Costs-and-Constraints.md:115
+#: e97ced3d1060459193f13d1022e2e678
+msgid ""
+"The collision cost is one of TrajOpt's most notable features. Using "
+"features in Tesseract, it is able to use convex-convex collision checking"
+" to very quickly calculate collisions. Further to discrete point "
+"collision checking, it also has the ability to do collision checking of a"
+" swept volume between two joint states. When an object is found in "
+"collision, it is able to provide a vector to get out of the collision - "
+"allowing for more intelligent state updates between iterations."
+msgstr ""
+

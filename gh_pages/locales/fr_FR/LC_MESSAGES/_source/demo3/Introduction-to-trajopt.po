@@ -1,0 +1,356 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:1
+#: d201292b42fb41d186310ff9a5c9f909
+msgid "Introduction to Trajopt"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:2
+#: 433e71adccb34d418460cdf3fea07f88
+msgid "What is TrajOpt?"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:3
+#: 804b01a368954463be3add678addf53a
+msgid ""
+"Trajopt is an optimization based path planner that utilizes Sequential "
+"Quadratic Programming. It models the path planning problem as an "
+"optimization problem of the costs and constraints provided by the user, "
+"then iteratively attempts to converge to a global minimum (though with no"
+" guarantee)."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:6
+#: 37e7d768aa9f4d71b357998d68ddb84d
+msgid "Why use TrajOpt?"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:8
+#: 7b37411425eb4ea3bb00d9165476e38d
+msgid "Speed: Trajopt solves many problems very quickly."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:10
+#: 31df8ce94beb453c8d13cf010ba65ba9
+msgid ""
+"Reliability: Trajopt can reliably solve a large number of planning "
+"problems."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:11
+#: f39df41a575047dc91cf5250d0cdceb0
+msgid ""
+"Flexibility: Trajopt provides the ability for a user to define their own "
+"costs and constraints. This means that you can define a unique "
+"optimization objection specific to any application."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:14
+#: 3e78833af00f496badec42a3da828d6b
+msgid "Basic Usage"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:16
+#: bf757ce816c84a9b967742e384c86a75
+msgid "The typical workflow of using Trajopt for pathplanning is as follows:"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:17
+#: 85498d915813486ab47984f27743537c
+msgid ""
+"Create a ProblemConstructionInfo (pci). This can either be loaded from a "
+"json file or generated directly in C++. This contains information about "
+"the costs/constraints desired, the robot, and the planning environment."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:18
+#: 94b8aa2ca15d44129d3822a30a49cae8
+msgid ""
+"Convert ProblemConstructionInfo to a TrajOptProb using ConstructProblem. "
+"This constructs the optimization into a standardized format used by the "
+"optimizers."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:19
+#: 70328011dc1b457389634d03e6f19921
+msgid ""
+"Optimize. The optimizer will optimize a num_timesteps x num_joints + 1 "
+"matrix to minimize the costs and constraints. Each column represents a "
+"joint except for the last one which is time."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:21
+#: 064540fa56784841bcda0bfede8c35e6
+msgid ""
+"The next sections will cover some of the important steps towards setting "
+"up a TrajOpt problem."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:23
+#: e897a43c8e444a699275265e5cf35dda
+msgid "1. Basic Info"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:25
+#: 8f2c6bfff7c24d10ae3796deaf7892b7
+msgid ""
+"The basic_info section of the pci contains (as you might expect) basic "
+"information for the planner."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:27
+#: 196357818a32419987ca43b882accc11
+msgid ""
+"[int] n_steps: The number of trajectory states (timesteps) to be used in "
+"the planning of the trajectory."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:30
+#: 1a624fdd87ef460b9b5e0f0e4b734417
+msgid "[string] manip: The name of the manipulator of the robot to plan for."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:33
+#: 8b5d22652d1f4f89a024fd407a0f1a60
+msgid "[string] robot (optional): TODO"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:36
+#: e8567302417c458cb92fdb8a407ac2ee
+msgid ""
+"[bool] start_fixed: Whether to force the first trajectory state to "
+"exactly equal the first state given in the init info. If true, the "
+"associated joint values will be set to the initial conditions with an "
+"equality constraint."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:39
+#: 1dd21161079a466eae2a9d98e7f37ec9
+msgid ""
+"[vector/list of ints] dofs_fixed (optional): Indices corresponding to any"
+" degrees of freedom which position you want to hold throughout the entire"
+" trajectory. These will be set to the initial conditions with an equality"
+" constraint."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:42
+#: 9aa9aa01b30e4870a6f8d30a274a5422
+msgid ""
+"[sco::ModelType] convex_solver (optional): This specifies the solver to "
+"use. If unspecified, the included BPMPD solver will be used."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:45
+#: f1fb9d7fece541ebbe98211ebe53ddba
+msgid ""
+"***[bool] use_time ***: If true, TrajOpt adds a column to represent "
+"(1/dt). This must be set to true if any of the costs/constraints are set "
+"to use time."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:48
+#: 09b1e51ff3ab4ffa86afa061edbb8392
+msgid ""
+"[double] dt_upper_limit (optional): This is the upper limit of 1/dt "
+"values allowed. Note this value is 1/dt NOT dt."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:51
+#: c06a5b07c522417aa1f0f3724842245d
+msgid ""
+"[double] dt_lower_limit (optional): This is the lower limit of 1/dt "
+"values allowed. Note this value is 1/dt NOT dt."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:54
+#: ef11e420d0874cc4b7c8b9c9b2195583
+msgid "2. Init Info"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:56
+#: 4fd180d50ccc4f0cbf25409518e26686
+msgid ""
+"The init_info section of the pci contains information detailing the "
+"initial trajectory Trajopt should start from."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:58
+#: f3372efeac614b00a62d14b2c51729bf
+msgid "[InitInfo::Type] type: The type of initialization. Valid values are:"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:61
+#: 0e2c8eab2c274f94ae69a9a4b36f06ec
+msgid ""
+"STATIONARY: Initializes the entire trajectory to the current joint states"
+" of the robot. No data is needed."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:63
+#: f06af785db4f4b33a53edd0ac510b025
+msgid "GIVEN_TRAJ: You provide the entire initial trajectory in the data member"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:65
+#: c20f8f87b7d1421ca095980eda0c2b1f
+msgid ""
+"JOINT_INTERPOLATED: You provide an endpoint member for the initial "
+"trajectory. The trajectory is the joint interpolated between the current "
+"state and the endpoint."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:68
+#: 39facfda720b4cfba35efc6004af373a
+msgid ""
+"[TrajArray] data: Array containing the initialization information. - If "
+"using C++, must contain a trajectory with all joints over all timesteps. "
+"- If using Json, you should only provide what is needed given the type "
+"you choose."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:73
+#: 95d12b1384b7418382b17d46f0650d53
+msgid "3. Optimization Info (optional)"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:75
+#: 8ae5d077a9cb44e18cd0a10159055f8d
+msgid ""
+"This section of the pci can typically be set to default. In fact, when "
+"using a Tesseract planner as we will in this demo, the selections here "
+"get overwritten. These are the parameters that govern the SQP "
+"optimization routine. More details can be found in the TrajOpt "
+"documentation."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:77
+#: 50921151275143c28fd9e65973a4ed23
+msgid "4. Costs"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:79
+#: 3c629c3127d245ee83eeacd917ba909b
+msgid ""
+"These are functions that you wish to see minimized, such as joint "
+"accelerations or Cartesian velocities. The optimizer will seek to "
+"optimize the sum of the weighted costs subject to the constraints below. "
+"These correspond to the objective function. These will be discussed in "
+"more details in 3.6."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:81
+#: 8b723333c9b04938b3cdd3e52018809e
+msgid "5. Constraints"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:83
+#: 170e9a209ff54718af2e57925a8d8474
+msgid ""
+"These are the conditions that must be satisfied by the optimizer. Failure"
+" to meet these constraints will cause the weighting of these terms to "
+"increase until they are met or the maximum number of iterations is "
+"reached. These directly correspond to optimizer constraints. Section 3.6 "
+"will cover the available costs and contraints."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:86
+#: 2b4d8b54f1df4980bf51a2221a0e31a8
+msgid "Performance"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:88
+#: 97c6b9f562b34aa3a4db7ce3c6fcc6a1
+msgid ""
+"There are several things that you can do to help speed up the trajopt "
+"optimization."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:90
+#: fb252a9f33034a75bff2a195f9ab8818
+msgid ""
+"Be sure to build your project in Release mode. Using the command line "
+"this is catkin build --cmake-args -DCMAKE_BUILD_TYPE=Release\". In Qt "
+"Creator, the build type option is under the projects tab."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:92
+#: 69d59f05bc604792b2fd1b34a8514587
+msgid ""
+"Set the Trajopt logging level higher than Info before optimization. Do "
+"this with #include <trajopt_utils/logging.hpp> trajopt::gLogLevel = "
+"util::LevelWarn;"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:95
+#: ce7645c3a152419cb7dc3abcdeb8c300
+msgid ""
+"Change optimization parameters. The parameters in "
+"BasicTrustRegionSQPParameters can affect both the speed with which the "
+"optimization converges and the point at which the optimization triggers "
+"as having converged."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:97
+#: 1cabf06de821467f893e29826603200d
+msgid ""
+"Change your problem. This may seem obvious, but sometimes constraints can"
+" be mutually exclusive. You can also have two very similar competing "
+"costs (this is one of TrajOpt's advantages). For example, a Cartesian "
+"pose constraint that is out of the robot workspace would cause a failure."
+" A Cartesian pose cost that is in collision could slow down optimization."
+" Be judicious on which terms are really necessary as constraints and "
+"which ones could be costs."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:99
+#: b7d08dbfa5834c25bed4e41c65032e2b
+msgid "Notes"
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:102
+#: 0d2f3b3d2dc9456bb76e5506e137e1e4
+msgid ""
+"At its core, trajopt does nothing more than taking some cost functions "
+"and minimizing them, but there are some details that the user should be "
+"aware of."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:104
+#: fa5c5caa8807461d9bce99be7b7de26c
+msgid ""
+"In updating the trajectory, trajopt treats both costs and constraints as "
+"costs. If it fails to satisfy constraints, then it will increase the "
+"weight (penalty) of the constraints in an effort to have them overcome "
+"the weight of the costs to move the trajectory toward satisfying the "
+"constraints. It will increase the penalty applied to constraint "
+"violations a finite number of times, so if the weights of your costs are "
+"too high, it may fail to produce a result that satisfies constraints."
+msgstr ""
+
+#: ../../_source/demo3/Introduction-to-trajopt.md:106
+#: 7a5d19e49936424cbbc4807efc2ee248
+msgid ""
+"Furthermore, note that the result will be organized into a m x n matrix, "
+"where m is the number of timesteps and n is the number of joints + a "
+"column for time. The ith row then represents the joint state at the ith "
+"timestep of the trajectory."
+msgstr ""
+

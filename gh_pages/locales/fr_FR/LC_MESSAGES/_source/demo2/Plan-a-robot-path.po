@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo2/Plan-a-robot-path.md:1 210179d905fd472b975acbed4931ebb5
+msgid "Plan a Robot Path"
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:2 fca1e089832a44c58f9c8a45b07b5b21
+msgid ""
+"In this exercise, we will pass our trajectory to the Descartes planner in"
+" order to plan a robot path."
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:4 783c2faed395451b88c35de252abd54e
+msgid "Locate Exercise Source File"
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:6 c824700440e9445fa68bf96dcf46a5ce
+msgid ""
+"Go to the main application source file located in "
+"plan_and_run/src/plan_and_run_node.cpp."
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:7 01cfd073bf2d4eeaa72c802fa664c0af
+msgid "In the main program, locate the function call to application.planPath()."
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:8 e8b943e361a8429793d72e0d03e46ab2
+msgid ""
+"Go to the source file for that function located in the "
+"plan_and_run/src/tasks/plan_path.cpp. Alternatively, in Eclipse you can "
+"click in any part of the function and press \"F2\" to bring up that file."
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:9 bced8e8666e44b0fb9457b38584d65dc
+msgid ""
+"Comment out the first line containing the ROS_ERROR_STREAM( ... entry so "
+"that the function does not quit immediately."
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:11 b5c335ac99fd4a05a45ba0f43fcd5e70
+msgid "Complete Code"
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:13 b78efd33500748718f2942d961bab2a4
+msgid ""
+"Observe the use of the AxialSymmetricPt::getClosestJointPose() in order "
+"to get the joint values of the robot that is closest to an arbitrary "
+"joint pose.  Furthermore, this step allows us to select a single joint "
+"pose for the start and end rather than multiple valid joint "
+"configurations."
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:14 bb37ed7001dc4073b9fab7e3a701945d
+msgid ""
+"Call the DensePlanner::planPath() method in order to compute a motion "
+"plan."
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:15 1112f687d32b4e75922c5df58e3cfe4b
+msgid ""
+"When planning succeeds, use the DensePlanner::getPath() method in order "
+"to retrieve the path from the planner and save it into the output_path "
+"variable."
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:16 543cc15c54f545bbb19e845d2ea9c902
+msgid ""
+"Find comment block that starts with /*  Fill Code: and complete as "
+"described."
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:18 73f4c32b19b84310b74fa57d43c971e7
+msgid "Replace every instance of [ COMPLETE HERE ] accordingly."
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:20 6a5c1c1c26e44fc3b3bbd59e00d6bfc4
+msgid "Build Code and Run"
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:22 d56589b8eedd4dd1ad899b6dea517125
+msgid "cd into your catkin workspace and run catkin build"
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:23 01d25bcc293348b790934b7f27bad8f7
+msgid "Then run the application launch file:"
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:28 ee6a1344dd2b4e74959fa6962642f8ee
+msgid "API References"
+msgstr ""
+
+#: ../../_source/demo2/Plan-a-robot-path.md:30 686d46a123144d098dcdb0457928f198
+msgid "descartes_planner::DensePlanner"
+msgstr ""
+

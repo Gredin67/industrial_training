@@ -1,0 +1,266 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:1
+#: a2666e1c5d4a4c6d9c436cd33e74892a
+msgid "Build a MoveIt! Package"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:2
+#: 977773fb71c14fe796c72d1df297710c
+msgid ""
+"In this exercise, we will create a MoveIt! package for an industrial "
+"robot. This package creates the configuration and launch files required "
+"to use a robot with the MoveIt! Motion-Control nodes. In general, the "
+"MoveIt! package does not contain any C++ code."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:4
+#: e9263c4b19b44981884f979e8e78268e
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:5
+#: e9ceca203eaa4e44887b3232b1d051dd
+msgid ""
+"MoveIt! is a free-space motion planning framework for ROS. It’s an "
+"incredibly useful and easy-to-use tool for planning motions between two "
+"points in space without colliding with anything. Under the hood MoveIt is"
+" quite complicated, but unlike most ROS libraries, it has a really nice "
+"GUI Wizard to get you going."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:7
+#: 068f7e05abed4ad2bfee5819e8046730
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:8
+#: 8d96964b654e4544a53823abb5856f91
+msgid "Using MoveIt with ROS-I"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:10
+#: 5e8044f31a334230af2865f330e6a07e
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:11
+#: f4596fed172b4310a60c76ea885a9115
+msgid "MoveIt’s Standard Wizard Guide"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:13
+#: b813263c4bdd4fb5b56212c72bdbd40e
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:14
+#: 1e9dcf4453de4c2f91ea4fa5674096ae
+msgid ""
+"In this exercise, you will generate a MoveIt package for the UR5 workcell"
+" you built in a previous step. This process will mostly involve running "
+"the MoveIt! Setup Assistant. At the end of the exercise you should have "
+"the following:"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:16
+#: 52204f4536ce49149409af88d7b1aa48
+msgid "A new package called myworkcell_moveit_config"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:18
+#: 21cb28795e804e6b9f72d0e9dcecaaf0
+msgid ""
+"A moveit configuration with one group (\"manipulator\"), that consists of"
+" the kinematic chain between the UR5’s base_link and tool0."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:20
+#: b5f8ed731bcd48c0919d66cfb6a5591e
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:22
+#: e084ff8ec19947f18b15adea77d344c1
+msgid "Start the MoveIt! Setup Assistant (don't forget auto-complete with tab):"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:28
+#: 65fda6d93cb047c1a354ddde0174f606
+msgid ""
+"Select \"Create New MoveIt Configuration Package\", select the "
+"workcell.xacro you created previously, then \"Load File\"."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:30
+#: 4a016e68ae674eda9a8567645e733ca1
+msgid "Work your way through the tabs on the left from the top down."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:32
+#: 021f4725e5b24781ae776cc8f06dfe5f
+msgid "Generate a self-collision matrix."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:33
+#: 35fea1519715415d812080b3ca510b9b
+msgid "Add a fixed virtual base joint. e.g."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:42
+#: ac92c0a9f6034e42b8dda46781dac786
+msgid ""
+"Add a planning group called manipulator that names the kinematic chain "
+"between base_link and tool0. Note: Follow ROS naming "
+"guidelines/requirements and don't use any whitespace, anywhere."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:44
+#: ecf5af786f9f47b98c75e1b2b582a338
+msgid "a. Set the kinematics solver to KDLKinematicsPlugin"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:46
+#: 82a7af8cfe3b4be4b878b8841f97af84
+msgid ""
+"Create a few named positions (e.g. \"home\", \"allZeros\", etc.) to test "
+"with motion-planning."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:48
+#: 96aa4318f996432e8e576bdd5b211e8a
+msgid ""
+"Don't worry about adding end effectors/grippers or passive joints for "
+"this exercise."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:50
+#: decf8aa01a714b84b35f600d5fdb1908
+msgid "Enter author / maintainer info."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:52
+#: eee3b8f123ef4841a5a1ae46a6b2470b
+msgid "Yes, it's required, but doesn't have to be valid"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:54
+#: 7701a23e76f8428dbaa8c2a4cc71c85e
+msgid "Generate a new package and name it myworkcell_moveit_config."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:55
+#: 6634ead3345b4c1480d1309b1ee629cb
+msgid "make sure to create the package inside your catkin_ws/src directory"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:57
+#: be3a088bc6fc4f398ccec0e9fd1db79c
+msgid ""
+"The outcome of these steps will be a new package that contains a large "
+"number of launch and configuration files. At this point, it's possible to"
+" do motion planning, but not to execute the plan on any robot.  To try "
+"out your new configuration:"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:63
+#: 092b29efde254ede9d5e815b5bd74b65
+msgid ""
+"Don't worry about learning how to use RViz to move the robot; that's what"
+" we'll cover in the next session!"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:65
+#: c7a41cce333c4307a5757d2ff6410d76
+msgid "Using MoveIt! with Physical Hardware"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:67
+#: d285c1e3e0194417a0ce1bd81d412fa9
+msgid "MoveIt!'s setup assistant generates a suite of files that, upon launch:"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:69
+#: 720fc6c4d8594b97be8a09f6959d49fc
+msgid "Loads your workspace description to the parameter server."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:70
+#: 33cb5b30136645d0b897ef4c71267d6a
+msgid ""
+"Starts a node move_group that offers a suite of ROS services & actions "
+"for doing kinematics, motion planning, and more."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:71
+#: 15fa8987e7374c48a0f2b072b34b41e1
+msgid ""
+"An internal simulator that publishes the last planned path on a loop for "
+"other tools (like RViz) to visualize."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:73
+#: ad6d19b1e05c423dae25f1cda95bc513
+msgid ""
+"Essentially, MoveIt can publish a ROS message that defines a trajectory "
+"(joint positions over time), but it doesn't know how to pass that "
+"trajectory to your hardware."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:75
+#: cc23e0440bb1473d9a7c31180a888d50
+msgid "To do this, we need to define a few extra files."
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:77
+#: 5909ba7ad9ca457ba6d95c19d0823a00
+msgid ""
+"Create a controllers.yaml file "
+"(myworkcell_moveit_config/config/controllers.yaml) with the following "
+"contents:"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:87
+#: bc40e6d74e194006a32ae3fa8fc166fb
+msgid ""
+"Create the joint_names.yaml file "
+"(myworkcell_moveit_config/config/joint_names.yaml):"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:93
+#: 9893e5f31917465084a029b194e5e3c1
+msgid ""
+"Fill in the existing, but blank, controller_manager launch file "
+"(myworkcell_moveit_config/launch/myworkcell_moveit_controller_manager.launch.xml):"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:106
+#: fbe774ee85a24eecb6572923cd96e397
+msgid ""
+"Create a new myworkcell_planning_execution.launch (in "
+"myworkcell_moveit_config/launch):"
+msgstr ""
+
+#: ../../_source/session3/ros1/3-Build-a-MoveIt-Package.md:161
+#: bcdb270c5b904b8c9e299f486acff927
+msgid "Now let's test the new launch files we created:"
+msgstr ""
+

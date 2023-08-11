@@ -1,0 +1,159 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:1
+#: 405b53a5252d4ebcbb87e23f91e97408
+msgid "Create ROS Workspace"
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:2
+#: a8fc289723da4ac9918ca1f76daf4eae
+msgid "In this exercise, we will create and build an empty ROS workspace."
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:4
+#: 4858ec1b8f7842b6a179c664d51c0cd5
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:5
+#: b0584957af6446d29eede407ec045b6c
+msgid ""
+"Any ROS project begins with making a workspace. In this workspace, you "
+"will put all the things related to this particular project. In this "
+"module we will create the workspace where we will build the components of"
+" our Scan-N-Plan application."
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:7
+#: 27b7d1f961ea4ec791d58f9d7e197d09
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:8
+#: fd26eab6ef0a4503ab1c3c18accf146b
+msgid "Steps to creating a workspace: Creating a Workspace"
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:10
+#: 1a37b12ab58f44a1a3a207e2651b0c83
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:11
+#: 6a4cde27eddf48a08d86bfe9ce11bf47
+msgid ""
+"Additional details on what a ROS environment consists of and some basic "
+"checks you can run: Configuring a ROS2 Environment"
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:13
+#: 32ed939aba7b47749f6c3f7c6f87b6fe
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:14
+#: 550fda7784bd49d9bb533b28bc94ecda
+msgid ""
+"We have a good installation of ROS, and we need to take the first step to"
+" setting up our particular application. Your goal is to create a "
+"workspace for your application and its supplements."
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:16
+#: af3a0de41b5e4de38c6cceb46738b9ef
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:18
+#: 75f6d02fb5a74d08838a8717e759f5fe
+msgid "Create a Workspace"
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:20
+#: dbf290d67226491baa620ed6f5312a7e
+msgid ""
+"Close any open terminal windows.  Open a new terminal and source the "
+"\"humble\" distribution."
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:26
+#: cee3ddf9a31e47cf9c21ba4f91eda41a
+msgid ""
+"Create the root workspace directory. Note that the required structure is "
+"a top-level directory and a src/ directory one level down. The directory "
+"name is a completely free choice. We will use ros2_ws throughout these "
+"tutorials."
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:35
+#: 3213d4fcac6d4b47a90addb710d13298
+msgid "Build the workspace from the workspace root-directory (ros2_ws)."
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:42
+#: ead8ba26616040a59be325486b53c2e8
+msgid ""
+"See that the ros2_ws directory now contains additional directories "
+"(build, install, log)."
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:43
+#: 92b8ecf317cf4f4aa8f4d145f2f842b9
+msgid "colcon build must always be run from the root of your workspace directory."
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:44
+#: 61cd4917a6c64ee582589b6a49d9d7e7
+msgid ""
+"Don't run colcon build from a terminal where you've also sourced this "
+"workspace's setup file.  Use a dedicated terminal for building."
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:46
+#: bf012a175c3a422799c3f823fcf504c2
+msgid ""
+"These new directories can be safely deleted at any time.  This is "
+"sometimes used to resolve unusual build errors by \"starting with a clean"
+" slate\".  Note that colcon never changes any files in the src directory."
+"  Re-run colcon build to re-create the build/install/log directories."
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:55
+#: d16b6f87682844bbb13b136c1057e57f
+msgid ""
+"Make the contents of this workspace visible to ROS. Source the setup file"
+" in the install directory."
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:61
+#: 9ec4ce90d4154870bb493691d7d9cd4c
+msgid "This file MUST be sourced for every new terminal."
+msgstr ""
+
+#: ../../_source/session1/ros2/1-Create-ROS-Workspace.md:62
+#: 7377d976c6ae47f58111dcdafd154e7e
+msgid ""
+"This file will automatically include the ROS environment that was active "
+"when you first built this workspace.  Make sure you have sourced the "
+"correct ROS distribution before building a new workspace for the first "
+"time!"
+msgstr ""
+

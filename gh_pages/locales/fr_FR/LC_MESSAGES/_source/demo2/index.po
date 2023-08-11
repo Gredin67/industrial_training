@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo2/index.rst:4
+msgid "Demo 2.0 - Introduction"
+msgstr ""
+
+#: ../../_source/demo2/index.rst:4
+msgid "Demo 2.1 - Application Structure"
+msgstr ""
+
+#: ../../_source/demo2/index.rst:4
+msgid "Demo 2.2 - General Instructions"
+msgstr ""
+
+#: ../../_source/demo2/index.rst:4
+msgid "Demo 2.3 - Load Parameters"
+msgstr ""
+
+#: ../../_source/demo2/index.rst:4
+msgid "Demo 2.4 - Initialize ROS"
+msgstr ""
+
+#: ../../_source/demo2/index.rst:4
+msgid "Demo 2.5 - Initialize Descartes"
+msgstr ""
+
+#: ../../_source/demo2/index.rst:4
+msgid "Demo 2.6 - Move Home"
+msgstr ""
+
+#: ../../_source/demo2/index.rst:4
+msgid "Demo 2.7 - Generate a Semi-Constrained Trajectory"
+msgstr ""
+
+#: ../../_source/demo2/index.rst:4
+msgid "Demo 2.8 - Plan a Robot Path"
+msgstr ""
+
+#: ../../_source/demo2/index.rst:4
+msgid "Demo 2.9 - Run a Robot Path"
+msgstr ""
+
+#: ../../_source/demo2/index.rst:2 5d6ef2b2adb24a09907d922e7315a075
+msgid "Application Demo 2 - Descartes Planning and Execution"
+msgstr ""
+

@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:1
+#: de8f0d59ec3b43bfab5b7576236944aa
+msgid "Setting up a Schunk Gripper"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:3
+#: b2c9a86ecf284caba6233f09241d7bb3
+msgid ""
+"For this tutorial, we will use a Schunk WSG050 gripper. We will "
+"communicate with this gripper via Ethernet TCP/IP. However, the ROS "
+"driver hides most of the details of this interface, allowing us to "
+"control it without in-depth knowledge of TCP/IP. Further, it is worth "
+"noting that there are at least 2 community supported ROS drivers that "
+"provide different interfaces. We will demonstrate only the first one."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:5
+#: f364d11feb1b424b977992c685ae8e05
+msgid "https://github.com/ipa320/ipa325_wsg50.git"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:6
+#: 16ad8b6b964c4a91a3eb4b5d4cb9272d
+msgid "https://github.com/nalt/wsg50-ros-pkgS"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:8
+#: 4e8d1e04cf27491fae28d59616815308
+msgid ""
+"Note that this tutorial is more advanced than some of the previous "
+"tutorials. While examples and guidelines will be given, the \"solution\" "
+"is not provided. Be sure to refer to the prior tutorials as well as the "
+"ROS wiki for more information. Additionally, searching any error messages"
+" is always a good way to utilize the vast ROS community knowledgebase."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:10
+#: 7446d57015fd49ba9e035822b5918982
+msgid "Setup Network"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:11
+#: 96e14d9efc664ad395dce5f2af04a488
+msgid "Connect to the gripper using a static IP address such as 192.168.1.2"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:12
+#: 3484fc09d42d4082945746ad5039f827
+msgid "Open a browser and enter 192.168.1.20"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:13
+#: abe328e8e9714e4b97ba4b59262ee12e
+msgid "Settings → Network → change IP address and subnet mask to"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:14
+#: d195e9cb9806419eb5f7b514995465f3
+msgid "IP: 160.69.69.20"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:15
+#: 758ac979fef845acaa5dfe0f17634b72
+msgid "subnet: 255.255.0.0"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:17
+#: ee2f5370122e4501ad55ac7efb25da22
+msgid "Clone the driver package into your workspace"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:18
+#: 4b0cade239d441b9b4d52a56a527a8b9
+msgid ""
+"Like many community ROS packages, there is no debian release for this "
+"driver. Therefore you will need to clone the source of the package into "
+"the src space of your workspace."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:23
+#: 7eb7ef680a7942e09a36899d5af1ef08
+msgid "Create Example node"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:24
+#: 2ce618839c0a4b488edb00ddc69212f5
+msgid "Edit Build Information"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:25
+#: 0d1664f3f49b4690bf275a5a6124bba6
+msgid ""
+"Next you will create a C++ example. First you need to add an executable "
+"to the CMakeLists.txt"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:32
+#: b2a328fc7e374736b7329a7964e8c14b
+msgid ""
+"Additionally, you will need to add a dependency on the ipa325_wsg50 by "
+"adding it to the appropriate places in the CMakeLists.txt"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:34
+#: 0517f681944845dfa3c5c0d89283e237
+msgid ""
+"find_package(catkin REQUIRED COMPONENTS [all_of your other packages] "
+"ipa325_wsg50)"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:35
+#: ab79ef9230f3445e8c00082e36fe25a0
+msgid "catkin_package( CATKIN_DEPENDS [all of your other packages] ipa325_wsg50)"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:37
+#: de22021188c74bccbf75fa0843847c8f
+msgid "Finally, you will need to add the following line to your package.xml file"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:44
+#: 6d34d9f7c1a14add9c6cc09160be1016
+msgid "Add gripper_interface_node.cpp"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:46
+#: 6b03c08b1c3842039d3b9be4930d0b7a
+msgid ""
+"Now create the gripper_interface_node.cpp file in the location specified "
+"in the CMakeLists.txt"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:109
+#: e49f6092e1ee48d2941d3934484436e7
+msgid "Test Example"
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:110
+#: 0cad8e4d938841c3b38fc18d650e4f8e
+msgid ""
+"To test this example, first launch the launch file that was included with"
+" the ROS driver (wsg50.launch).  Then start the C++ example. Verify that "
+"it is working - opening and closing the Schunk gripper."
+msgstr ""
+
+#: ../../_source/demo3/Setting-up-a-gripper-schunk.md:112
+#: cb30d48ca1644e628fbc23f68ecb2471
+msgid ""
+"You can now take this code and add it to test_bed_core_node.cpp at "
+"appropriate times in order to pick and place the box. While some headers "
+"should go to the top, the majority of the code should go within the "
+"execution section at the bottom. Look for:"
+msgstr ""
+

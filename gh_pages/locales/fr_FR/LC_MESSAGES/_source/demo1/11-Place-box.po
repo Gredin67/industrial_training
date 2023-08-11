@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo1/11-Place-box.rst:2 d877c248d3cd4a07b176a3ca7eff929a
+msgid "Place Box"
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:4 9b5fbebeb4e542d3b13b01fb05ff8be0
+msgid ""
+"In this exercise, we will move the robot through the pick and place "
+"motions while avoiding obstacles with an attached payload. In addition, "
+"the gripper must be opened or closed at the appropriate time in order to "
+"complete the task."
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:11 652fa9fbd815476e80e982a8975d2df2
+msgid "Locate Function"
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:13 9cd0532a9a6c4ace9eeeb4d0164b6bc8
+msgid ""
+"In the main program, locate the function call to "
+"``application.doBoxPlace()``."
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:14 9045072ca4e544bb8c9698c6610118c1
+msgid ""
+"Go to the source file of that function by clicking in any part of the "
+"function and pressing :kbd:`F2` in QtCreator."
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:16 09a2e7036ad34a43a761455d7f05b805
+msgid ""
+"Remove the first line containing the following ``RCLCPP_ERROR_STREAM "
+"...`` so that the program runs."
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:21 7f896437685143b8aafca595285d8649
+msgid "Complete Code"
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:23 ffac17e211634aa7986a014296e64492
+msgid ""
+"Find every line that begins with the comment ``Fill Code:`` and read the "
+"description. Then, replace every instance of the comment ``UNCOMMENT AND "
+"COMPLETE`` with the appropriate line of code."
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:36 c1fbe21ba62e464eaec73f17d0897480
+msgid "The |execute()| method sends a motion plan to the robot."
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:40 fe4820b238dd407c8d521b58ac422e9b
+msgid "Build Code and Run"
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:42 420b6b12cadf4e81b8c945674b660c76
+msgid "Compile the pick and place node:"
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:44 233fd323192c4ae49db44d5634ebf32f
+msgid "In QTCreator: :menuselection:`Build --> Build Project`"
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:46 24391f99b6d549c4b204c35affad0a4f
+msgid "Alternatively, in a terminal:"
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:52 64c98dcd2db04bcbb8efe23e872b3100
+msgid "Run the supporting nodes with the launch file (only if needed):"
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:58 277db2a78cfe480a91fe4610806539e8
+msgid "In another terminal, run your node with the launch file:"
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:64 ba45a45954524695b3e0230ae460d813
+msgid ""
+"At this point your exercise is complete and the robot should move through"
+" the pick and place motions and then back to the wait pose. "
+"Congratulations!"
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:69 8048377245434d78a906a8d6225f2afc
+msgid "API References"
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:71 d605e6ead47a4ee297f2599d25b518cc
+msgid ""
+"`MoveItCpp class reference "
+"<https://docs.ros.org/en/api/moveit_ros_planning/html/classmoveit__cpp_1_1MoveItCpp.html>`_"
+msgstr ""
+
+#: ../../_source/demo1/11-Place-box.rst:73 15d0f270c0d4457eaf78e5aabba41b43
+msgid "|execute()|_"
+msgstr ""
+

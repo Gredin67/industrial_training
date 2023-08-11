@@ -1,0 +1,399 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:1
+#: e41d4bcdbade4c00aca1d33b6532ab43
+msgid "Creating Packages and Nodes"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:2
+#: f0e7470b4e0d4f63959b69dc86a9abca
+msgid "In this exercise, we will create our own ROS package and node."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:4
+#: 88772c6913544a0ea81d76ec346d5e93
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:5
+#: 3d4408f70fe8485491975d9e2cdaf805
+msgid ""
+"The basis of ROS communication is that multiple executables called nodes "
+"are running in an environment and communicating with each other in "
+"various ways. These nodes exist within a structure called a package. In "
+"this module we will create a node inside a newly created package."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:7
+#: f3687d53123a4e0793882ca69ddd9e7c
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:8
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:25
+#: c40cdf166b9f43f783c07474c3f9329e d84360a835fa4450a54f212ece384f7f
+msgid "Create a Package"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:10
+#: 3d250e4f7ce549df83deb7fff497c488
+msgid "Further Information and Resources"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:11
+#: e0df238f5fd1409dba894e4a90245f8e
+msgid "Package.xml Format"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:12
+#: 3a17a2780abf498b88dbbf1199fe0b1a
+msgid "Understanding Nodes"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:14
+#: c9f025cff33e4a4fba285374ed5934b4
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:15
+#: 57942d7b9e674e4cb7c1bc036110c303
+msgid ""
+"We've installed ROS, created a workspace, and even built a few times. Now"
+" we want to create our own package and our own node to do what we want to"
+" do."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:17
+#: 9574003a5e9348668359bf2e9789c9e2
+msgid "Your goal is to create your first ROS node:"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:19
+#: c0de8aa4041846ae958570e7fc9711bb
+msgid "First you need to create a package inside your workspace."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:21
+#: d9b751dcefd642e4b58e61021e1498bc
+msgid "Then you can write your own node"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:23
+#: b5a852970730475f925cc95de177637c
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:26
+#: 0fd788345c6344fcac368fbc8c731a12
+msgid "cd into the workspace src directory"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:27
+#: 668f1bcc80d64e7fb4bebbafebdeef07
+msgid ""
+"Remember that all packages should be created inside a workspace src "
+"directory."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:33
+#: a5b53f42a85a49eb954f209f0c27dd4c
+msgid ""
+"Use the ROS command to create a package called myworkcell_core with a "
+"dependency on rclcpp"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:39
+#: 9b7afc550de741bca0a64d2dbe9aeafa
+msgid "Run ros2 pkg create -h to see more details and options for this command."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:41
+#: e860736ff8704375b8170c99ea00e897
+msgid "This command creates a directory and required files for a new ROS package."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:42
+#: fecbb56a252e4ca18dad49da2929d66b
+msgid "The first argument is the name of the new ROS package."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:43
+#: fe0b85f931bf4dc6aeb324e12aa8971b
+msgid ""
+"Use the --dependencies option to specify packages which the newly created"
+" package depends on."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:45
+#: f08f99beda704790b7a903aa7ee3e216
+msgid ""
+"There will now be a folder named myworkcell_core. Change into that folder"
+" and edit the package.xml file. Edit the file and change the description,"
+" author, etc., as desired."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:52
+#: 82ec8cbb07874e00939580ce9bc9c369
+msgid ""
+"If you forget to add a dependency when creating a package, you can add "
+"additional dependencies in the package.xml file."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:55
+#: 1b60f463df644dc0bc30cfa96b829a8f
+msgid ""
+"STOP!  We'll go through a few more lecture slides before continuing this "
+"exercise."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:58
+#: 7569003594fe4ff98cd7a422da3384cc
+msgid "Create a Node"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:59
+#: 27bba5ddc9724ae7867500df85683041
+msgid "In the package folder, create the file src/vision_node.cpp (using gedit)."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:60
+#: 7bd000bd5af9498abe35256c8d72f5b1
+msgid ""
+"Make sure you know the difference between the workspace src directory and"
+" the myworkcell_core package src directory.  This node source-file should"
+" live at: ~/ros2_ws/src/myworkcell_core/src/vision_node.cpp."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:62
+#: d356f8e56d2f42e485328043fb44b616
+msgid "Add the ROS C++ header (include rclcpp.hpp)."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:71
+#: 57644a4aad014748b6180c42d7d6e80e
+msgid ""
+"Add a main function (typical in c++ programs). The rest of our code will "
+"go inside this function."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:81
+#: b74d01d04520452ebbc9331c8e2cc8dd
+msgid ""
+"Initialize the ROS CPP middleware interface (must be called once per "
+"process)."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:88
+#: 9932f9b983e84f8382ffab9565d2916d
+msgid "Create a ROS node instance."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:94
+#: 2df60cfccf974aaca517c5b872df01bd
+msgid "Print a \"Hello World\" message using ROS print tools."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:100
+#: d4f31af8e8d24465a5916f5602bc7473
+msgid "Do not exit the program automatically - keep the node alive."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:107
+#: 32843c58be8b46688bdb9908fc8adb66
+msgid "The complete code should look like this:"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:130
+#: fb4e4d94093f4fe0b33a227dec53dbcc
+msgid "RCLCPP_INFO is one of the many logging methods"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:132
+#: c384cc712c50434b8e5198f5d0bef479
+msgid ""
+"It will print the message to the terminal output, and send it to the "
+"/rosout topic for other nodes to monitor."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:133
+#: 68cc09459af9408aa509103449c6cfe5
+msgid "There are 5 levels of logging: DEBUG, INFO, WARNING, ERROR, & FATAL."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:134
+#: 6836b8ecd64b46a0ac8f168e8f1108b7
+msgid ""
+"To use a different logging level, replace INFO in RCLCPP_INFO or "
+"RCLCPP_INFO_STREAM with the appropriate level."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:135
+#: ea39c4d30cdb40cc964adfeb36ca4350
+msgid ""
+"Use RCLCPP_INFO for printf-style logging, and RCLCPP_INFO_STREAM for "
+"cout-style logging."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:137
+#: f1b9a40abd08411780b623fd77659923
+msgid ""
+"Now that you have created the source code for the node, we need to add "
+"instructions for building it into an executable program. In the package "
+"folder, edit the CMakeLists.txt file using gedit. Define an executable "
+"node named vision_node (add_executable), with the source file "
+"vision_node.cpp. Also within the CMakeLists.txt, make sure your new "
+"vision_node gets linked to the required dependencies."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:144
+#: d1dbb763563b426da17ce7b350eca698
+msgid ""
+"These lines should be place after the section labeled # find dependencies"
+" and before the ament_package() call. The flow of a CMakeLists.txt file "
+"is almost always to first find all dependencies the current project "
+"requires, then to declare the targets the current project is creating, "
+"and finally to specify extra information such as how to test the targets "
+"and things that projects making use of this one need to know. Note that "
+"the term \"project\" is used here in the context of CMake. Each ROS "
+"package acts as a separate CMake project (notice the "
+"project(myworkcell_core)) line at the very top of the file)."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:146
+#: 83f8f034e220469bb475a5ece6f81156
+msgid ""
+"See ament_cmake documentation for more details on common ROS2 CMakeLists "
+"rules."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:147
+#: b70b63d4da9a4ecfb1f9ad792c3373b3
+msgid ""
+"You're allowed to spread most of the CMakeLists rules across multiple "
+"lines, which is often required when a target contains many source files "
+"or has many dependencies."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:149
+#: 1806cc4e2d544715be4855345a1ae171
+msgid ""
+"We've now told CMake about the vision_node executable and how to build "
+"it, but to actually run it, the file must be installed along with all the"
+" other workspace outputs. Typically, the installation location will be "
+"the install/ directory alongside the src/ directory. Add the following "
+"lines after ament_target_dependencies but before ament_package into your "
+"CMakeLists.txt to declare an installation rule for the vision_node "
+"executable:"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:157
+#: 7577e2450c234a26802f2fe6df5b9332
+msgid ""
+"ROS2 installs executables into a package-named subdir in the lib "
+"directory."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:158
+#: 5f182b8f670040b091806a2423ff304d
+msgid ""
+"A different set of install rules are needed if your project builds "
+"libraries, which are installed in bot the root lib and bin directories."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:160
+#: be256329fab1454cb74ceba907ed408b
+msgid ""
+"Build your program (node), by running colcon build in your build terminal"
+" window"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:162
+#: 5e770e1c60f240cc936c5bbcab01d6f0
+msgid "Remember that you must run colcon build from the ros2_ws directory."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:163
+#: 2cbc1087a38142c4bb93b004b20cd5f7
+msgid "This will build all of the programs, libraries, etc. in myworkcell_core"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:164
+#: b4141749a5814233adc1647a2d603d5d
+msgid "In this case, it's just a single ROS node vision_node"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:166
+#: b77cf38c564346cb982ce57265817bb9
+msgid "Run a Node"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:168
+#: 50a9f3bc675c48848f005601623f4be7
+msgid "Open a terminal to run your node."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:170
+#: ccab36678d6c4a6bb42f215e263a09a2
+msgid "Remember to run source ~/ros2_ws/install/setup.bash in this new terminal"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:172
+#: ba0a12c5225a4fb9b18dda1bb731ca7e
+msgid "Run your node."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:178
+#: f7fe3dca22284fbaa7d224b6f33b8ad7
+msgid ""
+"This runs the program we just created. Remember to use TAB to help speed-"
+"up typing and reduce errors."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:180
+#: 1064531bdc1d4e1695a0036fdc9bc80b
+msgid "In a second terminal, check what nodes are running."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:186
+#: 00e10c7d4d7042cdac3b8a0f21052bc8
+msgid "You should now see a new /vision_node listed."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:188
+#: 141c403a155348de9a04769a15e27f12
+msgid ""
+"To stop the node, input Ctrl+C in the terminal where it is running. The "
+"node is running as a completely normal executable file so standard Linux "
+"process management tools can also stop it (e.g., killall vision_node)."
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:190
+#: 500cf7d6fa154984a8f753ae7a9d0ccd
+msgid "Challenge"
+msgstr ""
+
+#: ../../_source/session1/ros2/3-Creating-a-ROS-Package-and-Node.md:192
+#: 29ad928155034a1f9da2f0a4f80bb660
+msgid ""
+"Goal: Modify the node so that it prints your name. This will require you "
+"to run through the build process again."
+msgstr ""
+

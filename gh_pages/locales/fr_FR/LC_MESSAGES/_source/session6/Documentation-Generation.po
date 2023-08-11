@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session6/Documentation-Generation.md:1
+#: ae45287c9a664d05b6d906454112add4
+msgid "Documentation Generation"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:3
+#: 20cddef215bc47a6bfa01d2d3dbd33bd
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:4
+#: fe7e66387dd64a5fab85663e1116c1f7
+msgid ""
+"The ROS Scan-N-Plan application is complete and tested.  It is important "
+"to thoroughly document the code so that other developers may easily "
+"understand this program."
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:6
+#: 6389a9f4736f4966b5a73cba343511f8
+msgid "Information and Resources"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:8
+#: 03a2b6dc37504f3cbeee0578f6444207
+msgid "doxygen generates documentation from annotated source code"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:10
+#: b12ec1e7a92c4cfe93577e4e56358413
+msgid "rosdoc_lite is a ROS wrapper for doxygen"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:12
+#: e35088a9fb2b4f548e88079770ca054f
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:13
+#: 41b955b686e844ce84321f8a1e8b021c
+msgid ""
+"We have completed and tested our Scan-N-Plan program from Exercise 4.0 "
+"and we need to release the code to the public.  Your goal is to make "
+"documentation viewable in a browser.  You may accomplish this by "
+"annotated the myworkcell_core package with doxygen syntax and generating "
+"documentation with rosdoc_lite."
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:15
+#: 9dca11ca0b6a49538193e20741764c58
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:16
+#: 35f56203f36f4c5d91ed1d068e538a48
+msgid "Annotate the Source Code"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:18
+#: d0606d20039f48ebb36310b4b151cb80
+msgid "Open the myworkcell_node.cpp file from the previous example."
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:20
+#: fce03a5340134e72866a44fd3f895127
+msgid "Annotate above the ScanNPlan class:"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:30
+#: af782a6cca844aa48eb775e66e6c7403
+msgid "Annotate above the start method"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:47
+#: bf3744ca353c4c6581baf36de9c83f35
+msgid "Annotate above the main function"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:60
+#: ca5212d5bcca423f8533da3bd6e7ed2b
+msgid ""
+"Additional annotations may be  placed above private variables or other "
+"important code elements."
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:62
+#: e939bdfed2184273bd75840d5a66d0c9
+msgid "Generate documentation"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:64
+#: 0aed11ad9ab6419498f808cfcb7fc991
+msgid "Install rosdoc_lite:"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:70
+#: f4194b0bf18b4f5d81dbe1c7790e8b56
+msgid ""
+"Build the workspace so we can produce documentation for its packages "
+"later:"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:76
+#: 8476c9b66a654b5e864a3e8b6f15d793
+msgid "Source the workspace"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:82
+#: 0717d301f14b4fe18b27be3d2d70cd3d
+msgid "Run rosdoc_lite to generate the documentation"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:89
+#: bb9709c9689444dfaf0c3d4056046d90
+msgid "View the Documentation"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:91
+#: 3a783bc280de411fb7052bcdfa99d7fa
+msgid "Open the documentation in a browser:"
+msgstr ""
+
+#: ../../_source/session6/Documentation-Generation.md:97
+#: 01c11e5ffdd34b48ab9b0615c42d08de
+msgid "Navigate to Classes -> ScanNPlan and view the documentation."
+msgstr ""
+

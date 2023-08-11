@@ -1,0 +1,174 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:1
+#: cacfbde1a60940d5878d070c215dd8d6
+msgid "Using rqt Tools for Analysis"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:2
+#: 8e2247313c1e44ba824b69a7f9a73523
+msgid ""
+"In this exercise we will use rqt_console, rqt_graph and urdf_to_graphviz "
+"to understand behavior of the ROS system."
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:4
+#: 5f2ae1c3369e46dc9b448fa86d503093
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:5
+#: 1da5f6b332e44d99abd553da3d2ff0c6
+msgid ""
+"When complicated multi-node ros systems are running it can be important "
+"to understand the interactions of nodes."
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:7
+#: 396d32d05c6840c6ab677a4ed2a4379a
+msgid "Information and Resources"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:8
+#: 10815a7d5283424dbe6e1042054c88fa
+msgid "Using a catkin workspace"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:10
+#: 3d43fa013ba64c2e8a51f3bd0d972b68
+msgid "Problem Statement"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:11
+#: 82a8625e02ca4bb8b3365deff2bf2e25
+msgid ""
+"The Scan-N-Plan application is complete.  We would like to further "
+"inspect the application using the various ROS rqt tools."
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:13
+#: 982126af1c59447f9e3f32dc904f2160
+msgid "Guidance"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:14
+#: 31e95b9d3d1742c58b9a0a01519f4f51
+msgid "rqt_graph: view node interaction"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:15
+#: ddff013c09a846b9b79e7dbead41afc4
+msgid ""
+"In complex applications, it may be helpful to get a visual representation"
+" of the ROS node interactions."
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:16
+#: bb658a6d70964f8d8296b6493c73c7f8
+msgid "Launch the Scan-N-Plan workcell:"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:20
+#: ba5709dce25c4211b33ee70b14596fb1
+msgid "In a 2nd terminal, launch the rqt_graph:"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:24
+#: 24943d78ecb04226a5c812b9dd8c9730
+msgid "Here we can see the basic layout of our Scan-N-Plan application:"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:26
+#: 9522bfb9d9fd4ec88238e60dda6c4ba4
+msgid "In a 3rd terminal, launch the descartes path planner.:"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:30
+#: dc8021d6b5d542e2b74801fb889da531
+msgid ""
+"You must update the graph while the node is running because the graph "
+"will not update automatically.  After the update, we see our updated ROS "
+"network contains out myworkcell_node. Also, The myworkcell_node is "
+"publishing a new topic /move_group/goal which is subscribed by the "
+"move_group node."
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:33
+#: 729b442c551d4fd5abc454925363062e
+msgid "rqt_console: view messages:"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:34
+#: f839fd584ea24ee2b20cb6a16bdbee53
+msgid ""
+"Now, we would like to see the output of the path planner.  rqt_console is"
+" a great gui for viewing ROS topics."
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:35
+#: 16cc496ff53f4c0bae37b45453433a27
+msgid "Kill the rqt_graph application in the 2nd terminal and run rqt_console:"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:39
+#: 6078f23ecb6b4de4a9d66f86808ab48e
+msgid "Run the path planner:"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:43
+#: 18abe990dd5740f39d27e2fcea9cc87c
+msgid ""
+"The rqt_console automatically updates, showing the logic behind the path "
+"planner:"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:46
+#: 07bcb55dd9e341299649c2685226186b
+msgid "rqt_plot: view data plots"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:47
+#: 82648874ad6d43c3a38ebc68dbfc8183
+msgid ""
+"rqt_plot is an easy way to plot ROS data in real time.  In this example, "
+"we will plot robot joint velocities from our path plan."
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:48
+#: 9593eae878ff4a889db9fcb6a8861b06
+msgid "Kill the rqt_console application in the 2nd terminal and run rqt_plot:"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:52
+#: 73d9babd8bac4f57a1ee17e92e804ab9
+msgid "In the Topic field add the following topics:"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:61
+#: 7165f63399c641aea31ee28a18639bab
+msgid "Then run the path planner:"
+msgstr ""
+
+#: ../../_source/session6/Using-rqt-tools-for-analysis.md:65
+#: c533c88f2eb240859affe5f24a8e863b
+msgid "We can see the joint positions streaming in real-time:"
+msgstr ""
+

@@ -1,0 +1,262 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session2/ros2/3-Parameters.md:1
+#: c5ae306719754368868904ea708e0945
+msgid "Parameters"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:2
+#: 6f20439ae3fd4751b86cc6e27c1b3da5
+msgid "In this exercise, we will look at ROS Parameters for configuring nodes"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:4
+#: 67df3cede2d14af9a80e490d36b217a2
+msgid "Motivation"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:5
+#: b3abfcb3788e452183232d6e85d79c26
+msgid ""
+"By this point in these tutorials (or your career), you've probably typed "
+"the words int main(int argc, char** argv) more times than you can count. "
+"The arguments to main are the means by which a system outside scope and "
+"understanding of your program can configure your program to do a "
+"particular task. These are command line parameters."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:7
+#: a6b91c5888ff489d84089f1da4ef812c
+msgid ""
+"The ROS ecosystem has an analogous system for configuring nodes. It's a "
+"key-value storage model that is associated with each node individually. "
+"It's best used to pass configuration parameters to nodes at run-time "
+"(e.g. to identify which camera a node should subscribe to), but it can be"
+" used for much more complicated items."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:9
+#: c7559a04582e45369cde2247006d4d7b
+msgid "Reference Example"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:10
+#: 0a75fb811f954063898082aedfca027c
+msgid "Using Parameters"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:12
+#: b2cc3c626c2343c798bb5c14f5b2d934
+msgid "Further Information and Resource"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:13
+#: 9fc6c24f1cd3423c9868a457828b734c
+msgid "Understanding ROS2 parameters"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:15
+#: 03affd314bdc4303b482284c0f3792f7
+msgid "Scan-N-Plan Application: Problem Statement"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:16
+#: ee638374211c4d3cbfc7207e1cbb487c
+msgid "In previous exercises, we added a service with the following definition:"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:26
+#: 591afc3afb9c479db48553a733b14d69
+msgid ""
+"So far we haven't used the request field, base_frame, for anything. In "
+"this exercise we'll use ROS parameters to set this field. You will need "
+"to:"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:28
+#: 728530e3f91348fab5086e51efedcf65
+msgid ""
+"Declare inside the class that the Node uses a base_frame parameter of "
+"string type."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:29
+#: 25960e8902014ea3a1d57d7fdb3b2d99
+msgid "Load the parameter base_frame and store it in a local string object."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:31
+#: c19af40c934641dd9fdb61e6db1e7f24
+msgid "If no parameter is provided, default to the parameter to \"world\"."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:33
+#: 4f500b049816408aae340e833f7e8a54
+msgid ""
+"When making the service call to the vision_node, use this parameter to "
+"fill out the Request::base_frame field."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:34
+#: af7131384fcf462d92226ab69423e6e6
+msgid ""
+"Add a parameters arguments to your launch file to initialize the new "
+"value."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:36
+#: 11652307b29b4bc2869465f49c2761a8
+msgid "Scan-N-Plan Application: Guidance"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:38
+#: 6431ba4a893647199c5d2ccdcba5f833
+msgid "Open up myworkcell_node.cpp for editing."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:40
+#: 85e440a8b93b4fe0a5c00f83034aa224
+msgid "Inside the ScanNPlan class constructor, add a call to declare_parameter:"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:46
+#: e2780a2fc50141418bfedc889e4b42a9
+msgid ""
+"The first argument is the parameter name, the second is the default value"
+" if the parameter is not set."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:47
+#: 461aa03fdb5943f69058f259518662e2
+msgid ""
+"The parameter type is fixed from the type of the default value. You may "
+"safely assume any value you get when accessing the base_frame parameter "
+"is a string."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:49
+#: d4f0359f321a46c0b09ad4e387668554
+msgid ""
+"In the main function, after creating the node but before calling start, "
+"create a temporary string object, std::string base_frame;, and then use "
+"get_parameter to load the parameter \"base_frame\"."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:55
+#: d4e9af92a3134fdda6310c43d99bfb5f
+msgid ""
+"The declare_parameter function actually returns the parameter value as "
+"well, so if you want to declare and get a parameter in the same place, "
+"you can do it with one line."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:57
+#: 4a32639b1f924e52bcbbea7be5ba021c
+msgid ""
+"Also prior to calling start, insert a call to sleep for a few seconds. "
+"Without this, the service will be called immediately when the node starts"
+" and if the nodes all start together, there is a good chance the "
+"vision_node won't have received any data from the fake_ar_publisher yet:"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:64
+#: 67aac00fa7114afeaad71ce29fdd65ff
+msgid ""
+"Add an argument to your myworkcell_node \"start\" function of a string "
+"named base_frame, and assign the value from the argument into the service"
+" request. Make sure to update the app->start call in your main() routine "
+"to pass through the base_frame value you obtained."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:83
+#: 7dbb4e7f0e904d64856ec2ccdecc1d53
+msgid ""
+"Now we'll add myworkcell_node to the existing workcell.launch.py file, so"
+" we can set the base_frame parameter from a launch file.  We'd like the "
+"vision_node to return the position of the target relative to the world "
+"frame, for motion-planning purposes.  Even though that's the default "
+"value, we'll specify it in the launch-file anyway:"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:95
+#: 4e9ae90095184414a4733c45ffdd6143
+msgid ""
+"Note that the parameters arguments provides the names and values to use "
+"as a list of dictionaries."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:97
+#: 51e8c542d6924c9e9fad46b68977c77e
+msgid "Try it out by re-building and running the system."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:103
+#: 7065b8d830fe4fba99214c6937288982
+msgid "Press Ctrl+C to kill the running nodes"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:104
+#: 24e38cc013a84aeaac50c789f00e62df
+msgid ""
+"Edit the launch file to change the base_frame parameter value (e.g. to "
+"\"test2\")"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:105
+#: 18f80c2e096b419a8c3e3bcb1a587b00
+msgid ""
+"Re-launch workcell.launch.py, and observe that the \"request frame\" has "
+"changed"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:106
+#: 5830969518c248469d8443d34aa0f0b7
+msgid ""
+"If you didn't build with the --symlink-install option, you will need to "
+"re-build after editing the launch file, to copy the updates into the "
+"\"install\" directory."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:107
+#: 1dd73bc4e87c45479a90aa01e230caa9
+msgid ""
+"The response frame doesn't change, because we haven't updated vision_node"
+" (yet) to handle the request frame.  Vision_node always returns the same "
+"frame (for now)."
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:108
+#: 0eafc4087ecf483d8ef2138f136168a3
+msgid "Set the base_frame back to \"world\""
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:110
+#: 75dea2c4c70541f3965cb277ba03f3b6
+msgid "Challenge Exercise"
+msgstr ""
+
+#: ../../_source/session2/ros2/3-Parameters.md:111
+#: bca207280e294f81a1964e9cbf19901a
+msgid ""
+"Imagine a human is cooporating with the robot in this scenario. Try "
+"adding a new parameter for the human-operational frame."
+msgstr ""
+

@@ -1,0 +1,161 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:2
+#: 38f69e4bab0d4fa0b9d7c5c3b14a1320
+msgid "Move Arm to Wait Position"
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:4
+#: 8dc31723d2914d61b7eaa0d8c4dafb13
+msgid ""
+"MoveIt!'s ``moveit_cpp`` API allows us to move the robot in various ways."
+"  With a ``PlanningComponent`` object, it is possible to create motion "
+"plans to move to a desired joint position, Cartesian goal or a predefined"
+" pose created with the Setup Assistant. Then we can use a ``MoveItCpp`` "
+"object to execute that plan. In this exercise, we will move the robot to "
+"a predefined joint pose."
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:12
+#: dca7d0920c2a4815a0c34c6408455f4d
+msgid "Locate Function"
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:14
+#: 712eb69f78434537a325b5b77b7f3aff
+msgid ""
+"In the main program, locate the method call to "
+"``application.moveToWaitPosition()``."
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:16
+#: e6595b68ebae46cdb68312f8605e446a
+msgid ""
+"Go to the source file of that function by clicking in any part of the "
+"function and pressing :kbd:`F2` in QtCreator."
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:18
+#: 345be17b202b4e33bc7a1df6983e9915
+msgid "Alternatively, browse to the file at"
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:24
+#: 09602393d8b74d9084d5778ebd7f6ae4
+msgid ""
+"Remove the first line containing the following ``RCLCPP_ERROR ...`` so "
+"that the program runs."
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:29
+#: b7df12774d654643a8751b3f1d0e2cf3
+msgid "Complete Code"
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:31
+#: 3218f93a868d4835941b4a034dc49314
+msgid ""
+"Find every line that begins with the comment ``Fill Code:`` and read the "
+"description. Then, replace every instance of the comment ``UNCOMMENT AND "
+"COMPLETE`` with the appropriate line of code."
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:44
+#: 6eaaee66e69543e384b23a55260caa95
+msgid ""
+"The name of the predefined \"wait\" pose was saved in the global variable"
+" ``cfg.WAIT_POSE_NAME`` during initialization."
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:46
+#: af53d6bea86e4caf8e64717dfc6c2f44
+msgid ""
+"Calling |plan()| provides a solution trajectory stored in a "
+"``PlanSolution`` object"
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:48
+#: 19b0fec9a20c41219d665140207c9857
+msgid "The |execute()| method sends a motion plan to the robot."
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:51
+#: a53910aa17f242fc9a4e7cbfcf99480f
+msgid "Build Code and Run"
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:53
+#: b6191309f7d04ae1abc95301e2f737fa
+msgid "Compile the pick and place node:"
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:55
+#: 5f18f3208afa4c92b1fda24cb43517e9
+msgid "In QTCreator: :menuselection:`Build --> Build Project`"
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:56
+#: 350d2aba8a874babaa29bf5d3c1b209c
+msgid "Alternatively, in a terminal:"
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:63
+#: 00df401d4e0445b9a03ddccaac6a3e1f
+msgid "In a terminal, launch the supporting nodes:"
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:70
+#: 1775ac7c890b49e38dcabb66ed96dd75
+msgid "In another terminal, launch the application node:"
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:77
+#: ab260f2529cb4b3ba443cf699a75e6e3
+msgid "If the robot is not already in the wait position, it should move to it."
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:79
+#: 0262e3ba1035449dae2c747d1d2c3b27
+msgid "In the terminal, you should see something like this:"
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:87
+#: f5e5d80ae3404517b439bdf3e8b58084
+msgid "API References"
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:89
+#: aed137d7fafe4bdc846dddf57deceebf
+msgid ""
+"`setGoal() "
+"<https://docs.ros.org/en/api/moveit_ros_planning/html/classmoveit__cpp_1_1PlanningComponent.html#aa89cf6ec7cf184c07fd78e3ed1a39c5a>`_"
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:90
+#: 930dc9f959964f23a6ce33e5696730c3
+msgid "|plan()|"
+msgstr ""
+
+#: ../../_source/demo1/5-Move-arm-to-wait-position.rst:91
+#: 90816088cfa444cb989b88d030a04e6a
+msgid "|execute()|"
+msgstr ""
+

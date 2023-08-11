@@ -1,0 +1,245 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:1
+#: 1e77f441cc3746daad6d3168ee94c42c
+msgid "Exploring the Linux File System"
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:2
+#: d8501a40360447fbbebf19372f1c7497
+msgid ""
+"In this exercise, we will look at how to navigate and move files in the "
+"Linux file system using the Ubuntu GUI, and learn some of the basics of "
+"Linux file attributes."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:4
+#: 1455339fbf1c4cf397fd4e445b59a822
+msgid "Using the File Browser to Navigate"
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:6
+#: 3fed10e798434f87b26fb4ba3ba05e93
+msgid ""
+"Open the folder browser application we opened in the previous exercise. "
+"You should see an window like the one below. The icons and text above the"
+" main window show the current location of the window in the file system."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:10
+#: 50ee7e94bc89482abd92265b7569cb00
+msgid ""
+"The icons at the top constitute the \"location bar\" of the file browser."
+" While the location bar is very useful for navigating in the GUI, it "
+"hides the exact location of the window. You can show the location by "
+"pressing Ctrl+L. You should see the location bar turn into something like"
+" the image below:"
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:14
+#: 9f1b592fe0da45338cc88f9a8e7d5c13
+msgid ""
+"The folder browser opens up in the user's home folder by default. This "
+"folder is typically /home/<username>, which in the ROS-Industrial "
+"training computer is /home/ros-industrial. This folder is the only one "
+"which the user has full access to. This is by design for security's sake."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:16
+#: dcad9663204a4e58b2ebc767af651432
+msgid ""
+"By default, the file browser doesn't show hidden files (files which begin"
+" with a . character) or \"backup\" files (which end with a ~ character). "
+"To show these files, click on the \"View\" menu, and select \"Show Hidden"
+" Files\" (or press Ctrl+H). This will show all of the hidden files.  "
+"Uncheck the option to re-hide those files."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:18
+#: 8deb96511b17435495aecf52fa760065
+msgid ""
+"Two hidden directories are never shown: The . folder, which is a special "
+"folder that represents the current folder, and .., which represents the "
+"folder which contains the current folder. These will become important in "
+"the next exercise."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:20
+#: 5547b756395e4c0f99b3c73bc58e4b36
+msgid ""
+"On the left hand side of the window are some quick links to removable "
+"devices, other hard drives, bookmarks, etc. Click on the \"Computer\" "
+"shortcut link. This will take you to the \"root\" of the file system, the"
+" / folder. All of the files on the computer are in sub-folders under this"
+" folder."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:22
+#: d73d990d75bd4866a5c863cfa305ef75
+msgid ""
+"Double click on the opt folder, then the ros folder. This is where all of"
+" the ROS software resides. Each version is stored in its own folder; we "
+"should see a \"melodic\" folder there. Double-click on that folder. The "
+"setup.bash file will be used in the terminal exercise to configure the "
+"terminal for ROS. The programs, data, etc. are in the bin and share "
+"folders. You generally do not need to modify any of these files directly,"
+" but it is good to know where they reside."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:24
+#: 27659db3910143699e24511f39a4d513
+msgid "Making Changes"
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:26
+#: d566f7736f73434aa57a6cdaee356dc2
+msgid "Copying, Moving, and Removing Files"
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:28
+#: 6cf247939fd8493abb98c3778d3bac78
+msgid "Create a directory and file"
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:30
+#: 73798fbc6ad94053921c9234f9877613
+msgid "Make a directory  <Home>/ex0.3. We will be working within this folder."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:32
+#: a6b4c09c9c2d4c37827ac41148cdb4b7
+msgid ""
+"Inside the file browser, click on the \"Home\" shortcut in the left "
+"sidebar."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:33
+#: b690e056567747f3b184185741e0be7b
+msgid "Right click in the file browser's main panel and select \"New Folder\"."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:34
+#: 50c5fdcc70584d5da1f7f8dbe5b917a2
+msgid "Name the folder \"ex0.3\" and press \"return\"."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:36
+#: 5626980aa140475cbedd8efb72f3ad03
+msgid "Make a file test.txt inside the newly-created ex0.3 folder."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:38
+#: 6fa31ca4d78c4202859112d7995c7ce7
+msgid ""
+"Double-click on the ex0.3 folder.  Note how the File Browser header "
+"changes to show the current folder."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:39
+#: 2ff13371282845eea5d59aee595bfe75
+msgid ""
+"Right click in the file browser's main panel and select \"New Document\","
+" then \"Empty Document\"."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:40
+#: b863680a852d4c50845d3cc0329d008a
+msgid "Name the file \"test.txt\" and press \"return\"."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:42
+#: 5944d1c62e22463d8ff883ff6a5c4943
+msgid "Copying Files"
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:44
+#: fca97b26419d4c81913944d05fb1fda1
+msgid "Copy the file using one of the following methods:"
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:46
+#: 16e46d3c544743859ed950023ce267d3
+msgid ""
+"Click and hold on the test.txt file, hold down on the control key, drag "
+"somewhere else on the folder, and release."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:47
+#: 965f289944334beb8ea26082ccb57cfa
+msgid ""
+"Click on the file, go to the \"Copy\" from the \"Edit\" menu, and then "
+"\"Paste\" from the \"Edit\" menu.<BR> Remember: to see the Menu, hover "
+"your mouse above the bar at the top of the screen"
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:50
+#: eb0caf70395a41d5ba8a095accf1663b
+msgid "Rename the copied file to copy.txt using one of the following methods:"
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:52
+#: 4ef27d45b3aa4bceb10c1ac510bdecec
+msgid "Right-click on the copied file, select \"Rename...\" and enter copy.txt."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:53
+#: 08c3363fb9d54c19ad99b211c9faa62b
+msgid "Click on the file, press the F2 key, and enter copy.txt."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:55
+#: 94d595eef7fa4be2b081260a2ae948c5
+msgid "Create a folder new using one of the following methods:"
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:57
+#: a02952b9f2ee4f40a079fb1596b2e0a3
+msgid ""
+"Right-click on an open area of the file browser window, select \"New "
+"Folder\", and naming it new"
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:58
+#: 85965efd39544fb88d387080f1bd94c1
+msgid "Select \"New Folder\" from the \"File\" menu, and naming it new"
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:60
+#: 4f50ad46f1cb45eb9f262c6334be7ece
+msgid ""
+"Move the file copy.txt into the new folder by dragging the file into the "
+"new folder."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:62
+#: 9079dbf252a04a07895a2dce06e46bb1
+msgid ""
+"Copy the file test.txt by holding down the Control key while dragging the"
+" file into the new folder."
+msgstr ""
+
+#: ../../_source/prerequisites/Exploring-the-Linux-File-System.md:64
+#: 41704d5e8c364bdbaf089e1444c2d307
+msgid ""
+"Navigate into the new folder, and delete the test.txt folder by clicking "
+"on the file, and pressing the delete key."
+msgstr ""
+

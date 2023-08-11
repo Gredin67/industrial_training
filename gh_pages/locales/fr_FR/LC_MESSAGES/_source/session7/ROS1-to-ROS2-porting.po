@@ -1,0 +1,445 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:1
+#: ca00dbf3c64b4ebdb3aa256275569c3c
+msgid "ROS1 to ROS2 porting"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:3
+#: f09fff212be547b88e25c2e18f79a523
+msgid "Introduction"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:5
+#: edf7fe42800e4875b046339cecfe7208
+msgid ""
+"Our goal for this exercise is to have you fully port a small ROS1 "
+"application into ROS2. We'll be using the basic training material from "
+"sessions 1 and 2 as the initial ROS1 application. This will provide some "
+"exposure to the differences in the basic tools of ROS development "
+"including publishers, subscribers, services, and parameters. We will be "
+"using exercise 2.3 as the starting point."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:10
+#: 4f457899d84b455ba8f83be70786cd39
+msgid "Workspace setup"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:12
+#: 218057cc47df4e4b88f43aaece129c5c
+msgid "Clone the ROS2 version of fake_ar_publisher into your ROS2 workspace"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:19
+#: 71a6d4c0e90e465eb4f7a2b8cde373f4
+msgid "Create empty ROS2 packages."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:27
+#: ac511d26ebdf4f5cbf6284d17107d5b9
+msgid "Verify the workspace builds with colcon build"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:29
+#: 1775c808924a4c0aad625750a7a12294
+msgid ""
+"Set up a new project in Qt Creator with 'Build System' set to 'Colcon' "
+"and 'Distribution' set to '/opt/ros/eloquent'. This is optional but "
+"highly recommended since you will get code autocompletion when editing "
+"C++ in the Qt Creator IDE. Verify that the workspace builds successfully "
+"from inside the IDE."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:34
+#: 5c90a3123d4841efb7da7a866b1159a2
+msgid ""
+"Copy the ROS1 code from the packages at "
+"~/industrial_training/exercises/2.3/src/ into the empty ROS2 packages.  "
+"We'll want everything copied over except CMakeLists.txt and package.xml, "
+"where we will be modifying the empty ROS2 versions instead. For more "
+"complex porting efforts, it will likely be more efficient to directly "
+"modify the ROS1 versions of these files."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:40
+#: 20385f63caf945ab86a580e0196352a1
+msgid "Porting"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:42
+#: e1d631c5b92d43e8b34a6cc9b8df5fe5
+msgid ""
+"We will more or less follow the same sequence that the ROS1 basic "
+"training takes in switching to ROS2."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:45
+#: d16fac1af9f34cd696e37e8e2ce83ec6
+msgid "Topic subscription"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:47
+#: 48e34818b1484bf08136aee6781a3090
+msgid "Open and start editing the CMakeLists.txt file in myworkcell_core"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:49
+#: dadf14fbd75f4076a3a90cf44b95683b
+msgid ""
+"Package dependencies: Ament packages you depend on are now found directly"
+" using the CMake find_package command. Almost always the first invocation"
+" will be find_package(ament_cmake) which is required to make this package"
+" an ament package."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:53
+#: 17f7b1c799b342c083ff74c167cdd36d
+msgid ""
+"Add additional dependencies for this application below this first "
+"find_package command:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:60
+#: 58d73de55f34433fba91cbcddbf9b5b0
+msgid ""
+"Build the vision node: An executable is added in the usual CMake way. "
+"Rather than use include_directories and target_link_libraries to depend "
+"on other packages, a convenience macro is provided to depend on other "
+"ament packages."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:69
+#: 451724e86c6942e6973bf52abc3989cf
+msgid ""
+"Install the vision node: Everything in ROS2 must have an install rule in "
+"order to be used at runtime."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:80
+#: 76f21f09d227407283ef4347dd31a3a5
+msgid ""
+"Above the final call to ament_package() add a line which indicates which "
+"ament packages this package depends on at runtime:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:87
+#: da2273bccad04d89ab3a8f05bbe48aa3
+msgid ""
+"You may try to build the workspace again now and you should get a compile"
+" error about ros/ros.h not being found. We're now ready to port the C++ "
+"code. Open vision_node.cpp for editing."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:91
+#: da394eeca4b04586b9ea247d5e5d8b11
+msgid ""
+"Change the headers: ROS2 requires headers to end in .hpp instead of .h "
+"and includes for msgs and srv require the file name to file/msg/ and "
+"file/srv/ respectively in their names."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:101
+#: f4af4416dd1d4141b31479009add0b9b
+msgid ""
+"Comment out the callbacks, the member variables, and the contents of the "
+"constructor. Change the Localizer class to inherit from rclcpp::Node."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:117
+#: 7e5ade9e830a4faa95d0c5f2f4dbbe88
+msgid ""
+"The main function can now be replaced with ROS2 equivalents of creating a"
+" node and spinning to wait for callbacks to be invoked:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:134
+#: 666b5d4faed04510aeac43eee28742a5
+msgid ""
+"Now we'll port the subscriber Replace the ar_sub_ and last_msg_ member "
+"variables with:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:141
+#: 5f9994660a824c168d1b125e2e66c196
+msgid "Add the subscription creation to the constructor:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:150
+#: 0a22a14f529843699866df0901f4e758
+msgid "and the callback that stores the message:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:160
+#: 5c960cb191004ea8972b9a732cd0151c
+msgid ""
+"Verify the workspace builds now and test the topic subscription. Run the "
+"publisher node and vision node in separate terminals:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:168
+#: ee78d8fdb9304f07a179d2e10e008ec0
+msgid "Interface generation"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:170
+#: f487a086b58d414a91332dedc2949e35
+msgid ""
+"We'll now build the LocalizePart service type to use in the "
+"myworkcell_core package."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:172
+#: e6e2423b27ff48f580b5d5ad011197aa
+msgid ""
+"The .srv file syntax is basically unchanged, but we do have to modify the"
+" definition. Since ROS2 does not allow you to return a boolean from a "
+"service callback, we must track success and failure ourselves. Add a "
+"success member to the response in LocalizePart.srv:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:185
+#: 1ddadcccfc8b4f1fb9ddfff2142e78f8
+msgid ""
+"Modify CMake and package.xml to build the service. In CMakeLists.txt add "
+"additional dependencies and a call to generate custom interfaces:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:198
+#: 07953ae971054a54913c3ac152144375
+msgid ""
+"To use generated interfaces in the same package, another dependency must "
+"be added on built targets:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:205
+#: 2c411349fe9c4037916ea52e64de32c8
+msgid ""
+"In package.xml make sure the format version is 3 and add the following "
+"tags:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:213
+#: 3cf629ce18ea469188e2defdd1b0dfe8
+msgid ""
+"Make sure the workspace builds and you can now see the "
+"myworkcell_core/srv/LocalizePart service when running ros2 srv list."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:215
+#: bf935a4c0500462d967b9fc1e18173d3
+msgid "Services"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:217
+#: f7058fade2464bfbbffd7c27cf8d3042
+msgid "At the top of vision_node.cpp add/uncomment:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:223
+#: 9d0d4b9e40cf408c9740507111844053
+msgid ""
+"Then add the service server to the vision node, replacing the "
+"ServiceServer member variable with:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:230
+#: a3d059243ce54d54af42476864da8b38
+msgid "Add the service creation to the constructor:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:237
+#: ed3e65a02066451daa33f63c0277ce96
+msgid "and the service callback:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:257
+#: 67e9d58f9f784f3ba9a25382d13056c6
+msgid ""
+"Run both the fake_ar_publisher node and the vision_node and try manually "
+"calling the service."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:260
+#: 99634469431c4532b8e9f14a554af169
+msgid ""
+"Now we'll set up the application node to call the service. Add a new "
+"target to CMakeLists.txt:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:268
+#: d9ac91ec89a54dcaa0da20f041faba6e
+msgid ""
+"and add myworkcell_node to the existing install function call, after "
+"vision_node."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:270
+#: 8e631574789d41a1bbae00d23a5700c9
+msgid ""
+"Open myworkcell_node.cpp to start porting it over. As done with the "
+"vision node, convert the ScanNPlan class to inherit from rclcpp::Node and"
+" rewrite the main function in the same way. For now, comment out the code"
+" that loads the 'base_frame' parameter and call the start function with a"
+" hardcoded \"world\"."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:292
+#: 868b6b63a63e4294b4d9271a6e169750
+msgid "Replace the vision_client member variable with:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:298
+#: 0d5fed40976748589c80e6c66c08a787
+msgid "and create it in the constuctor with:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:304
+#: 3c0273b92e12442d857820a93a7a9472
+msgid ""
+"The start function will be fully replaced since it is quite a bit more "
+"complex. Since ROS2 services are now asynchronous, the client returns a "
+"future object when called and the developer is responsible for spinning "
+"until a response returns from the vision node. Read through the new start"
+" function here before replacing to make sure you understand everything "
+"that is happening."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:356
+#: 40ffde457b8349fc94db0bbed2ecfa0d
+msgid "Verify everything builds and works"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:358
+#: e08fd4ec5f3c4d5f95ea144eae0c549b
+msgid "Parameters"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:360
+#: 4d6d949097d647bd9faada16a017d62a
+msgid ""
+"Parameters work slightly differently than in ROS1. The most significant "
+"change is the parameter declaration mechanism, which, when given a "
+"default value, ensures that a parameter will exist under the given name "
+"which matches the type of the default. Modify the main function to "
+"declare and get the base_frame parameter:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:383
+#: ccdb1705d0734fd69deed62484bedcb4
+msgid ""
+"Unfortunately, parameters can not currently be set on the command line "
+"when using ros2 run. To test that the parameter is set, you must create "
+"and save a YAML file:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:392
+#: fb7b3bd12bb34b5e93462d9796cd4665
+msgid "Then load this file when running the node:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:398
+#: 6a70552bb64049aa9b7633cf40f770b3
+msgid "Launch file"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:400
+#: 22ca6e9872164bab9b4a97ddba78ab34
+msgid ""
+"Currently, the myworkcell_support package only contains a launch file for"
+" starting the three required nodes. We will port it to a ROS2 python "
+"launch script."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:403
+#: 87012b1a665847d4983e47fb04a68d74
+msgid ""
+"Start by creating a new file workcell.launch.py under the launch/ "
+"directory."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:405
+#: 4c8143379cae4a95b81a530aa83e9b73
+msgid ""
+"Modify the contents to add the required python imports and the required "
+"function which will return the launch configuration description:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:416
+#: 5338c998e51945488deb96f61685abde
+msgid ""
+"Each node in the XML launch file will correspond to a Node launch "
+"'action' in the new launch description. The named arguments used in the "
+"action constructor should have clear meaning. You'll need one for the "
+"fake_ar_publisher:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:433
+#: e7b786956c3b4e85b5b6af867e32a0d2
+msgid "one for the vision_node:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:444
+#: 3089e6b03eed41a182b40f544353c6ad
+msgid "and one for myworkcell_node:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:456
+#: 564cc8ce69244446b8eda8b5ee40e0f1
+msgid ""
+"Notice the parameters argument must be set with a list of dictionaries. "
+"Another common argument not used here is arguments, set with a list of "
+"command line arguments that the executable will start with."
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:460
+#: 8abbd59c61c64bf4abd9cc532f9a10fe
+msgid ""
+"Now bundle the three nodes in a LaunchDescription and return it from the "
+"function:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:466
+#: 53962bc385bd43848179251efef04552
+msgid "Add an install call to CMakesList.txt to install the launch file:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:474
+#: b95547af82ff47cbacf07064411088a6
+msgid "Modify package.xml to show the runtime dependency on the packages"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:481
+#: 7224e3f5e4ae489c9f603dee7cf763ce
+msgid "After building the workspace test the launch file with:"
+msgstr ""
+
+#: ../../_source/session7/ROS1-to-ROS2-porting.md:487
+#: ae267164fcb64bd7a2eb69a0f8f3274e
+msgid ""
+"Note that the file loaded by ros2 launch resides in the install/ "
+"directory and will not update if you edit the version in the src/ space. "
+"To avoid having to rebuild the workspace to see changes in the launch "
+"script, you can run colcon build with the --symlink-install option so the"
+" file in the install space is just a link back to the source space. This "
+"build option is also useful when developing ROS python code in general."
+msgstr ""
+

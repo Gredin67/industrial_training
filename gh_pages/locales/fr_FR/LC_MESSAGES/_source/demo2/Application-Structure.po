@@ -1,0 +1,322 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo2/Application-Structure.md:1
+#: 79d499c7894c4350bb7a6a8f4707ec29
+msgid "Application Structure"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:2
+#: 7931d7daf6fc48b79f46552a5bd3c133
+msgid ""
+"In this exercise, we will take a look at all the packages and files that "
+"will be used during the completion of the next exercices."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:4
+#: 7447f5786fe846f0a40f5fabe2296718
+msgid "Acquire and initialize the Workspace"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:14
+#: 3b33d27521f84bf190ae7e21879011b8
+msgid "Download source dependencies"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:15
+#: 07091954de9c4375bd6130a8a9321744
+msgid ""
+"Use the wstool command to download the repositories listed in the "
+"src/.rosinstall file"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:21
+#: bf72a13a08ab4f92996d9245d4150429
+msgid "Download debian dependencies"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:22
+#: d8e6d56580854742b600e71fce5e62d6
+msgid ""
+"Make sure you have installed and configured the rosdep tool. Then, run "
+"the following command from the src directory of your workspace."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:28
+#: 71f10bd72c3e422ebdb1e5a8d078aafe
+msgid "Build your workspace"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:32
+#: 3fbcf98a520148f6b0bf612f7a67c9da
+msgid ""
+"If the build fails, then revisit the previous two steps to make sure all "
+"the dependencies were downloaded."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:35
+#: f15046c6019c4248bb9a54c973ca54b8
+msgid "Source the workspace"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:36
+#: 8ab4553a6b7648b2aa2d4450e1814a1b
+msgid "Run the following command from your workspace parent directory"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:41
+#: d3c80687000c45158bd85db36fdcd1d7
+msgid "List All the Packages in the Application"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:47
+#: 197739d5ecb24802bbc506620285fd22
+msgid ""
+"plan_and_run :           Contains the source code for the plan_and_run "
+"application.  You will be completing the exercises by editing source "
+"files in this package."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:48
+#: f1663c6eb7b44f0780a60d3a4c78cc53
+msgid ""
+"ur5_demo_moveit_config : Contains support files for planning and "
+"execution robot motions with Moveit. This package was generated with the "
+"Moveit Setup Assistant."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:49
+#: 3673eb8de1414391886167d8b115fbf0
+msgid ""
+"ur5_demo_support :       Provides the robot definition as a URDF file.  "
+"This URDF is loaded at runtime by our plan_and_run application."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:50
+#: c152153fb06e45f483acb14e6ea4be50
+msgid ""
+"ur5_demo_descartes :     Provides a custom Descartes Robot Model for the "
+"UR5 arm.  It uses an Inverse-Kinematics closed form solution, which is "
+"significantly faster than the numerical approach used by the "
+"MoveitStateAdapter."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:52
+#: d075facc9315475da1760f4ca224147a
+msgid "The plan_and_run package"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:59
+#: 1ca8dde6cefd47adbaea93311c2ce7a0
+msgid "src :     Application source files."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:60
+#: c3b0b1d0c009487fa6036e10a335983c
+msgid ""
+"src/demo_application.cpp : A class source file that contains the "
+"application implementation code."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:61
+#: d62625eba34f4af39d80fda3b590c391
+msgid ""
+"src/plan_and_run.cpp     : The application main access point. It invokes "
+"all the tasks in the application and wraps them inside the \"main\" "
+"routine."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:62
+#: b2115681811d415fa159e92cec706a7f
+msgid ""
+"src/tasks                : A directory that contains every source file "
+"that you will be editing or completing as you progress through the "
+"exercises."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:63
+#: 1a0f2f2264ef4f6a926cbdbaf231dc0a
+msgid "include : Header files"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:64
+#: 3525e70abac245eb8a46cfbba721008f
+msgid ""
+"include/plan_and_run/demo_application.h : Defines the application "
+"skeleton and provides a number of global variables for passing data at "
+"various points in the exercises."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:65
+#: 897a0b1d706c43de9190fc17c0a76155
+msgid "launch: Launch files needed to run the application"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:66
+#: bd20313a2da8411b89883a4523132142
+msgid ""
+"launch/demo_setup.launch : Loads roscore, moveit and the runtime "
+"resources needed by our application."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:67
+#: 5ab983aee57041f192290a217eb24cc5
+msgid ""
+"launch/demo_run.launch : Starts our application main executable as a ROS "
+"node."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:68
+#: 7d5f78f3577447e7b84d2e3a2ea28009
+msgid "config: Directory that contains non-critical configuration files."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:70
+#: eca00285c0284ab986d81c66bb7943e9
+msgid "Main Application Source File"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:72
+#: 039177fc5d6a45f5a64943ecb780a3df
+msgid ""
+"In the \"plan_and_run/src/plan_and_run_node.cpp\" you will find the "
+"following code:"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:115
+#: eaa97c39d5f9420da03b807cf0baefb2
+msgid ""
+"In short, this program will run through each exercise by calling the "
+"corresponding function from the application object.  For instance, in "
+"order to initialize Descartes the program calls "
+"application.initDescartes().  Thus each exercise consists in editing the "
+"source file where that exercise is implemented, so for "
+"application.initDescartes() you will be editing the "
+"plan_and_run/src/tasks/init_descartes.src source file."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:118
+#: 3e4e3afeeadf4a3ead7c571fda4634f2
+msgid "The DemoApplication Class"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:120
+#: 4a85af71f4524bddbdc2d58695212ba1
+msgid ""
+"In the header file "
+"\"plan_and_run/include/plan_and_run/demo_application.h\" you will find "
+"the definition for the main class of the application along with several "
+"support constructs. Some of the important components to take notice of "
+"are as follows:"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:122
+#: 8616f8a02ad14441844d76c9d3a1a1f3
+msgid ""
+"Program Variables: Contain hard coded values that are used at various "
+"points in the application."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:137
+#: bb3aa0dc49ff42a8afa71cce4225a2c1
+msgid ""
+"Trajectory Type: Convenience type that represents an array of Descartes "
+"Trajectory Points."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:144
+#: d95e47a429714196855f8c6dd6ef9b94
+msgid ""
+"DemoConfiguration Data Structure:  Provides variables which values are "
+"initialized at run-time from corresponding ros parameters."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:175
+#: 9b8f1e8849ab4bc3a3c9f653a14b1e32
+msgid ""
+"DemoApplication Class:  Main component of the application which provides "
+"functions for each step in our program.  It also contains several "
+"constructs that turn this application into a ROS node."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:247
+#: 18736ee37eba4304a26a1b3002d834f3
+msgid "Application Launch File"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:248
+#: a8ef97a2affc481d945a1adbdf804c9e
+msgid ""
+"This file starts our application as a ROS node and loads up the necessary"
+" parameters into the ROS parameter server. Check how this is done by "
+"opening the \"plan_and_run/launch/demo_run.launch\" file:"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:269
+#: e6693412a8ce4a2e856c015b4e42192b
+msgid "Some of the important parameters are explained below:"
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:270
+#: 20de176449ed4381a23bd74a6535e77a
+msgid ""
+"group_name: A namespace that points to the list of links in the robot "
+"that are included in the kinematic chain of the arm (base to end-of-"
+"tooling links).  This list is defined in the ur5_demo_moveit_config "
+"package."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:271
+#: 2ee57c5cfa6042b08a96b70f91303fd9
+msgid ""
+"tip_link: Name of the last link in the kinematic chain, usually the tool "
+"link."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:272
+#: 6b012fd9123a4f9988939c99e5ef027f
+msgid "base_link: Name for the base link of the robot."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:273
+#: 2eae51bf170a4c0fa19676fae4c50682
+msgid ""
+"world_frame: The absolute coordinate frame of reference for all the "
+"objects defined in the planning environment."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:274
+#: 4189446eaa81477190bc3a71d82453f2
+msgid ""
+"The parameters under the \"trajectory\" namespace are used to generate "
+"the trajectory that is fed to the Descartes planner."
+msgstr ""
+
+#: ../../_source/demo2/Application-Structure.md:275
+#: 6cc3e63dc85d40da8afc2c0a51f006ce
+msgid ""
+"trajectory/seed_pose: This is of particular importance because it is used"
+" to indicate the preferred start and end joint configurations of the "
+"robot when planning the path.  If a ''seed_pose'' were not specified then"
+" planning would take longer since multiple start and end joint "
+"configurations would have to be taken into account, leading to multiple "
+"path solutions that result from combining several start and end poses."
+msgstr ""
+

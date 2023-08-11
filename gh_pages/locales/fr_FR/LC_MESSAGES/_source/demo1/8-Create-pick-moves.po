@@ -1,0 +1,147 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:2
+#: a88aab02cc5a48c3a273f5cb78b6e476
+msgid "Create Pick Moves"
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:4
+#: 62151fd8b8da4e8699f00766557bb886
+msgid ""
+"The gripper moves through three poses in order to do a pick: approach, "
+"target and retreat. In this exercise, we will use the box pick transform "
+"to create the pick poses for the :abbr:`TCP (Tool Center Point)` "
+"coordinate frame."
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:11
+#: 7685b5315f2c4de689c377d9fd3fe879
+msgid "Locate Function"
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:13
+#: 2ef6351293234762994023df82debc16
+msgid ""
+"In the main program, locate the function call to "
+"``application.computePickToolPoses()``."
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:15
+#: c9e60f3b292f4bb9a7482355c4280fae
+msgid ""
+"Go to the source file of that function by clicking in any part of the "
+"function and pressing :kbd:`F2` in QtCreator."
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:17
+#: b53a473fbfb14b21a7f457e156fd6e04
+msgid ""
+"Remove the first line containing the following ``RCLCPP_ERROR_STREAM "
+"...`` so that the program runs."
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:22
+#: 6bcb93dfab4f40ecbe2f67e78b315a00
+msgid "Complete Code"
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:24
+#: 1de4d1cec54442f59324b140df33e1d9
+msgid ""
+"Find every line that begins with the comment ``Fill Code:`` and read the "
+"description. Then, replace every instance of the comment ``UNCOMMENT AND "
+"COMPLETE`` with the appropriate line of code."
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:37
+#: fd6a6352128d4b758bca830db94034cf
+msgid ""
+"We want to set where the box currently is as the pick location with "
+"|setOrigin()|."
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:38
+#: 4d72c62bc6fa4ecf973af36537bf0b71
+msgid ""
+"After setting the right location, |setRotation()| makes the end-effector "
+"face the correct direction."
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:40
+#: 50a1e9ed54824985b2e3c2f98709c477
+msgid ""
+"The ``createManipulationPoses()`` uses the values of the approach and "
+"retreat distances in order to create the corresponding poses at the "
+"desired target."
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:45
+#: 2284dec9778144409d3461762105e536
+msgid "Build Code and Run"
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:47
+#: 70a26da09bd44974812847087f5930c7
+msgid "Compile the pick and place node:"
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:49
+#: 0aee261ef7944467994eba3bf8f35b08
+msgid "In QTCreator: :menuselection:`Build --> Build Project`"
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:51
+#: 9ad96fb626534432b49acb99a5a5dfcf
+msgid "Alternatively, in a terminal:"
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:57
+#: d47142350495400588e81e69d255fd4a
+msgid "Run the supporting nodes with the launch file (only if needed):"
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:63
+#: f0e9f48fbbdb476daeca68700f01a496
+msgid "In another terminal, run your node with the launch file:"
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:69
+#: d391da659a3146d79c53b439691d23dd
+msgid ""
+"The TCP and wrist positions at the pick will be printed in the terminal. "
+"You should see something like this:"
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:83
+#: 44e4de4f45b748678f00ef22965811a8
+msgid "API References"
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:85
+#: 01476410ed8644dcab3f3a552122a106
+msgid "|setOrigin()|"
+msgstr ""
+
+#: ../../_source/demo1/8-Create-pick-moves.rst:87
+#: cfb347b497a64b9a98d2b7bb576cf17f
+msgid "|setRotation()|"
+msgstr ""
+

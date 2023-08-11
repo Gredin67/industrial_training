@@ -1,0 +1,195 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:1
+#: 6df93ccbf1f448049dacf299ca6d71fc
+msgid "Navigating the Ubuntu GUI"
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:2
+#: 1625e20ac6d84ae49aa63a5d41bcdf57
+msgid ""
+"In this exercise, we will familiarize ourselves with the graphical user "
+"interface (GUI) of the Ubuntu operating system."
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:4
+#: 24067f79bc5c4f309088a223a68feaa9
+msgid "Task 1: Familiarize Yourself with the Ubuntu Desktop"
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:5
+#: b42f8d82cae44a20a78a09672443bc28
+msgid ""
+"At the log-in screen, click in the password input box, enter "
+"rosindustrial for the password, and hit enter. The screen should look "
+"like the image below when you log in:"
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:9
+#: 728a99a65a2c4398868fe6733fbe118b
+msgid "There are several things you will notice on the desktop:"
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:13
+#: c6cdaa6604bb44a08b8b99540b980db1
+msgid ""
+"The gear icon on the top right of the screen brings up a menu which "
+"allows the user to log out, shut down the computer, access system "
+"settings, etc..."
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:14
+#: 0c88563fe4484d3b94ccfaa3082cc05a
+msgid ""
+"The bar on the left side shows running and \"favorite\" applications, "
+"connected thumb drives, etc."
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:15
+#: 4e9e06f7b7d3427bab4202047461e5f6
+msgid ""
+"The top icon is used to access all applications and files. We will look "
+"at this in more detail later."
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:16
+#: 0c28bca0c8be4c9a920af5ad670adb61
+msgid ""
+"The next icons are either applications which are currently running or "
+"have been \"pinned\" (again, more on pinning later)"
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:17
+#: 0067014dcc284ec99eccb99dd42d3368
+msgid ""
+"Any removable drives, like thumb drives, are found after the application "
+"icons."
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:18
+#: 2819652828f74be8a375fa207e4c5fe4
+msgid ""
+"If the launcher bar gets \"too full\", clicking and dragging up/down "
+"allows you to see the applications that are hidden."
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:19
+#: 85b162ee23af4832baa5209a254eaf83
+msgid ""
+"To reorganize the icons on the launcher, click and hold the icon until it"
+" \"pops out\", then move it to the desired location."
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:21
+#: e9fb789aa7394685b24c17eff7da0b3f
+msgid "Task 2: Open and Inspect an Application"
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:22
+#: d7e47cc6b9da48b58d908b2b32e10abc
+msgid ""
+"Click on the filing-cabinet icon in the launcher. A window should show "
+"up, and your desktop should look like something below:"
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:26
+#: 9022e7afc85844a9a37b0512fe92f83f
+msgid "Things to notice:"
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:28
+#: 6e964474514c4b0c8679e604f6a7e0a7
+msgid ""
+"The close, minimize, and maximize buttons typically found on the right-"
+"hand side of the window title bar are found on the left-hand side."
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:29
+#: b29260c4a3fd46f391919debfea9eaf7
+msgid ""
+"The menu for windows are found on the menu bar at the top of the screen, "
+"much in the same way Macs do. The menus, however, only show up when you "
+"hover the mouse over the menu bar."
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:30
+#: cafdbca4e009405aa80164698cdac411
+msgid ""
+"Notice that there are menu highlights of the folder icon. The dots on the"
+" left show how many windows of this application are open. Clicking on "
+"these icons when the applications are open does one of two things:"
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:31
+#: 683812be2f1d4c72aa6987a0a76ec8a3
+msgid "If there is only one window open, this window gets focus."
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:32
+#: 78be4be3ab8b4cc89ce15b2e6f2a7f81
+msgid ""
+"If more than one are open, clicking a second time causes all of the "
+"windows to show up in the foreground, so that you can choose which window"
+" to go to (see below):"
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:36
+#: cdc50426a6ba4ecbacbe560d9dfe8d31
+msgid "Task 3: Start an Application & Pin it to the Launcher Bar"
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:37
+#: 33b10d7f446f4ed9bd2829ad7f9adb18
+msgid ""
+"Click on the launcher button (top left) and type gedit in the search box."
+" The \"Text Editor\" application (this is actually gedit) should show up "
+"(see below):"
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:41
+#: 581b724fc9c1465d9af54cf32031cc0d
+msgid ""
+"Click on the application. The text editor window should show up on the "
+"screen, and the text editor icon should show up on the launcher bar on "
+"the left-hand side (see below):"
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:45
+#: d6bf139f0aed4e0cb5a162ba6a2d9dcd
+msgid ""
+"Right-click on the text editor launch icon, and select \"Lock to "
+"Launcher\"."
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:46
+#: 8ab8d4351f1143a2afd3db0fdd9837eb
+msgid ""
+"Close the gedit window. The launcher icon should remain after the window "
+"closes."
+msgstr ""
+
+#: ../../_source/prerequisites/Navigating-the-Ubuntu-GUI.md:47
+#: ef2f533f0f904ee6be082a4f1bdade38
+msgid ""
+"Click on the gedit launcher icon. You should see a new gedit window "
+"appear."
+msgstr ""
+

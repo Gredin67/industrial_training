@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo2/Initialize-ROS.md:1 ed0bc9a7ff1e495baaf5eedeb436dbd3
+msgid "Initialize ROS"
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:2 090e44274a7e472d90cfa03659098a03
+msgid ""
+"In this exercise, we will initialize the ros components that our "
+"application needs in order to communicate with MoveIt! and other parts of"
+" the system."
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:4 d259dadfd46e47abb208a761742e547f
+msgid "Locate Exercise Source File"
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:6 b0052f57dbc948f99b3d5804f85b9ab9
+msgid ""
+"Go to the main application source file located in "
+"plan_and_run/src/plan_and_run_node.cpp."
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:7 d8780c26813e432ba407d341bef02fd6
+msgid "In the main program, locate the function call to application.initRos()."
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:8 8e72d49728414e83baaec0fc20b0ffcc
+msgid ""
+"Go to the source file for that function located in the "
+"plan_and_run/src/tasks/init_ros.cpp."
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:9 4ff600488aec48e99a8c9df4c00f6145
+msgid ""
+"Alternatively, in QTCreator, click on any part of the function and press "
+"\"F2\" to bring up that file."
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:10 f7b3c34598da4d59904ae398365a92cb
+msgid ""
+"Comment out the first line containing the ROS_ERROR_STREAM ... entry so "
+"that the function does not quit immediately."
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:12 eae685dd9c414b2caf476a3eed8186b4
+msgid "Complete Code"
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:14 a52771c6e918482581054981051eed2d
+msgid ""
+"Observe how the ros Publisher marker_publisher_ variable is initialized. "
+"The node uses it to publish a visualization_msgs::!MarkerArray message "
+"for visualizing the trajectory in RViz."
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:15 5f4750c0ddb74085be1d3b1a46e5c3fa
+msgid ""
+"Initialize the moveit_run_path_client_ptr_ action client with the "
+"ExecuteTrajectoryAction  type."
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:17 43907e4f86114a0d954535ba426dcd4b
+msgid ""
+"Find comment block that starts with /*  Fill Code: and complete as per "
+"described."
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:19 36a78c226cdc4c5d9e25bed457c7e05a
+msgid "Replace every instance of [ COMPLETE HERE ] accordingly."
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:21 ed7a83d41b534606a0ec2a6819a5a6b7
+msgid "Build Code and Run"
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:23 2d99178efd634dd9861ad3dfbf99d5f2
+msgid "cd into your catkin workspace and run catkin build"
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:24 4324fb47ff80403badf5755a6cec40b0
+msgid "Then run the application launch file:"
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:30 03fbe0d4d31642daa2da0b4dc4b21fb0
+msgid "API References"
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:32 580d27259de6462cb234ccfd232989c9
+msgid "visualization_msgs::MarkerArray"
+msgstr ""
+
+#: ../../_source/demo2/Initialize-ROS.md:34 7324fa760e2340959d17759e0211f828
+msgid "NodeHandle::serviceClient()"
+msgstr ""
+

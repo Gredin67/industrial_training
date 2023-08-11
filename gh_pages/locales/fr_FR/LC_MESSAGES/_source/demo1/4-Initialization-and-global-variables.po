@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.8.0\n"
+
+#: ../../_source/demo1/4-Initialization-and-global-variables.rst:2
+#: 61f0958e37de4cbb825aab4908f676e0
+msgid "Initialization and Global Variables"
+msgstr ""
+
+#: ../../_source/demo1/4-Initialization-and-global-variables.rst:4
+#: 8ae7446405194b06b89d4329d674a487
+msgid ""
+"In this exercise, we will take a first look at the main application "
+":file:`pick_and_place_node.cpp`, its public variables, and how to "
+"properly initialize it as a ROS node."
+msgstr ""
+
+#: ../../_source/demo1/4-Initialization-and-global-variables.rst:10
+#: 8e725496448641c19bc5ab5c5e7ceb8c
+msgid "Application Variables"
+msgstr ""
+
+#: ../../_source/demo1/4-Initialization-and-global-variables.rst:12
+#: add5487fa1d943619f97c3f18fac3a84
+msgid ""
+"Open the file :file:`pick_and_place_utilities.h` in the following "
+"directory:"
+msgstr ""
+
+#: ../../_source/demo1/4-Initialization-and-global-variables.rst:18
+#: c486e34a79ef4ccebcdf9756d3d611f9
+msgid ""
+"The C++ class ``PickAndPlaceConfig`` defines public global variables used"
+" in various parts of the program. These variables are listed below:"
+msgstr ""
+
+#: ../../_source/demo1/4-Initialization-and-global-variables.rst:28
+#: b1327a48562748d189626500221cd2d3
+msgid ""
+"In the main program :file:`pick_and_place_node.cpp`, the global "
+"``application`` object provides access to the program variables through "
+"its ``cfg`` member."
+msgstr ""
+
+#: ../../_source/demo1/4-Initialization-and-global-variables.rst:31
+#: de800e4fdf3a43d48908eb3170a160c7
+msgid ""
+"For instance, in order to use the ``WORLD_FRAME_ID`` global variable we "
+"would do the following:"
+msgstr ""
+
+#: ../../_source/demo1/4-Initialization-and-global-variables.rst:40
+#: 7b163b9b9dc94a28bb6fce9d849a731d
+msgid "Node Initialization"
+msgstr ""
+
+#: ../../_source/demo1/4-Initialization-and-global-variables.rst:42
+#: a867d760566e481a9ba61c412ab2355a
+msgid ""
+"In the :file:`pick_and_place_node.cpp` file, the following block of code "
+"in the ``main`` function initializes the ``PickAndPlace`` application "
+"class and its main ROS components."
+msgstr ""
+
