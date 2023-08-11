@@ -1,0 +1,599 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, ROS-Industrial
+# This file is distributed under the same license as the Industrial Training package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Industrial Training \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-08-11 17:28+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../index.rst:146
+#: 
+msgid "PC Setup"
+msgstr ""
+
+#: ../../index.rst:146
+#: 
+msgid "IDE Setup"
+msgstr ""
+
+#: ../../index.rst:146
+#: 
+msgid "MIT Introduction to C++"
+msgstr ""
+
+#: ../../index.rst:146
+#: 
+msgid "Bruce Eckel Thinking in C++ Vol. 1"
+msgstr ""
+
+#: ../../index.rst:146
+#: 
+msgid "Bruce Eckel Thinking in C++ Vol. 2"
+msgstr ""
+
+#: ../../index.rst:146
+#: 
+msgid "0.1 - Intro to Ubuntu GUI"
+msgstr ""
+
+#: ../../index.rst:146
+#: 
+msgid "0.2 - The Linux File System"
+msgstr ""
+
+#: ../../index.rst:146
+#: 
+msgid "0.3 - Using the Terminal"
+msgstr ""
+
+#: ../../index.rst:146
+#: ../../index.rst:24
+#: 
+#: aa5e354a7daa4fc888bdb8db7b56c816
+msgid "Getting Started"
+msgstr ""
+
+#: ../../index.rst:162
+#: 
+msgid "1.0 - ROS Setup"
+msgstr ""
+
+#: ../../index.rst:162
+#: 
+msgid "1.1 - Create a Workspace"
+msgstr ""
+
+#: ../../index.rst:162
+#: 
+msgid "1.2 - Installing Packages"
+msgstr ""
+
+#: ../../index.rst:162
+#: 
+msgid "1.3 - Packages and Nodes"
+msgstr ""
+
+#: ../../index.rst:162
+#: 
+msgid "1.4 - Topics and Messages"
+msgstr ""
+
+#: ../../index.rst:162
+#: 
+msgid "2.0 - Services"
+msgstr ""
+
+#: ../../index.rst:162
+#: 
+msgid "2.1 - Launch Files"
+msgstr ""
+
+#: ../../index.rst:162
+#: 
+msgid "2.2 - Parameters"
+msgstr ""
+
+#: ../../index.rst:162
+#: 
+msgid "ROS Basics (ROS2)"
+msgstr ""
+
+#: ../../index.rst:176
+#: 
+msgid "3.0 - Intro to URDF"
+msgstr ""
+
+#: ../../index.rst:176
+#: 
+msgid "3.1 - Workcell XACRO"
+msgstr ""
+
+#: ../../index.rst:176
+#: 
+msgid "3.2 - Transforms using TF"
+msgstr ""
+
+#: ../../index.rst:176
+#: 
+msgid "3.3 - Build a MoveIt Package"
+msgstr ""
+
+#: ../../index.rst:176
+#: 
+msgid "3.4 - Motion Planning using RViz"
+msgstr ""
+
+#: ../../index.rst:176
+#: 
+msgid "4.0 - Motion Planning using C++"
+msgstr ""
+
+#: ../../index.rst:176
+#: 
+msgid "4.1 - Intro to Perception"
+msgstr ""
+
+#: ../../index.rst:176
+#: 
+msgid "ROS-Industrial Basics (ROS2)"
+msgstr ""
+
+#: ../../index.rst:189
+#: 
+msgid "Demo 1 - Perception-Driven Manipulation"
+msgstr ""
+
+#: ../../index.rst:189
+#: 
+msgid "Demo 2 - Optimization Based Path Planning"
+msgstr ""
+
+#: ../../index.rst:189
+#: ../../index.rst:95
+#: 
+#: c2b7816e692546e99d0465afb756a1f5
+msgid "Application Demos"
+msgstr ""
+
+#: ../../index.rst:197
+#: 
+msgid "5.0 - Building a Perception Pipeline"
+msgstr ""
+
+#: ../../index.rst:197
+#: 
+msgid "5.1 - Simple PCL Interface for Python"
+msgstr ""
+
+#: ../../index.rst:197
+#: 
+msgid "5.2 - OpenCV Image Processing (Python)"
+msgstr ""
+
+#: ../../index.rst:197
+#: 
+msgid "6.0 - Documentation Generation"
+msgstr ""
+
+#: ../../index.rst:197
+#: 
+msgid "6.1 - Using rqt tools for Analysis"
+msgstr ""
+
+#: ../../index.rst:197
+#: 
+msgid "7.0 - ROS2 basics"
+msgstr ""
+
+#: ../../index.rst:197
+#: 
+msgid "7.1 - ROS1 to ROS2 porting"
+msgstr ""
+
+#: ../../index.rst:197
+#: 
+msgid "7.2 - Using the ROS1-ROS2 bridge"
+msgstr ""
+
+#: ../../index.rst:197
+#: 
+msgid "8.0 - Motion Planning with Tesseract"
+msgstr ""
+
+#: ../../index.rst:197
+#: ../../index.rst:101
+#: 
+#: 598eedcc43a64a30b8084f89964bf44f
+msgid "Advanced Topics"
+msgstr ""
+
+#: ../../index.rst:212
+#: 
+msgid "9.0 - Actions"
+msgstr ""
+
+#: ../../index.rst:212
+#: 
+msgid "9.1 - Intro to Descartes"
+msgstr ""
+
+#: ../../index.rst:212
+#: 
+msgid "9.2 - Advanced Descartes Path Planning"
+msgstr ""
+
+#: ../../index.rst:212
+#: 
+msgid "9.3 - Introduction to STOMP"
+msgstr ""
+
+#: ../../index.rst:212
+#: 
+msgid "9.4 - Unit Testing"
+msgstr ""
+
+#: ../../index.rst:212
+#: 
+msgid "9.5 - ROS Style Guide and ros_lint"
+msgstr ""
+
+#: ../../index.rst:212
+#: 
+msgid "9.6 - Introduction to ROS with Docker and Amazon Web Services (AWS)"
+msgstr ""
+
+#: ../../index.rst:212
+#: 
+msgid "Legacy Material (ROS1)"
+msgstr ""
+
+#: ../../index.rst:212
+#: ../../index.rst:135
+#: 
+#: 6d36c67c28a247318042f5b3039c8294
+msgid "Archives"
+msgstr ""
+
+#: ../../index.rst:2
+#: bbd07718318f4cf3b5eaa67405424a38
+msgid "ROS Industrial Training"
+msgstr ""
+
+#: ../../index.rst:4
+#: 4da52ee4c08948f3b48d097d3568f0e3
+msgid "Welcome to the ROS-Industrial training page!"
+msgstr ""
+
+#: ../../index.rst:6
+#: ab1d58cf38ea45699023aa6a0a1280e8
+msgid "The content on this site is divided into several sessions, each of which is focused on building skills in a particular area. The main sessions first introduce you to ROS itself before moving on to ideas specific to ROS-Industrial. Afterwards, deeper exploration is encouraged with some full scale application demos, which provide a good sense of what a real ROS application entails. Finally, some advanced modules are provided which focus on specific ROS tools or capabilities."
+msgstr ""
+
+#: ../../index.rst:12
+#: 703c56f16e04457ea36285ee083d4731
+msgid "We are currently in the process of updating much of our training content from ROS1 to ROS2. Currently, the ROS basics sessions are written to teach ROS2 while the rest of the material still uses ROS1. The old ROS1 basic material can still be found under the :doc:`Legacy Material <_source/legacy>` page."
+msgstr ""
+
+#: ../../index.rst:27
+#: edd4939aab3c43028fca68b0c15d6060
+msgid "Setup"
+msgstr ""
+
+#: ../../index.rst:29
+#: 19f865ed4fa24cf59b69c21a7e20212d
+msgid ":doc:`PC Setup <_source/setup/PC-Setup---ROS>`"
+msgstr ""
+
+#: ../../index.rst:30
+#: ee3007ca51e040979989f37df00757f3
+msgid ":doc:`IDE Setup <_source/setup/IDE-Setup>`"
+msgstr ""
+
+#: ../../index.rst:33
+#: 5200d1f23809405eb759f2f866a38c31
+msgid "Prerequisites"
+msgstr ""
+
+#: ../../index.rst:36
+#: 4c7d41c4745e430192bc1b69cb695f51
+msgid "C++"
+msgstr ""
+
+#: ../../index.rst:38
+#: 3240e0e7cde24beeb892045d314c0ffd
+msgid "`MIT Introduction to C++ <http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-096-introduction-to-c-january-iap-2011/assignments/>`_"
+msgstr ""
+
+#: ../../index.rst:39
+#: 6827aed59c87418884b4c8885e7e6e3a
+msgid "`Bruce Eckel Thinking in C++ Vol. 1 <http://vergil.chemistry.gatech.edu/resources/programming/pdf/TIC2Vone.pdf>`_"
+msgstr ""
+
+#: ../../index.rst:40
+#: 798478cb3d754ff88f9d1c70e5291876
+msgid "`Bruce Eckel Thinking in C++ Vol. 2 <https://web.mit.edu/merolish/ticpp/TicV2.html>`_"
+msgstr ""
+
+#: ../../index.rst:43
+#: f407765d5fe24c13ab4b8d71ca5d4737
+msgid "Linux Fundamentals"
+msgstr ""
+
+#: ../../index.rst:45
+#: 7c48e442f6514bba9dd67a1a24e3b5ee
+msgid ":download:`Slides <_downloads/slides/ROS-I Basic Developers Training - Session 0.pdf>`"
+msgstr ""
+
+#: ../../index.rst:47
+#: c85b7a5d2fcf407ca0545cb16029dc1f
+msgid ":doc:`0.1 - Intro to Ubuntu GUI <_source/prerequisites/Navigating-the-Ubuntu-GUI>`"
+msgstr ""
+
+#: ../../index.rst:48
+#: f94382ff390f4906ba522dc72574260c
+msgid ":doc:`0.2 - The Linux File System <_source/prerequisites/Exploring-the-Linux-File-System>`"
+msgstr ""
+
+#: ../../index.rst:49
+#: 4c7bdf8124f74f17bbbfc94716c1d41c
+msgid ":doc:`0.3 - Using the Terminal <_source/prerequisites/The-Linux-Terminal>`"
+msgstr ""
+
+#: ../../index.rst:52
+#: f094dc37358a47cb86ab4ebefb1cd2cc
+msgid "Session 1 - ROS Concepts and Fundamentals (ROS2)"
+msgstr ""
+
+#: ../../index.rst:54
+#: ef0b0b1ca4cc40a3ab60be991f0c297c
+msgid ":download:`Slides <_downloads/slides/ROS-I Basic Developers Training (ROS2) - Session 1.pdf>`"
+msgstr ""
+
+#: ../../index.rst:56
+#: e6909590150f439da9a80fbaa91604fc
+msgid ":doc:`1.0 - ROS Setup <_source/session1/ros2/0-ROS-Setup>`"
+msgstr ""
+
+#: ../../index.rst:57
+#: c84962ef2e6b4c4e974e340e06b19a97
+msgid ":doc:`1.1 - Create a Workspace <_source/session1/ros2/1-Create-ROS-Workspace>`"
+msgstr ""
+
+#: ../../index.rst:58
+#: 87e05b8ab7fd42ae95df62dff6ee6bd5
+msgid ":doc:`1.2 - Installing Packages <_source/session1/ros2/2-Installing-Existing-Packages>`"
+msgstr ""
+
+#: ../../index.rst:59
+#: 13ff954d9a7a420daee938d35b1e37ab
+msgid ":doc:`1.3 - Packages and Nodes <_source/session1/ros2/3-Creating-a-ROS-Package-and-Node>`"
+msgstr ""
+
+#: ../../index.rst:60
+#: b65c58a9ade546258b7d28e2c96a52ff
+msgid ":doc:`1.4 - Topics and Messages <_source/session1/ros2/4-Topics-and-Messages>`"
+msgstr ""
+
+#: ../../index.rst:62
+#: ../../index.rst:73
+#: 3a4f22ba562b4c5693796a287f216681
+#: 38dfb236ecb549f4912477a7e89a8e6b
+msgid "For equivalent ROS1 content, see the :doc:`Legacy Material <_source/legacy>` page."
+msgstr ""
+
+#: ../../index.rst:65
+#: a0717287ee664609b87f6ebcc4847441
+msgid "Session 2 - Basic ROS Applications (ROS2)"
+msgstr ""
+
+#: ../../index.rst:67
+#: b4361f00fa6744f4ac3ca139108df826
+msgid ":download:`Slides <_downloads/slides/ROS-I Basic Developers Training (ROS2) - Session 2.pdf>`"
+msgstr ""
+
+#: ../../index.rst:69
+#: 040bcc9feb544ea6a22af741772d925d
+msgid ":doc:`2.0 - Services <_source/session2/ros2/0-Services>`"
+msgstr ""
+
+#: ../../index.rst:70
+#: 7a072fef5fd6476284f03e39842e3fcb
+msgid ":doc:`2.1 - Launch Files <_source/session2/ros2/2-Launch-Files>`"
+msgstr ""
+
+#: ../../index.rst:71
+#: 0220fdc147c84e62a7996c82d5fc6c44
+msgid ":doc:`2.2 - Parameters <_source/session2/ros2/3-Parameters>`"
+msgstr ""
+
+#: ../../index.rst:76
+#: 6ce1dd6005e646a999f11e00afaedd80
+msgid "Session 3 - Motion Control of Manipulators"
+msgstr ""
+
+#: ../../index.rst:78
+#: 26217ab3466b4c6db8718b9cf939f9f8
+msgid ":download:`Slides <_downloads/slides/ROS-I Basic Developers Training (ROS2) - Session 3.pdf>`"
+msgstr ""
+
+#: ../../index.rst:80
+#: 9f60cab5fe194119a6d44561c3f30497
+msgid ":doc:`3.0 - Intro to URDF <_source/session3/ros2/0-Intro-to-URDF>`"
+msgstr ""
+
+#: ../../index.rst:81
+#: 61db1a840a624e09ba33c460082da332
+msgid ":doc:`3.1 - Workcell XACRO <_source/session3/ros2/1-Workcell-XACRO>`"
+msgstr ""
+
+#: ../../index.rst:82
+#: fd065ffb386d405f9c943d3eec691f7e
+msgid ":doc:`3.2 - Transforms using TF <_source/session3/ros2/2-Coordinate-Transforms-using-TF>`"
+msgstr ""
+
+#: ../../index.rst:83
+#: 7419bb2e77264fcca16748fca74a8ef1
+msgid ":doc:`3.3 - Build a MoveIt Package <_source/session3/ros2/3-Build-a-MoveIt-Package>`"
+msgstr ""
+
+#: ../../index.rst:84
+#: b2eee7b03a7242cfb1d7365f4738f6f7
+msgid ":doc:`3.4 - Motion Planning using RViz <_source/session3/ros2/4-Motion-Planning-RVIZ>`"
+msgstr ""
+
+#: ../../index.rst:87
+#: af21f60b79d7469cadd3d165a3c330b9
+msgid "Session 4 - Motion Planning and Perception"
+msgstr ""
+
+#: ../../index.rst:89
+#: f9a58b0ee8ec4931b198aaeaaf9b0989
+msgid ":download:`Slides <_downloads/slides/ROS-I Basic Developers Training (ROS2) - Session 4.pdf>`"
+msgstr ""
+
+#: ../../index.rst:91
+#: a67da805cd094ff7bd933b65c2bbc41b
+msgid ":doc:`4.0 - Motion Planning using C++ <_source/session4/ros2/0-Motion-Planning-CPP>`"
+msgstr ""
+
+#: ../../index.rst:92
+#: d84c60f2609c4504ae951da2d01585c2
+msgid ":doc:`4.1 - Intro to Perception <_source/session4/ros2/2-Introduction-to-Perception>`"
+msgstr ""
+
+#: ../../index.rst:97
+#: 3bc67791f51d46cfb4a690a0031ff482
+msgid ":doc:`Demo 1 - Perception-Driven Manipulation <_source/demo1/index>`"
+msgstr ""
+
+#: ../../index.rst:98
+#: 1655fefb10d74c00b395975ada05c6ee
+msgid ":doc:`Demo 2 - Optimization Based Path Planning <_source/demo3/index>`"
+msgstr ""
+
+#: ../../index.rst:104
+#: c74c5d34ca8c4ae79b9ae5e3e74078b5
+msgid "Session 5 - Path Planning and Perception"
+msgstr ""
+
+#: ../../index.rst:106
+#: ../../index.rst:115
+#: 7b896d498d66441f9aeb8b4c97fa3d33
+#: 7ea3e70d9ae64c0396b653a8f6deea81
+msgid ":download:`Slides <_downloads/slides/ROS-I Advanced Developers Training - Session 5.pdf>`"
+msgstr ""
+
+#: ../../index.rst:108
+#: 074a0003d36240d99687dd2b1fc3d503
+msgid ":doc:`5.0 - Building a Perception Pipeline <_source/session5/Building-a-Perception-Pipeline>`"
+msgstr ""
+
+#: ../../index.rst:109
+#: 9cf6f8c6dfb64e2dbde8e65d45fc89fa
+msgid ":doc:`5.1 - Simple PCL Interface for Python <_source/session5/Simple-PCL-Interface-for-Python>`"
+msgstr ""
+
+#: ../../index.rst:110
+#: 06f65a31083b4fa2a6c11d5996cfb28c
+msgid ":doc:`5.2 - OpenCV Image Processing (Python) <_source/session5/OpenCV-in-Python>`"
+msgstr ""
+
+#: ../../index.rst:113
+#: acf9c81653494e1a8dce6343a57aff0e
+msgid "Session 6 - ROS Tools"
+msgstr ""
+
+#: ../../index.rst:117
+#: 3354cdb71da645d2825f4e6b710f93e9
+msgid ":doc:`6.0 - Documentation Generation <_source/session6/Documentation-Generation>`"
+msgstr ""
+
+#: ../../index.rst:118
+#: 21514c97158044ab9907563250cd7b3b
+msgid ":doc:`6.1 - Using rqt tools for Analysis <_source/session6/Using-rqt-tools-for-analysis>`"
+msgstr ""
+
+#: ../../index.rst:121
+#: 017a7e6b10844089b9220ada0b40087f
+msgid "Session 7 - ROS2 Topics"
+msgstr ""
+
+#: ../../index.rst:123
+#: ca022ec169024b91a2901a5165af1820
+msgid ":doc:`7.0 - ROS2 basics <_source/session7/ROS2-Basics>`"
+msgstr ""
+
+#: ../../index.rst:124
+#: a0f706f9144549228ddd26fc56f9cb48
+msgid ":doc:`7.1 - ROS1 to ROS2 porting <_source/session7/ROS1-to-ROS2-porting>`"
+msgstr ""
+
+#: ../../index.rst:125
+#: bc53ff1e69ee459e9610347a87dc242e
+msgid ":doc:`7.2 - Using the ROS1-ROS2 bridge <_source/session7/ROS1-ROS2-bridge>`"
+msgstr ""
+
+#: ../../index.rst:128
+#: 763b69085a944577bc8ef2a09893623e
+msgid "Session 8 - Motion Planning"
+msgstr ""
+
+#: ../../index.rst:130
+#: 9c64bcdeb28340cc98959d49112aeed9
+msgid ":download:`Slides <_downloads/slides/ROS-I Advanced Developers Training - Motion Planning with Tesseract.pdf>`"
+msgstr ""
+
+#: ../../index.rst:132
+#: 03f199a4e3064b2996db8b164abdd297
+msgid ":doc:`8.0 - Motion Planning with Tesseract <_source/session8/Motion-Planning-with-Tesseract>`"
+msgstr ""
+
+#: ../../index.rst:136
+#: 79e3f20682654bcda27f874daa7a6d18
+msgid ":doc:`2.1 - Actions <_source/_archives/1-Actions>`"
+msgstr ""
+
+#: ../../index.rst:137
+#: 86c84f291cf54a8f9a5d8d95d5f60809
+msgid ":doc:`4.1 - Intro to Descartes <_source/_archives/1-Descartes-Path-Planning>`"
+msgstr ""
+
+#: ../../index.rst:138
+#: 8a7b54074868435bb9a47a625c085216
+msgid ":doc:`Demo 2 - Descartes Planning and Execution <_source/_archives/index>`"
+msgstr ""
+
+#: ../../index.rst:139
+#: 060bc6f1f173431799d066c066dcd26d
+msgid ":doc:`5.0 - Advanced Descartes Path Planning <_source/_archives/Advanced-Descartes-Path-Planning>`"
+msgstr ""
+
+#: ../../index.rst:140
+#: 5e050977a4c04778baae7873a023f8b8
+msgid ":doc:`5.2 - Introduction to STOMP <_source/_archives/Introduction-to-STOMP>`"
+msgstr ""
+
+#: ../../index.rst:141
+#: b32d95f7564c4bd79c69250add152089
+msgid ":doc:`6.1 - Unit Testing <_source/_archives/Unit-Testing>`"
+msgstr ""
+
+#: ../../index.rst:142
+#: d9a97f15bf9a4f95a131ca9000d088ed
+msgid ":doc:`6.3 - ROS Style Guide and ros_lint <_source/_archives/Style-Guide-and-ros_lint>`"
+msgstr ""
+
+#: ../../index.rst:143
+#: 206d9fc7633f4b90aadc31e90df6fabc
+msgid ":doc:`6.4 - Introduction to ROS with Docker and Amazon Web Services (AWS) <_source/_archives/Docker-AWS>`"
+msgstr ""
