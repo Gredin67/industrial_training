@@ -136,3 +136,5 @@ html_context = {
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'IndustrialTrainingDocumentation'
 
+gettext_uuid = True
+gettext_compact = False
